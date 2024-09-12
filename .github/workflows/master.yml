@@ -30,15 +30,26 @@ jobs:
       uses: digitalocean/action-doctl@v2
       with:
         token: ${{ secrets.DO_TOKEN }}
+    - name: Verify Server Authenticity
+      run: |
+        PUBLIC_KEY=$(echo ${{ secrets.DROPLET_PUBLIC_KEY }})
+        echo "$PUBLIC_KEY" > droplet_rsa.pub
+        ssh-keygen -lf droplet_rsa.pub | awk '{print $1}' | grep -Fxq ~/.ssh/known_hosts || (
+        echo "Server fingerprint not found! Add the public key to known_hosts manually."
+        exit 1
+        )
     - name: Set up SSH
       run: |
-        ssh-keyscan -H ${{ secrets.IP_PUBLICA }} >> ~/.ssh/known_hosts
+        # Only add key to known_hosts if verification passes
+        if [ $? -eq 0 ]; then
+          ssh-keyscan -H ${{ secrets.IP_PUBLICA }} >> ~/.ssh/known_hosts
+        fi
         eval "$(ssh-agent -s)"
         ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
         chmod 600 ~/.ssh/id_rsa
     - name: Deploy to Droplet
       run: |
-        ssh -i ~/.ssh/id_rsa root@${{secrets.IP_PUBLICA}} "\
+        ssh -i ~/.ssh/id_rsa root@${{secrets.IP_PUBLICA}}
         cd ./var/www/html/Vue
         git pull
         npm install
