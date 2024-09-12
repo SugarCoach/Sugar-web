@@ -32,9 +32,8 @@ jobs:
         token: ${{ secrets.DO_TOKEN }}
     - name: Deploy to Droplet
       run: |
-        ssh root@${{secrets.IP_PUBLICA}}"
+        ssh root@${{secrets.IP_PUBLICA}}
         cd ./var/www/html/Vue
         git pull
         npm install
         pm2 restart app.js
-        "
