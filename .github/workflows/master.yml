@@ -1,55 +1,45 @@
-name: Deploy App to DigitalOcean
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Deploy app Digital Ocean
 
 on:
   push:
     branches: [ "master" ]
 
 jobs:
-  deploy:
+  build:
 
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm install
-      - run: npm run build --if-present
-      - name: Install dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y doctl
-
-      - name: Store DigitalOcean Token
-        run: |
-          echo ${{ secrets.DO_TOKEN }} > do_token.txt
-          # Consider using a dedicated action for secret handling
-
-      - name: Login to DigitalOcean
-        run: |
-          chmod 600 do_token.txt  # Set stricter permissions for the token file
-          doctl auth init
-          doctl auth token set < do_token.txt  # Read the token from the file
-
-      - name: Deploy to Droplet
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.IP_PUBLICA }}
-          username: root  # Consider using a non-root user for security reasons
-          script: |
-            cd /var/www/html/Vue
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm i
+    - run: npm run build --if-present
+    - name: Install dependencies
+      run: |
+            sudo apt update
+            sudo snap install doctl
+    - name: Login to DigitalOcean
+      run: |
+            doctl auth init
+            # Reemplaza con tu token de acceso de DigitalOcean
+            echo ${{secrets.DO_TOKEN}} | doctl auth token set
+    - name: Deploy to Droplet
+      run: |
+            ssh root@${{secrets.IP_PUBLICA}}"
+            cd ./var/www/html/Vue
             git pull
             npm install
-            # Install pm2 if not already installed
-            if ! which pm2 >/dev/null; then
-              npm install pm2
-            fi
             pm2 restart app.js
-        # Consider adding error handling for the SSH connection and deployment steps
+            "
