@@ -30,7 +30,7 @@ jobs:
     - name: Login to DigitalOcean
       run: |
             npm config set registry https://registry.npmjs.org
-            npm install -g @digitalocean/doctl
+            npm install @digitalocean/doctl
             doctl auth init
             # Reemplaza con tu token de acceso de DigitalOcean
             echo ${{secrets.DO_TOKEN}} | doctl auth token set
