@@ -32,7 +32,7 @@ jobs:
     - name: Set up SSH
       run: |
         eval "$(ssh-agent -s)"
-        ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+        ssh-add - < "${{ secrets.SSH_PRIVATE_KEY }}"
     - name: Deploy to Droplet
       run: |
         ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@${{secrets.IP_PUBLICA}}
