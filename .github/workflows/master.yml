@@ -31,7 +31,6 @@ jobs:
         token: ${{ secrets.DO_TOKEN }}
     - name: Set up SSH
       run: |
-        chmod 600 ~/.ssh/id_rsa
         eval "$(ssh-agent -s)"
         ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
     - name: Deploy to Droplet
