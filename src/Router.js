@@ -30,10 +30,15 @@ const routes = [
         meta: { analytics: false }
     },
     {
-        path: '/account',
+        path: '/accountlaunch',
         name: 'Delete Account',
-        //component: () => import('@/views/DeleteAccount.vue'),
-        beforeEnter: () => window.location.href='https://luaeiyvw.formester.com/f/54c8bc99-d562-4d44-9e1c-222a80f2faf8',
+        component: () => import('@/views/DeleteAccount.vue'),
+        meta: { analytics: false }
+    },
+    {
+        path: '/deleted',
+        name: 'Deleted',
+        component: () => import('@/views/Deleted.vue'),
         meta: { analytics: false }
     },
     {

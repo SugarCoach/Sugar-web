@@ -102,7 +102,7 @@ export default {
         {
           link: 'Delete Account',
           icon: 'fas fa-info-circle',
-          enlace: '/account'
+          enlace: '/accountlaunch'
         },
       ]
     }
