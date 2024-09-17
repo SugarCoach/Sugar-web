@@ -6,14 +6,13 @@
 					<h2>
 						DELETE YOUR ACCOUNT
 					</h2>
-					<input type="text" name="Username" placeholder="Your username" required/>
-					<input type="password" name="Password" placeholder="Your password" required/>
-					<input type="email" name="Email" placeholder="Your email" required/>
+					<input type="text" name="username" placeholder="Your username" required/>
+					<input type="email" name="email" placeholder="Your email" required/>
 					<button type="submit" class="mb-5">
 						Send Message
 					</button>
 					<div class="info" style="">
-						<span class="fa fa-envelope-o "></span>Contact us: info@sugar.coach
+						<span class="fa fa-envelope-o "></span>Contact us: admin@sugar.coach
 					</div>
 				</form>
 			</div>

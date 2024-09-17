@@ -4,8 +4,9 @@
     </q-page>
 </template>
 
-<script>
-export default {
+<script setup>
     name: 'Deleted'
-}
+    setTimeout(function() {
+        window.location.replace("/");
+    }, 2000);
 </script>
