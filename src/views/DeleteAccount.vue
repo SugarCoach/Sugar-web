@@ -12,7 +12,7 @@
 						Send Message
 					</button>
 					<div class="info" style="">
-						<span class="fa fa-envelope-o "></span>Contact us: admin@sugar.coach
+						<span class="fa fa-envelope-o "></span>Contact us: admin.team@sugar.coach
 					</div>
 				</form>
 			</div>
