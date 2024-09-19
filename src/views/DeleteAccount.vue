@@ -30,7 +30,9 @@ onMounted(() => {
 	$form.addEventListener("submit", handleSubmit);
 	function handleSubmit(event){
 		const form = new FormData(this);
-		$buttonMailto.setAttribute("href", `mailto:admin.team@sugar.coach?subject=Borrar cuenta: ${form.get("username")}&body=Email: ${form.get("email")}\n`)
+		const username = form.get("username");
+		const email = form.get("email");
+		$buttonMailto.setAttribute("href", "mailto:admin.team@sugar.coach" + "?subject=Borrar cuenta:"+ username + "&body=Email:" + email);
 		$buttonMailto.click();
 		event.preventDefault();
 	}
