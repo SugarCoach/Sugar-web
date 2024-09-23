@@ -11,5 +11,6 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Editor directories and files
+.gitignore
 .idea
 .vscode
