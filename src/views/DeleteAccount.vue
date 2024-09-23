@@ -28,17 +28,25 @@ onMounted(() => {
 	const $form = document.querySelector("#form");
 	const $buttonMailto = document.querySelector("#trick");
 	$form.addEventListener("submit", handleSubmit);
-	function handleSubmit(event){
+	function handleSubmit(event) {
 		const form = new FormData(this);
 		const username = form.get("username");
 		const email = form.get("email");
 		$buttonMailto.setAttribute("href", "mailto:admin.team@sugar.coach" + "?subject=Borrar cuenta:"+ username + "&body=Email:" + email);
 		$buttonMailto.click();
 		event.preventDefault();
+		// axios.post('/submit', formData)
+		// 	.then(response => {
+		// 		console.log('Formulario enviado correctamente:', response.data);
+		// 	})
+		// 	.catch(error => {
+		// 		console.error('Error al enviar el formulario:', error);
+		// 	});
 	}
 })
 
 </script>
+
 <style>
 .form_delete {
 	width: 340px;

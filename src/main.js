@@ -1,5 +1,3 @@
-//esta es una prueba
-
 import App from "./App.vue";
 import router from "./Router.js";
 import "@/assets/bootstrap.min.css";
@@ -13,6 +11,9 @@ const app = createApp(App);
 
 app.use(head);
 app.use(router);
+app.mount("#app");
+
+
 /*
 app.use(
     createGtm({
@@ -24,7 +25,6 @@ app.use(
     }),
 )
 */
-app.mount("#app");
 /*
 try {
     fetch('http://localhost:1337/api/sugar-premios', {

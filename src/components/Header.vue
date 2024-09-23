@@ -57,6 +57,11 @@ export default {
                     enlace: '../#nuestras_novedades'
                 },
                 {
+                    link: 'Delete Account',
+                    icon: '',
+                    enlace: '/DiabetesPremiumDeleteAccount'
+                },
+                {
                     link: 'Premium',
                     icon: 'fas fa-info-circle',
                     enlace: '/premium'

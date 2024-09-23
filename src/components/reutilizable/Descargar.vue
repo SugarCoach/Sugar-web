@@ -3,7 +3,7 @@
     class="item-desplazar d-none d-sm-block position-fixed h-auto bg-body-secondary opacity-100 d-flex justify-content-center align-items-center item-deslizar"
     style="
       min-width: 180px;
-      width: 30%;
+      width: 22%;
       right: 50px;
       bottom: 10vh;
       z-index: 999;
@@ -47,7 +47,7 @@ export default {
 
   animation-timeline: --item;
   animation-name: desplazar;
-  animation-range: entry 100% cover 710%;
+  animation-range: entry 20% cover 80%;
   animation-fill-mode: both;
 }
 

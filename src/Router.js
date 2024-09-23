@@ -30,7 +30,7 @@ const routes = [
         meta: { analytics: false }
     },
     {
-        path: '/accountlaunch',
+        path: '/DiabetesPremiumDeleteAccount',
         name: 'Delete Account',
         component: () => import('@/views/DeleteAccount.vue'),
         meta: { analytics: false }
