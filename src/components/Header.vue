@@ -1,26 +1,32 @@
-
 <template>
     <header>
-        <nav class="navbar navbar-expand-sm top-0 position-fixed" style="z-index: 999; background-color: #4B23A5; width: 100vw">
+        <nav class="navbar navbar-expand-lg top-0 position-fixed"
+            style="z-index: 999; background-color: #4B23A5; width: 100vw">
             <div class="container-fluid">
                 <router-link class="navbar-brand" to="/">
-                    <img src="../../public/contenido/sugar-logo.webp" loading="lazy" class="d-inline-block " alt="Logo SugarCoach"
-                        width="60">
+                    <img src="../../public/contenido/sugar-logo.webp" loading="lazy" class="d-inline-block "
+                        alt="Logo SugarCoach" width="60">
                 </router-link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="menu"><img src="../../public/contenido/menu.webp" alt="menu" width="45" loading="lazy"
                             style="filter: invert(85%);"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="d-flex justify-content-end align-items-start navbar-nav mb-2 mb-lg-0">
                         <!--Links navbar-->
-                        <li v-for="item in links" :key="index" class="nav-item"><a v-if="item.link != 'Premium'"
-                                class="nav-link" :href="item.enlace">{{ item.link }}</a>
-                            <router-link v-else to="/premium" class="link-premium"><span class="text-warning">{{
-                                item.link }}</span>
-                                <img class="corona" src="../../public/contenido/corona.webp" alt="Corona" width="30" loading="lazy"></router-link>
+                        <li v-for="item in links" :key="index" class="nav-item">
+                            <a v-if="item.link != 'Premium'" class="nav-link" :href="item.enlace">{{ item.link }}</a>
+                            <router-link v-else-if="item.link != 'Delete Account'" to="/premium"
+                                class="link-premium"><span class="text-warning">{{
+                                    item.link }}</span>
+                                <img class="corona" src="../../public/contenido/corona.webp" alt="Corona" width="30"
+                                    loading="lazy">
+                            </router-link>
+                            <router-link v-else to="/DiabetesPremiumDeleteAccount" class="nav-link">
+                                {{ item.link }}
+                            </router-link>
                         </li>
                     </ul>
                 </div>
@@ -124,4 +130,5 @@ header nav {
     .menu img {
         width: 30px;
     }
-}</style>
+}
+</style>
