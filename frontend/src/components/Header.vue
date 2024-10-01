@@ -17,16 +17,17 @@
                     <ul class="d-flex justify-content-end align-items-start navbar-nav mb-2 mb-lg-0">
                         <!--Links navbar-->
                         <li v-for="item in links" :key="index" class="nav-item">
-                            <a v-if="item.link != 'Premium' || item.link != 'Delete Account'" class="nav-link" :href="item.enlace">{{ item.link }}</a>
-                            <router-link v-else-if="item.link != 'Delete Account'" to="/premium"
+                            <a v-if="item.link != 'Premium' && item.link != 'Delete Account'" class="nav-link" :href="item.enlace">{{ item.link }}</a>
+                            <router-link v-else-if="item.link == 'Delete Account'" to="/DiabetesPremiumDeleteAccount" class="nav-link">
+                                {{ item.link }}
+                            </router-link>
+                            <router-link v-else  to="/premium"
                                 class="link-premium"><span class="text-warning">{{
                                     item.link }}</span>
                                 <img class="corona" src="../../public/contenido/corona.webp" alt="Corona" width="30"
                                     loading="lazy">
                             </router-link>
-                            <router-link v-else to="/DiabetesPremiumDeleteAccount" class="nav-link">
-                                {{ item.link }}
-                            </router-link>
+                            
                         </li>
                     </ul>
                 </div>

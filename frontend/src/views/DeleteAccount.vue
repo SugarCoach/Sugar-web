@@ -23,26 +23,33 @@
 
 <script setup>
 import { onMounted } from 'vue';
+import axiosInstance from '../plugins/axios';
 name: 'Delete Account'
+// Define a route for sending emails
 onMounted(() => {
 	const $form = document.querySelector("#form");
-	const $buttonMailto = document.querySelector("#trick");
-	$form.addEventListener("submit", handleSubmit);
-	function handleSubmit(event) {
-		const form = new FormData(this);
-		const username = form.get("username");
-		const email = form.get("email");
-		$buttonMailto.setAttribute("href", "mailto:admin.team@sugar.coach" + "?subject=Borrar cuenta:"+ username + "&body=Email:" + email);
-		$buttonMailto.click();
+	$form.addEventListener("submit", event => {
 		event.preventDefault();
-		// axios.post('/submit', formData)
-		// 	.then(response => {
-		// 		console.log('Formulario enviado correctamente:', response.data);
-		// 	})
-		// 	.catch(error => {
-		// 		console.error('Error al enviar el formulario:', error);
-		// 	});
-	}
+		const formdata = new FormData($form);
+		const data = Object.fromEntries(formdata);
+		console.log(`formdata:\n${JSON.stringify(data)}`);
+		
+		axiosInstance.post('/submit', data).then(response => {
+			console.log("Recurso creado con éxito:", response.data);
+		}).catch(error => {
+			console.error("Error al crear el recurso: ", error);
+		});
+	// 	// fetch('/', {
+	// 	// 	method: 'POST',
+	// 	// 	headers: {
+	// 	// 		'Content-Type': 'application/json'
+	// 	// 	},
+	// 	// 	body: JSON.stringify(data)
+	// 	// })
+	// 	// 	.then(response => response.json())
+	// 	// 	.then(data => console.log(data))
+	// 	// 	.catch(error => console.error(error));
+	});
 })
 
 </script>

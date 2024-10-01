@@ -33,7 +33,7 @@ const Equipo = defineAsyncComponent(() =>
 	import("../components/home/Equipo.vue")
 );
 const Testimonios = defineAsyncComponent(() =>
-	import("../components/home/Testimonios.vue")
+	import("../components/home/Comunidad.vue")
 );
 const Formulario = defineAsyncComponent(() =>
 	import("../components/home/Formulario.vue")
