@@ -1,4 +1,4 @@
-console.log("hola")
+console.log("Iniciado")
 async function startServer() {
     try {
         const port = process.env.PORT || 8080
@@ -12,7 +12,7 @@ async function startServer() {
         app.use(express.json())
         // Middleware para CORS
         app.use(cors({
-            origin: ['https://sugar.coach', 'http://localhost:8081', 'http://192.168.0.144:8081'],
+            origin: ['https://sugar.coach', 'http://localhost:8081'],
             methods: ['POST'],
             allowedHeaders: ['Content-Type', 'Authorization'],
             credentials: true
