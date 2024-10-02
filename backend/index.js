@@ -18,7 +18,7 @@ async function startServer() {
             credentials: true
         }))
         // POST METHOD API URL
-        app.get('/', (req, res) => {
+        app.get('/hola', (req, res) => {
             res.send("hola mundo")
         })
         app.post('/submit', (req, res) => {
