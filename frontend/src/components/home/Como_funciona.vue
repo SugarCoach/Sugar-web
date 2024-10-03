@@ -135,7 +135,7 @@ export default {
 
 <style scoped>
 #como_funciona {
-    background-image: url('../../../public/contenido/1-Niños-con-SC.jpg');
+    background-image: url('../../../public/contenido/1-Niños-con-SC.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

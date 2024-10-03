@@ -16,7 +16,7 @@
 					<h2>Navegación inicio</h2>
 					<nav>
 						<ul class="nav flex-column">
-							<li v-for="item in links" :key="index" class="nav-item mb-2">
+							<li v-for="item in links" class="nav-item mb-2">
 								<a class="nav-link p-0" :href="item.enlace" style="color:antiquewhite;">{{ item.link
 									}}</a>
 							</li>
@@ -27,7 +27,7 @@
 					<h2>Navegación vistas</h2>
 					<nav>
 						<ul class="nav flex-column">
-							<li v-for="item in views" :key="index" class="nav-item mb-2">
+							<li v-for="item in views" class="nav-item mb-2">
 								<router-link :to="item.enlace" class="nav-link p-0" style="color:antiquewhite;">
 									{{ item.link }}
 								</router-link>
@@ -55,63 +55,57 @@
   </div>
 -->
 </template>
-<script>
-export default {
-	name: 'Pie',
-	data() {
-		return {
-			links: [
-				{
-					link: '¿Como Funciona?',
-					icon: 'fas fa-cogs',
-					enlace: '../#como_funciona'
-				},
-				{
-					link: 'Testimonios',
-					icon: 'fas fa-info-circle',
-					enlace: '../#testimonios'
-				},
-				{
-					link: 'Nuestra App ',
-					icon: 'fas fa-dollar-sign',
-					enlace: '../#nuestra_app'
-				},
-				{
-					link: 'Equipo',
-					icon: 'fas fa-question-circle',
-					enlace: '../#equipo'
-				},
-				{
-					link: 'Contacto',
-					icon: '',
-					enlace: '../#nuestras_novedades'
-				},
-			],
-			views: [
-				{
-					link: 'Inicio',
-					icon: 'fas fa-info-circle',
-					enlace: '/'
-				},
-				{
-					link: 'Premium',
-					icon: 'fas fa-info-circle',
-					enlace: '/premium'
-				},
-				{
-					link: 'Premios',
-					icon: 'fas fa-info-circle',
-					enlace: '/premios'
-				},
-				{
-					link: 'Delete Account',
-					icon: 'fas fa-info-circle',
-					enlace: '/DiabetesPremiumDeleteAccount'
-				},
-			]
-		}
-	}
-}
+<script setup>
+name: 'Pie';
+const links = [
+	{
+		link: '¿Como Funciona?',
+		icon: 'fas fa-cogs',
+		enlace: '../#como_funciona'
+	},
+	{
+		link: 'Testimonios',
+		icon: 'fas fa-info-circle',
+		enlace: '../#testimonios'
+	},
+	{
+		link: 'Nuestra App ',
+		icon: 'fas fa-dollar-sign',
+		enlace: '../#nuestra_app'
+	},
+	{
+		link: 'Equipo',
+		icon: 'fas fa-question-circle',
+		enlace: '../#equipo'
+	},
+	{
+		link: 'Contacto',
+		icon: '',
+		enlace: '../#nuestras_novedades'
+	},
+];
+const views = [
+	{
+		link: 'Inicio',
+		icon: 'fas fa-info-circle',
+		enlace: '/'
+	},
+	{
+		link: 'Premium',
+		icon: 'fas fa-info-circle',
+		enlace: '/premium'
+	},
+	{
+		link: 'Premios',
+		icon: 'fas fa-info-circle',
+		enlace: '/premios'
+	},
+	{
+		link: 'Delete Account',
+		icon: 'fas fa-info-circle',
+		enlace: '/DiabetesPremiumDeleteAccount'
+	},
+]
 </script>
 
 <style scoped>

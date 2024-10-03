@@ -16,7 +16,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="d-flex justify-content-end align-items-start navbar-nav mb-2 mb-lg-0">
                         <!--Links navbar-->
-                        <li v-for="item in links" :key="index" class="nav-item">
+                        <li v-for="item in links" class="nav-item">
                             <a v-if="item.link != 'Premium' && item.link != 'Delete Account'" class="nav-link" :href="item.enlace">{{ item.link }}</a>
                             <router-link v-else-if="item.link == 'Delete Account'" to="/DiabetesPremiumDeleteAccount" class="nav-link">
                                 {{ item.link }}
