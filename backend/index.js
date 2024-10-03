@@ -1,3 +1,4 @@
+require('dotenv').config()
 console.log("Iniciado")
 async function startServer() {
     try {
