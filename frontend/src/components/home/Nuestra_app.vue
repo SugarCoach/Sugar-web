@@ -38,7 +38,7 @@ export default {
 
 <style scoped>
 #nuestra_app {
-    background-image: url('../../../public/contenido/11-niños-con-SC.webp');
+    background-image: url('../../../public/contenido/11-Niños-con-SC.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

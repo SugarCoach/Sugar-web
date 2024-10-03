@@ -3,7 +3,7 @@
         <div class="equipo__contenedor d-flex flex-column d-sm-block">
             <div class="container">
                 <h2 class="fw-bolder display-3">Somos un equipo</h2>
-                <img src="../../../public/contenido/integrantes-equipo.webp" alt="Equipo" class="img-equipo item-appear"
+                <img src="../../../public/contenido/integrantes/integrantes-equipo.jpg" alt="Equipo" class="img-equipo item-appear"
                     loading="lazy">
                 <p class="texto">Somos un equipo decidido a mejorar la calidad de vida de las familias de niños con <strong>diabetes
                     tipo 1</strong>. SugarCoach nació de la necesidad de mantener vivos y sanos a los hijos de Isabel. Como muchos

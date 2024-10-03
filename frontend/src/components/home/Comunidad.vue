@@ -72,7 +72,7 @@ export default {
 #comunidad {
 	max-width: 100vw;
 	height: 120vh;
-	background-image: url("../../../public/contenido/7-Niños-con-SC.webp");
+	background-image: url("../../../public/contenido/7-Niños-con-SC.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;

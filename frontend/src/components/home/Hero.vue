@@ -41,7 +41,7 @@ export default {
             carousels: [
                 {
                     claseCSS: 'carousel-item active slide1',
-                    url: '../../../contenido/1-Niños-con-SC.webp',
+                    url: '../../../contenido/1-Niños-con-SC.jpg',
                     alt: 'Slide 1',
                     title: 'Convertimos el control de la diabetes en un juego',
                     description: '',
@@ -55,7 +55,7 @@ export default {
                 },
                 {
                     claseCSS: 'carousel-item slide3',
-                    url: '../../../contenido/niños-con-app.webp',
+                    url: '../../../contenido/niños-con-app.jpg',
                     alt: 'Slide 3',
                     title: 'Una experiencia gamificada',
                     description: 'Juega y gana recompensas del mundo gaming.',

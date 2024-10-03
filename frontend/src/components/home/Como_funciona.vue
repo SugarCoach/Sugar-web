@@ -135,7 +135,7 @@ export default {
 
 <style scoped>
 #como_funciona {
-    background-image: url('../../../public/contenido/1-Niños-con-SC.webp');
+    background-image: url('../../../public/contenido/1-Niños-con-SC.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -150,6 +150,6 @@ export default {
 /*Queries*/
 @media only screen and (max-width: 768px) {
     #como_funciona {
-        background-image: url('../../../public/contenido/nenes-usando-app.webp');
+        background-image: url('../../../public/contenido/nenes-usando-app.jpg');
     }
 }</style>
