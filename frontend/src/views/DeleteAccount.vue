@@ -23,7 +23,7 @@
 
 <script setup>
 import { onMounted } from 'vue';
-import axiosInstance from '../plugins/axios';
+import axios from 'axios';
 name: 'Delete Account'
 // Define a route for sending emails
 onMounted(() => {
@@ -34,7 +34,7 @@ onMounted(() => {
 		const data = Object.fromEntries(formdata);
 		console.log(`formdata:\n${JSON.stringify(data)}`);
 		
-		axiosInstance.post('/submit', data).then(response => {
+		axios.post('https://sugar.coach/apisubmit', data).then(response => {
 			console.log("Recurso creado con éxito:", response.data);
 		}).catch(error => {
 			console.error("Error al crear el recurso: ", error);

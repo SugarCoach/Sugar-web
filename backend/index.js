@@ -20,7 +20,7 @@ async function startServer() {
         }))
         // POST METHOD API URL
         app.get('/', (req, res) => {
-            res.send("hola mundo")
+            res.send("Funciona!!")
         })
         app.post('/submit', (req, res) => {
             const {username, email} = req.body
