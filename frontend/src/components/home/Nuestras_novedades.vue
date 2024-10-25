@@ -16,41 +16,35 @@
 </template>
 
 
-<script>
-export default {
-    name: 'Nuestras_novedades',
-    data() {
-        return {
-            redes: [
-                {
-                    enlace: 'https://www.instagram.com/sugar.coach/',
-                    url: '../../../contenido/instagram-logo.webp',
-                    alt: 'Instagram'
-                },
-                {
-                    enlace: 'https://www.facebook.com/SugarCoachApp',
-                    url: '../../../contenido/facebook-logo.webp',
-                    alt: 'Facebook'
-                },
-                {
-                    enlace: 'https://twitter.com/sugarcoachapp',
-                    url: '../../../contenido/x-logo.webp',
-                    alt: 'X'
-                },
-                {
-                    enlace: 'https://www.youtube.com/@sugarcoachproject3630',
-                    url: '../../../contenido/youtube-logo.webp',
-                    alt: 'Youtube'
-                },
-                {
-                    enlace: 'https://www.tiktok.com/@sugar.coach',
-                    url: '../../../contenido/tiktok-logo.webp',
-                    alt: 'Tiktok'
-                },
-            ]
-        }
-    }
-}
+<script setup>
+name: 'Nuestras_novedades';
+redes: [
+    {
+        enlace: 'https://www.instagram.com/sugar.coach/',
+        url: '../../../contenido/instagram-logo.webp',
+        alt: 'Instagram'
+    },
+    {
+        enlace: 'https://www.facebook.com/SugarCoachApp',
+        url: '../../../contenido/facebook-logo.webp',
+        alt: 'Facebook'
+    },
+    {
+        enlace: 'https://twitter.com/sugarcoachapp',
+        url: '../../../contenido/x-logo.webp',
+        alt: 'X'
+    },
+    {
+        enlace: 'https://www.youtube.com/@sugarcoachproject3630',
+        url: '../../../contenido/youtube-logo.webp',
+        alt: 'Youtube'
+    },
+    {
+        enlace: 'https://www.tiktok.com/@sugar.coach',
+        url: '../../../contenido/tiktok-logo.webp',
+        alt: 'Tiktok'
+    },
+];
 </script>
 
 <style scoped>
@@ -69,7 +63,7 @@ export default {
 }
 
 .logo-red-social:hover {
-    
+
     scale: 1.2;
     transition: 0.3s;
 }

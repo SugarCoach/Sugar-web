@@ -1,0 +1,45 @@
+$premium : #FFB800;
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+.nav-link{
+    padding: 0 !important;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+main{
+    min-height: 100vh;
+}
+section{
+    padding-top: 20vh;
+    min-height: 50vh;
+}
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 2rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.font-smallest{
+    font-size: 0.85rem;
+}
+.color-premium {
+    color: $premium;
+}
+.space-left{
+    padding-left: 10vw!important;
+}
+// @media only screen and (768px <= width <= 900px) {
+//     html{
+//         font-size: 15px;
+//     }
+// }

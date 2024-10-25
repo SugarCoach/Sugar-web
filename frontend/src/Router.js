@@ -18,12 +18,6 @@ const routes = [
         meta: { analytics: true }
     },
     {
-        path: '/premios', // otra ruta
-        name: 'Premios',
-        component: () => import('@/views/Premios.vue'),
-        meta: { analytics: true }
-    },
-    {
         path: '/privacy',
         name: 'Priacy Policy',
         component: () => import('@/views/PrivacyPolicy.vue'),
@@ -33,24 +27,18 @@ const routes = [
         path: '/DiabetesPremiumDeleteAccount',
         name: 'Delete Account',
         component: () => import('@/views/DeleteAccount.vue'),
-        meta: { analytics: false }
-    },
-    {
-        path: '/deleted',
-        name: 'Deleted',
-        component: () => import('@/views/Deleted.vue'),
-        meta: { analytics: false }
+        meta: { analytics: true }
     },
     {
         path: '/isa',
         name: 'IsaLinktree',
-        component: () => import('@/views/Isa.vue'),
+        component: () => import('@/views/extras/Isa.vue'),
         meta: { analytics: false }
     },
     {
-        path: '/lab', // otra ruta
+        path: '/lab',
         name: 'SugarLab',
-        component: () => import('@/views/Lab.vue'),
+        component: () => import('@/views/extras/Lab.vue'),
         meta: { analytics: false }
     },
     {

@@ -1,0 +1,89 @@
+<template>
+    <nav class="navbar navbar-expand-md navbar-white bg-white" aria-label="Fourth navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand space-left m-0" href="#">
+                <sugarlogo width="60px" class=""></sugarlogo>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column justify-content-center align-items-end gap-1" id="navbarsExample04">
+                <div class="d-flex gap-2">
+                    <span v-for="link in policy" :key="link.id" class="font-smallest d-flex gap-2 ">
+                        <router-link :to="link.url" class="text-black text-opacity-50 fw-normal">
+                            {{ link.name }}
+                        </router-link>
+                        <span v-if="link.id == 0" class="">|</span>
+                    </span>
+                </div>
+                <ul class="navbar-nav mb-2 mb-md-0 gap-3">
+                    <li v-for="link in nav" :key="link.id" class="nav-item">
+                        <linkPremium v-if="link.name == 'Premium'"></linkPremium>
+                        <router-link v-else-if="link.isView" :to="link.url" class="nav-link">
+                            {{ link.name }}
+                        </router-link>
+                        <a v-else class="nav-link" aria-current="page" :href="link.url">{{ link.name }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</template>
+
+<script setup>
+import sugarlogo from "./reutilizable/icons/sugarLogo.vue";
+import linkPremium from "./reutilizable/linkPremium.vue";
+name: "sugarHeader";
+components: {
+    sugarlogo, linkPremium
+};
+const nav = [
+    {
+        name: "Nuestra App",
+        url: "/#nuestra_app",
+        isView: false,
+        id: 0
+    },
+    {
+        name: "Comunidad",
+        url: "/#comunidad",
+        isView: false,
+        id: 1
+    },
+    {
+        name: "Quienes somos",
+        url: "/#quienes_somos",
+        isView: false,
+        id: 2
+    },
+    {
+        name: "Empresas",
+        url: "/empresas",
+        isView: true,
+        id: 3
+    },
+    {
+        name: "Premium",
+        url: "/premium",
+        isView: true,
+        id: 4
+    }
+];
+const policy = [
+    {
+        name: "Politica de privacidad",
+        url: "/politica de privacidad",
+        id: 0
+    },
+    {
+        name: "Terminos y condiciones",
+        url: "/Terminos y condiciones",
+        id: 1
+    }
+];
+</script>
+
+<style scoped lang="scss">
+</style>
