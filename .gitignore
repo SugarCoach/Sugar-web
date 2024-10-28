@@ -1,5 +1,8 @@
 dist
 .DS_Store
+frontend/src
+frontend/public
+.github
 node_modules/
 # local env files
 .env
