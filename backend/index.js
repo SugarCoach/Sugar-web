@@ -3,7 +3,7 @@ console.log("Iniciado")
 async function startServer() {
     try {
         const port = process.env.PORT || 8080
-        const user = process.env.USER
+        const user = process.env.EMAIL
         const pass = process.env.PASS
         const nodemailer = require('nodemailer')
         const cors = require('cors')
@@ -14,7 +14,7 @@ async function startServer() {
         // Middleware para CORS
         app.use(cors({
             origin: ['https://sugar.coach', 'http://localhost:8081'],
-            methods: ['POST'],
+            methods: ['POST','GET'],
             allowedHeaders: ['Content-Type', 'Authorization'],
             credentials: true
         }))

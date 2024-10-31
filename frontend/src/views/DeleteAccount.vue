@@ -34,7 +34,7 @@ onMounted(() => {
 		const data = Object.fromEntries(formdata);
 		console.log(`formdata:\n${JSON.stringify(data)}`);
 		
-		axios.post('https://sugar.coach/submit', data).then(response => {
+		axios.post('https://sugar.coach/apisubmit', data).then(response => {
 			console.log("Recurso creado con éxito:", response.data);
 		}).catch(error => {
 			console.error("Error al crear el recurso: ", error);
