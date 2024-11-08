@@ -1,0 +1,67 @@
+<template>
+    <div class="paquete p-4 rounded-3 position-relative border border-dark-subtle">
+        <h3 class="text-start mb-0 border-bottom border-dark border-opacity-50 px-4 pb-4 h4 d-flex align-items-center" :style="colorText"><iconGota :color="props.color" size="40px" class="icon"/>{{ props.title }}</h3>
+        <h4 class="text-start w-100 mb-0 py-3 display-6 fw-medium">{{ props.price }}<span v-show="props.mensual" class="lead fw-light">/mo</span></h4>
+        <ul class="text-start w-100 p-0 d-flex flex-column gap-4 mb-5">
+            <li v-for="beneficio in props.beneficios" class=""><iconTick :color="props.color" /> {{ beneficio }}</li>
+        </ul>
+        <a href="" class="btn btn-primary rounded-pill w-100" :style="colorBtn">{{ props.textoBtn }}</a>
+    </div>
+</template>
+
+<script setup>
+import iconCorona from "./icons/_corona.vue";
+import iconGota from "./icons/_gota.vue";
+import iconTick from "./icons/_tick.vue";
+name: "paquetePremium";
+components: [
+    iconCorona, iconTick, iconGota
+]
+const props = defineProps({
+    title: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: String,
+        required: true
+    },
+    beneficios: {
+        type: Array,
+        default: ["Lorem", "Lorem", "Lorem", "Lorem", "Lorem", "Lorem"]
+        
+    },
+    textoBtn: {
+        type: String,
+        required: true,
+    },
+    color: {
+        type: String,
+        default: "#3F77E3"
+    },
+    mensual: {
+        type: Boolean,
+        default: false
+    }
+})
+const colorText =  `color: ${props.color};`;
+const colorBtn =  `background-color: ${props.color}; border-color: ${props.color};`;
+</script>
+
+<style scoped lang="scss">
+$padding: 1.5rem;
+$light-gray: #EFEFEF;
+.paquete {
+    width: 20vw;
+    max-width: 500px;
+    min-width: 260px;
+    background-color: $light-gray;
+    h3 {
+        width: calc(100% + 2 * ($padding));
+        margin-left: -$padding;
+        .icon{
+            margin-left: -5px;
+        }
+    }
+}
+</style>
