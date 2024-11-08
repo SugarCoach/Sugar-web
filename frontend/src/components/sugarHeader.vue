@@ -2,14 +2,15 @@
     <nav class="navbar navbar-expand-md navbar-white bg-white" aria-label="Fourth navbar example">
         <div class="container-fluid">
             <a class="navbar-brand space-left m-0" href="#">
-                <sugarlogo width="60px" class=""></sugarlogo>
+                <sugarlogo size="60px" class=""/>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
                 aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse flex-column justify-content-center align-items-end gap-1" id="navbarsExample04">
+            <div class="collapse navbar-collapse flex-column justify-content-center align-items-end gap-1"
+                id="navbarsExample04">
                 <div class="d-flex gap-2">
                     <span v-for="link in policy" :key="link.id" class="font-smallest d-flex gap-2 ">
                         <router-link :to="link.url" class="text-black text-opacity-50 fw-normal">
@@ -20,7 +21,11 @@
                 </div>
                 <ul class="navbar-nav mb-2 mb-md-0 gap-3">
                     <li v-for="link in nav" :key="link.id" class="nav-item">
-                        <linkPremium v-if="link.name == 'Premium'"></linkPremium>
+                        <router-link v-if="link.name == 'Premium'" :to="link.url"
+                            class="nav-link gap-1 color-premium fw-bold">
+                            {{ link.name }}<iconCorona width="25px" height="25px"></iconCorona>
+                        </router-link>
+
                         <router-link v-else-if="link.isView" :to="link.url" class="nav-link">
                             {{ link.name }}
                         </router-link>
@@ -33,11 +38,11 @@
 </template>
 
 <script setup>
+import iconCorona from "./reutilizable/icons/_corona.vue";
 import sugarlogo from "./reutilizable/icons/sugarLogo.vue";
-import linkPremium from "./reutilizable/linkPremium.vue";
 name: "sugarHeader";
 components: {
-    sugarlogo, linkPremium
+    sugarlogo, iconCorona
 };
 const nav = [
     {
@@ -85,5 +90,4 @@ const policy = [
 ];
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
