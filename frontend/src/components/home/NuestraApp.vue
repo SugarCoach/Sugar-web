@@ -1,40 +1,44 @@
 <template>
-	<section class="d-flex flex-column align-items-center">
-		<funcionalidadApp v-for="pantalla in pantallas" :key="pantalla.id" :celu_url="pantalla.url"></funcionalidadApp>
+	<section id="nuestra_app" >
+		<h2 class="text-center mb-5">Nuestra App</h2>
+		<div class="screens-container h-100 d-flex flex-column align-items-center">
+			<funcionalidadApp v-for="pantalla in pantallas" :key="pantalla.id" :celu_url="pantalla.url" :direction="pantalla.id % 2 == 0 ? 'left' : 'right'" :last="pantalla.id == 4"/>
+		</div>
+		
 	</section>
 
 </template>
 
 <script setup>
-import funcionalidadApp from '../funcionalidadApp.vue';
-name: "descargar";
+import funcionalidadApp from '../reutilizable/funcionalidadApp.vue';
+name: "nuestraApp";
 components: [
 	funcionalidadApp
 ];
 
 const pantallas = [
 	{
-		url: "../../contenido/celu2.png",
-		id: 0
+		url: "../../contenido/celu1.png",
+		id: 1
 	},
 	{
 		url: "../../contenido/celu2.png",
-		id: 0
+		id: 2
 	},
 	{
 		url: "../../contenido/celu3.png",
-		id: 0
+		id: 3
 	},
 	{
 		url: "../../contenido/celu4.png",
-		id: 0
+		id: 4
 	}
 
 ]
 </script>
 
 <style scoped>
-h1 {
-	background-image: url("../../../public/contenido/celu1.png")
+.screens-container{
+	gap: 90vh;
 }
 </style>
