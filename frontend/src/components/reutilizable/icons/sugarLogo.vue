@@ -1,7 +1,13 @@
 <template>
-    <img src="../../../../public/contenido/sugar-logo.webp" alt="Logo de SugarCoach">
+    <img src="../../../../public/contenido/sugar-logo.webp" :width="props.size" alt="Logo de SugarCoach">
 </template>
 
 <script setup>
 name: "sugarLogo";
+const props = defineProps({
+    size: {
+        type: String,
+        default: "50px"
+    }
+});
 </script>

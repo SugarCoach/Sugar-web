@@ -2,9 +2,9 @@
 	<q-page>
 		<main>
 			<hero />
-			<nuestraApp/>
+			<nuestraApp />
 			<textLink class="py-5 mt-5 mb-1" text="¡Descarga la app ya!">
-				<descargarApp/>
+				<descargarApp />
 			</textLink>
 			<mejorarExperiencia />
 			<sectionPremium />
@@ -20,7 +20,7 @@
 import { useHead } from "@vueuse/head";
 import hero from "@/components/home/Hero.vue";
 import nuestraApp from "@/components/home/NuestraApp.vue";
-import textLink from "@/components/reutilizable/text&Link.vue";
+import textLink from "@/components/reutilizable/textYLink.vue";
 import mejorarExperiencia from "@/components/home/MejorarExperiencia.vue";
 import sectionPremium from "@/components/home/sectionPremium.vue";
 import descargarApp from "@/components/reutilizable/descargarApp.vue";
