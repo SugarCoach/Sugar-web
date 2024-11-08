@@ -1,73 +1,100 @@
 <template>
-    <div class="container">
+    <div class="container-md">
         <footer class="py-5">
-            <div class="row">
-                <div class="col-6 col-md-2 mb-3">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-                    </ul>
+            <div class="d-flex justify-content-between gap-2 flex-wrap">
+                <div class="mb-3 logo">
+                    <sugarLogo size="120px"></sugarLogo>
                 </div>
-
-                <div class="col-6 col-md-2 mb-3">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-md-2 mb-3">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-5 offset-md-1 mb-3">
-                    <form>
-                        <h5>Subscribe to our newsletter</h5>
-                        <p>Monthly digest of what's new and exciting from us.</p>
-                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                            <label for="newsletter1" class="visually-hidden">Email address</label>
-                            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                            <button class="btn btn-primary" type="button">Subscribe</button>
-                        </div>
-                    </form>
+                <div class="d-flex gap-5 justify-content-start justify-content-sm-end sections flex-wrap">
+                    <div class="">
+                        <h5>Descargar</h5>
+                        <descargarApp />
+                    </div>
+                    <div v-for="item in sections" :key="item.id" class="">
+                        <h5>{{ item.section }}</h5>
+                        <ul class="nav flex-column">
+                            <li v-for="link in item.links" :key="link.id" class="nav-item mb-2">
+                                <a :href="link.url" class="nav-link p-0 text-body-secondary fw-semibold">{{ link.name
+                                    }}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p>&copy; 2024 Company, Inc. All rights reserved.</p>
-                <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#twitter" />
-                            </svg></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#instagram" />
-                            </svg></a></li>
-                    <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
-                                <use xlink:href="#facebook" />
-                            </svg></a></li>
-                </ul>
+            <div class="d-flex justify-content-between py-3 my-4 sub-footer flex-wrap">
+                <p class="d-flex align-items-center">&copy; 2024 SugarCoach Diabetes Premium, Inc.</p>
+                <redesSociales size="md" justify="end" />
             </div>
         </footer>
     </div>
 </template>
 <script setup>
-name: 'sugarFooter';
+import descargarApp from './reutilizable/descargarApp.vue';
+import sugarLogo from './reutilizable/icons/sugarLogo.vue';
+import redesSociales from './reutilizable/redesSociales.vue';
 
+name: 'sugarFooter';
+components: [descargarApp, sugarLogo, redesSociales]
+const sections = [
+    {
+        section: 'SugarCoach',
+        links: [
+            {
+                name: 'Home',
+                url: '#',
+                id: 0,
+            },
+            {
+                name: 'Sobre nosotros',
+                url: '#',
+                id: 0,
+            },
+            {
+                name: 'Contacto',
+                url: '#',
+                id: 0,
+            },
+        ],
+        id: 0,
+    },
+    {
+        section: 'Usuarios',
+        links: [
+            {
+                name: 'Premium',
+                url: '#',
+                id: 0,
+            },
+            {
+                name: 'Premios',
+                url: '#',
+                id: 0,
+            },
+            {
+                name: 'Borrar cuenta',
+                url: '#',
+                id: 0,
+            },
+        ],
+        id: 0,
+    }
+]
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+footer {
+    color: #3E3A9C !important;
+
+    a {
+        color: #3E3A9C !important;
+    }
+
+    .logo {
+        justify-self: flex-start !important;
+    }
+    .sub-footer{
+        border-top: 1px solid #3E3A9C;
+    }
+}
+</style>
