@@ -1,16 +1,34 @@
 <template>
 	<q-page>
 		<main>
-			<hero></hero>
-			<nuestra_app></nuestra_app>
+			<hero />
+			<nuestraApp/>
+			<textLink class="py-5 mt-5 mb-1" text="¡Descarga la app ya!">
+				<descargarApp/>
+			</textLink>
+			<mejorarExperiencia />
+			<sectionPremium />
+			<comunidad />
+			<testimonios />
+			<nuestrasNovedades />
+			<contacto />
 		</main>
 	</q-page>
 </template>
 
 <script setup>
 import { useHead } from "@vueuse/head";
-import Hero from "@/components/home/Hero.vue";
-import Nuestra_app from "@/components/home/NuestraApp.vue";
+import hero from "@/components/home/Hero.vue";
+import nuestraApp from "@/components/home/NuestraApp.vue";
+import textLink from "@/components/reutilizable/text&Link.vue";
+import mejorarExperiencia from "@/components/home/MejorarExperiencia.vue";
+import sectionPremium from "@/components/home/sectionPremium.vue";
+import descargarApp from "@/components/reutilizable/descargarApp.vue";
+import comunidad from "@/components/home/Comunidad.vue";
+import nuestrasNovedades from "@/components/home/NuestrasNovedades.vue";
+import testimonios from "@/components/home/Testimonios.vue";
+import contacto from "@/components/home/Contacto.vue";
+import formulario from "@/components/reutilizable/formulario.vue";
 // import { defineAsyncComponent } from "vue";
 
 // const Nuestra_app = defineAsyncComponent(() =>
@@ -19,7 +37,7 @@ import Nuestra_app from "@/components/home/NuestraApp.vue";
 
 name: "Home";
 components: {
-	Hero, Nuestra_app
+	hero, nuestraApp, textLink, mejorarExperiencia, sectionPremium, descargarApp, comunidad, testimonios, nuestrasNovedades, formulario, contacto
 };
 useHead({
 	// Can be static or computed
