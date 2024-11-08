@@ -33,7 +33,7 @@
 import iconCorona from '../reutilizable/icons/_corona.vue';
 import iconTrofeo from '../reutilizable/icons/_trofeo.vue';
 import paquetePremium from '../reutilizable/paquetePremium.vue';
-import textLink from '../reutilizable/text&Link.vue';
+import textLink from '../reutilizable/textYLink.vue';
 
 name: 'sectionPremium';
 components: [paquetePremium, textLink, iconCorona, iconTrofeo]
@@ -48,6 +48,7 @@ const premiosColor = "#FFB800"
     width: 120%;
     height: $dHeight;
     left: -10%;
+
     @if ($place =='top') {
         top: calc($dHeight/2) * (-1);
     }
