@@ -59,7 +59,7 @@ const nav = [
     },
     {
         name: "Quienes somos",
-        url: "/#quienes_somos",
+        url: "/About",
         isView: false,
         id: 2
     },

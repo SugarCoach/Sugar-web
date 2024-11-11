@@ -12,6 +12,12 @@ const routes = [
         meta: { analytics: true }
     },
     {
+        path: '/About', // la ruta base
+        name: 'About', // el nombre de la ruta
+        component: () => import('@/views/About.vue'),
+        meta: { analytics: true }
+    },
+    {
         path: '/premium', // otra ruta
         name: 'Premium',
         component: () => import('@/views/Premium.vue'),

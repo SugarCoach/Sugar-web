@@ -1,7 +1,7 @@
 <template>
 	<q-page>
 		<main>
-			<hero />
+			<hero img="../../../contenido/1-Niños-con-SC.webp" title="SugarCoach" subheading="Diviertete mientras te cuidas" :cta="true"/>
 			<nuestraApp />
 			<textLink class="py-5 mt-5 mb-1" text="¡Descarga la app ya!">
 				<descargarApp />
@@ -18,7 +18,7 @@
 
 <script setup>
 import { useHead } from "@vueuse/head";
-import hero from "@/components/home/Hero.vue";
+import hero from "../components/reutilizable/hero.vue";
 import nuestraApp from "@/components/home/NuestraApp.vue";
 import textLink from "@/components/reutilizable/textYLink.vue";
 import mejorarExperiencia from "@/components/home/MejorarExperiencia.vue";

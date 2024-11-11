@@ -64,7 +64,7 @@ $top: 3rem;
 	$size: $size/2.2;
 	$move-celu: calc((-1) * (1.5rem + $size));
 	$move-all: calc((-1) * $size/2 - 1.5rem);
-	$tira-move: calc(50% - (1.5rem + max(6vw, 40px) - $move-all/2));
+	$tira-move: 20%;
 	&.left {
 		flex-direction: row;
 		margin-right: $move-all;
