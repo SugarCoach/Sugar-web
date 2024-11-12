@@ -23,7 +23,7 @@ components: [ctaBtn, formulario]
 <style scoped lang="scss">
 #contacto {
     height: 80vh;
-    min-height: fit-content;
+    min-height: 500px;
     background-image: url("../../../public/contenido/nene-usando-app.jpg");
     background-size: cover;
     background-position: center;

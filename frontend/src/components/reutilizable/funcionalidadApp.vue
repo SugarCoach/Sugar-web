@@ -1,5 +1,6 @@
 <template>
-	<div class="fondo w-autorounded-3 p-5 shadow position-relative d-flex rounded-5" :class="props.direction">
+	<div class="fondo w-autorounded-3 p-4 p-sm-5 shadow position-relative d-flex rounded-5" :class="props.direction">
+		<div class="position-absolute tapa-celu d-none"></div>
 		<div class="celu position-relative">
 			<img :src="props.celu_url" class="position-absolute h-auto m-auto m-0" alt="Pantalla de SugarCoach">
 		</div>
@@ -62,12 +63,19 @@ $top: 3rem;
 	}
 
 	$size: $size/2.2;
-	$move-celu: calc((-1) * (1.5rem + $size));
+	$move-celu: calc((-1) * (3rem + $size));
 	$move-all: calc((-1) * $size/2 - 1.5rem);
-	$tira-move: 20%;
+	$tira-move: 25%;
+
 	&.left {
 		flex-direction: row;
 		margin-right: $move-all;
+
+		.tapa-celu {
+			left: -5px;
+			border-radius: 2.5rem 0 0 2.5rem;
+			box-shadow: 10px 0px 15px 5px rgb(248, 248, 248);
+		}
 
 		.tira {
 			right: $tira-move;
@@ -87,6 +95,13 @@ $top: 3rem;
 	&.right {
 		flex-direction: row-reverse;
 		margin-left: $move-all;
+		padding-left: 2rem !important;
+
+		.tapa-celu {
+			right: -5px;
+			border-radius: 0 2.5rem 2.5rem 0;
+			box-shadow: -10px 0px 15px 5px rgb(248, 248, 248);
+		}
 
 		.tira {
 			left: $tira-move;
@@ -172,7 +187,61 @@ $top: 3rem;
 
 	.fondo {
 		width: 380px;
-		@include screenStyles(180px, 1/1);
+		@include screenStyles(150px, 1/1);
+		margin: 0 !important;
+		max-width: 95vw;
+		overflow-x: clip;
+		overflow-y: visible;
+
+		.tapa-celu {
+			width: 20px;
+			height: 100%;
+			background-color: rgb(248, 248, 248);
+			z-index: 70;
+			top: 0;
+			display: block !important;
+		}
+
+		&.right {
+			.celu {
+				img {
+					&:hover {
+						right: min(calc(42.5vw - 75px), 100px);
+						z-index: 75;
+					}
+				}
+
+			}
+		}
+
+		&.left {
+			.celu {
+				img {
+					&:hover {
+						left: min(calc(42.5vw - 75px), 100px);
+						z-index: 75;
+					}
+				}
+
+			}
+		}
+
+		.celu {
+			img {
+				top: 0;
+				bottom: 0;
+				max-height: 100%;
+				max-width: min-content;
+				filter: none;
+				transition: 1s;
+			}
+
+		}
+
+		.text-container {
+			width: 83%;
+			margin-top: 10vw !important;
+		}
 	}
 }
 </style>

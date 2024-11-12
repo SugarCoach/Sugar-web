@@ -52,7 +52,7 @@ onMounted(() => {
 .hero {
     padding: 0 10vw 0 10vw;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-attachment: fixed;
     width: 100%;
     height: calc(100vh - (80.141px + 1.6250rem));
