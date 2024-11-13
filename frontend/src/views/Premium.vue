@@ -1,15 +1,22 @@
 <template>
-	<q-page id="premium" class="">
-		<main></main>
+	<q-page class="">
+		<main>
+			<heroCircle heading1="Premium" heading2="Recibe más ayuda para combatir la diabetes"
+				over-text="Mejora tu salud con Premium" button-text="Obtén Premium" img_url="../../../contenido/7-Niños-con-SC.webp"
+				img_alt="Foto de niño ganando puntos en SugarCoach">
+				<corona />
+			</heroCircle>
+		</main>
 	</q-page>
 </template>
 
 <script setup>
+import heroCircle from "@/components/reutilizable/heroCircle.vue";
+import corona from "@/components/reutilizable/icons/_corona.vue";
 import { useHead } from "@vueuse/head";
 // import { defineAsyncComponent } from "vue";
 name: "Premium";
-components: {
-};
+components: [heroCircle, corona];
 useHead({
 	// Can be static or computed
 	title:
@@ -35,5 +42,4 @@ useHead({
 });
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

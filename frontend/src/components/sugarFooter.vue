@@ -52,7 +52,7 @@ const sections = [
             },
             {
                 name: 'Contacto',
-                url: '#',
+                url: '/Contacto',
                 id: 0,
             },
         ],
@@ -63,17 +63,17 @@ const sections = [
         links: [
             {
                 name: 'Premium',
-                url: '#',
+                url: '/Premium',
                 id: 0,
             },
             {
                 name: 'Premios',
-                url: '#',
+                url: '/Premium#premios',
                 id: 0,
             },
             {
                 name: 'Borrar cuenta',
-                url: '#',
+                url: '/DiabetesPremiumDeleteAccount',
                 id: 0,
             },
         ],

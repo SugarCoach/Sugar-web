@@ -16,7 +16,7 @@
                         <router-link :to="link.url" class="text-black text-opacity-50 fw-normal">
                             {{ link.name }}
                         </router-link>
-                        <span v-if="link.id == 0" class="">|</span>
+                        <span v-if="link.id == 0" class="text-black text-opacity-50">|</span>
                     </span>
                 </div>
                 <ul class="navbar-nav mb-2 mb-md-0 gap-3">
@@ -90,4 +90,5 @@ const policy = [
 ];
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+</style>

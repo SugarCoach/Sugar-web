@@ -1,7 +1,8 @@
 <template>
 	<q-page>
 		<main>
-			<hero img="../../../contenido/1-Niños-con-SC.webp" title="SugarCoach" subheading="Diviertete mientras te cuidas" :cta="true"/>
+			<hero img="../../../contenido/1-Niños-con-SC.webp" title="SugarCoach"
+				subheading="Diviertete mientras te cuidas" :cta="true" />
 			<nuestraApp />
 			<textLink class="py-5 mt-5 mb-1" text="¡Descarga la app ya!">
 				<descargarApp />
@@ -27,7 +28,7 @@ import descargarApp from "@/components/reutilizable/descargarApp.vue";
 import comunidad from "@/components/home/Comunidad.vue";
 import nuestrasNovedades from "@/components/home/NuestrasNovedades.vue";
 import testimonios from "@/components/home/Testimonios.vue";
-import contacto from "@/components/home/Contacto.vue";
+import contacto from "@/components/home/Contactanos.vue";
 import formulario from "@/components/reutilizable/formulario.vue";
 // import { defineAsyncComponent } from "vue";
 

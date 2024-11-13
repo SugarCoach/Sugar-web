@@ -1,11 +1,15 @@
 $premium : #FFB800;
-$space_hero: 10vw!important;
+$space_hero: 10vw;
 $box-shadow: 0 .5rem 20px rgba(0, 0, 0, 0.2);
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
+html{
+    font-size: 15px;
+}
 .nav-link{
     padding: 0 !important;
     height: 2rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
 }
@@ -37,7 +41,7 @@ ul{
 }
 
 .font-smallest{
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 .color-premium {
     color: $premium;
