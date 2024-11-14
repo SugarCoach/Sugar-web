@@ -1,5 +1,5 @@
 <template>
-	<div v-for="(item, index) in cards" :key="index" class="col p-0">
+	<div v-for="item in cards" class="col p-0">
 		<div class="card mb-4" style="border-radius: 20px">
 			<div class="card-header py-3">
 				<h3 class="my-0 fw-normal display-6">{{ item.titulo }}</h3>
@@ -50,7 +50,7 @@
 				</ul>
 
 				<!-- Button trigger modal -->
-				<button
+				<button v-if="item.titulo != 'Para empresas'"
 					type="button"
 					class="w-100 btn btn-lg btn-outline-primary m-auto mb-0"
 					data-bs-toggle="modal"
@@ -59,6 +59,7 @@
 				>
 					{{ item.boton }}
 				</button>
+				<a v-else class="w-100 btn btn-lg btn-outline-primary m-auto mb-0" data-type="pay" href="https://fnd.us/e2TMf2/pay">Colaborar</a>
 			</div>
 		</div>
 	</div>
