@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import integrante from '../reutilizable/integrante.vue';
+import integrante from '../reutilizable/design/integrante.vue';
 
 name: 'nosotros';
 components: [ integrante ];

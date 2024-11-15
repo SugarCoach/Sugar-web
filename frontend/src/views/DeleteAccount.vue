@@ -83,6 +83,11 @@ main {
 			width: 190px;
 			color: #FEE9E7;
 			background-color: #444444;
+			transition: .2s;
+			&:hover{
+				background-color: #616161;
+				color: #FEE9E7;
+			}
 		}
 
 		.info {

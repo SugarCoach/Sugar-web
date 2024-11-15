@@ -1,12 +1,11 @@
 <template>
-    <section class="position-relative overflow-hidden">
-        <div class="rounded-circle d-top bg-white position-absolute"></div>
+    <sectionDividers>
         <header>
             <h2 class="text-center">SugarCoach Premium</h2>
             <h3 class="text-center">Obten nuevas funcionalidades</h3>
         </header>
 
-        <div class="d-flex justify-content-center paquetes-container">
+        <div class="d-flex justify-content-center paquetes-container flex-wrap">
             <paquete-premium :color="basicColor" title="Basico" price="Free"
                 :beneficios="['lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem']" texto-btn="Obtener gratis" />
             <paquete-premium :color="premiuColor" title="Premium" price="$2.99" :mensual="true"
@@ -25,65 +24,36 @@
                 </router-link>
             </textLink>
         </div>
-        <div class="rounded-circle d-bottom bg-white position-absolute"></div>
-    </section>
+    </sectionDividers>
 </template>
 
 <script setup>
 import iconCorona from '../reutilizable/icons/_corona.vue';
 import iconTrofeo from '../reutilizable/icons/_trofeo.vue';
-import paquetePremium from '../reutilizable/paquetePremium.vue';
-import textLink from '../reutilizable/textYLink.vue';
+import paquetePremium from '../reutilizable/design/paquetePremium.vue';
+import textLink from '../reutilizable/utils/textYLink.vue';
+import sectionDividers from '../reutilizable/ui/sectionDividers.vue';
 
 name: 'sectionPremium';
-components: [paquetePremium, textLink, iconCorona, iconTrofeo]
+components: [paquetePremium, textLink, iconCorona, iconTrofeo, sectionDividers]
 const basicColor = "#7ED956";
 const premiuColor = "#CF74FF";
 const premiosColor = "#FFB800"
 </script>
 
 <style scoped lang="scss">
-@mixin divider ($place) {
-    $dHeight: 60vh;
-    width: 120%;
-    height: $dHeight;
-    left: -10%;
 
-    @if ($place =='top') {
-        top: calc($dHeight/2) * (-1);
-    }
-
-    @else {
-        bottom: calc($dHeight/2) * (-1);
-    }
+header {
+    margin-bottom: 5rem;
 }
 
-section {
-    height: auto;
-    background-color: #F5F5F5;
 
-    header {
-        margin-bottom: 5rem;
-    }
 
-    h2 {
-        margin-top: 35vh;
-    }
+.cta-links {
+    margin: 10vh 0 30vh 0;
+}
 
-    .cta-links {
-        margin: 10vh 0 30vh 0;
-    }
-
-    .paquetes-container {
-        gap: 5rem;
-    }
-
-    .d-top {
-        @include divider('top')
-    }
-
-    .d-bottom {
-        @include divider('bottom')
-    }
+.paquetes-container {
+    gap: 5rem;
 }
 </style>

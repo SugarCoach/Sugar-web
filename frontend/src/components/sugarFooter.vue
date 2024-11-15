@@ -30,9 +30,9 @@
     </div>
 </template>
 <script setup>
-import descargarApp from './reutilizable/descargarApp.vue';
+import descargarApp from './reutilizable/utils/descargarApp.vue';
 import sugarLogo from './reutilizable/icons/sugarLogo.vue';
-import redesSociales from './reutilizable/redesSociales.vue';
+import redesSociales from './reutilizable/utils/redesSociales.vue';
 
 name: 'sugarFooter';
 components: [descargarApp, sugarLogo, redesSociales]
@@ -93,7 +93,8 @@ footer {
     .logo {
         justify-self: flex-start !important;
     }
-    .sub-footer{
+
+    .sub-footer {
         border-top: 1px solid #3E3A9C;
     }
 }

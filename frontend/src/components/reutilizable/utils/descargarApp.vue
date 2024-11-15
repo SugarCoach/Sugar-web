@@ -1,5 +1,5 @@
 <template>
-	<a href=""><img src="../../../public/contenido/boton-descargar.webp" alt="Descargar Google Play" :width="props.size"></a>
+	<a href=""><img src="../../../../public/contenido/boton-descargar.webp" alt="Descargar Google Play" :width="props.size"></a>
 </template>
 
 <script setup>

@@ -1,0 +1,106 @@
+<template>
+    <sectionDividers>
+        <div class="d-flex align-items-center justify-content-center mb-5 w-100 ">
+            <h2 class="text-center">Premios</h2>
+            <trofeo size="50px" color="#FFB800"/>
+        </div>
+
+        <div class="contenedor-premios d-grid m-0 m-auto pt-4">
+            <img v-for="item in premios" :key="item.id" :src="item.url" :alt="item.alt">
+        </div>
+        <div class="w-100 d-flex justify-content-center mt-5">
+            <button class="btn px-5 py-3">Canjear puntos</button>
+        </div>
+        
+    </sectionDividers>
+</template>
+
+<script setup>
+import trofeo from '../reutilizable/icons/_trofeo.vue';
+import sectionDividers from '../reutilizable/ui/sectionDividers.vue';
+
+name: "premios";
+components: [ sectionDividers, trofeo ]
+const premios = [
+    {
+        url: 'contenido/tarjeta-fornite.webp',
+        alt: 'Targeta de regalo fornite',
+        id: 0
+    },
+    {
+        url: 'contenido/tarjeta-fornite.webp',
+        alt: 'Targeta de regalo fornite',
+        id: 1
+    },
+    {
+        url: 'contenido/tarjeta-fornite.webp',
+        alt: 'Targeta de regalo fornite',
+        id: 2
+    },
+    {
+        url: 'contenido/tarjeta-fornite.webp',
+        alt: 'Targeta de regalo fornite',
+        id: 3
+    },
+    {
+        url: 'contenido/tarjeta-fornite.webp',
+        alt: 'Targeta de regalo fornite',
+        id: 4
+    },
+    {
+        url: 'contenido/tarjeta-fornite.webp',
+        alt: 'Targeta de regalo fornite',
+        id: 5
+    },
+    {
+        url: 'contenido/tarjeta-fornite.webp',
+        alt: 'Targeta de regalo fornite',
+        id: 6
+    },
+    {
+        url: 'contenido/tarjeta-fornite.webp',
+        alt: 'Targeta de regalo fornite',
+        id: 7
+    },
+    {
+        url: 'contenido/tarjeta-fornite.webp',
+        alt: 'Targeta de regalo fornite',
+        id: 8
+    },
+
+]
+</script>
+
+<style scoped lang="scss">
+h2{
+    color: #FFB800;
+}
+img{
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.5))
+}
+
+.contenedor-premios{
+    width: 70%;
+    grid-template-columns: 
+    repeat(
+        auto-fit,
+        minmax(max(23%, 180px), 1fr)
+    );
+    gap: 32px;
+}
+button{
+    color: white!important;
+    width: 220px;
+    background-color: #FFB800;
+    transition: .2s;
+    &:hover{
+        background-color: #ffb700be;
+    }
+}
+@media only screen and (max-width: 575px) {
+
+}
+</style>

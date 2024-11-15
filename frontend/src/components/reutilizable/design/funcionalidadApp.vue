@@ -1,5 +1,5 @@
 <template>
-	<div class="fondo w-autorounded-3 p-4 p-sm-5 shadow position-relative d-flex rounded-5" :class="props.direction">
+	<div class="fondo w-autorounded-3 p-4 p-sm-5  position-relative d-flex rounded-5" :class="props.direction">
 		<div class="position-absolute tapa-celu d-none"></div>
 		<div class="celu position-relative">
 			<img :src="props.celu_url" class="position-absolute h-auto m-auto m-0" alt="Pantalla de SugarCoach">
@@ -74,7 +74,7 @@ $top: 3rem;
 		.tapa-celu {
 			left: -5px;
 			border-radius: 2.5rem 0 0 2.5rem;
-			box-shadow: 10px 0px 15px 5px rgb(248, 248, 248);
+			box-shadow: 10px 0px 30px -5px rgb(248, 248, 248);
 		}
 
 		.tira {
@@ -127,6 +127,7 @@ $top: 3rem;
 	min-height: fit-content !important;
 	padding-bottom: relative !important;
 	background-color: rgb(248, 248, 248);
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 15px #ffffff;
 	@include screenStyles(250px, 7/4);
 
 	.tira {

@@ -9,7 +9,7 @@
 
             <div class="text d-flex flex-column gap-4 gap-md-3 h-100 justify-content-center">
                 <div class="">
-                    <h2>¡Mejora tu experiencia!</h2>
+                    <h2 class="">¡Mejora tu experiencia!</h2>
                     <p class="w-75">Analiza tus datos, conoce tu historial medico, enterate de las novedades y
                         mucho más.</p>
                 </div>
@@ -18,7 +18,7 @@
                         <iconCorona width="25px" height="25px" color="white" class="me-sm-2 vertical-align-top" />
                         Obten Premium
                     </ctaBtn>
-                    <descargarApp :size="screenWidth <= 570 ? '110px' : '150px' " />
+                    <descargarApp :size="screenWidth <= 570 ? '110px' : '150px'" />
                 </div>
             </div>
         </div>
@@ -27,8 +27,8 @@
 </template>
 
 <script setup>
-import ctaBtn from "../reutilizable/ctaBtn.vue";
-import descargarApp from "../reutilizable/descargarApp.vue";
+import ctaBtn from "../reutilizable/utils/ctaBtn.vue";
+import descargarApp from "../reutilizable/utils/descargarApp.vue";
 import iconCorona from "../reutilizable/icons/_corona.vue";
 import { ref, onMounted, onUnmounted } from 'vue';
 name: 'mejorarExperiencia';
@@ -103,9 +103,11 @@ $img-radius: 50px;
         }
     }
 }
+
 @media only screen and (max-width: 440px) {
     .mejorar-container {
         height: 250px;
+
         .text {
             margin-left: 4%;
         }

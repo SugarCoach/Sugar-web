@@ -1,6 +1,6 @@
 <template>
 	<section id="nuestra_app" >
-		<h2 class="text-center mb-5">Nuestra App</h2>
+		<h2 class="text-center lone-h2">Nuestra App</h2>
 		<div class="screens-container h-100 d-flex flex-column align-items-center">
 			<funcionalidadApp v-for="pantalla in pantallas" :key="pantalla.id" :celu_url="pantalla.url" :direction="pantalla.id % 2 == 0 ? 'left' : 'right'" :last="pantalla.id == 4"/>
 		</div>
@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import funcionalidadApp from '../reutilizable/funcionalidadApp.vue';
+import funcionalidadApp from '../reutilizable/design/funcionalidadApp.vue';
 name: "nuestraApp";
 components: [
 	funcionalidadApp

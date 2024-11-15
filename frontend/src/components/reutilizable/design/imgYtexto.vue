@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex align-items-center w-100 justify-content-center  gap-2 gap-sm-3 flex-wrap"
+    <div class="d-flex align-items-center w-100 justify-content-center  gap-2 gap-sm-3 gap-md-5 flex-wrap"
         :class="props.direction === 'right' ? 'flex-row-reverse' : ''">
         <img class="" :src="props.imagen" :alt="imagen_alt">
         <div class="text d-flex flex-column align-self-start justify-content-start align-items-start">
@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import ctaBtn from './ctaBtn.vue';
+import ctaBtn from '../utils/ctaBtn.vue';
 name: 'imgYtexto';
 components: [ctaBtn]
 const props = defineProps({
@@ -55,7 +55,8 @@ img,
 .text {
     width: 45%;
     min-width: 250px;
-    p{
+
+    p {
         max-width: 400px;
     }
 }

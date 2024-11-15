@@ -1,20 +1,22 @@
 <template>
-    <section id="contacto" class="text-white position-relative d-flex">
+    <section id="contacto"
+        class="text-white position-relative d-flex gap-5 gap-xl-0 justify-content-center justify-content-xl-between flex-wrap">
         <div class="filtro"></div>
-        <header class="w-50 ms-5 p-4">
-            <h2 class="text-start mb-4">Contactanos</h2>
-            <p class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque atque, quibusdam quia, alias illum
+        <header class="p-4 m-0 ms-xl-5">
+            <h2 class="mb-4">Contactanos</h2>
+            <p class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque atque, quibusdam quia, alias
+                illum
                 distinctio libero tempore maxime eos enim voluptas eum temporibus totam incidunt fuga consequatur quis
                 architecto repudiandae?</p>
-            <ctaBtn class="">Sobre nosotros</ctaBtn>
+            <ctaBtn class="cta">Sobre nosotros</ctaBtn>
         </header>
-        <formulario class="position-absolute form"/>
+        <formulario class="form me-0 me-xl-4" />
     </section>
 </template>
 
 <script setup>
-import ctaBtn from '../reutilizable/ctaBtn.vue';
-import formulario from '../reutilizable/formulario.vue';
+import ctaBtn from '../reutilizable/utils/ctaBtn.vue';
+import formulario from '../reutilizable/design/formulario.vue';
 
 name: "contacto";
 components: [ctaBtn, formulario]
@@ -28,27 +30,52 @@ components: [ctaBtn, formulario]
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    .form{
+
+    .form {
         z-index: 65;
-        right: 7%;
-        top: 30%;
-        max-width: 50%;
+        margin-top: 1.5rem;
+        max-width: 80%;
     }
-    header{
+
+    header {
         position: relative;
         z-index: 60;
-        p{
+        text-justify: start;
+        margin-left: 3rem;
+        width: 50%;
+
+        p {
             margin-top: 5%;
             width: 90%;
         }
     }
-    .filtro{
+
+    .filtro {
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
         position: absolute;
         top: 0;
         z-index: 40;
+    }
+}
+
+@media only screen and (max-width: 989px) {
+    #contacto {
+        min-height: 740px;
+
+        header {
+            text-align: center;
+            width: 80%;
+
+            p {
+                width: 100%;
+            }
+
+            .cta {
+                margin: 0px auto !important;
+            }
+        }
     }
 }
 </style>

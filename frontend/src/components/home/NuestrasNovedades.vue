@@ -11,7 +11,7 @@
 
 
 <script setup>
-import redesSociales from '../reutilizable/redesSociales.vue';
+import redesSociales from '../reutilizable/utils/redesSociales.vue';
 
 name: 'Nuestras_novedades';
 components: [redesSociales]

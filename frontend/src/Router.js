@@ -12,13 +12,13 @@ const routes = [
         meta: { analytics: true }
     },
     {
-        path: '/About', // la ruta base
+        path: '/about', // la ruta base
         name: 'About', // el nombre de la ruta
         component: () => import('@/views/About.vue'),
         meta: { analytics: true }
     },
     {
-        path: '/Contacto', // la ruta base
+        path: '/contacto', // la ruta base
         name: 'Contacto', // el nombre de la ruta
         component: () => import('@/views/Contacto.vue'),
         meta: { analytics: true }
@@ -27,6 +27,12 @@ const routes = [
         path: '/premium', // otra ruta
         name: 'Premium',
         component: () => import('@/views/Premium.vue'),
+        meta: { analytics: true }
+    },
+    {
+        path: '/empresas', // otra ruta
+        name: 'Empresas',
+        component: () => import('@/views/Empresas.vue'),
         meta: { analytics: true }
     },
     {

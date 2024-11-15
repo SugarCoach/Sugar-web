@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import iconStar from './icons/_star.vue';
+import iconStar from '../icons/_star.vue';
 
 name: 'testimonio';
 components: [iconStar]

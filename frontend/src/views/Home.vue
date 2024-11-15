@@ -19,17 +19,17 @@
 
 <script setup>
 import { useHead } from "@vueuse/head";
-import hero from "../components/reutilizable/hero.vue";
+import hero from "../components/reutilizable/ui/hero.vue";
 import nuestraApp from "@/components/home/NuestraApp.vue";
-import textLink from "@/components/reutilizable/textYLink.vue";
+import textLink from "@/components/reutilizable/utils/textYLink.vue";
 import mejorarExperiencia from "@/components/home/MejorarExperiencia.vue";
 import sectionPremium from "@/components/home/sectionPremium.vue";
-import descargarApp from "@/components/reutilizable/descargarApp.vue";
+import descargarApp from "@/components/reutilizable/utils/descargarApp.vue";
 import comunidad from "@/components/home/Comunidad.vue";
 import nuestrasNovedades from "@/components/home/NuestrasNovedades.vue";
 import testimonios from "@/components/home/Testimonios.vue";
 import contacto from "@/components/home/Contactanos.vue";
-import formulario from "@/components/reutilizable/formulario.vue";
+import formulario from "@/components/reutilizable/design/formulario.vue";
 // import { defineAsyncComponent } from "vue";
 
 // const Nuestra_app = defineAsyncComponent(() =>

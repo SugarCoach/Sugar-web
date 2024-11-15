@@ -1,18 +1,24 @@
 <template>
-    <div class="paquete p-4 rounded-3 position-relative border border-dark-subtle">
+    <div class="paquete p-4 rounded-3 position-relative border border-dark-subtle" :class="props.texto ? 'plan-x' : ''">
         <h3 class="text-start mb-0 border-bottom border-dark border-opacity-50 px-4 pb-4 h4 d-flex align-items-center" :style="colorText"><iconGota :color="props.color" size="40px" class="icon"/>{{ props.title }}</h3>
-        <h4 class="text-start w-100 mb-0 py-3 display-6 fw-medium">{{ props.price }}<span v-show="props.mensual" class="lead fw-light">/mo</span></h4>
-        <ul class="text-start w-100 p-0 d-flex flex-column gap-4 mb-5">
+        <div class="text-start w-100 mb-0 py-3 display-6 fw-medium h4">{{ props.price }}<span v-show="props.mensual" class="lead fw-light">/mo</span></div>
+        <div class="mb-3" v-if="props.texto">
+            <p v-if="props.texto">{{ props.texto }}</p>
+            <a href="" class="btn btn-primary rounded-pill w-100 mb-3 py-2" :style="colorBtn">{{ props.textoBtn }}</a>
+            <div class="divider border-bottom position-absolute start-0 border-dark border-opacity-50"></div>
+        </div>
+        
+        <ul class="text-start w-100 p-0 d-flex flex-column gap-4 mb-3 mt-3">
             <li v-for="beneficio in props.beneficios" class=""><iconTick :color="props.color" /> {{ beneficio }}</li>
         </ul>
-        <a href="" class="btn btn-primary rounded-pill w-100" :style="colorBtn">{{ props.textoBtn }}</a>
+        <a v-if="!props.texto" href="" class="btn btn-primary rounded-pill w-100 py-2" :style="colorBtn">{{ props.textoBtn }}</a>
     </div>
 </template>
 
 <script setup>
-import iconCorona from "./icons/_corona.vue";
-import iconGota from "./icons/_gota.vue";
-import iconTick from "./icons/_tick.vue";
+import iconCorona from "../icons/_corona.vue";
+import iconGota from "../icons/_gota.vue";
+import iconTick from "../icons/_tick.vue";
 name: "paquetePremium";
 components: [
     iconCorona, iconTick, iconGota
@@ -25,6 +31,10 @@ const props = defineProps({
     price: {
         type: String,
         required: true
+    },
+    texto: {
+        types: String,
+        default: ''
     },
     beneficios: {
         type: Array,
@@ -50,10 +60,10 @@ const colorBtn =  `background-color: ${props.color}; border-color: ${props.color
 
 <style scoped lang="scss">
 $padding: 1.5rem;
-$light-gray: #EFEFEF;
+$light-gray: rgba(217, 217, 217, 0.2);
 .paquete {
     width: 20vw;
-    max-width: 500px;
+    max-width: 360px;
     min-width: 260px;
     background-color: $light-gray;
     h3 {
@@ -62,6 +72,13 @@ $light-gray: #EFEFEF;
         .icon{
             margin-left: -5px;
         }
+    }
+    .divider{
+        width: 100%;
+    }
+    &.plan-x{
+        width: 24vw;
+        min-width: 285px;
     }
 }
 </style>

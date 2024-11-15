@@ -17,6 +17,9 @@ main{
     min-height: 100vh;
     margin-bottom: max(50vh, 200px);
 }
+nav{
+    z-index: 900;
+}
 section{
     margin-top: max(20vh, 100px);
     padding: 20vh 0 10vh 0;
@@ -52,6 +55,9 @@ ul{
 .vertical-align-top{
     vertical-align: top;
 }
+.lone-h2{
+    margin-bottom: 9rem!important;
+}
 // @media only screen and (768px <= width <= 992px) {
 //     html{
 //         font-size: 15px;
@@ -60,6 +66,9 @@ ul{
 @media only screen and (576px <= width <= 768px) {
     html{
         font-size: 14.2px;
+    }
+    .space-left{
+        margin: 5vw;
     }
 }
 @media only screen and (width <= 576px) {

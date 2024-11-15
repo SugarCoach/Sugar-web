@@ -1,8 +1,8 @@
 <template>
-    <nav class="navbar navbar-expand-md navbar-white bg-white" aria-label="Fourth navbar example">
+    <nav class="navbar navbar-expand-md navbar-white bg-white shadow position-sticky top-0" aria-label="Fourth navbar example">
         <div class="container-fluid">
-            <a class="navbar-brand space-left m-0" href="#">
-                <sugarlogo size="60px" class=""/>
+            <a class="navbar-brand space-left m-0" href="/">
+                <sugarlogo size="60px" class="" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
                 aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,10 +20,10 @@
                     </span>
                 </div>
                 <ul class="navbar-nav mb-2 mb-md-0 gap-3">
-                    <li v-for="link in nav" :key="link.id" class="nav-item">
+                    <li v-for="link in nav" :key="link.id" class="nav-item fw-medium">
                         <router-link v-if="link.name == 'Premium'" :to="link.url"
-                            class="nav-link gap-1 color-premium fw-bold">
-                            {{ link.name }}<iconCorona width="25px" height="25px"></iconCorona>
+                            class="nav-link gap-1 color-premium fw-bold premium-link">
+                            {{ link.name }}<iconCorona class="corona" width="25px" height="25px"></iconCorona>
                         </router-link>
 
                         <router-link v-else-if="link.isView" :to="link.url" class="nav-link">
@@ -91,4 +91,24 @@ const policy = [
 </script>
 
 <style scoped lang="scss">
+$transition: .3s;
+
+.premium-link {
+    transition: $transition;
+
+    .corona {
+        transition: $transition;
+    }
+
+    &:hover {
+        color: #0047ff!important;
+
+        .corona {
+            filter: invert(1);
+        }
+    }
+    &:focus {
+        color: #FFB800;
+    }
+}
 </style>

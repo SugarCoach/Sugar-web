@@ -3,7 +3,7 @@
         <div class="d-flex flex-column gap-2 mb-5 h-50 justify-content-end header position-relative"
             :class="`text-${props.justify}`">
             <h1>{{ props.title }}</h1>
-            <h2>{{ props.subheading }}</h2>
+            <h2 class="mb-0">{{ props.subheading }}</h2>
         </div>
         <div class="position-absolute w-100 h-100 top-0 start-0 filtro"></div>
 
@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import descargar from "../reutilizable/descargarApp.vue"
+import descargar from "../utils/descargarApp.vue"
 import { onMounted } from 'vue'
 name: 'Hero';
 components: [
@@ -72,4 +72,6 @@ onMounted(() => {
         font-size: 2rem !important;
     }
 }
+
+
 </style>

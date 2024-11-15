@@ -9,7 +9,7 @@
                     class="form-control message"></textarea>
             </div>
         </div>
-        <input type="submit" value="Enviar" class="border-0 bg-dark enviar p-2 m-auto my-0 rounded-2">
+        <input type="submit" value="Enviar" class="border-0 enviar p-2 m-auto my-0 rounded-2">
     </form>
 </template>
 
@@ -44,9 +44,12 @@ const inputs = [
 form {
     background-color: #F5F5F5;
     width: 450px;
+    min-height: fit-content;
     box-shadow: 1px 10px 20px -8px rgba(0, 0, 0, 0.3);
+
     textarea {
         height: 100px;
+        max-height: 15vh;
         resize: none
     }
 
@@ -60,10 +63,17 @@ form {
     }
 
     .enviar {
-        background-color: #686868;
-        color: white;
+        background-color: #444444;
+        color: #FEE9E7;
         max-width: 60%;
         width: 200px;
+        transition: .2s;
+
+        &:hover {
+            background-color: #616161;
+            color: #FEE9E7;
+        }
     }
+
 }
 </style>

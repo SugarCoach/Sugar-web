@@ -1,9 +1,9 @@
 <template>
     <section id="testimonios">
-        <h2 class="m-auto m-0 mb-5">Testimonios</h2>
+        <h2 class="m-auto m-0 lone-h2">Testimonios</h2>
         <div class="position-relative testimonios-container">
             <div
-                class="arrow left position-absolute m-3 m-sm-5 rounded-circle d-flex justify-content-center align-items-center">
+                class="arrow left position-absolute m-1 m-sm-5 rounded-circle d-flex justify-content-center align-items-center">
                 <iconArrow class="icon" />
             </div>
             <testimonio class="t1" user="Pablo" opinion="Muy buena aplicación" :stars="3" size="md" />
@@ -11,7 +11,7 @@
             <testimonio class="m-auto" user="Pablo" opinion="Muy buena aplicación" :stars="5" size="lg" />
 
             <div
-                class="arrow right position-absolute m-3 m-sm-5 rounded-circle d-flex justify-content-center align-items-center">
+                class="arrow right position-absolute m-1 m-sm-5 rounded-circle d-flex justify-content-center align-items-center">
                 <iconArrow class="icon" />
             </div>
         </div>
@@ -23,7 +23,7 @@
 
 <script setup>
 import iconArrow from '../reutilizable/icons/_arrow.vue';
-import testimonio from '../reutilizable/testimonio.vue';
+import testimonio from '../reutilizable/design/testimonio.vue';
 
 name: 'testimonios';
 components: [testimonio, iconArrow]
@@ -52,7 +52,7 @@ components: [testimonio, iconArrow]
         }
 
         .arrow {
-            min-width: 35px;
+            min-width: 32px;
             width: 6vw;
             max-width: 50px;
             aspect-ratio: 1/1;

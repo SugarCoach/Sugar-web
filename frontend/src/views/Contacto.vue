@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import formulario from '@/components/reutilizable/formulario.vue';
+import formulario from '@/components/reutilizable/design/formulario.vue';
 
 name: 'contacto';
 components: [formulario];
