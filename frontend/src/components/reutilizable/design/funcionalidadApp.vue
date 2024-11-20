@@ -20,13 +20,12 @@
 			<div class="t1 h-100"></div>
 			<div class="t2 h-100"></div>
 		</div>
-
 	</div>
 
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+// import { onMounted } from 'vue';
 
 name: "funcionalidadApp";
 const props = defineProps({
@@ -181,7 +180,7 @@ $top: 3rem;
 	}
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 578px) {
 	h3 {
 		color: violet;
 	}

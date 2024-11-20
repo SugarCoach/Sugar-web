@@ -11,17 +11,23 @@
         <ul class="text-start w-100 p-0 d-flex flex-column gap-4 mb-3 mt-3">
             <li v-for="beneficio in props.beneficios" class=""><iconTick :color="props.color" /> {{ beneficio }}</li>
         </ul>
-        <a v-if="!props.texto" href="" class="btn btn-primary rounded-pill w-100 py-2" :style="colorBtn">{{ props.textoBtn }}</a>
+        <button :style="colorBtn" v-if="!props.texto && props.btnUrl === 'modal'" type="button" class="btn btn-primary rounded-pill w-100 py-2" data-bs-toggle="modal" data-bs-target="#modal_pago">
+            {{ props.textoBtn }}
+        </button>
+        <a  :href="props.btnUrl" v-else-if="!props.texto"  class="btn btn-primary rounded-pill w-100 py-2" :style="colorBtn">{{ props.textoBtn }}</a>
+        <!-- Modal -->
+        <FormularioPago/>
     </div>
 </template>
 
 <script setup>
+import FormularioPago from "@/components/empresas/FormularioPago.vue";
 import iconCorona from "../icons/_corona.vue";
 import iconGota from "../icons/_gota.vue";
 import iconTick from "../icons/_tick.vue";
 name: "paquetePremium";
 components: [
-    iconCorona, iconTick, iconGota
+    iconCorona, iconTick, iconGota, FormularioPago
 ]
 const props = defineProps({
     title: {
@@ -45,6 +51,10 @@ const props = defineProps({
         type: String,
         required: true,
     },
+    btnUrl:{
+        type: String,
+        required: true,
+    },
     color: {
         type: String,
         default: "#3F77E3"
@@ -62,7 +72,7 @@ const colorBtn =  `background-color: ${props.color}; border-color: ${props.color
 $padding: 1.5rem;
 $light-gray: rgba(217, 217, 217, 0.2);
 .paquete {
-    width: 20vw;
+    width: 22vw;
     max-width: 360px;
     min-width: 260px;
     background-color: $light-gray;

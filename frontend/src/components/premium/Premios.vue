@@ -1,12 +1,12 @@
 <template>
-    <sectionDividers>
+    <sectionDividers img_url="/contenido/trofeo.png" img_alt="trofeo">
         <div class="d-flex align-items-center justify-content-center mb-5 w-100 ">
             <h2 class="text-center">Premios</h2>
             <trofeo size="50px" color="#FFB800"/>
         </div>
 
         <div class="contenedor-premios d-grid m-0 m-auto pt-4">
-            <img v-for="item in premios" :key="item.id" :src="item.url" :alt="item.alt">
+            <img class="m-auto m-0" v-for="item in premios" :key="item.id" :src="item.url" :alt="item.alt">
         </div>
         <div class="w-100 d-flex justify-content-center mt-5">
             <button class="btn px-5 py-3">Canjear puntos</button>
@@ -28,45 +28,46 @@ const premios = [
         id: 0
     },
     {
-        url: 'contenido/tarjeta-fornite.webp',
+        url: 'contenido/tarjeta-minecraft-transformed.webp',
         alt: 'Targeta de regalo fornite',
         id: 1
     },
     {
-        url: 'contenido/tarjeta-fornite.webp',
+        url: 'contenido/xbox_card_transformed.png',
         alt: 'Targeta de regalo fornite',
         id: 2
     },
     {
-        url: 'contenido/tarjeta-fornite.webp',
+        url: 'contenido/netflix_card.png',
         alt: 'Targeta de regalo fornite',
         id: 3
     },
     {
-        url: 'contenido/tarjeta-fornite.webp',
+        url: 'contenido/steam_card.png',
         alt: 'Targeta de regalo fornite',
         id: 4
     },
     {
-        url: 'contenido/tarjeta-fornite.webp',
+        url: 'contenido/google_play_card.png',
         alt: 'Targeta de regalo fornite',
         id: 5
     },
     {
-        url: 'contenido/tarjeta-fornite.webp',
+        url: 'contenido/playstation_card.png',
         alt: 'Targeta de regalo fornite',
         id: 6
     },
     {
-        url: 'contenido/tarjeta-fornite.webp',
+        url: 'contenido/switch_card.png',
         alt: 'Targeta de regalo fornite',
         id: 7
     },
     {
-        url: 'contenido/tarjeta-fornite.webp',
+        url: 'contenido/lol_card.webp',
         alt: 'Targeta de regalo fornite',
         id: 8
     },
+
 
 ]
 </script>

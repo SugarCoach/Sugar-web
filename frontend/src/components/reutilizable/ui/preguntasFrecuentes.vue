@@ -1,6 +1,6 @@
 <template>
-    <section>
-        <h2 class="lone-h2 text-center">Faqs</h2>
+    <section class="mt-0">
+        <h2 class="mb-5 text-center">Faqs</h2>
         <div class="accordion w-75 m-0 m-auto" id="accordion">
             <div v-for="item in props.preguntas" :key="item.id" class="accordion-item mb-3 border-top border-dark-subtle rounded-2 shadow-sm">
                 <h3 class="accordion-header">

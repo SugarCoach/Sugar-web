@@ -1,6 +1,7 @@
 <template>
     <section class="position-relative overflow-hidden">
         <div class="rounded-circle d-top bg-white position-absolute"></div>
+        <img class="position-absolute" :class="props.img_alt" :src="props.img_url" :alt="props.img_alt">
         <slot></slot>
         <div class="rounded-circle d-bottom bg-white position-absolute"></div>
     </section>
@@ -41,6 +42,20 @@ section {
     height: auto;
     background-color: #f6f6f6;
 
+    img{
+        top: 11vh;
+        filter: drop-shadow(5px 10px 30px rgba(0, 0, 0, 0.25));
+        min-width: 140px;
+        max-width: 350px;
+        width: 30%;
+        &.corona{
+            top: 10vh;
+        }
+        &.trofeo{
+            top: 14vh;
+            transform: rotateZ(-20deg)
+        }
+    }
     .d-top {
         @include divider('top')
     }

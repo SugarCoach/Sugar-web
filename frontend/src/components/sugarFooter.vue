@@ -7,11 +7,11 @@
                 </div>
                 <div class="d-flex gap-5 justify-content-start justify-content-sm-end sections flex-wrap">
                     <div class="">
-                        <h5>Descargar</h5>
+                        <h5 class="fw-bold">Descargar</h5>
                         <descargarApp />
                     </div>
                     <div v-for="item in sections" :key="item.id" class="">
-                        <h5>{{ item.section }}</h5>
+                        <h5 class="fw-bold">{{ item.section }}</h5>
                         <ul class="nav flex-column">
                             <li v-for="link in item.links" :key="link.id" class="nav-item mb-2">
                                 <a :href="link.url" class="nav-link p-0 text-body-secondary fw-semibold">{{ link.name
@@ -42,18 +42,18 @@ const sections = [
         links: [
             {
                 name: 'Home',
-                url: '#',
+                url: '/',
                 id: 0,
             },
             {
                 name: 'Sobre nosotros',
-                url: '#',
-                id: 0,
+                url: '/about',
+                id: 1,
             },
             {
                 name: 'Contacto',
-                url: '/Contacto',
-                id: 0,
+                url: '/contacto',
+                id: 2,
             },
         ],
         id: 0,

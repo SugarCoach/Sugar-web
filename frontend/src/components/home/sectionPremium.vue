@@ -1,5 +1,5 @@
 <template>
-    <sectionDividers>
+    <sectionDividers img_url="/contenido/corona.png" img_alt="corona">
         <header>
             <h2 class="text-center">SugarCoach Premium</h2>
             <h3 class="text-center">Obten nuevas funcionalidades</h3>

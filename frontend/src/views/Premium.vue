@@ -7,7 +7,7 @@
 				<corona />
 			</heroCircle>
 			<imgsYtextos title="Beneficios" :imagenesYtextos="imagenesYTextos" />
-			<planes :paquetes-usuarios="paquetes" />
+			<planes :paquetesUsuarios="paquetes" />
 			<premios />
 			<faqs :preguntas="preguntas"/>
 			<contactanos />
@@ -52,36 +52,36 @@ useHead({
 });
 const imagenesYTextos = [
 	{
-		img_url: '../../contenido/integrantes/integrantes-equipo.jpg',
+		img_url: 'contenido/niños-con-app.jpg',
 		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'El Equipazo',
+		title: 'Parenting',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
 		cta: '',
 		cta_url: '',
 		id: 0
 	},
 	{
-		img_url: '../../contenido/integrantes/integrantes-equipo.jpg',
+		img_url: '../../contenido/telemedicina_edit.png',
 		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'El Equipo',
+		title: 'Telemedicina',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
 		cta: '',
 		cta_url: '',
 		id: 1
 	},
 	{
-		img_url: '../../contenido/integrantes/integrantes-equipo.jpg',
+		img_url: '../../contenido/alertas_geolocalizacion_edit.png',
 		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'El Equipo',
+		title: 'Alertas de emergencia',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
 		cta: '',
 		cta_url: '',
 		id: 2
 	},
 	{
-		img_url: '../../contenido/integrantes/integrantes-equipo.jpg',
-		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'El Equipo',
+		img_url: 'cards',
+		img_alt: ['Gift card de Fornite', 'Gift card de Minicraft', 'Gift card de Xbox'],
+		title: '¡Canjea tus puntos!',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
 		cta: 'Premios',
 		cta_url: '/#premios',

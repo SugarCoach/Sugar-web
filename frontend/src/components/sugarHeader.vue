@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-md navbar-white bg-white shadow position-sticky top-0" aria-label="Fourth navbar example">
         <div class="container-fluid">
             <a class="navbar-brand space-left m-0" href="/">
-                <sugarlogo size="60px" class="" />
+                <sugarlogo  size="60px" class="" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
                 aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +19,7 @@
                         <span v-if="link.id == 0" class="text-black text-opacity-50">|</span>
                     </span>
                 </div>
-                <ul class="navbar-nav mb-2 mb-md-0 gap-3">
+                <ul class="navbar-nav mb-2 mb-md-0 gap-3 pe-5">
                     <li v-for="link in nav" :key="link.id" class="nav-item fw-medium">
                         <router-link v-if="link.name == 'Premium'" :to="link.url"
                             class="nav-link gap-1 color-premium fw-bold premium-link">

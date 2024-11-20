@@ -8,7 +8,7 @@
                 illum
                 distinctio libero tempore maxime eos enim voluptas eum temporibus totam incidunt fuga consequatur quis
                 architecto repudiandae?</p>
-            <ctaBtn class="cta">Sobre nosotros</ctaBtn>
+            <ctaBtn class="cta" url="/about">Sobre nosotros</ctaBtn>
         </header>
         <formulario class="form me-0 me-xl-4" />
     </section>

@@ -1,7 +1,7 @@
 <template>
     <q-page>
         <main>
-            <hero justify="center" img="../../contenido/integrantes/integrantes-equipo.jpg" title="Sobre nosotros"
+            <hero justify="center" img="../../contenido/integrantes/10.Team.jpg" title="Sobre nosotros"
                 subheading="Conoce nuestra historia" />
             <imgsYtextos title="Nosotros" :imagenesYtextos="imagenesYTextos" />
             <fuertes />
@@ -32,7 +32,7 @@ const imagenesYTextos = [
         id: 0
     },
     {
-        img_url: '../../contenido/integrantes/integrantes-equipo.jpg',
+        img_url: '../../contenido/objetivos.png',
         img_alt: 'Equipo de SugarCoach trabajando',
         title: 'El Equipo',
         texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',

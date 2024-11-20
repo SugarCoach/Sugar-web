@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex flex-column justify-content-between align-items-center integrante p-3 text-center rounded-5 shadow-lg">
+    <div class="d-flex flex-column justify-content-between align-items-center integrante p-3 text-center rounded-5">
         <img :src="props.img_url" :alt="props.img_alt" class="rounded-circle mt-2">
         <div class="d-flex flex-column gap-0 mb-2">
             <span class="nombre fw-bold">{{ props.nombre }}</span>
@@ -36,6 +36,7 @@ const props = defineProps({
     width: 195px;
     height: 265px;
     background-color: #696AF5;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.25);
     .nombre{
         font-size: 16px;
         color: #1C1C1C;

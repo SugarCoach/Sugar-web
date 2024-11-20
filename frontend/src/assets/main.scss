@@ -9,7 +9,7 @@ html{
 .nav-link{
     padding: 0 !important;
     height: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
 }
@@ -56,16 +56,17 @@ ul{
     vertical-align: top;
 }
 .lone-h2{
-    margin-bottom: 9rem!important;
+    margin-bottom: 15vh!important;
 }
-// @media only screen and (768px <= width <= 992px) {
-//     html{
-//         font-size: 15px;
-//     }
-// }
+@media only screen and (768px <= width <= 992px) {
+    html{
+        font-size: 14px;
+    }
+}
+
 @media only screen and (576px <= width <= 768px) {
     html{
-        font-size: 14.2px;
+        font-size: 13.5px;
     }
     .space-left{
         margin: 5vw;
