@@ -1,24 +1,24 @@
 <template>
     <section class="text-white">
-        <div class="mejorar-container bg-primary bg-opacity-75 p-3 p-sm-4 d-flex align-items-end position-relative">
-            <div class="h-100 position-relative">
+        <div class="mejorar-container bg-primary bg-opacity-75 gap-2 p-3 p-sm-4 d-flex  align-items-center align-items-sm-end position-relative">
+            <div class="h-100 position-relative contenedor-img">
                 <span class="cuadrado position-absolute rounded-2"></span>
                 <img src="../../../public/contenido/11-Niños-con-SC.webp" alt="Niño usando app de SugarCoach"
-                    class="align-self-start rounded-2 position-relative">
+                    class=" rounded-2 position-relative">
             </div>
 
-            <div class="text d-flex flex-column gap-4 gap-md-3 h-100 justify-content-center">
+            <div class="text d-flex flex-column gap-2 gap-md-3 h-100 justify-content-center">
                 <div class="">
                     <h2 class="">¡Mejora tu experiencia!</h2>
                     <p class="w-75">Analiza tus datos, conoce tu historial medico, enterate de las novedades y
                         mucho más.</p>
                 </div>
-                <div class="d-flex gap-2 gap-sm-4 mb-2 align-items-center">
+                <div class="d-flex gap-2 gap-sm-4 mb-2 align-items-center flex-wrap flex-sm-nowrap">
                     <ctaBtn class="rounded-pill cta-btn">
                         <iconCorona width="25px" height="25px" color="white" class="me-sm-2 vertical-align-top" />
                         Obten Premium
                     </ctaBtn>
-                    <descargarApp :size="screenWidth <= 570 ? '110px' : '150px'" />
+                    <descargarApp :size="screenWidth <= 578 ? '100px' : '150px'" />
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@ $img-radius: 50px;
         height: 150%;
         max-width: 40vw;
         object-fit: cover;
-        border-top-left-radius: $img-radius !important;
+        border-top-left-radius: calc($img-radius - 1.5rem)  !important;
         z-index: 50;
     }
 
@@ -91,30 +91,32 @@ $img-radius: 50px;
 
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 578px) {
     .mejorar-container {
         .text {
             margin-left: 4%;
         }
-
-        img {
-            height: 120%;
-            aspect-ratio: 6/9;
+        h2{
+            font-size: 1.8rem;
         }
+            img {
+                height: 120%;
+                aspect-ratio: 6/9;
+                border-top-left-radius: calc($img-radius - 1rem) 
+            }
+        }
+        
     }
-}
 
 @media only screen and (max-width: 440px) {
     .mejorar-container {
-        height: 250px;
-
+        height: fit-content;
         .text {
             margin-left: 4%;
         }
 
         img {
-            height: 100%;
-            aspect-ratio: 5/9;
+            min-height: 100%;
         }
     }
 }

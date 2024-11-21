@@ -50,7 +50,7 @@ header {
 
 
 .cta-links {
-    margin: 10vh 0 30vh 0;
+    margin: 10vh 0 0 0;
 }
 
 .paquetes-container {

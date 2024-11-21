@@ -52,34 +52,34 @@ const imagenesYTextos = [
 	{
 		img_url: 'contenido/8-NiñosconSC.jpg',
 		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'El Equipazo',
+		title: 'Distribuir licencias Premium',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
 		cta: '',
 		cta_url: '',
 		id: 0
 	},
 	{
-		img_url: '../../contenido/integrantes/integrantes-equipo.jpg',
+		img_url: 'contenido/objetivos.png',
 		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'El Equipo',
+		title: 'Lista de sponsors',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
 		cta: '',
 		cta_url: '',
 		id: 1
 	},
 	{
-		img_url: '../../contenido/integrantes/6.Team.jpg',
+		img_url: 'contenido/integrantes/6.Team.jpg',
 		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'El Equipo',
+		title: 'Verse en articulos y notas',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
 		cta: '',
 		cta_url: '',
 		id: 2
 	},
 	{
-		img_url: '../../contenido/integrantes/11.Team.jpg',
+		img_url: 'contenido/integrantes/11.Team.jpg',
 		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'El Equipo',
+		title: 'Apoyar a SugarCoach',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
 		cta: 'Premios',
 		cta_url: '/#premios',

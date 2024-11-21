@@ -1,21 +1,24 @@
 <template>
-	<div class="fondo w-autorounded-3 p-4 p-sm-5  position-relative d-flex rounded-5" :class="props.direction">
-		<div class="position-absolute tapa-celu d-none"></div>
-		<div class="celu position-relative">
-			<img :src="props.celu_url" class="position-absolute h-auto m-auto m-0" alt="Pantalla de SugarCoach">
+	<div class="fondo rounded-3 pt-5 p-3 p-sm-5 position-relative d-flex rounded-5" :class="props.direction">
+		<div class="h-100 w-100 d-flex contenedor-funcionalidad">
+			<div class="celu position-relative mb-2 mb-sm-0">
+				<img :src="props.celu_url" class="position-absolute h-auto" alt="Pantalla de SugarCoach">
+				<div class="position-absolute tapa-celu d-none bottom-0"></div>
+			</div>
+
+			<div class="text-container">
+				<h3>H3</h3>
+				<p class="">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sit adipisci voluptatem distinctio
+					error?
+					Ex placeat eius quidem illo amet, quos accusamus exercitationem molestiae voluptatibus minima sint
+					dicta
+					reprehenderit distinctio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit
+					eos
+				</p>
+			</div>
 		</div>
 
-		<div class="text-container m-auto">
-			<h3>H3</h3>
-			<p class="">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sit adipisci voluptatem distinctio
-				error?
-				Ex placeat eius quidem illo amet, quos accusamus exercitationem molestiae voluptatibus minima sint
-				dicta
-				reprehenderit distinctio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit
-				eos
-			</p>
-		</div>
 		<div v-if="!props.last" class="d-flex gap-4 gap-sm-5 position-absolute tira">
 			<div class="t1 h-100"></div>
 			<div class="t2 h-100"></div>
@@ -56,64 +59,52 @@ $top: 3rem;
 
 		img {
 			filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
+			margin: 0 auto;
 			top: $top;
 			width: $size;
 		}
 	}
 
-	$size: $size/2.2;
+	$size: $size/3.2;
 	$move-celu: calc((-1) * (3rem + $size));
 	$move-all: calc((-1) * $size/2 - 1.5rem);
 	$tira-move: 25%;
 
 	&.left {
-		flex-direction: row;
-		margin-right: $move-all;
-
-		.tapa-celu {
-			left: -5px;
-			border-radius: 2.5rem 0 0 2.5rem;
-			box-shadow: 10px 0px 30px -5px rgb(248, 248, 248);
-		}
-
+		.contenedor-funcionalidad{
+			flex-direction: row;
+			margin-right: $move-all;
+			.celu {
+				img {
+					left: $move-celu;
+				}
+			}
+			.text-container {
+				margin-right: 0;
+			}
+		}	
 		.tira {
 			right: $tira-move;
-		}
-
-		.celu {
-			img {
-				left: $move-celu;
-			}
-		}
-
-		.text-container {
-			margin-right: 0 !important;
 		}
 	}
 
 	&.right {
-		flex-direction: row-reverse;
-		margin-left: $move-all;
-		padding-left: 2rem !important;
+		.contenedor-funcionalidad{
+			flex-direction: row-reverse;
+			margin-left: $move-all;
+			padding-left: 2rem;
+			.celu {
+				img {
+					right: $move-celu;
+				}
+			}
 
-		.tapa-celu {
-			right: -5px;
-			border-radius: 0 2.5rem 2.5rem 0;
-			box-shadow: -10px 0px 15px 5px rgb(248, 248, 248);
-		}
-
-		.tira {
-			left: $tira-move;
-		}
-
-		.celu {
-			img {
-				right: $move-celu;
+			.text-container {
+				margin-left: 1rem;
 			}
 		}
-
-		.text-container {
-			margin-left: 0 !important;
+		.tira {
+			left: $tira-move;
 		}
 	}
 }
@@ -149,6 +140,7 @@ $top: 3rem;
 	}
 
 	.text-container {
+		margin: auto;
 		width: 75%;
 
 		p {
@@ -158,11 +150,6 @@ $top: 3rem;
 }
 
 @media only screen and (max-width: 992px) {
-
-	h3 {
-		color: red;
-	}
-
 	.fondo {
 		width: 605px;
 		@include screenStyles(220px, 7/5);
@@ -170,10 +157,6 @@ $top: 3rem;
 }
 
 @media only screen and (max-width: 768px) {
-	h3 {
-		color: violet;
-	}
-
 	.fondo {
 		width: 480px;
 		@include screenStyles(190px, 6/5);
@@ -181,67 +164,97 @@ $top: 3rem;
 }
 
 @media only screen and (max-width: 578px) {
-	h3 {
-		color: violet;
-	}
-
 	.fondo {
 		width: 380px;
-		@include screenStyles(150px, 1/1);
-		margin: 0 !important;
-		max-width: 95vw;
-		overflow-x: clip;
-		overflow-y: visible;
+		max-width: 95vw;	
+		aspect-ratio: 6/7;
+		padding-bottom: 1rem!important;
+		.contenedor-funcionalidad{
+			margin: 0 !important;
+			justify-content: space-between;
+			flex-direction: column-reverse!important;
+			padding-left: 0!important;
+			overflow: hidden;
 
-		.tapa-celu {
-			width: 20px;
-			height: 100%;
-			background-color: rgb(248, 248, 248);
-			z-index: 70;
-			top: 0;
-			display: block !important;
-		}
 
-		&.right {
-			.celu {
-				img {
-					&:hover {
-						right: min(calc(42.5vw - 75px), 100px);
-						z-index: 75;
+			.celu{
+				position: relative!important;
+				width: 100%;
+				height: 47%;
+				margin: 0!important;
+				img{
+					margin: unset;
+					top: 0;
+					left: calc(50% - 95px)!important;
+					filter: unset;
+					transition: 500ms;
+					transition-delay: 200ms;
+					&:hover{
+						top: -31vh;
 					}
 				}
-
-			}
-		}
-
-		&.left {
-			.celu {
-				img {
-					&:hover {
-						left: min(calc(42.5vw - 75px), 100px);
-						z-index: 75;
-					}
+				.tapa-celu {
+					width: 100%;
+					height: 11%;
+					background-color: #f8f8f8;
+					box-shadow: 0 0 20px 20px #f8f8f8;
+					z-index: 999;
+					display: block !important;
 				}
-
+				
+			}
+			.text-container {
+				text-align: center;
+				width: 90%;
+				margin: 0 auto!important;
+				p{
+					margin: 0 auto!important;
+				}
 			}
 		}
+		// @include screenStyles(150px, 1/1);
 
-		.celu {
-			img {
-				top: 0;
-				bottom: 0;
-				max-height: 100%;
-				max-width: min-content;
-				filter: none;
-				transition: 1s;
-			}
+		
+		
 
-		}
+		
+		// &.right {
+		// 	.celu {
+		// 		img {
+		// 			&:hover {
+		// 				right: min(calc(42.5vw - 75px), 100px);
+		// 				z-index: 75;
+		// 			}
+		// 		}
 
-		.text-container {
-			width: 83%;
-			margin-top: 10vw !important;
-		}
+		// 	}
+		// }
+
+		// &.left {
+		// 	.celu {
+		// 		img {
+		// 			&:hover {
+		// 				left: min(calc(42.5vw - 75px), 100px);
+		// 				z-index: 75;
+		// 			}
+		// 		}
+
+		// 	}
+		// }
+
+		// .celu {
+		// 	img {
+		// 		top: 0;
+		// 		bottom: 0;
+		// 		max-height: 100%;
+		// 		max-width: min-content;
+		// 		filter: none;
+		// 		transition: 1s;
+		// 	}
+
+		// }
+
+
 	}
 }
 </style>
