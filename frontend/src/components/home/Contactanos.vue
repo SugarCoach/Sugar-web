@@ -4,10 +4,7 @@
         <div class="filtro"></div>
         <header class="p-4 m-0 ms-xl-5">
             <h2 class="mb-4">Contactanos</h2>
-            <p class="">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque atque, quibusdam quia, alias
-                illum
-                distinctio libero tempore maxime eos enim voluptas eum temporibus totam incidunt fuga consequatur quis
-                architecto repudiandae?</p>
+            <p class="">Para conocer más sobre nosotros y SugarCoach podés escribirnos, o seguir la comunidad en las redes.</p>
             <ctaBtn class="cta" url="/about">Sobre nosotros</ctaBtn>
         </header>
         <formulario class="form me-0 me-xl-4" />
@@ -34,7 +31,6 @@ components: [ctaBtn, formulario]
     .form {
         z-index: 65;
         margin-top: 1.5rem;
-        max-width: 80%;
     }
 
     header {

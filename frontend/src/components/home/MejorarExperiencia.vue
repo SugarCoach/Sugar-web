@@ -1,7 +1,7 @@
 <template>
     <section class="text-white">
         <div class="mejorar-container bg-primary bg-opacity-75 gap-2 p-3 p-sm-4 d-flex  align-items-center align-items-sm-end position-relative">
-            <div class="h-100 position-relative contenedor-img">
+            <div class="h-100 position-relative contenedor-img align-self-start">
                 <span class="cuadrado position-absolute rounded-2"></span>
                 <img src="../../../public/contenido/11-Niños-con-SC.webp" alt="Niño usando app de SugarCoach"
                     class=" rounded-2 position-relative">
@@ -18,7 +18,7 @@
                         <iconCorona width="25px" height="25px" color="white" class="me-sm-2 vertical-align-top" />
                         Obten Premium
                     </ctaBtn>
-                    <descargarApp :size="screenWidth <= 578 ? '100px' : '150px'" />
+                    <descargarApp :size="screenWidth <= 578 ? '100px' : '140px'" />
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped lang="scss">
-$img-radius: 50px;
+$img-radius: 7rem;
 
 .mejorar-container {
     border-top-left-radius: $img-radius;
@@ -116,7 +116,7 @@ $img-radius: 50px;
         }
 
         img {
-            min-height: 100%;
+            aspect-ratio: 6/10;
         }
     }
 }

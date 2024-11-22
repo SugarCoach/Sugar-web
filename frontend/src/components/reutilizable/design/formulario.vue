@@ -43,7 +43,9 @@ const inputs = [
 <style scoped lang="scss">
 form {
     background-color: #F5F5F5;
-    width: 450px;
+    min-width: 300px;
+    width: 80%;
+    max-width: 430px;
     min-height: fit-content;
     box-shadow: 1px 10px 20px -8px rgba(0, 0, 0, 0.3);
 

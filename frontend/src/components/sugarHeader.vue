@@ -19,7 +19,7 @@
                         <span v-if="link.id == 0" class="text-black text-opacity-50">|</span>
                     </span>
                 </div>
-                <ul class="navbar-nav mb-2 mb-md-0 gap-3 pe-5">
+                <ul class="navbar-nav mb-2 mb-md-0 gap-3 pe-3 pe-lg-5">
                     <li v-for="link in nav" :key="link.id" class="nav-item fw-medium">
                         <router-link v-if="link.name == 'Premium'" :to="link.url"
                             class="nav-link gap-1 color-premium fw-bold premium-link">
@@ -79,7 +79,7 @@ const nav = [
 const policy = [
     {
         name: "Politica de privacidad",
-        url: "/politica de privacidad",
+        url: "/privacy",
         id: 0
     },
     {

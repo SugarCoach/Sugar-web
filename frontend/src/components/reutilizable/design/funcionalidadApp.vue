@@ -1,20 +1,15 @@
 <template>
-	<div class="fondo rounded-3 pt-5 p-3 p-sm-5 position-relative d-flex rounded-5" :class="props.direction">
-		<div class="h-100 w-100 d-flex contenedor-funcionalidad">
+	<div class="fondo rounded-3  position-relative d-flex rounded-5" :class="props.direction">
+		<div class="d-flex contenedor-funcionalidad gap-3 gap-sm-0 pt-5 p-3 p-sm-5">
 			<div class="celu position-relative mb-2 mb-sm-0">
 				<img :src="props.celu_url" class="position-absolute h-auto" alt="Pantalla de SugarCoach">
 				<div class="position-absolute tapa-celu d-none bottom-0"></div>
 			</div>
 
 			<div class="text-container">
-				<h3>H3</h3>
+				<h3>{{ props.title }}</h3>
 				<p class="">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sit adipisci voluptatem distinctio
-					error?
-					Ex placeat eius quidem illo amet, quos accusamus exercitationem molestiae voluptatibus minima sint
-					dicta
-					reprehenderit distinctio! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit
-					eos
+					{{ props.texto }}
 				</p>
 			</div>
 		</div>
@@ -43,6 +38,12 @@ const props = defineProps({
 	last: {
 		type: Boolean,
 		defaut: false,
+	},
+	title:{
+		type: String,
+	},
+	texto: {
+		type: String,
 	}
 });
 </script>
@@ -52,16 +53,18 @@ $top: 3rem;
 
 
 @mixin screenStyles ($size, $aspectRatio) {
-	aspect-ratio: $aspectRatio;
+	.contenedor-funcionalidad{
+		aspect-ratio: $aspectRatio;
 
-	.celu {
-		width: 1px;
+		.celu {
+			width: 1px;
 
-		img {
-			filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
-			margin: 0 auto;
-			top: $top;
-			width: $size;
+			img {
+				filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
+				margin: 0 auto;
+				top: 0;
+				width: $size;
+			}
 		}
 	}
 
@@ -71,9 +74,10 @@ $top: 3rem;
 	$tira-move: 25%;
 
 	&.left {
+		margin-right: $move-all;
 		.contenedor-funcionalidad{
 			flex-direction: row;
-			margin-right: $move-all;
+			
 			.celu {
 				img {
 					left: $move-celu;
@@ -89,10 +93,9 @@ $top: 3rem;
 	}
 
 	&.right {
+		margin-left: $move-all;
 		.contenedor-funcionalidad{
 			flex-direction: row-reverse;
-			margin-left: $move-all;
-			padding-left: 2rem;
 			.celu {
 				img {
 					right: $move-celu;
@@ -100,7 +103,7 @@ $top: 3rem;
 			}
 
 			.text-container {
-				margin-left: 1rem;
+				margin-left: 0;
 			}
 		}
 		.tira {
@@ -112,13 +115,13 @@ $top: 3rem;
 
 
 .fondo {
-	width: 800px;
-	max-width: 80vw;
-	min-height: fit-content !important;
-	padding-bottom: relative !important;
 	background-color: rgb(248, 248, 248);
 	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 15px #ffffff;
-	@include screenStyles(250px, 7/4);
+	@include screenStyles(250px, 6/4);
+	.contenedor-funcionalidad{
+		width: 680px;
+		max-width: 80vw;
+	}
 
 	.tira {
 		height: calc(90vh + 6%);
@@ -151,26 +154,34 @@ $top: 3rem;
 
 @media only screen and (max-width: 992px) {
 	.fondo {
-		width: 605px;
+		
 		@include screenStyles(220px, 7/5);
+		.contenedor-funcionalidad{
+			width: 600px;
+		}
 	}
 }
 
 @media only screen and (max-width: 768px) {
 	.fondo {
-		width: 480px;
-		@include screenStyles(190px, 6/5);
+		
+		@include screenStyles(190px, 7/5);
+		.contenedor-funcionalidad{
+			width: 480px;
+		}
 	}
 }
 
 @media only screen and (max-width: 578px) {
 	.fondo {
-		width: 380px;
-		max-width: 95vw;	
-		aspect-ratio: 6/7;
 		padding-bottom: 1rem!important;
+		margin: 0 !important;
 		.contenedor-funcionalidad{
-			margin: 0 !important;
+			min-height: 410px;
+			aspect-ratio: unset;
+			width: 380px;
+			max-width: 90vw;
+			padding-bottom: 0!important;
 			justify-content: space-between;
 			flex-direction: column-reverse!important;
 			padding-left: 0!important;
@@ -180,7 +191,7 @@ $top: 3rem;
 			.celu{
 				position: relative!important;
 				width: 100%;
-				height: 47%;
+				height: 190px;
 				margin: 0!important;
 				img{
 					margin: unset;
@@ -190,7 +201,7 @@ $top: 3rem;
 					transition: 500ms;
 					transition-delay: 200ms;
 					&:hover{
-						top: -31vh;
+						top: -35vh;
 					}
 				}
 				.tapa-celu {

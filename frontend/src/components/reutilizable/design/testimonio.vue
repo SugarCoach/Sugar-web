@@ -52,7 +52,10 @@ $md: 20%;
         max-width: 350px;
         width: $lg;
         z-index: 40;
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
         h3{
             font-size: 1.2rem;
         }
@@ -65,6 +68,7 @@ $md: 20%;
         max-width: 250px;
         width: $md;
         z-index: 30;
+
         position: absolute;
         h3{
             font-size: 1rem;

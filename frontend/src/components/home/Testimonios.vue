@@ -1,16 +1,14 @@
 <template>
     <section id="testimonios">
-        <h2 class="m-auto m-0 lone-h2">Testimonios</h2>
+        <h2 class="m-auto m-0 mb-2">Testimonios</h2>
         <div class="position-relative testimonios-container">
             <div
                 class="arrow left position-absolute m-1 m-sm-5 rounded-circle d-flex justify-content-center align-items-center">
-                <iconArrow class="icon" />
+                <iconArrow @click="move('left')" class="icon" />
             </div>
-            <testimonio class="t1" user="Pablo" opinion="Muy buena aplicación" :stars="3" size="md" />
-            <testimonio class="t2" user="Pablo" opinion="Muy buena aplicación" :stars="4" size="md" />
-            <testimonio class="m-auto" user="Pablo" opinion="Muy buena aplicación" :stars="5" size="lg" />
+            <testimonio v-for="item in testimonios" :key="item.id" class="testimonio" :class="item.className" :user="item.user" :opinion="item.opinion" :stars="5" :size="item.className === 't3' || item.className === 't6' ? 'lg' : 'md'" />
 
-            <div
+            <div @click="move('right')"
                 class="arrow right position-absolute m-1 m-sm-5 rounded-circle d-flex justify-content-center align-items-center">
                 <iconArrow class="icon" />
             </div>
@@ -27,31 +25,90 @@ import testimonio from '../reutilizable/design/testimonio.vue';
 
 name: 'testimonios';
 components: [testimonio, iconArrow]
+const testimonios = [
+    {
+        className: 't1',
+        user: 'Pablo',
+        opinion: 'Muy buena aplicación',
+        id: 0
+    },
+    {
+        className: 't2',
+        user: 'Pablo',
+        opinion: 'Muy buena aplicación',
+        id: 1
+    },
+    {
+        className: 't3',
+        user: 'Pablo',
+        opinion: 'Muy buena aplicación',
+        id: 2
+    },
+    {
+        className: 't4',
+        user: 'Pablo',
+        opinion: 'Muy buena aplicación',
+        id: 3
+    },
+    {
+        className: 't5',
+        user: 'Pablo',
+        opinion: 'Muy buena aplicación',
+        id: 4
+    },
+
+    {
+        className: 't6',
+        user: 'Pablo',
+        opinion: 'Muy buena aplicación',
+        id: 5
+    },
+];
+const move = (direction) => {
+    if (direction === 'left'){
+        testimonios.map()
+    }
+    else{
+        
+    }
+}
 </script>
 
 <style scoped lang="scss">
 #testimonios {
+    height: auto;
     h2 {
         width: 64%;
     }
     input{
         transform: scale(1.7);
-        accent-color: #b23abb;      
+        accent-color: #b23abb;
+        cursor: pointer;
     }
 
     .testimonios-container {
         vertical-align: middle;
-        .t1 {
-            top: 20%;
+        height: 36vw;
+        max-height: 400px;
+        min-height: 240px;
+        .t4, .t5 {
+            bottom: 10%;
             left: 18vw;
         }
 
-        .t2 {
-            top: 20%;
+        .t2, .t1 {
+            bottom: 10%;
             right: 18vw;
         }
-
+        .t3, .t6{
+            margin: 0 auto;
+            
+        }
+        .t6, .t1, .t5{
+            visibility: hidden;
+        }
         .arrow {
+            cursor: pointer;
             min-width: 32px;
             width: 6vw;
             max-width: 50px;
