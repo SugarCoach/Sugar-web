@@ -3,12 +3,12 @@
         class="hero-circle d-flex justify-content-end gap-3 gap-sm-0 justify-content-sm-between flex-column-reverse flex-sm-row">
         <div class="hero-text d-flex flex-column align-self-start align-self-sm-center">
             <span class="d-flex gap-1 over-text fw-medium align-items-center">
-                <slot></slot> {{ props.overText }}
+                <iconCorona v-if="props.heading1 === 'Premium'" :color="props.color" size="35px"/><iconEdificio v-else :color="props.color" size="35px"/>{{ props.overText }}
             </span>
             <h1 class="fw-bold mb-3" :style="`color: ${props.color};`">{{ props.heading1 }}</h1>
             <h2 class="fw-normal mb-4">{{ props.heading2 }}</h2>
             <ctaBtn :url="props.button_url" :color="props.color">
-                <slot></slot> {{ buttonText }}
+                <iconCorona v-if="props.heading1 === 'Premium'"  color="white" size="23px"/><iconEdificio v-else color="white" size="23px"/>{{ buttonText }}
             </ctaBtn>
         </div>
         <img class="align-self-center align-self-sm-start" :src="props.img_url" :alt="props.img_alt">
@@ -17,10 +17,12 @@
 </template>
 
 <script setup>
+import iconCorona from '../icons/_corona.vue';
+import iconEdificio from '../icons/_edificio.vue';
 import ctaBtn from '../utils/ctaBtn.vue';
 
 name: 'heroCircle';
-components: [ctaBtn]
+components: [ctaBtn, iconCorona, iconEdificio]
 const props = defineProps({
     heading1: {
         type: String,

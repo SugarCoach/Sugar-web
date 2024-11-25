@@ -14,8 +14,13 @@
                         <h5 class="fw-bold">{{ item.section }}</h5>
                         <ul class="nav flex-column">
                             <li v-for="link in item.links" :key="link.id" class="nav-item mb-2">
-                                <a :href="link.url" class="nav-link p-0 text-body-secondary fw-semibold">{{ link.name
-                                    }}</a>
+                                <router-link v-if="link.isView" :to="link.url" class="nav-link p-0 text-body-secondary fw-semibold">
+                                    {{ link.name }}
+                                </router-link>
+                                <a v-else  aria-current="page" :href="link.url" class="nav-link p-0 text-body-secondary fw-semibold">
+                                    {{ link.name }}
+                                </a>
+                                
                             </li>
                         </ul>
                     </div>
@@ -43,16 +48,19 @@ const sections = [
             {
                 name: 'Home',
                 url: '/',
+                isView: true,
                 id: 0,
             },
             {
                 name: 'Sobre nosotros',
                 url: '/about',
+                isView: true,
                 id: 1,
             },
             {
                 name: 'Contacto',
                 url: '/contacto',
+                isView: true,
                 id: 2,
             },
         ],
@@ -63,17 +71,20 @@ const sections = [
         links: [
             {
                 name: 'Premium',
-                url: '/Premium',
+                url: '/premium',
+                isView: true,
                 id: 0,
             },
             {
                 name: 'Premios',
-                url: '/Premium#premios',
+                url: '/premium#premios',
+                isView: false,
                 id: 0,
             },
             {
                 name: 'Borrar cuenta',
                 url: '/DiabetesPremiumDeleteAccount',
+                isView: true,
                 id: 0,
             },
         ],
@@ -86,7 +97,7 @@ const sections = [
 footer {
     color: #3E3A9C !important;
 
-    a {
+    .nav-link {
         color: #3E3A9C !important;
     }
 

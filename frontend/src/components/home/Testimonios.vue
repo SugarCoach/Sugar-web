@@ -2,79 +2,101 @@
     <section id="testimonios">
         <h2 class="m-auto m-0 mb-2">Testimonios</h2>
         <div class="position-relative testimonios-container">
-            <div
-                class="arrow left position-absolute m-1 m-sm-5 rounded-circle d-flex justify-content-center align-items-center">
-                <iconArrow @click="move('left')" class="icon" />
+            <div class="p-2 position-absolute left m-1 m-sm-5" @click="move('left')">
+                <div
+                    class="arrow rounded-circle d-flex justify-content-center align-items-center">
+                    <iconArrow  class="icon" />
+                </div>
             </div>
-            <testimonio v-for="item in testimonios" :key="item.id" class="testimonio" :class="item.className" :user="item.user" :opinion="item.opinion" :stars="5" :size="item.className === 't3' || item.className === 't6' ? 'lg' : 'md'" />
-
-            <div @click="move('right')"
-                class="arrow right position-absolute m-1 m-sm-5 rounded-circle d-flex justify-content-center align-items-center">
-                <iconArrow class="icon" />
+            <testimonio v-for="item in testimonios" :key="item.id" class="testimonio" :class="'t'+item.className" :user="item.user" :opinion="item.opinion" :stars="5" :size="'lg'" />
+            <div class="p-2 position-absolute right m-1 m-sm-5" @click="move('right')">
+                <div
+                    class=" arrow rounded-circle d-flex justify-content-center align-items-center">
+                    <iconArrow class="icon" />
+                </div>
             </div>
+            
         </div>
-        <div class="d-flex justify-content-center gap-5 align-items-center mt-5">
+        <!-- <div class="d-flex justify-content-center gap-5 align-items-center mt-5">
             <input v-for="index in 6" :key="index"type="radio" :checked="index == 1 ? true:false" name="select-testimonio">
-        </div>
+        </div> -->
     </section>
 </template>
 
 <script setup>
 import iconArrow from '../reutilizable/icons/_arrow.vue';
 import testimonio from '../reutilizable/design/testimonio.vue';
+import { ref } from 'vue';
 
 name: 'testimonios';
 components: [testimonio, iconArrow]
-const testimonios = [
+const testimonios = ref([
     {
-        className: 't1',
+        className: 1,
         user: 'Pablo',
-        opinion: 'Muy buena aplicación',
+        opinion: 'Buenisimaaaaa',
         id: 0
     },
     {
-        className: 't2',
+        className: 2,
         user: 'Pablo',
-        opinion: 'Muy buena aplicación',
+        opinion: 'me gusta esta app',
         id: 1
     },
     {
-        className: 't3',
+        className: 3,
         user: 'Pablo',
-        opinion: 'Muy buena aplicación',
+        opinion: 'buena',
         id: 2
     },
     {
-        className: 't4',
+        className: 4,
         user: 'Pablo',
         opinion: 'Muy buena aplicación',
         id: 3
     },
     {
-        className: 't5',
+        className: 5,
         user: 'Pablo',
-        opinion: 'Muy buena aplicación',
+        opinion: 'Increible',
         id: 4
     },
 
     {
-        className: 't6',
+        className: 6,
         user: 'Pablo',
-        opinion: 'Muy buena aplicación',
+        opinion: 'La mejor app que use',
         id: 5
     },
-];
+]);
 const move = (direction) => {
+    var value;
+    var last;
+    var notLast;
     if (direction === 'left'){
-        testimonios.map()
+        value = 1;
+        last = 6;
+        notLast = 1;
+
     }
     else{
-        
+        value = -1;
+        last = 1;
+        notLast = 6;
     }
+    testimonios.value.map((x) => {
+        if (x.className != last){
+            x.className += value;
+        }
+        else{
+            x.className = notLast;
+        }
+    })
 }
 </script>
 
 <style scoped lang="scss">
+$transform: 18vw;
 #testimonios {
     height: auto;
     h2 {
@@ -91,39 +113,49 @@ const move = (direction) => {
         height: 36vw;
         max-height: 400px;
         min-height: 240px;
-        .t4, .t5 {
-            bottom: 10%;
-            left: 18vw;
+        .t1, .t2, .t3, .t4, .t5, .t6{
+            transition: 1s;
+            margin: 0 auto;
+        }
+        .t2, .t1 {
+            transform: translateX($transform);
+            scale: 0.7;
         }
 
-        .t2, .t1 {
-            bottom: 10%;
-            right: 18vw;
+        .t5, .t4 {
+            transform: translate(-$transform);
+            scale: 0.7;
         }
         .t3, .t6{
-            margin: 0 auto;
-            
+            transform: translate(0);
         }
         .t6, .t1, .t5{
-            visibility: hidden;
+            opacity: 0;
+        }
+        .t3{
+            z-index: 99;
+        }
+        .left {
+            left: 0;
+            top: 45%;
+            cursor: pointer;
+        }
+        .right {
+            right: 0;
+            top: 45%;
+            transform: rotate(180deg);
+            cursor: pointer;
         }
         .arrow {
-            cursor: pointer;
             min-width: 32px;
             width: 6vw;
             max-width: 50px;
             aspect-ratio: 1/1;
             background: linear-gradient(30deg, #ffffff 0%, #b23abbf3 64%);
-            top: 45%;
+            
+            
 
-            &.left {
-                left: 0;
-            }
-
-            &.right {
-                right: 0;
-                transform: rotate(180deg);
-            }
+            
 
             .icon {
                 filter: drop-shadow(-2px -1px 3px #ffffffbe) drop-shadow(2px 1px 4px #00000083);

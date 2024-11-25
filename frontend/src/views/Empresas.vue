@@ -2,11 +2,11 @@
     <q-page class="">
         <main>
             <heroCircle heading1="Empresas" heading2="Recibe más ayuda para combatir la diabetes"
-                over-text="Invierte en SugarCoach" color="#00C8DC" button-text="Patrocinanos" button_url="planes-empresas"
-                img_url="../../../contenido/nenes-usando-app.jpg" img_alt="Foto de niño viendo sus datos en SugarCoach">
-                <corona color="#00C8DC" />
-            </heroCircle>
-            <ImgsYtextos title="Beneficios" :imagenesYtextos="imagenesYTextos"/>
+                over-text="Invierte en SugarCoach" color="#00C8DC" button-text="Patrocinanos" button_url="#planes-empresas"
+                img_url="../../../contenido/nenes-usando-app.jpg" img_alt="Foto de niño viendo sus datos en SugarCoach"/>
+            <ImgsYtextos title="Beneficios" :imagenesYtextos="imagenesYTextos" color="#00C8DC">
+				<iconEdificio color="white" size="23px"/>
+			</ImgsYtextos>
             <PlanesEmpresas :paquetes="paquetes" color="#00C8DC"/>
             <faqs :preguntas="preguntas"/>
             <Contactanos/>
@@ -21,10 +21,11 @@ import ImgsYtextos from "@/components/reutilizable/ui/imgsYtextos.vue";
 import PlanesEmpresas from "@/components/empresas/PlanesEmpresas.vue";
 import faqs from "@/components/reutilizable/ui/preguntasFrecuentes.vue";
 import Contactanos from "@/components/home/Contactanos.vue";
+import iconEdificio from "@/components/reutilizable/icons/_edificio.vue";
 // import { useHead } from "@vueuse/head";
 // import { defineAsyncComponent } from "vue";
 name: "Empresas";
-components: [heroCircle, corona, ImgsYtextos, PlanesEmpresas, faqs, Contactanos];
+components: [heroCircle, iconEdificio, ImgsYtextos, PlanesEmpresas, faqs, Contactanos];
 // useHead({
 // 	// Can be static or computed
 // 	title:
@@ -81,8 +82,8 @@ const imagenesYTextos = [
 		img_alt: 'Equipo de SugarCoach trabajando',
 		title: 'Apoyar a SugarCoach',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
-		cta: 'Premios',
-		cta_url: '/#premios',
+		cta: 'Ver los paquetes',
+		cta_url: '#planes-empresas',
 		id: 3
 	},
 ];

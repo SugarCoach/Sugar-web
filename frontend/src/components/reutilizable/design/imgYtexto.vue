@@ -12,7 +12,7 @@
             <p class="mb-1">
                 {{ props.texto }}
             </p>
-            <ctaBtn v-if="props.cta" :url="props.cta_url">{{ props.cta }}</ctaBtn>
+            <ctaBtn v-if="props.cta" :url="props.cta_url" :color="props.color"><slot></slot>{{ props.cta }}</ctaBtn>
         </div>
 
     </div>
@@ -49,6 +49,10 @@ const props = defineProps({
     },
     cta_url: {
         type: String,
+    },
+    color: {
+        type: String,
+        default: 'blue'
     }
 
 });

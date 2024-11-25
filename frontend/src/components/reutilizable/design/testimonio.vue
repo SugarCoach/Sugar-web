@@ -48,7 +48,7 @@ $md: 20%;
     aspect-ratio: 6/5;
     box-shadow: 1px 6px 25px -5px rgba(0, 0, 0, 0.3);
     &.lg{
-        min-width: 250px;
+        min-width: 230px;
         max-width: 350px;
         width: $lg;
         z-index: 40;

@@ -1,18 +1,21 @@
 <template>
-    <sectionDividers img_url="/contenido/trofeo.png" img_alt="trofeo">
-        <div class="d-flex align-items-center justify-content-center mb-5 w-100 ">
-            <h2 class="text-center">Premios</h2>
-            <trofeo size="50px" color="#FFB800"/>
-        </div>
+    <section id="premios">
+        <sectionDividers sectionId="premios" img_url="/contenido/trofeo.png" img_alt="trofeo">
+            <div class="d-flex align-items-center justify-content-center mb-5 w-100 ">
+                <h2 class="text-center">Premios</h2>
+                <trofeo size="50px" color="#FFB800"/>
+            </div>
 
-        <div class="contenedor-premios d-grid m-0 m-auto pt-4">
-            <img class="m-auto m-0" v-for="item in premios" :key="item.id" :src="item.url" :alt="item.alt">
-        </div>
-        <div class="w-100 d-flex justify-content-center mt-5">
-            <button class="btn px-5 py-3">Canjear puntos</button>
-        </div>
-        
-    </sectionDividers>
+            <div class="contenedor-premios d-grid m-0 m-auto pt-4">
+                <img class="m-auto m-0" v-for="item in premios" :key="item.id" :src="item.url" :alt="item.alt">
+            </div>
+            <div class="w-100 d-flex justify-content-center mt-5">
+                <button class="btn px-5 py-3">Canjear puntos</button>
+            </div>
+            
+        </sectionDividers>
+    </section>
+
 </template>
 
 <script setup>

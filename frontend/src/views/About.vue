@@ -34,8 +34,8 @@ const imagenesYTextos = [
     {
         img_url: '../../contenido/objetivos.png',
         img_alt: 'Objetivos de SugarCoach',
-        title: 'El Equipo',
-        texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
+        title: 'Nuestra mision',
+        texto: '',
         cta: 'Premios',
         cta_url: '/#premios',
         id: 1

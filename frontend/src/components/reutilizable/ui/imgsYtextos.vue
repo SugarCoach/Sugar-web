@@ -4,7 +4,9 @@
         <div class="contenedor-textos d-flex flex-column">
             <imgYtexto v-for="item in props.imagenesYtextos" :key="item.id" :direction="item.id % 2 == 0 ? 'left' : 'right'"
                 :imagen="item.img_url" :imagen_alt="item.img_alt" :title="item.title" :texto="item.texto"
-                :cta="item.cta" :cta_url="item.cta_url" />
+                :cta="item.cta" :cta_url="item.cta_url" :color="props.color">
+                <slot></slot>
+            </imgYtexto>
         </div>
 
     </section>
@@ -23,6 +25,10 @@ const props = defineProps({
     imagenesYtextos: {
         type: Object,
         required: true
+    },
+    color: {
+        type: String,
+        default: 'blue'
     }
 })
 </script>
