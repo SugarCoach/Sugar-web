@@ -17,10 +17,9 @@
                                 <router-link v-if="link.isView" :to="link.url" class="nav-link p-0 text-body-secondary fw-semibold">
                                     {{ link.name }}
                                 </router-link>
-                                <a v-else  aria-current="page" :href="link.url" class="nav-link p-0 text-body-secondary fw-semibold">
+                                <a v-else aria-current="page" :href="link.url" class="nav-link p-0 text-body-secondary fw-semibold">
                                     {{ link.name }}
                                 </a>
-                                
                             </li>
                         </ul>
                     </div>
@@ -35,78 +34,78 @@
     </div>
 </template>
 <script setup>
-import descargarApp from './reutilizable/utils/descargarApp.vue';
-import sugarLogo from './reutilizable/icons/sugarLogo.vue';
-import redesSociales from './reutilizable/utils/redesSociales.vue';
+    import descargarApp from './reutilizable/utils/descargarApp.vue'
+    import sugarLogo from './reutilizable/icons/sugarLogo.vue'
+    import redesSociales from './reutilizable/utils/redesSociales.vue'
 
-name: 'sugarFooter';
-components: [descargarApp, sugarLogo, redesSociales]
-const sections = [
-    {
-        section: 'SugarCoach',
-        links: [
-            {
-                name: 'Home',
-                url: '/',
-                isView: true,
-                id: 0,
-            },
-            {
-                name: 'Sobre nosotros',
-                url: '/about',
-                isView: true,
-                id: 1,
-            },
-            {
-                name: 'Contacto',
-                url: '/contacto',
-                isView: true,
-                id: 2,
-            },
-        ],
-        id: 0,
-    },
-    {
-        section: 'Usuarios',
-        links: [
-            {
-                name: 'Premium',
-                url: '/premium',
-                isView: true,
-                id: 0,
-            },
-            {
-                name: 'Premios',
-                url: '/premium#premios',
-                isView: false,
-                id: 0,
-            },
-            {
-                name: 'Borrar cuenta',
-                url: '/DiabetesPremiumDeleteAccount',
-                isView: true,
-                id: 0,
-            },
-        ],
-        id: 0,
-    }
-]
+    name: 'sugarFooter'
+    components: [descargarApp, sugarLogo, redesSociales]
+    const sections = [
+        {
+            section: 'SugarCoach',
+            links: [
+                {
+                    name: 'Home',
+                    url: '/',
+                    isView: true,
+                    id: 0
+                },
+                {
+                    name: 'Sobre nosotros',
+                    url: '/about',
+                    isView: true,
+                    id: 1
+                },
+                {
+                    name: 'Contacto',
+                    url: '/contacto',
+                    isView: true,
+                    id: 2
+                }
+            ],
+            id: 0
+        },
+        {
+            section: 'Usuarios',
+            links: [
+                {
+                    name: 'Premium',
+                    url: '/premium',
+                    isView: true,
+                    id: 0
+                },
+                {
+                    name: 'Premios',
+                    url: '/premium#premios',
+                    isView: false,
+                    id: 0
+                },
+                {
+                    name: 'Borrar cuenta',
+                    url: '/DiabetesPremiumDeleteAccount',
+                    isView: true,
+                    id: 0
+                }
+            ],
+            id: 0
+        }
+    ]
 </script>
 
 <style scoped lang="scss">
-footer {
-    color: #3E3A9C !important;
+    footer {
+        color: #3e3a9c !important;
 
-    .nav-link {
-        color: #3E3A9C !important;
-    }
+        .nav-link {
+            color: #3e3a9c !important;
+        }
 
-    .logo {
-        justify-self: flex-start !important;
-    }
+        .logo {
+            justify-self: flex-start !important;
+        }
 
-    .sub-footer {
-        border-top: 1px solid #3E3A9C;
+        .sub-footer {
+            border-top: 1px solid #3e3a9c;
+        }
     }
-}
 </style>

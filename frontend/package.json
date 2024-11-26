@@ -11,8 +11,10 @@
     "@vueuse/head": "^2.0.0",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "dompurify": "^3.2.1",
     "node-fetch": "^3.3.2",
     "vue": "^3.5.4",
+    "vue-i18n": "^10.0.4",
     "vue-meta": "^2.4.0",
     "vue-router": "^4.4.4",
     "yarn": "^1.22.22"
