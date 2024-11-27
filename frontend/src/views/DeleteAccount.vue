@@ -1,10 +1,11 @@
 <template>
 	<q-page class="">
 		<main>
-			<form
+			<form id="delete-account-form"
 				class="m-auto m-0 d-flex flex-column align-items-center p-4 rounded-5 position-relative">
 				<h1 class="h3 text-center mb-3 fw-normal">BORRAR TU CUENTA</h1>
 				<div class="d-flex flex-column gap-3 w-100 mb-4">
+					<input type="text" name="formId" value="delete-account-form" class="d-none">
 					<div v-for="item in inputs" :key="item.id" class="w-100">
 						<label :for="item.for" class="mb-1 lead fw-normal">{{ item.label }}</label>
 						<input class="form-control message rounded-4 border border-1 border-black border-opacity-50"
@@ -23,26 +24,25 @@
 </template>
 
 <script setup>
-// import { onMounted } from 'vue';
-// import axios from 'axios';
+import { onMounted } from 'vue';
+import axios from 'axios';
 name: 'deleteAccount'
 // Define a route for sending emails
 
-// onMounted(() => {
-// 	const $form = document.querySelector("#form");
-// 	$form.addEventListener("submit", event => {
-// 		event.preventDefault();
-// 		const formdata = new FormData($form);
-// 		const data = Object.fromEntries(formdata);
-// 		console.log(`formdata:\n${JSON.stringify(data)}`);
-
-// 		axios.post('https://sugar.coach/apisubmit', data).then(response => {
-// 			console.log("Recurso creado con éxito:", response.data);
-// 		}).catch(error => {
-// 			console.error("Error al crear el recurso: ", error);
-// 		});
-// 	});
-// })
+onMounted(() => {
+	const $form = document.querySelector("#delete-account-form");
+	$form.addEventListener("submit", event => {
+		event.preventDefault();
+		let formdata = new FormData($form);
+		const data = Object.fromEntries(formdata);
+		console.log(`formdata:\n${JSON.stringify(data)}`);
+		axios.post(`${process.env.VUE_APP_BACKEND_URL}/submit`, data).then(response => {
+			console.log("Recurso creado con éxito:", response.data);
+		}).catch(error => {
+			console.error("Error al crear el recurso: ", error);
+		});
+	});
+})
 
 const inputs = [
 	{
