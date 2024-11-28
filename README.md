@@ -1,24 +1,13 @@
 # web
 Sitio web oficial de SugarCoach Diabetes Premium
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Frontend:
+# Vue 3 + Vite
 
-### Compiles and minifies for production
-```
-npm run build
-```
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-### Lints and fixes files
-```
-npm run lint
-```
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Backend:
+Node + Js + >Express.js
