@@ -5,8 +5,8 @@
             <funcionalidadApp
                 v-for="item in pantallas"
                 :key="item.id"
-                :title="$t('nuestraApp.pantallas[' + item.id + '].title')"
-                :texto="$t('nuestraApp.pantallas[' + item.id + '].texto')"
+                :title="$t('home.nuestraApp.pantallas[' + item.id + '].title')"
+                :texto="$t('home.nuestraApp.pantallas[' + item.id + '].texto')"
                 :celu_url="item.url"
                 :direction="item.id % 2 == 0 ? 'right' : 'left'"
                 :last="item.id == 3"

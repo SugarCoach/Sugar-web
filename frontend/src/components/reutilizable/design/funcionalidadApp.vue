@@ -209,7 +209,7 @@ $top: 3rem;
 					height: 11%;
 					background-color: #f8f8f8;
 					box-shadow: 0 0 20px 20px #f8f8f8;
-					z-index: 999;
+					z-index: 100;
 					display: block !important;
 				}
 				

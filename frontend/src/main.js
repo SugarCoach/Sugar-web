@@ -2,7 +2,6 @@ import App from "./App.vue";
 import router from "./Router.js";
 import "./assets/main.scss"
 import "bootstrap/dist/js/bootstrap.js"
-import axiosInstance from './plugins/axios';
 // import { createHead } from "@vueuse/head";  
 import { createI18n } from 'vue-i18n';
 import messages from './languagePreference';
@@ -19,7 +18,6 @@ const i18n = createI18n({
 })
 // const head = createHead();
 const app = createApp(App);
-app.config.globalProperties.$axios = axiosInstance;
 // app.use(head);
 app.use(router);
 app.use(i18n)

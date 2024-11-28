@@ -15,13 +15,13 @@
 </template>
 
 <script setup>
-import heroCircle from "@/components/reutilizable/ui/heroCircle.vue";
-import corona from "@/components/reutilizable/icons/_corona.vue";
-import ImgsYtextos from "@/components/reutilizable/ui/imgsYtextos.vue";
-import PlanesEmpresas from "@/components/empresas/PlanesEmpresas.vue";
-import faqs from "@/components/reutilizable/ui/preguntasFrecuentes.vue";
-import Contactanos from "@/components/home/Contactanos.vue";
-import iconEdificio from "@/components/reutilizable/icons/_edificio.vue";
+import heroCircle from "../components/reutilizable/ui/heroCircle.vue";
+import corona from "../components/reutilizable/icons/_corona.vue";
+import ImgsYtextos from "../components/reutilizable/ui/imgsYtextos.vue";
+import PlanesEmpresas from "../components/empresas/PlanesEmpresas.vue";
+import faqs from "../components/reutilizable/ui/preguntasFrecuentes.vue";
+import Contactanos from "../components/home/Contactanos.vue";
+import iconEdificio from "../components/reutilizable/icons/_edificio.vue";
 // import { useHead } from "@vueuse/head";
 // import { defineAsyncComponent } from "vue";
 name: "Empresas";

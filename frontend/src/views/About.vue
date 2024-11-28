@@ -13,10 +13,10 @@
 
 <script setup>
 import hero from "../components/reutilizable/ui/hero.vue";
-import fuertes from "@/components/about/Fuertes.vue";
-import nuestroEquipo from "@/components/about/NuestroEquipo.vue";
-import contacto from "@/components/home/Contactanos.vue";
-import imgsYtextos from "@/components/reutilizable/ui/imgsYtextos.vue";
+import fuertes from "../components/about/Fuertes.vue";
+import nuestroEquipo from "../components/about/NuestroEquipo.vue";
+import contacto from "../components/home/Contactanos.vue";
+import imgsYtextos from "../components/reutilizable/ui/imgsYtextos.vue";
 
 name: 'About';
 components: [hero, imgsYtextos, fuertes, nuestroEquipo, contacto];
