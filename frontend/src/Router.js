@@ -14,55 +14,55 @@ const routes = [
     {
         path: '/about', // la ruta base
         name: 'About', // el nombre de la ruta
-        component: () => import('@/views/About.vue'),
+        component: () => import('./views/About.vue'),
         meta: { analytics: true }
     },
     {
         path: '/contacto', // la ruta base
         name: 'Contacto', // el nombre de la ruta
-        component: () => import('@/views/Contacto.vue'),
+        component: () => import('./views/Contacto.vue'),
         meta: { analytics: true }
     },
     {
         path: '/premium', // otra ruta
         name: 'Premium',
-        component: () => import('@/views/Premium.vue'),
+        component: () => import('./views/Premium.vue'),
         meta: { analytics: true }
     },
     {
         path: '/empresas', // otra ruta
         name: 'Empresas',
-        component: () => import('@/views/Empresas.vue'),
+        component: () => import('./views/Empresas.vue'),
         meta: { analytics: true }
     },
     {
         path: '/privacy',
         name: 'Priacy Policy',
-        component: () => import('@/views/PrivacyPolicy.vue'),
+        component: () => import('./views/PrivacyPolicy.vue'),
         meta: { analytics: false }
     },
     {
         path: '/DiabetesPremiumDeleteAccount',
         name: 'Delete Account',
-        component: () => import('@/views/DeleteAccount.vue'),
+        component: () => import('./views/DeleteAccount.vue'),
         meta: { analytics: true }
     },
     {
         path: '/isa',
         name: 'IsaLinktree',
-        component: () => import('@/views/extras/Isa.vue'),
+        component: () => import('./views/extras/Isa.vue'),
         meta: { analytics: false }
     },
     {
         path: '/lab',
         name: 'SugarLab',
-        component: () => import('@/views/extras/Lab.vue'),
+        component: () => import('./views/extras/Lab.vue'),
         meta: { analytics: false }
     },
     {
         path: '/:catchAll(.*)', // otra ruta
         name: 'NotFound',
-        component: () => import('@/views/404.vue'),
+        component: () => import('./views/404.vue'),
         meta: { analytics: true }
     }
 ]

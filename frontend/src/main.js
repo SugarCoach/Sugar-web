@@ -1,6 +1,6 @@
 import App from "./App.vue";
 import router from "./Router.js";
-import "@/assets/main.scss"
+import "./assets/main.scss"
 import "bootstrap/dist/js/bootstrap.js"
 import axiosInstance from './plugins/axios';
 import { createHead } from "@vueuse/head";  

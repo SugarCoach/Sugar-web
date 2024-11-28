@@ -39,7 +39,7 @@
 <script setup>
     import { onMounted } from 'vue'
     import axios from 'axios'
-    import FormularioPago from '@/components/empresas/FormularioPago.vue'
+    import FormularioPago from '../../empresas/FormularioPago.vue'
     import iconCorona from '../icons/_corona.vue'
     import iconGota from '../icons/_gota.vue'
     import iconTick from '../icons/_tick.vue'
