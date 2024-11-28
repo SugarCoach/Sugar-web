@@ -3,7 +3,7 @@ import router from "./Router.js";
 import "./assets/main.scss"
 import "bootstrap/dist/js/bootstrap.js"
 import axiosInstance from './plugins/axios';
-import { createHead } from "@vueuse/head";  
+// import { createHead } from "@vueuse/head";  
 import { createI18n } from 'vue-i18n';
 import messages from './languagePreference';
 // Importa la función createApp desde el módulo 'vue'
@@ -17,10 +17,10 @@ const i18n = createI18n({
     fallbackformat: 'es',
     locale: navigator.language.startsWith('en') ? 'en' : 'es',
 })
-const head = createHead();
+// const head = createHead();
 const app = createApp(App);
 app.config.globalProperties.$axios = axiosInstance;
-app.use(head);
+// app.use(head);
 app.use(router);
 app.use(i18n)
 app.mount("#app");
