@@ -1,9 +1,9 @@
 <template>
     <q-page>
         <main>
-            <hero img="contenido/1-Niños-con-SC.webp" title="SugarCoach" subheading="Diviertete mientras te cuidas" :cta="true" />
+            <hero img="contenido/1-Niños-con-SC.jpg" title="SugarCoach" :subheading="$t('home.hero.h2')" :cta="true" />
             <nuestraApp />
-            <textLink class="py-5 mt-5 mb-1" text="¡Descarga la app ya!">
+            <textLink class="py-5 mt-5 mb-1" :text="$t('home.descargarApp')">
                 <descargarApp />
             </textLink>
             <mejorarExperiencia />

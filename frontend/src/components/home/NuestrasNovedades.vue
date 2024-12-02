@@ -1,8 +1,8 @@
 <template>
     <section id="nuestras_novedades" class="pt-5">
         <div class="mb-4 text-center">
-            <h2 class="">Seguí nuestras novedades</h2>
-            <h3 class="">Sumate a nuestras redes sociales</h3>
+            <h2 class="">{{ $t('home.novedades.h2') }}</h2>
+            <h3 class="">{{ $t('home.novedades.h3') }}</h3>
 
         </div>
         <redes-sociales />

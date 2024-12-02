@@ -3,19 +3,19 @@
 		<main>
 			<form id="delete-account-form"
 				class="m-auto m-0 d-flex flex-column align-items-center p-4 rounded-5 position-relative">
-				<h1 class="h3 text-center mb-3 fw-normal">BORRAR TU CUENTA</h1>
+				<h1 class="h3 text-center mb-3 fw-normal">{{ $t('borrarCuenta.h1') }}</h1>
 				<div class="d-flex flex-column gap-3 w-100 mb-4">
 					<input type="text" name="formId" value="delete-account-form" class="d-none">
 					<div v-for="item in inputs" :key="item.id" class="w-100">
-						<label :for="item.for" class="mb-1 lead fw-normal">{{ item.label }}</label>
+						<label :for="item.for" class="mb-1 lead fw-normal">{{ $t('borrarCuenta.inputs['+ item.id +'].label') }}</label>
 						<input class="form-control message rounded-4 border border-1 border-black border-opacity-50"
-							:name="item.for" :type="item.type" :placeholder="item.placeholder">
+							:name="item.for" :type="item.type" :placeholder="$t('borrarCuenta.inputs['+ item.id +'].placeholder')">
 					</div>
 				</div>
 
-				<button type="submit" class="mb-5 btn py-2 mt-3">Borrar cuenta</button>
+				<button type="submit" class="mb-5 btn py-2 mt-3">{{ $t('borrarCuenta.enviar') }}</button>
 				<div class="info position-absolute p-4 rounded-4 text-white" style="">
-					<span class="">Contactanos: admin.team@sugar.coach</span>
+					<span class="">{{ $t('borrarCuenta.info') }}</span>
 				</div>
 			</form>
 		</main>

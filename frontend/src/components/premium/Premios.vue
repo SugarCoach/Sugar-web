@@ -2,7 +2,7 @@
     <section id="premios">
         <sectionDividers sectionId="premios" img_url="/contenido/trofeo.png" img_alt="trofeo">
             <div class="d-flex align-items-center justify-content-center mb-5 w-100 ">
-                <h2 class="text-center">Premios</h2>
+                <h2 class="text-center">{{ $t('premium.premios.h2') }}</h2>
                 <trofeo size="50px" color="#FFB800"/>
             </div>
 
@@ -10,7 +10,7 @@
                 <img class="m-auto m-0" v-for="item in premios" :key="item.id" :src="item.url" :alt="item.alt">
             </div>
             <div class="w-100 d-flex justify-content-center mt-5">
-                <button class="btn px-5 py-3">Canjear puntos</button>
+                <button class="btn px-5 py-3">{{ $t('premium.premios.ctaBtn') }}</button>
             </div>
             
         </sectionDividers>

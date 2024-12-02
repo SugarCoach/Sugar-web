@@ -1,5 +1,5 @@
 <template>
-	<a :href="props.url" class="btn p-2 d-flex align-items-center gap-2 text-white" :style="`background-color: ${props.color}!important;`"><slot></slot></a>
+	<a :href="props.url" class="btn px-3 py-2 d-flex align-items-center gap-2 text-white" :style="`background-color: ${props.color}!important;`"><slot></slot></a>
 </template>
 
 <script setup>

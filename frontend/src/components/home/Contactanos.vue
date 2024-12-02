@@ -3,9 +3,9 @@
         class="text-white position-relative d-flex gap-5 gap-xl-0 justify-content-center justify-content-xl-between flex-wrap">
         <div class="filtro"></div>
         <header class="p-4 m-0 ms-xl-5">
-            <h2 class="mb-4">Contactanos</h2>
-            <p class="">Para conocer más sobre nosotros y SugarCoach podés escribirnos, o seguir la comunidad en las redes.</p>
-            <ctaBtn class="cta" url="/about">Sobre nosotros</ctaBtn>
+            <h2 class="mb-4">{{ $t('home.contactanos.h2') }}</h2>
+            <p class="" v-html="$t('home.contactanos.p')"></p>
+            <ctaBtn class="cta" url="/about">{{ $t('home.contactanos.ctaBtn') }}</ctaBtn>
         </header>
         <formulario class="form me-0 me-xl-4" />
     </section>

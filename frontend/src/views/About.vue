@@ -1,9 +1,9 @@
 <template>
     <q-page>
         <main>
-            <hero justify="center" img="../../contenido/integrantes/10.Team.jpg" title="Sobre nosotros"
-                subheading="Conoce nuestra historia" />
-            <imgsYtextos title="Nosotros" :imagenesYtextos="imagenesYTextos" />
+            <hero justify="center" img="../../contenido/integrantes/10.Team.jpg" :title="$t('sobreNosotros.hero.h1')"
+                :subheading="$t('sobreNosotros.hero.h2')" />
+            <imgsYtextos :title="$t('sobreNosotros.beneficios.h2')" from="sobreNosotros" :imagenesYtextos="imagenesYTextos" />
             <fuertes />
             <nuestroEquipo />
             <contacto />

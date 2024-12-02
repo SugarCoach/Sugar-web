@@ -1,16 +1,16 @@
 <template>
 	<q-page class="">
 		<main>
-			<heroCircle heading1="Premium" heading2="Recibe más ayuda para combatir la diabetes" color="#FFB800"
-				over-text="Mejora tu salud con Premium" button-text="Obtén Premium" button_url="#planes-premium"
+			<heroCircle heading1="Premium" :heading2="$t('premium.hero.h2')" color="#FFB800"
+				:over-text="$t('premium.hero.overtext')" :button-text="$t('premium.hero.ctaBtn')" button_url="#planes-premium"
 				img_url="../../../contenido/7-Niños-con-SC.webp" img_alt="Foto de niño ganando puntos en SugarCoach"/>
-			<imgsYtextos title="Beneficios" :imagenesYtextos="imagenesYTextos" color="#FFB800">
+			<imgsYtextos from="premium" :title="$t('premium.beneficios.h2')" :imagenesYtextos="imagenesYTextos" color="#FFB800">
 				<iconTrofeo color="white" size="23px"/>
 			</imgsYtextos>
 			<planes :paquetesUsuarios="paquetes" />
 			<premios />
-			<faqs :preguntas="preguntas"/>
-			<contactanos />
+			<faqs :preguntas="preguntas" from="premium"/>
+			<Contactanos/>
 		</main>
 	</q-page>
 </template>
@@ -21,12 +21,12 @@ import heroCircle from "../components/reutilizable/ui/heroCircle.vue"
 import imgsYtextos from "../components/reutilizable/ui/imgsYtextos.vue";
 import planes from "../components/premium/Planes.vue";
 import premios from "../components/premium/Premios.vue";
-import contactanos from "../components/home/Contactanos.vue";
 import faqs from "../components/reutilizable/ui/preguntasFrecuentes.vue";
 import iconTrofeo from "../components/reutilizable/icons/_trofeo.vue";
+import Contactanos from "../components/home/Contactanos.vue";
 // import { defineAsyncComponent } from "vue";
 name: "Premium";
-components: [heroCircle, iconTrofeo, imgsYtextos, planes, premios, faqs, contactanos];
+components: [heroCircle, iconTrofeo, imgsYtextos, planes, premios, faqs, Contactanos];
 // useHead({
 // 	// Can be static or computed
 // 	title:
@@ -54,36 +54,24 @@ const imagenesYTextos = [
 	{
 		img_url: 'contenido/niños-con-app.jpg',
 		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'Parenting',
-		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
-		cta: '',
 		cta_url: '',
 		id: 0
 	},
 	{
 		img_url: '../../contenido/telemedicina_edit.png',
 		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'Telemedicina',
-		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
-		cta: '',
 		cta_url: '',
 		id: 1
 	},
 	{
 		img_url: '../../contenido/alertas_geolocalizacion_edit.png',
 		img_alt: 'Equipo de SugarCoach trabajando',
-		title: 'Alertas de emergencia',
-		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
-		cta: '',
 		cta_url: '',
 		id: 2
 	},
 	{
 		img_url: 'cards',
 		img_alt: ['Gift card de Fornite', 'Gift card de Minicraft', 'Gift card de Xbox'],
-		title: '¡Canjea tus puntos!',
-		texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
-		cta: 'Premios',
 		cta_url: '#premios',
 		id: 3
 	},
@@ -95,7 +83,7 @@ const paquetes = [
 		price: 'Free',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipis, sed do eiusmod tempor incididunt ut labore et d',
 		btnText: 'Obtenlo gratis',
-		beneficios: ['Licencia Premium', 'Parenting', 'Telemedicina', 'Alertas con geolocalización'],
+		beneficios: 4,
 		mensual: false,
 		id: 0,
 	},
@@ -104,7 +92,7 @@ const paquetes = [
 		price: '$2.99',
 		texto: 'lorem ipsum dolor sit amet, consectetur adipis, sed do eiusmod tempor incididunt ut labore et d',
 		btnText: 'Pasate a premium',
-		beneficios: ['Apoyar a SugarCoach', 'Licencia Premium', 'Parenting', 'Telemedicina', 'Alertas con geolocalización','Canjear puntos por premios', 'Serán los primeros en usar la conexión automática con dispositivos, Glucómetros, CMG, Bombas, etc'],
+		beneficios: 7,
 		mensual: true,
 		id: 1,
 	}

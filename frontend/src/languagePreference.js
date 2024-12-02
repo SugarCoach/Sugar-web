@@ -1,7 +1,6 @@
 const messages = {
     es:{
-        home: {
-            nav: {
+        nav: {
                 links:[
                     'Nustra App',
                     'Comunidad',
@@ -10,21 +9,17 @@ const messages = {
                     'Premium'
                 ],
                 policy: [
-                    {
-                        name: 'Politica de privacidad',
-                        url: '/privacy',
-                    },
-                    {
-                        name: 'Terminos y condiciones',
-                        url: '/Terminos y condiciones',
-                    }
+                    'Politica de privacidad',
+                    'Terminos y condiciones',
                 ]
             },
+        home: {
+            
             hero: {
-                h1: 'SugarCoach',
                 h2: 'Diviertete mientras te cuidas',
             },
             nuestraApp: {
+                h2: 'Nuestra App',
                 pantallas: [
                     {
                         title:'Una experiencia gamificada para el control de la diabetes tipo 1',
@@ -82,6 +77,31 @@ const messages = {
                 h2: 'Testimonios',
                 listaTestimonios: [
                     {
+                        name: 'pablou',
+                        opinion: '',
+                        stars: '',
+                    },
+                    {
+                        name: '',
+                        opinion: '',
+                        stars: '',
+                    },
+                    {
+                        name: '',
+                        opinion: '',
+                        stars: '',
+                    },
+                    {
+                        name: '',
+                        opinion: '',
+                        stars: '',
+                    },
+                    {
+                        name: '',
+                        opinion: '',
+                        stars: '',
+                    },
+                    {
                         name: '',
                         opinion: '',
                         stars: '',
@@ -96,7 +116,6 @@ const messages = {
                 h2: 'Contactanos',
                 p: 'Para conocer más sobre nosotros y SugarCoach podés escribirnos, o seguir la comunidad en las redes.',
                 ctaBtn: 'Sobre nosotros',
-                ctaBtnUrl: '/about',
                 inputs: [
                     {
                         name: 'name',
@@ -116,33 +135,10 @@ const messages = {
                         placeholder: 'Hola, quería hacer una consulta acerca de...',
                         type: 'textarea',
                     },
-                ]
+                ],
+                enviar: 'Enviar'
             },
-            footer: [
-                {
-                    title: 'Descargar',
-                    links: [
-                        'descargarApp',
-                    ]
-                },
-                {
-                    title: 'SugarCoach',
-                    links: [
-                        'Inicio',
-                        'Sobre nosotros',
-                        'Contacto',
-                        'Empresas'
-                    ]
-                },
-                {
-                    title: 'Usuarios',
-                    links: [
-                        'Premium',
-                        'Premios',
-                        'Borrar cuenta'
-                    ]
-                },
-            ]
+            
         },
         premium: {
             hero: {
@@ -176,14 +172,14 @@ const messages = {
                     },
                 ]
             },
-            planesPremium: {
+            planes: {
                 h2: 'Elije tu plan ideal',
                 h3: '¿Eres una empresa?',
-                planes:[
+                paquetes:[
                     {
                         title: 'Becado',
                         price: 'Gratis',
-                        desription: '',
+                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
                         ctaBtn: 'Obrtenlo gratis',
                         beneficios: [
                             'Licencia Premium',
@@ -195,7 +191,7 @@ const messages = {
                     {
                         title: 'Clasico',
                         price: '$2.99',
-                        desription: '',
+                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
                         ctaBtn: 'Pasate a premium',
                         beneficios: [
                             'Apoyar a SugarCoach',
@@ -210,7 +206,7 @@ const messages = {
                     {
                         title: 'Para empresas',
                         price: 'Contactanos',
-                        desription: '',
+                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
                         ctaBtn: 'Ir a empresas',
                         beneficios: []
                     },
@@ -224,20 +220,20 @@ const messages = {
                 h2: 'Preguntas frecuentes',
                 preguntas: [
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'naur',
+                        respuesta: 'adcfdsas',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'main',
+                        respuesta: 'xscacasd',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'soup',
+                        respuesta: 'saxasxaS',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'raiz',
+                        respuesta: 'dcsadcsdc',
                     }
                 ]
             }
@@ -302,20 +298,20 @@ const messages = {
                 h2: 'Preguntas frecuentes',
                 preguntas: [
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'naur',
+                        respuesta: 'adcfdsas',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'main',
+                        respuesta: 'xscacasd',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'soup',
+                        respuesta: 'saxasxaS',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'raiz',
+                        respuesta: 'dcsadcsdc',
                     }
                 ]
             }
@@ -325,7 +321,7 @@ const messages = {
                 h1: 'Sobre nosotros',
                 h2: 'Conoce nuestra historia'
             },
-            nosotros: {
+            beneficios: {
                 h2: 'Nosotros',
                 imgsYtextos: [
                     {
@@ -344,44 +340,45 @@ const messages = {
                 h2: 'Nuestros Fuertes',
                 fuertes: [
                     {
-                        h3: '',
-                        p: '',
+                        h3: 'fuerte1',
+                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
                     },
                     {
-                        h3: '',
-                        p: '',
+                        h3: 'fuerte2',
+                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
                     },
                     {
-                        h3: '',
-                        p: '',
+                        h3: 'fuerte3',
+                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
                     }
                 ],
-                equipo: {
-                    h2: 'Nuestro Equipo',
-                    integrantes: [
-                        {
-                            nombre: 'Isabel Berizzo',
-                            rol: 'CEO & CTO FOUNDER'
-                        },
-                        {
-                            nombre: 'Veronica Avendaño',
-                            rol: 'COO'
-                        },
-                        {
-                            nombre: 'Karin Chmiel',
-                            rol: 'Business development'
-                        },
-                        {
-                            nombre: 'Debora Biain',
-                            rol: 'RSE & Relaciones Públicas'
-                        },
-                        {
-                            nombre: 'Agustina Olivo',
-                            rol: 'CM & Content Manager'
-                        },
-                    ]
-                }
+                
+            },
+            equipo: {
+                h2: 'Nuestro Equipo',
+                integrantes: [
+                    'CEO & CTO FOUNDER',
+                    'COO',
+                    'Business development',
+                    'RSE & Relaciones Públicas',
+                    'CM & Content Manager',
+                ]
             }
+        },
+        borrarCuenta: {
+            h1: 'Borrar tu cuenta',
+            enviar: 'Borrar cuenta',
+            info: 'Contactanos: admin.team@sugar.coach',
+            inputs:[
+                {
+                    label: 'Nombre de Usuario',
+                    placeholder: 'Usuario',
+                },
+                {
+                    label: 'Email',
+                    placeholder: 'usuario@gmail.com',
+                }
+            ]
         },
         politica: {
             header: {
@@ -411,19 +408,44 @@ const messages = {
                 },
                 {
                     h2: 'Política de Privacidad en Línea Únicamente.',
-                    p: 'Esta Política de Privacidad se aplica solo a nuestras actividades en línea y es válida para los visitantes de nuestra aplicación con respecto a la información que compartieron y/o recopilaron en SugarCoach Diabetes Premium. Esta política no es aplicable a ninguna información recopilada fuera de línea o a través de canales distintos a esta aplicación. Nuestra Política de Privacidad fue creada con la ayuda del Generador de Políticas de Privacidad de Aplicaciones de App-Privacy-Policy.com.'
+                    p: 'Esta Política de Privacidad se aplica solo a nuestras actividades en línea y es válida para los visitantes de nuestra aplicación con respecto a la información que compartieron y/o recopilaron en SugarCoach Diabetes Premium. Esta política no es aplicable a ninguna información recopilada fuera de línea o a través de canales distintos a esta aplicación. Nuestra Política de Privacidad fue creada con la ayuda del',
+                    link: 'Generador de Políticas de Privacidad de Aplicaciones de App-Privacy-Policy.com.'
                 },
                 {
                     h2: 'Consentimiento',
                     p: 'Al usar nuestra aplicación, aceptas nuestra Política de Privacidad y estás de acuerdo con sus Términos y Condiciones.'
                 },
             ],
-        }
+        },
+        footer: [
+                {
+                    title: 'Descargar',
+                    links: [
+                        'descargarApp',
+                    ]
+                },
+                {
+                    title: 'SugarCoach',
+                    links: [
+                        'Inicio',
+                        'Sobre nosotros',
+                        'Contacto',
+                        'Empresas'
+                    ]
+                },
+                {
+                    title: 'Usuarios',
+                    links: [
+                        'Premium',
+                        'Premios',
+                        'Borrar cuenta'
+                    ]
+                },
+            ]
     },
     
     en:{
-        home: {
-            nav: {
+        nav: {
                 links:[
                     'Our App',
                     'Community',
@@ -432,36 +454,33 @@ const messages = {
                     'Premium'
                 ],
                 policy: [
-                    {
-                        name: 'Privacy Policy',
-                        url: '/privacy',
-                    },
-                    {
-                        name: 'Terms and conditions',
-                        url: '/Terminos y condiciones',
-                    }
+                    'Privacy Policy',
+                    'Terms and conditions',
                 ]
             },
+        home: {
+            
             hero: {
                 h1: 'SugarCoach',
-                h2: 'Have fun while taking care of yourself.',
+                h2: 'Have fun while taking care of yourself',
             },
             nuestraApp: {
+                h2: 'Our App',
                 pantallas: [
                     {
-                        title:'A gamified experience for managing type 1 diabetes.',
+                        title:'A gamified experience for managing type 1 diabetes',
                         texto: 'Each person defines their profile and medical history so that SugarCoach can communicate with their medical team and offer personalized diabetes treatment. At each meal, the user logs blood glucose, insulin, and carbohydrate values. And most importantly, they earn rewards for taking care of themselves. SugarCoach adapts to all treatments and devices, even recording the profiles of the Insulin Infusion Pump.',
                     },
                     {
-                        title: 'Learning to take care of oneself with an app for diabetics.',
+                        title: 'Learning to take care of oneself with an app for diabetics',
                         texto: 'We created a modern, fast, and user-friendly tool designed from the perspective of the real user that allows them to create healthy habits. With simple explanations to efficiently manage type 1 diabetes, the user plays and receives rewards from the gaming world.',
                     },
                     {
-                        title: 'Keeping the family group informed about childhood diabetes.',
+                        title: 'Keeping the family group informed about childhood diabetes',
                         texto: 'It is very common for diabetes to present in children from a young age. Therefore, the control is carried out by responsible adults and can be managed by several family members. SugarCoach sends automatic messages to alert of a severe hypoglycemia or hyperglycemia episode.',
                     },
                     {
-                        title: 'With clear and useful reports for the doctor about glycated hemoglobin (HbA1c).',
+                        title: 'With clear and useful reports for the doctor about glycated hemoglobin (HbA1c)',
                         texto: 'SugarCoach sends regular reports to the medical team for diabetes monitoring. It also features simple and useful graphs and statistics to track blood glucose trends over time. Additionally, it supports telemedicine.',
                     }
                 ],
@@ -491,18 +510,43 @@ const messages = {
                     },
                 ],
                 linkPremium: {
-                    h4: 'Get your Premium licence now!',
+                    h4: 'Get your Premium license now!',
                     texto: 'Premium',
                 },
                 linkPremios: {
                     h4: 'Are you looking for something else?',
-                    texto: 'Prices',
+                    texto: 'Awards',
                 }
             },
-            comunidad: 'Comunity',
+            comunidad: 'Community',
             testimonios: {
                 h2: 'Reviews',
                 listaTestimonios: [
+                    {
+                        name: 'pablo',
+                        opinion: '',
+                        stars: '',
+                    },
+                    {
+                        name: '',
+                        opinion: '',
+                        stars: '',
+                    },
+                    {
+                        name: '',
+                        opinion: '',
+                        stars: '',
+                    },
+                    {
+                        name: '',
+                        opinion: '',
+                        stars: '',
+                    },
+                    {
+                        name: '',
+                        opinion: '',
+                        stars: '',
+                    },
                     {
                         name: '',
                         opinion: '',
@@ -534,42 +578,19 @@ const messages = {
                     },
                     {
                         name: 'message',
-                        label: 'Mensaje',
+                        label: 'Message',
                         placeholder: 'Hi, I would like to ask about...',
                         type: 'textarea',
                     },
-                ]
+                ],
+                enviar: 'Send'
             },
-            footer: [
-                {
-                    title: 'Download',
-                    links: [
-                        'downloadApp',
-                    ]
-                },
-                {
-                    title: 'SugarCoach',
-                    links: [
-                        'Home',
-                        'About',
-                        'Contact',
-                        'Companies'
-                    ]
-                },
-                {
-                    title: 'Users',
-                    links: [
-                        'Premium',
-                        'Prices',
-                        'Delete account',
-                    ]
-                },
-            ]
+            
         },
         premium: {
             hero: {
                 h1: 'Premium',
-                h2: 'Get more help to combat diabetes.',
+                h2: 'Get more help to combat diabetes',
                 overtext: 'Be healthier with Premium',
                 ctaBtn: 'Get Premium'
             },
@@ -594,21 +615,21 @@ const messages = {
                     {
                         h3: 'Trade your points!',
                         p: '',
-                        ctaBtn: 'Prices'
+                        ctaBtn: 'Awards'
                     },
                 ]
             },
-            planesPremium: {
+            planes: {
                 h2: 'Chose your ideal plan',
                 h3: 'Are you a company?',
-                planes:[
+                paquetes:[
                     {
                         title: 'Scolarship',
                         price: 'Free',
-                        desription: '',
+                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
                         ctaBtn: 'Get it for free',
                         beneficios: [
-                            'Premium licence',
+                            'Premium license',
                             'Parenting',
                             'Telemedicine',
                             'Alerts with geolocalization'
@@ -617,49 +638,49 @@ const messages = {
                     {
                         title: 'Clasic',
                         price: '$2.99',
-                        desription: '',
+                        description: 'orem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
                         ctaBtn: 'Go premium',
                         beneficios: [
                             'Support SugarCoach',
-                            'Premium licence ',
+                            'Premium license ',
                             'Parenting',
                             'Telemedicine',
                             'Alerts with geolocalization',
-                            'Trade points for prices',
+                            'Trade points for awards',
                             'They will be the first to use automatic connection with devices, Glucometers, CGM, Pumps, etc.'
                         ]
                     },
                     {
                         title: 'For companies',
                         price: 'Contact us',
-                        desription: '',
+                        description: 'orem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
                         ctaBtn: 'Go to companies',
                         beneficios: []
                     },
                 ]
             },
             premios: {
-                h2: 'Prices',
+                h2: 'Awards',
                 ctaBtn: 'Trade points',
             },
             faqs: {
                 h2: 'FAQS',
                 preguntas: [
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'lolo',
+                        respuesta: 'sxcassdc',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'casa',
+                        respuesta: 'sddf',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'mesa',
+                        respuesta: 'fecda',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'rama',
+                        respuesta: 'cdxcvdas',
                     }
                 ]
             }
@@ -724,20 +745,20 @@ const messages = {
                 h2: 'FAQS',
                 preguntas: [
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'lolo',
+                        respuesta: 'sxcassdc',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'casa',
+                        respuesta: 'sddf',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'mesa',
+                        respuesta: 'fecda',
                     },
                     {
-                        pregunta: '',
-                        respuesta: '',
+                        pregunta: 'rama',
+                        respuesta: 'cdxcvdas',
                     }
                 ]
             }
@@ -747,7 +768,7 @@ const messages = {
                 h1: 'About',
                 h2: 'Learn about our history'
             },
-            nosotros: {
+            beneficios: {
                 h2: 'Us',
                 imgsYtextos: [
                     {
@@ -766,44 +787,45 @@ const messages = {
                 h2: 'Our strengths',
                 fuertes: [
                     {
-                        h3: '',
-                        p: '',
+                        h3: 'fuerte1',
+                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
                     },
                     {
-                        h3: '',
-                        p: '',
+                        h3: 'fuerte2',
+                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
                     },
                     {
-                        h3: '',
-                        p: '',
+                        h3: 'fuerte3',
+                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
                     }
                 ],
-                equipo: {
-                    h2: 'Our team',
-                    integrantes: [
-                        {
-                            nombre: 'Isabel Berizzo',
-                            rol: 'CEO & CTO FOUNDER'
-                        },
-                        {
-                            nombre: 'Veronica Avendaño',
-                            rol: 'COO'
-                        },
-                        {
-                            nombre: 'Karin Chmiel',
-                            rol: 'Business development'
-                        },
-                        {
-                            nombre: 'Debora Biain',
-                            rol: 'RSE & Public Relations'
-                        },
-                        {
-                            nombre: 'Agustina Olivo',
-                            rol: 'CM & Content Manager'
-                        },
-                    ]
-                }
+                
+            },
+            equipo: {
+                h2: 'Our team',
+                integrantes: [
+                    'CEO & CTO FOUNDER',
+                    'COO',
+                    'Business development',
+                    'RSE & Public Relations',
+                    'CM & Content Manager',
+                ]
             }
+        },
+        borrarCuenta: {
+            h1: 'Delete your account',
+            enviar: 'Delete account',
+            info: 'Contact us: admin.team@sugar.coach',
+            inputs:[
+                {
+                    label: 'Username',
+                    placeholder: 'User',
+                },
+                {
+                    label: 'Email',
+                    placeholder: 'user@gmail.com',
+                }
+            ]
         },
         politica: {
             header: {
@@ -833,14 +855,40 @@ const messages = {
                 },
                 {
                     h2: 'Online Privacy Policy Only',
-                    p: 'This Privacy Policy applies only to our online activities and is valid for visitors to our App with regards to the information that they shared and/or collect in SugarCoach Diabetes Premium. This policy is not applicable to any information collected offline or via channels other than this app. Our Privacy Policy was created with the help of the App Privacy Policy Generator from App-Privacy-Policy.com'
+                    p: 'This Privacy Policy applies only to our online activities and is valid for visitors to our App with regards to the information that they shared and/or collect in SugarCoach Diabetes Premium. This policy is not applicable to any information collected offline or via channels other than this app. Our Privacy Policy was created with the help of the',
+                    link: 'App Privacy Policy Generator from App-Privacy-Policy.com'
                 },
                 {
                     h2: 'Consent',
                     p: 'By using our app, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.'
                 },
             ],
-        }
+        },
+        footer: [
+                {
+                    title: 'Download',
+                    links: [
+                        'downloadApp',
+                    ]
+                },
+                {
+                    title: 'SugarCoach',
+                    links: [
+                        'Home',
+                        'About',
+                        'Contact',
+                        'Companies'
+                    ]
+                },
+                {
+                    title: 'Users',
+                    links: [
+                        'Premium',
+                        'Awards',
+                        'Delete account',
+                    ]
+                },
+            ]
     }
 }
 export default messages;

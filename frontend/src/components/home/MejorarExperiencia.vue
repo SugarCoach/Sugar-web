@@ -9,14 +9,13 @@
 
             <div class="text d-flex flex-column gap-2 gap-md-3 h-100 justify-content-center">
                 <div class="">
-                    <h2 class="">¡Mejora tu experiencia!</h2>
-                    <p class="w-75">Analiza tus datos, conoce tu historial medico, enterate de las novedades y
-                        mucho más.</p>
+                    <h2 class="" v-html="$t('home.mejorarExperiencia.h2')"></h2>
+                    <p class="w-75" v-html="$t('home.mejorarExperiencia.p')"></p>
                 </div>
                 <div class="d-flex gap-2 gap-sm-4 mb-2 align-items-center flex-wrap flex-sm-nowrap">
                     <ctaBtn class="rounded-pill cta-btn">
                         <iconCorona width="25px" height="25px" color="white" class="me-sm-2 vertical-align-top" />
-                        Obten Premium
+                        <span v-html="$t('home.mejorarExperiencia.ctaBtn')"></span>
                     </ctaBtn>
                     <descargarApp :size="screenWidth <= 578 ? '100px' : '140px'" />
                 </div>

@@ -21,7 +21,7 @@
                     <div class="d-flex gap-1">
                         <span v-for="link in policy" :key="link.id" class="font-smallest gap-1 d-flex align-items-center">
                             <router-link :to="link.url" class="text-black text-opacity-50 fw-normal">
-                                {{ link.name }}
+                                {{ $t('nav.policy['+ link.id +']') }}
                             </router-link>
                             <span v-if="link.id == 0" class="text-black text-opacity-50">|</span>
                         </span>
@@ -30,14 +30,14 @@
                 </div>
                 <ul class="navbar-nav mb-2 mb-md-0 gap-3 pe-3 pe-lg-5">
                     <li v-for="link in nav" :key="link.id" class="nav-item fw-medium">
-                        <router-link v-if="link.name == 'Premium'" :to="link.url" class="nav-link gap-1 color-premium fw-bold premium-link">
-                            {{ link.name }}<iconCorona class="corona" width="25px" height="25px"></iconCorona>
+                        <a v-if="!link.isView" class="nav-link" aria-current="page" :href="link.url">{{ $t('nav.links['+ link.id +']') }}</a>
+                        <router-link v-else-if="link.id != 4" :to="link.url" class="nav-link">
+                            {{ $t('nav.links['+ link.id +']') }}
                         </router-link>
-
-                        <router-link v-else-if="link.isView" :to="link.url" class="nav-link">
-                            {{ link.name }}
+                        
+                        <router-link v-else :to="link.url" class="nav-link gap-1 color-premium fw-bold premium-link">
+                            Premium<iconCorona class="corona" width="25px" height="25px"></iconCorona>
                         </router-link>
-                        <a v-else class="nav-link" aria-current="page" :href="link.url">{{ link.name }}</a>
                     </li>
                 </ul>
             </div>
@@ -55,31 +55,26 @@
     }
     const nav = [
         {
-            name: 'Nuestra App',
             url: '/#nuestra_app',
             isView: false,
             id: 0
         },
         {
-            name: 'Comunidad',
             url: '/#comunidad',
             isView: false,
             id: 1
         },
         {
-            name: 'Quienes somos',
             url: '/About',
             isView: false,
             id: 2
         },
         {
-            name: 'Empresas',
             url: '/empresas',
             isView: true,
             id: 3
         },
         {
-            name: 'Premium',
             url: '/premium',
             isView: true,
             id: 4

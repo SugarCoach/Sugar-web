@@ -1,20 +1,26 @@
 <template>
     <form id="contact-form" class="d-flex flex-column gap-5 px-4 pb-5 pt-4 rounded-4">
         <div class="d-flex flex-column gap-4">
-            <input type="text" name="formId" value="contact-form" class="d-none">
+            <input type="text" name="formId" value="contact-form" class="d-none" />
             <div v-for="item in inputs" :key="item.id" class="d-flex flex-column">
-                <label :for="item.for" class="text-black mb-1 lead fw-normal">{{ item.label }}</label>
+                <label :for="item.for" class="text-black mb-1 lead fw-normal">{{ $t('home.contactanos.inputs[' + item.id + '].label') }}</label>
                 <input
                     v-if="item.type != 'textarea' && item.type != 'submit'"
                     class="form-control message"
                     :name="item.for"
                     :type="item.type"
-                    :placeholder="item.placeholder"
+                    :placeholder="$t('home.contactanos.inputs[' + item.id + '].placeholder')"
                 />
-                <textarea v-else :name="item.for" id="" :placeholder="item.placeholder" class="form-control message"></textarea>
+                <textarea
+                    v-else
+                    :name="item.for"
+                    id=""
+                    :placeholder="$t('home.contactanos.inputs[' + item.id + '].placeholder')"
+                    class="form-control message"
+                ></textarea>
             </div>
         </div>
-        <input type="submit" value="Enviar" class="border-0 enviar p-2 m-auto my-0 rounded-2" />
+        <input type="submit" :value="$t('home.contactanos.enviar')" class="border-0 enviar p-2 m-auto my-0 rounded-2" />
     </form>
 </template>
 

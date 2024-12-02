@@ -13,7 +13,7 @@
         </div>
 
         <ul class="text-start w-100 p-0 d-flex flex-column gap-4 mb-3 mt-3">
-            <li v-for="beneficio in props.beneficios" class=""><iconTick :color="props.color" /> {{ beneficio }}</li>
+            <li v-for="(n, i) in props.beneficios" class=""><iconTick :color="props.color" /> {{ $t(props.from + '.planes.paquetes['+ props.paqueteId +'].beneficios['+ i +']') }}</li>
         </ul>
         <!-- <div v-if="props.proximamente" class="text-center fw-semibold proximamente" :style="`${colorText} border-color: ${props.color}; box-shadow: inset 0 5px 15px -7px ${props.color};`">Proximamente</div>
         <ul v-if="props.proximamente" class="text-start w-100 p-0 d-flex flex-column gap-4 mb-3 mt-3">
@@ -83,8 +83,7 @@
             default: ''
         },
         beneficios: {
-            type: Array,
-            default: ['Lorem', 'Lorem', 'Lorem', 'Lorem', 'Lorem', 'Lorem']
+            type: Number,
         },
         proximamente: {
             type: Array
@@ -104,6 +103,12 @@
         mensual: {
             type: Boolean,
             default: false
+        },
+        paqueteId: {
+            type: Number,
+        },
+        from: {
+            type: String,
         }
     })
     const colorText = `color: ${props.color};`

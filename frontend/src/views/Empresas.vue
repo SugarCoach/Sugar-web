@@ -1,14 +1,14 @@
 <template>
     <q-page class="">
         <main>
-            <heroCircle heading1="Empresas" heading2="Recibe más ayuda para combatir la diabetes"
-                over-text="Invierte en SugarCoach" color="#00C8DC" button-text="Patrocinanos" button_url="#planes-empresas"
+            <heroCircle :heading1="$t('empresas.hero.h1')" :heading2="$t('empresas.hero.h2')"
+                :over-text="$t('empresas.hero.overtext')" color="#00C8DC" :button-text="$t('empresas.hero.ctaBtn')" button_url="#planes-empresas"
                 img_url="../../../contenido/nenes-usando-app.jpg" img_alt="Foto de niño viendo sus datos en SugarCoach"/>
-            <ImgsYtextos title="Beneficios" :imagenesYtextos="imagenesYTextos" color="#00C8DC">
+            <ImgsYtextos :title="$t('empresas.beneficios.h2')" from="empresas" :imagenesYtextos="imagenesYTextos" color="#00C8DC">
 				<iconEdificio color="white" size="23px"/>
 			</ImgsYtextos>
             <PlanesEmpresas :paquetes="paquetes" color="#00C8DC"/>
-            <faqs :preguntas="preguntas"/>
+            <faqs :preguntas="preguntas" from="empresas"/>
             <Contactanos/>
         </main>
     </q-page>
@@ -93,7 +93,7 @@ const paquetes = [
 		price: '$25',
 		btnText: 'Comprar',
         btnUrl: 'https://fundrazr.com/campaigns/e2TMf2/pay',
-		beneficios: ['lorem', 'ipsum', 'dolor', 'sit amet', 'consectetur adipis', 'sed do eiusmod tempor incid'],
+		beneficios: 0,
 		mensual: false,
 		id: 0,
 	},
@@ -102,7 +102,7 @@ const paquetes = [
 		price: '$250',
 		btnText: 'Comprar',
         btnUrl: 'https://fundrazr.com/campaigns/e2TMf2/pay',
-		beneficios: ['lorem', 'ipsum', 'dolor', 'sit amet', 'consectetur adipis', 'sed do eiusmod tempor incid'],
+		beneficios: 0,
 		mensual: false,
 		id: 1,
 	},
@@ -111,9 +111,9 @@ const paquetes = [
 		price: 'Contactanos',
 		btnText: 'Contactar',
         btnUrl: 'modal',
-		beneficios: ['lorem', 'ipsum', 'dolor', 'sit amet', 'consectetur adipis', 'sed do eiusmod tempor incid'],
+		beneficios: 0,
 		mensual: false,
-		id: 1,
+		id: 2,
 	}
 ];
 const preguntas = [

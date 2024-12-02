@@ -3,7 +3,7 @@
         <slot></slot>
         <div class="d-flex flex-column align-items-center">
             <h3>{{ props.title }}</h3>
-            <p class="w-75">{{ props.texto }}</p>
+            <p class="w-75" v-html="props.texto"></p>
         </div>
 
     </div>

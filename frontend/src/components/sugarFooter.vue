@@ -7,18 +7,18 @@
                 </div>
                 <div class="d-flex gap-5 justify-content-start justify-content-sm-end sections flex-wrap">
                     <div class="">
-                        <h5 class="fw-bold">Descargar</h5>
+                        <h5 class="fw-bold">{{ $t('footer[0].title') }}</h5>
                         <descargarApp />
                     </div>
                     <div v-for="item in sections" :key="item.id" class="">
-                        <h5 class="fw-bold">{{ item.section }}</h5>
+                        <h5 class="fw-bold">{{ $t('footer['+ item.id +'].title') }}</h5>
                         <ul class="nav flex-column">
                             <li v-for="link in item.links" :key="link.id" class="nav-item mb-2">
                                 <router-link v-if="link.isView" :to="link.url" class="nav-link p-0 text-body-secondary fw-semibold">
-                                    {{ link.name }}
+                                    {{$t('footer['+ item.id +'].links['+ link.id +']') }}
                                 </router-link>
                                 <a v-else aria-current="page" :href="link.url" class="nav-link p-0 text-body-secondary fw-semibold">
-                                    {{ link.name }}
+                                    {{ $t('footer['+ item.id +'].links['+ link.id +']') }}
                                 </a>
                             </li>
                         </ul>
@@ -45,49 +45,43 @@
             section: 'SugarCoach',
             links: [
                 {
-                    name: 'Home',
                     url: '/',
                     isView: true,
                     id: 0
                 },
                 {
-                    name: 'Sobre nosotros',
                     url: '/about',
                     isView: true,
                     id: 1
                 },
                 {
-                    name: 'Contacto',
                     url: '/contacto',
                     isView: true,
                     id: 2
                 }
             ],
-            id: 0
+            id: 1
         },
         {
             section: 'Usuarios',
             links: [
                 {
-                    name: 'Premium',
                     url: '/premium',
                     isView: true,
                     id: 0
                 },
                 {
-                    name: 'Premios',
                     url: '/premium#premios',
                     isView: false,
-                    id: 0
+                    id: 1
                 },
                 {
-                    name: 'Borrar cuenta',
                     url: '/DiabetesPremiumDeleteAccount',
                     isView: true,
-                    id: 0
+                    id: 2
                 }
             ],
-            id: 0
+            id: 2
         }
     ]
 </script>
