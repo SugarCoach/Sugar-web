@@ -45,22 +45,35 @@ const messages = {
                 p: 'Analiza tus datos, conoce tu historial medico, enterate de las novedades y mucho más.',
                 ctaBtn: 'Obten Premium',
             },
-            sectionPremium: {
+            planes: {
                 h3: 'Descubre nuestra ultimas funcionalidades',
-                plans: [
+                paquetes: [
                     {
                         title: 'Becado',
                         price: 'Gratis',
-                        beneficios: [],
-                        btnName: 'Obtener gratis',
-                        btnUrl: ''
+                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
+                        ctaBtn: 'Obrtenlo gratis',
+                        beneficios: [
+                            'Licencia Premium',
+                            'Parenting',
+                            'Telemedicina',
+                            'Alertas con geolocalización'
+                        ]
                     },
                     {
                         title: 'Clasico',
                         price: '$2.99',
-                        beneficios: [],
-                        btnName: 'Comprar',
-                        btnUrl: ''
+                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
+                        ctaBtn: 'Pasate a premium',
+                        beneficios: [
+                            'Apoyar a SugarCoach',
+                            'Licencia Premium',
+                            'Parenting',
+                            'Telemedicina',
+                            'Alertas con geolocalización',
+                            'Canjear puntos por premios',
+                            'Serán los primeros en usar la conexión automática con dispositivos, Glucómetros, CMG, Bombas, etc'
+                        ]
                     },
                 ],
                 linkPremium: {
@@ -126,7 +139,7 @@ const messages = {
                     {
                         name: 'email',
                         label: 'Email',
-                        placeholder: 'juanperez@gmail.com',
+                        placeholder: 'juanperez',
                         type: 'email',
                     },
                     {
@@ -270,29 +283,44 @@ const messages = {
                     },
                 ]
             },
-            planesEmpresas: {
+            planes: {
                 h2: 'Elige tu plan ideal',
                 h3: '',
-                planes:[
+                paquetes:[
                     {
                         title: 'Basico',
                         price: '$25',
+                        description: '',
                         ctaBtn: 'Comprar',
                         beneficios: []
                     },
                     {
                         title: 'Premium',
                         price: '$250',
+                        description: '',
                         ctaBtn: 'Comprar',
                         beneficios: []
                     },
                     {
                         title: 'Socios',
                         price: 'Contactanos',
+                        description: '',
                         ctaBtn: 'Contactar',
                         beneficios: []
                     },
-                ]
+                ],
+                formularioPago: {
+                    h4: '¡Gracias por querer apoyar a SugarCoach!',
+                    p: 'Para completar tu compra, necesitamos que nos proporciones tu correo electrónico. Te enviaremos un email con un enlace seguro para que puedas realizar el pago con el método que prefieras.',
+                    inputs: [
+                        'Nombre de la empresa',
+                        'Email de la empresa',
+                        'Fecha y hora de la reunion',
+                        'Enviar'
+                    ],
+                    info: 'Si tienes alguna duda o problema, puedes contactarnos a', 
+                    cerrar: 'Cerrar'
+                }
             },
             faqs: {
                 h2: 'Preguntas frecuentes',
@@ -368,7 +396,7 @@ const messages = {
         borrarCuenta: {
             h1: 'Borrar tu cuenta',
             enviar: 'Borrar cuenta',
-            info: 'Contactanos: admin.team@sugar.coach',
+            info: 'Contactanos:',
             inputs:[
                 {
                     label: 'Nombre de Usuario',
@@ -376,7 +404,7 @@ const messages = {
                 },
                 {
                     label: 'Email',
-                    placeholder: 'usuario@gmail.com',
+                    placeholder: 'usuario',
                 }
             ]
         },
@@ -491,22 +519,35 @@ const messages = {
                 p: 'Analyze your data, know your medical history, stay updated with the latest news, and much more.',
                 ctaBtn: 'Get Premium',
             },
-            sectionPremium: {
+            planes: {
                 h3: 'Discover our newest functionalities',
-                plans: [
+                paquetes: [
                     {
                         title: 'Scolarship',
                         price: 'Free',
-                        beneficios: [],
-                        btnName: 'Get free',
-                        btnUrl: ''
+                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
+                        ctaBtn: 'Get it for free',
+                        beneficios: [
+                            'Premium license',
+                            'Parenting',
+                            'Telemedicine',
+                            'Alerts with geolocalization'
+                        ]
                     },
                     {
                         title: 'Clasic',
                         price: '$2.99',
-                        beneficios: [],
-                        btnName: 'Buy',
-                        btnUrl: ''
+                        description: 'orem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
+                        ctaBtn: 'Go premium',
+                        beneficios: [
+                            'Support SugarCoach',
+                            'Premium license ',
+                            'Parenting',
+                            'Telemedicine',
+                            'Alerts with geolocalization',
+                            'Trade points for awards',
+                            'They will be the first to use automatic connection with devices, Glucometers, CGM, Pumps, etc.'
+                        ]
                     },
                 ],
                 linkPremium: {
@@ -573,7 +614,7 @@ const messages = {
                     {
                         name: 'email',
                         label: 'Email',
-                        placeholder: 'juanperez@gmail.com',
+                        placeholder: 'juanperez',
                         type: 'email',
                     },
                     {
@@ -717,29 +758,44 @@ const messages = {
                     },
                 ]
             },
-            planesEmpresas: {
+            planes: {
                 h2: 'Choose your ideal plan',
                 h3: '',
-                planes:[
+                paquetes:[
                     {
                         title: 'Basic',
                         price: '$25',
+                        description: '',
                         ctaBtn: 'Buy',
                         beneficios: []
                     },
                     {
                         title: 'Premium',
                         price: '$250',
+                        description: '',
                         ctaBtn: 'Buy',
                         beneficios: []
                     },
                     {
                         title: 'Socios',
                         price: 'Contact us',
+                        description: '',
                         ctaBtn: 'Contact',
                         beneficios: []
                     },
-                ]
+                ],
+                formularioPago: {
+                    h4: 'Thanks for your support!',
+                    p: 'To complete your purchase, we need you to provide us with your email address. We will send you an email with a secure link so you can make the payment using your preferred method.',
+                    inputs: [
+                        'Company name',
+                        'Company email',
+                        'Date and time of meeting',
+                        'Enviar'
+                    ],
+                    info: 'If you have any doubt or problem, you can contact us at',
+                    cerrar: 'Close'
+                }
             },
             faqs: {
                 h2: 'FAQS',
@@ -815,7 +871,7 @@ const messages = {
         borrarCuenta: {
             h1: 'Delete your account',
             enviar: 'Delete account',
-            info: 'Contact us: admin.team@sugar.coach',
+            info: 'Contact us:',
             inputs:[
                 {
                     label: 'Username',
@@ -823,7 +879,7 @@ const messages = {
                 },
                 {
                     label: 'Email',
-                    placeholder: 'user@gmail.com',
+                    placeholder: 'user',
                 }
             ]
         },

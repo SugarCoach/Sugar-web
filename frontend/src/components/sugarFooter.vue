@@ -58,6 +58,11 @@
                     url: '/contacto',
                     isView: true,
                     id: 2
+                },
+                {
+                    url: '/empresas',
+                    isView: true,
+                    id: 3
                 }
             ],
             id: 1

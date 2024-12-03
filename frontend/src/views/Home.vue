@@ -11,54 +11,46 @@
             <comunidad />
             <testimonios />
             <nuestrasNovedades />
-            <contacto />
+            <contact />
         </main>
     </q-page>
 </template>
 
 <script setup>
-    // import { useHead } from "@vueuse/head";
+    import { useHead } from '@vueuse/head'
+    import { defineAsyncComponent } from 'vue'
     import hero from '../components/reutilizable/ui/hero.vue'
     import nuestraApp from '../components/home/NuestraApp.vue'
-    import textLink from '../components/reutilizable/utils/textYLink.vue'
-    import mejorarExperiencia from '../components/home/MejorarExperiencia.vue'
-    import sectionPremium from '../components/home/sectionPremium.vue'
-    import descargarApp from '../components/reutilizable/utils/descargarApp.vue'
-    import comunidad from '../components/home/Comunidad.vue'
-    import nuestrasNovedades from '../components/home/NuestrasNovedades.vue'
-    import testimonios from '../components/home/Testimonios.vue'
-    import contacto from '../components/home/Contactanos.vue'
-    import formulario from '../components/reutilizable/design/formulario.vue'
-    // import { defineAsyncComponent } from "vue";
-
-    // const Nuestra_app = defineAsyncComponent(() =>
-    // 	import("../components/home/Nuestra_app.vue")
-    // );
+    const textLink = defineAsyncComponent(() => import('../components/reutilizable/utils/textYLink.vue'))
+    const descargarApp = defineAsyncComponent(() => import('../components/reutilizable/utils/descargarApp.vue'))
+    const mejorarExperiencia = defineAsyncComponent(() => import('../components/home/MejorarExperiencia.vue'))
+    const sectionPremium = defineAsyncComponent(() => import('../components/home/sectionPremium.vue'))
+    const comunidad = defineAsyncComponent(() => import('../components/home/Comunidad.vue'))
+    const nuestrasNovedades = defineAsyncComponent(() => import('../components/home/NuestrasNovedades.vue'))
+    const testimonios = defineAsyncComponent(() => import('../components/home/Testimonios.vue'))
+    const contact = defineAsyncComponent(() => import('../components/home/Contactanos.vue'))
 
     name: 'Home'
-    components: {
-        hero, nuestraApp, textLink, mejorarExperiencia, sectionPremium, descargarApp, comunidad, testimonios, nuestrasNovedades, formulario, contacto
-    }
-    // useHead({
-    // 	// Can be static or computed
-    // 	title: "SugarCoach: La app que te ayuda a cuidar de tu hijo con diabetes",
-    // 	link: [
-    // 		{
-    // 			rel: "canonical",
-    // 			href: "https://sugar.coach",
-    // 		},
-    // 	],
-    // 	meta: [
-    // 		{
-    // 			name: `description`,
-    // 			content:
-    // 				"Descubre Sugar Coach, la aplicación gamificada que ayuda a niños con diabetes a controlar sus valores de salud. Descarga la app gratis, explora nuestras redes sociales, contacta con nosotros y mucho más.",
-    // 		},
-    // 		{
-    // 			name: `keywords`,
-    // 			content:
-    // 				"SugarCoach, aplicación, Diabetes infantil, Control de glucosa, App gamificada, Descarga gratuita, Versión premium, redes sociales, mysugr, social diabetes",
-    // 		},
-    // 	],
-    // });
+    useHead({
+        // Can be static or computed
+        title: 'SugarCoach: La app que te ayuda a cuidar de tu hijo con diabetes',
+        link: [
+            {
+                rel: 'canonical',
+                href: 'https://sugar.coach'
+            }
+        ],
+        meta: [
+            {
+                name: `description`,
+                content:
+                    'Descubre Sugar Coach, la aplicación gamificada que ayuda a niños con diabetes a controlar sus valores de salud. Descarga la app gratis, explora nuestras redes sociales, contacta con nosotros y mucho más.'
+            },
+            {
+                name: `keywords`,
+                content:
+                    'SugarCoach, aplicación, Diabetes infantil, Control de glucosa, App gamificada, Descarga gratuita, Versión premium, redes sociales, mysugr, social diabetes'
+            }
+        ]
+    })
 </script>

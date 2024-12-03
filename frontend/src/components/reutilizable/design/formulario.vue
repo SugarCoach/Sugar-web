@@ -7,12 +7,15 @@
                 <input
                     v-if="item.type != 'textarea' && item.type != 'submit'"
                     class="form-control message"
+                    :id="item.for"
                     :name="item.for"
                     :type="item.type"
-                    :placeholder="$t('home.contactanos.inputs[' + item.id + '].placeholder')"
+                    :autocomplete="item.autocomplete"
+                    :placeholder="$t('home.contactanos.inputs[' + item.id + '].placeholder')+ item.placeholder"
                 />
                 <textarea
                     v-else
+                    :id="item.for"
                     :name="item.for"
                     id=""
                     :placeholder="$t('home.contactanos.inputs[' + item.id + '].placeholder')"
@@ -53,14 +56,16 @@
             type: 'text',
             label: 'Nombre',
             for: 'name',
-            placeholder: 'Juan Perez',
+            autocomplete: 'given-name',
+            placeholder: '',
             id: 0
         },
         {
             type: 'email',
             label: 'Email',
             for: 'email',
-            placeholder: 'juanperez@gmail.com',
+            autocomplete: 'off',
+            placeholder: '@gmail.com',
             id: 1
         },
         {

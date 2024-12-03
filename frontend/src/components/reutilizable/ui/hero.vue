@@ -8,7 +8,7 @@
         <div class="position-absolute w-100 h-100 top-0 start-0 filtro"></div>
 
         <div class="d-flex justify-content-start w-25 align-items-center" v-if="props.cta">
-            <descargar></descargar>
+            <descargar size="200px"></descargar>
         </div>
     </div>
 </template>

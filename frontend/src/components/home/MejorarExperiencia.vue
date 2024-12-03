@@ -17,7 +17,7 @@
                         <iconCorona width="25px" height="25px" color="white" class="me-sm-2 vertical-align-top" />
                         <span v-html="$t('home.mejorarExperiencia.ctaBtn')"></span>
                     </ctaBtn>
-                    <descargarApp :size="screenWidth <= 578 ? '100px' : '140px'" />
+                    <descargarApp :size="screenWidth <= 578 ? '100px' : '125px'" />
                 </div>
             </div>
         </div>

@@ -15,7 +15,7 @@
 import ctaBtn from '../reutilizable/utils/ctaBtn.vue';
 import formulario from '../reutilizable/design/formulario.vue';
 
-name: "contacto";
+name: "contactanos";
 components: [ctaBtn, formulario]
 </script>
 

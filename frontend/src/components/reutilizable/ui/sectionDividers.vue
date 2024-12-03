@@ -1,7 +1,7 @@
 <template>
     <div class="position-relative overflow-hidden section-div">
         <div class="rounded-circle d-top bg-white position-absolute"></div>
-        <img class="position-absolute" :class="props.img_alt" :src="props.img_url" :alt="props.img_alt">
+        <img loading="lazy" class="position-absolute" :class="props.img_alt" :src="props.img_url" :alt="props.img_alt">
         <slot></slot>
         <div class="rounded-circle d-bottom bg-white position-absolute"></div>
     </div>

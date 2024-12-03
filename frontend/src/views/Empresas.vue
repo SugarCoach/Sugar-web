@@ -22,33 +22,33 @@ import PlanesEmpresas from "../components/empresas/PlanesEmpresas.vue";
 import faqs from "../components/reutilizable/ui/preguntasFrecuentes.vue";
 import Contactanos from "../components/home/Contactanos.vue";
 import iconEdificio from "../components/reutilizable/icons/_edificio.vue";
-// import { useHead } from "@vueuse/head";
+import { useHead } from "@vueuse/head";
 // import { defineAsyncComponent } from "vue";
 name: "Empresas";
 components: [heroCircle, iconEdificio, ImgsYtextos, PlanesEmpresas, faqs, Contactanos];
-// useHead({
-// 	// Can be static or computed
-// 	title:
-// 		"SugarCoach - Premium: Accede a más beneficios y funciones por un precio asequible",
-// 	link: [
-// 		{
-// 			rel: "canonical",
-// 			href: "https://sugar.coach/premium",
-// 		},
-// 	],
-// 	meta: [
-// 		{
-// 			name: `description`,
-// 			content:
-// 				"Mejora tu experiencia con Sugar Coach adquiriendo la versión premium. Accede a beneficios exclusivos para un control aún más efectivo de la diabetes infantil. Descubre todas las funciones y suscríbete hoy.",
-// 		},
-// 		{
-// 			name: `keywords`,
-// 			content:
-// 				"Versión premium, Beneficios exclusivos, Mejora en el control de la diabetes, Suscripción paga, Becado, Patrocina",
-// 		},
-// 	],
-// });
+useHead({
+	// Can be static or computed
+	title:
+		"SugarCoach - Empresas: Consigue opurtunidades de crecimiento para tu empresa mientras apoyas a SugarCoach",
+	link: [
+		{
+			rel: "canonical",
+			href: "https://sugar.coach/empresas",
+		},
+	],
+	meta: [
+		{
+			name: `description`,
+			content:
+				"Haz crecer tu empresa y aporta tu granito de arena para el tratamiento contra la diabetes. Accede a beneficios exclusivos que potenciaran tu empresa",
+		},
+		{
+			name: `keywords`,
+			content:
+				"Empresas, Beneficios exclusivos, Apoyar el cuidado contra la diabetes, Suscripción paga, Patrocina",
+		},
+	],
+});
 const imagenesYTextos = [
 	{
 		img_url: 'contenido/8-NiñosconSC.jpg',

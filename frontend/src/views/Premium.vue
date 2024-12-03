@@ -17,39 +17,40 @@
 
 <script setup>
 import heroCircle from "../components/reutilizable/ui/heroCircle.vue"
-// import { useHead } from "@vueuse/head";
+
 import imgsYtextos from "../components/reutilizable/ui/imgsYtextos.vue";
 import planes from "../components/premium/Planes.vue";
 import premios from "../components/premium/Premios.vue";
 import faqs from "../components/reutilizable/ui/preguntasFrecuentes.vue";
 import iconTrofeo from "../components/reutilizable/icons/_trofeo.vue";
 import Contactanos from "../components/home/Contactanos.vue";
+import { useHead } from "@vueuse/head";
 // import { defineAsyncComponent } from "vue";
 name: "Premium";
 components: [heroCircle, iconTrofeo, imgsYtextos, planes, premios, faqs, Contactanos];
-// useHead({
-// 	// Can be static or computed
-// 	title:
-// 		"SugarCoach - Premium: Accede a más beneficios y funciones por un precio asequible",
-// 	link: [
-// 		{
-// 			rel: "canonical",
-// 			href: "https://sugar.coach/premium",
-// 		},
-// 	],
-// 	meta: [
-// 		{
-// 			name: `description`,
-// 			content:
-// 				"Mejora tu experiencia con Sugar Coach adquiriendo la versión premium. Accede a beneficios exclusivos para un control aún más efectivo de la diabetes infantil. Descubre todas las funciones y suscríbete hoy.",
-// 		},
-// 		{
-// 			name: `keywords`,
-// 			content:
-// 				"Versión premium, Beneficios exclusivos, Mejora en el control de la diabetes, Suscripción paga, Becado, Patrocina",
-// 		},
-// 	],
-// });
+useHead({
+	// Can be static or computed
+	title:
+		"SugarCoach - Premium: Accede a más beneficios y funciones por un precio asequible",
+	link: [
+		{
+			rel: "canonical",
+			href: "https://sugar.coach/premium",
+		},
+	],
+	meta: [
+		{
+			name: `description`,
+			content:
+				"Mejora tu experiencia con Sugar Coach adquiriendo la versión premium. Accede a beneficios exclusivos para un control aún más efectivo de la diabetes infantil. Descubre todas las funciones y suscríbete hoy.",
+		},
+		{
+			name: `keywords`,
+			content:
+				"Versión premium, Beneficios exclusivos, Mejora en el control de la diabetes, Suscripción paga, Becado, Patrocina",
+		},
+	],
+});
 const imagenesYTextos = [
 	{
 		img_url: 'contenido/niños-con-app.jpg',

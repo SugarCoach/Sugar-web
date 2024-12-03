@@ -16,7 +16,24 @@
 </template>
 
 <script setup>
+import { useHead } from '@vueuse/head'
 name: "IsaLinktree";
+    useHead({
+        // Can be static or computed
+        title: 'SugarCoach - Isabel Berizzo Link Tree',
+        meta: [
+            {
+                name: `description`,
+            },
+            {
+                name: `keywords`,
+            },
+            {
+                name: `robots`,
+                content: 'noindex'
+            }
+        ]
+    })
 </script>
 
 <style scoped>

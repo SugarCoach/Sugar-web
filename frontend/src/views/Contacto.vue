@@ -9,9 +9,32 @@
 
 <script setup>
 import formulario from '../components/reutilizable/design/formulario.vue';
-
+import { useHead } from "@vueuse/head";
 name: 'contacto';
 components: [formulario];
+useHead({
+	// Can be static or computed
+	title:
+		"SugarCoach - Contacto: Comunicate con el equipo de SugarCoach",
+	link: [
+		{
+			rel: "canonical",
+			href: "https://sugar.coach/contacto",
+		},
+	],
+	meta: [
+		{
+			name: `description`,
+			content:
+				"Contactate con el equipo de SugarCoach, resuelve tus dudas, envia propuestas, pide ayuda",
+		},
+		{
+			name: `keywords`,
+			content:
+				"Contacto, Dudas, Enviar propuestas, Ayuda, Soporte",
+		},
+	],
+});
 </script>
 
 <style scoped lang="scss">

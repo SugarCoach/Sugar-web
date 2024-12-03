@@ -8,14 +8,14 @@
 					<input type="text" name="formId" value="delete-account-form" class="d-none">
 					<div v-for="item in inputs" :key="item.id" class="w-100">
 						<label :for="item.for" class="mb-1 lead fw-normal">{{ $t('borrarCuenta.inputs['+ item.id +'].label') }}</label>
-						<input class="form-control message rounded-4 border border-1 border-black border-opacity-50"
-							:name="item.for" :type="item.type" :placeholder="$t('borrarCuenta.inputs['+ item.id +'].placeholder')">
+						<input autocomplete="" :id="item.for" class="form-control message rounded-4 border border-1 border-black border-opacity-50"
+							:name="item.for" :type="item.type" :placeholder="$t('borrarCuenta.inputs['+ item.id +'].placeholder') + item.placeholder">
 					</div>
 				</div>
 
 				<button type="submit" class="mb-5 btn py-2 mt-3">{{ $t('borrarCuenta.enviar') }}</button>
 				<div class="info position-absolute p-4 rounded-4 text-white" style="">
-					<span class="">{{ $t('borrarCuenta.info') }}</span>
+					<span class="">{{ $t('borrarCuenta.info') }} admin.team@sugar.coach</span>
 				</div>
 			</form>
 		</main>
@@ -49,14 +49,16 @@ const inputs = [
 		type: 'text',
 		label: 'Nombre de usuario',
 		for: 'name',
-		placeholder: 'Usuario',
+		autocomplete: 'given-name',
+		placeholder: '',
 		id: 0
 	},
 	{
 		type: 'email',
 		label: 'Email',
 		for: 'email',
-		placeholder: 'usuario@gmail.com',
+		autocomplete: 'off',
+		placeholder: '@gmail.com',
 		id: 1
 	}
 ]

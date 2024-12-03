@@ -3,25 +3,25 @@
         <sectionDividers img_url="/contenido/corona.png" img_alt="corona">
             <header>
                 <h2 class="text-center">SugarCoach Premium</h2>
-                <h3 class="text-center" v-html="$t('home.sectionPremium.h3')"></h3>
+                <h3 class="text-center" v-html="$t('home.planes.h3')"></h3>
             </header>
 
             <div class="d-flex justify-content-center paquetes-container flex-wrap">
-                <paquete-premium :color="basicColor" :title="$t('home.sectionPremium.plans[0].title')" :price="$t('home.sectionPremium.plans[0].price')"
-                    :beneficios="0" from="home" :texto-btn="$t('home.sectionPremium.plans[0].btnName')" />
-                <paquete-premium :color="premiuColor" :title="$t('home.sectionPremium.plans[1].title')" :price="$t('home.sectionPremium.plans[1].price')" :mensual="true"
-                    :beneficios="0" from="home" :texto-btn="$t('home.sectionPremium.plans[1].btnName')" />
+                <paquete-premium :color="basicColor" :title="$t('home.planes.paquetes[0].title')" :price="$t('home.planes.paquetes[0].price')"
+                    :beneficios="4" :paqueteId="0" from="home" :texto-btn="$t('home.planes.paquetes[0].ctaBtn')" btnUrl="/premium#planes-premium" />
+                <paquete-premium :color="premiuColor" :paqueteId="1" :title="$t('home.planes.paquetes[1].title')" btnUrl="/premium#premios" :price="$t('home.planes.paquetes[1].price')" :mensual="true"
+                    :beneficios="7" from="home" :texto-btn="$t('home.planes.paquetes[1].ctaBtn')" />
             </div>
             <div class="d-flex flex-column gap-4 cta-links">
-                <textLink class="" :color="premiuColor" :text="$t('home.sectionPremium.linkPremium.h4')">
+                <textLink class="" :color="premiuColor" :text="$t('home.planes.linkPremium.h4')">
                     <router-link to="/premium" class="gap-1 h3 fw-bold">
-                        <span v-html="$t('home.sectionPremium.linkPremium.texto')"></span><iconCorona :color="premiuColor" width="50px" height="50px"></iconCorona>
+                        <span v-html="$t('home.planes.linkPremium.texto')"></span><iconCorona :color="premiuColor" width="50px" height="50px"></iconCorona>
                     </router-link>
                 </textLink>
 
-                <textLink class="" :color="premiosColor" :text="$t('home.sectionPremium.linkPremios.h4')">
+                <textLink class="" :color="premiosColor" :text="$t('home.planes.linkPremios.h4')">
                     <router-link to="/premium#premios" class="gap-1 h3 fw-bold">
-                        <span v-html="$t('home.sectionPremium.linkPremios.texto')"></span><iconTrofeo :color="premiosColor" width="50px" height="50px"></iconTrofeo>
+                        <span v-html="$t('home.planes.linkPremios.texto')"></span><iconTrofeo :color="premiosColor" width="50px" height="50px"></iconTrofeo>
                     </router-link>
                 </textLink>
             </div>

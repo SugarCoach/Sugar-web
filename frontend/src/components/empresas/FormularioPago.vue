@@ -29,23 +29,21 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p class="h4 w-auto m-0 m-auto mb-2">Gracias por elegir nuestro servicio!</p>
-                    <p class="text-start fw-light w-100">
-                        Para completar tu compra, necesitamos que nos proporciones tu correo electrónico. Te enviaremos un email con un enlace seguro
-                        para que puedas realizar el pago con el método que prefieras.
-                    </p>
+                    <h4 class="h4 w-auto m-0 m-auto mb-2">{{ $t("empresas.planes.h2") }}</h4>
+                    <p class="text-start fw-light w-100" v-html="$t('empresas.planes.formularioPago.p')"></p>
                     <form id="pay-form" class="mt-2 clas d-flex flex-column align-items-center">
                         <div class="d-flex flex-column gap-2 w-75 mb-3">
                             <div v-for="item in inputs" :key="item.id" class="w-100">
-                                <label :for="item.name" class="text-start d-block mb-1">{{ item.label }}</label>
+                                <label :for="item.name" class="text-start d-block mb-1">{{ $t('empresas.planes.formularioPago.inputs['+ item.id +']') }}</label>
                                 <input
                                     v-if="item.type != 'date'"
                                     :type="item.type"
+                                    :autocomplete="item.autocomplete"
                                     class="form-control m-auto bg-dark-subtle w-100"
                                     :name="item.name"
                                     :placeholder="item.placeholder"
                                 />
-                                <div v-else class="d-flex justify-content-center gap-3 flex-wrap">
+                                <div v-else class="d-flex justify-content-center gap-3 flex-wrap flex-sm-nowrap">
                                     <input class="flex-fill form-control m-auto bg-dark-subtle" :type="item.type" :name="item.name" />
                                     <input class="flex-fill form-control m-auto bg-dark-subtle" type="time" name="time" />
                                 </div>
@@ -54,10 +52,10 @@
 
                         <input type="submit" class="btn btn-outline-secondary w-25 align-self-center" />
                     </form>
-                    <p class="mt-3 lead">Si tienes alguna duda o problema, puedes contactarnos a admin.team@sugar.coach</p>
+                    <p class="mt-3 lead" v-html="$t('empresas.planes.formularioPago.info') + ' admin.team@sugar.coach'"></p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ $t('empresas.planes.formularioPago.cerrar') }}</button>
                 </div>
             </div>
         </div>
@@ -65,6 +63,8 @@
 </template>
 
 <script setup>
+import SugarLogo from '../reutilizable/icons/sugarLogo.vue';
+
     name: 'formularioPago'
     props: ['titulo_plan']
     const inputs = [
@@ -73,19 +73,22 @@
             name: 'company',
             label: 'Nombre de la empresa',
             placeholder: 'Mercado Libre',
+            autocomplete: 'organization',
             id: 0
         },
         {
             type: 'email',
             name: 'email',
             label: 'Email de la empresa',
+            autocomplete: 'off',
             placeholder: 'mercadolibre@gmail.com',
             id: 1
         },
         {
             type: 'date',
             name: 'date',
-            label: 'Fecha Y hora de la reunion',
+            label: 'Fecha y hora de la reunion',
+            autocomplete: 'off',
             placeholder: '',
             id: 2
         }
@@ -95,6 +98,7 @@
 <style>
     .modal-dialog {
         max-width: 88%;
+        width: 650px;
     }
     .modal-header,
     .modal-footer {
