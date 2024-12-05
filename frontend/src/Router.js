@@ -63,13 +63,13 @@ const routes = [
         path: '/:catchAll(.*)', // otra ruta
         name: 'NotFound',
         component: () => import('./views/404.vue'),
-        meta: { analytics: true }
+        meta: { analytics: false }
     }
 ]
 
 // Crea una instancia del router y pasa las rutas como opción
 const router = createRouter({
-    history: createWebHistory('/'), //process.env.BASE_URL     usa el modo history para evitar el hash (#) en la URL
+    history: createWebHistory(), //process.env.BASE_URL     usa el modo history para evitar el hash (#) en la URL
     routes,
     scrollBehavior(to, from, savedPosition) {
         if (to.path !== from.path) {

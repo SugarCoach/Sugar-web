@@ -1,26 +1,27 @@
 <template>
-    <q-page>
-        <main>
-            <hero img="contenido/1-Niños-con-SC.jpg" title="SugarCoach" :subheading="$t('home.hero.h2')" :cta="true" />
-            <nuestraApp />
-            <textLink class="py-5 mt-5 mb-1" :text="$t('home.descargarApp')">
-                <descargarApp />
-            </textLink>
-            <mejorarExperiencia />
-            <sectionPremium />
-            <comunidad />
-            <testimonios />
-            <nuestrasNovedades />
-            <contact />
-        </main>
-    </q-page>
+    <main>
+        <hero img="contenido/1-Niños-con-SC.jpg" title="SugarCoach" :subheading="$t('home.hero.h2')" :cta="true" />
+        <nuestraApp />
+        <textLink class="py-5 mt-5 mb-1" :text="$t('home.descargarApp')">
+            <descargarApp />
+        </textLink>
+        <mejorarExperiencia />
+        <sectionPremium />
+        <comunidad />
+        <testimonios />
+        <nuestrasNovedades />
+        <contactanos />
+        <CookieBanner />
+        <!-- @useCookies="cookiesAnswer" -->
+    </main>
 </template>
 
 <script setup>
     import { useHead } from '@vueuse/head'
-    import { defineAsyncComponent } from 'vue'
+    import { defineAsyncComponent, ref } from 'vue'
     import hero from '../components/reutilizable/ui/hero.vue'
     import nuestraApp from '../components/home/NuestraApp.vue'
+    import CookieBanner from '../components/CookieBanner.vue'
     const textLink = defineAsyncComponent(() => import('../components/reutilizable/utils/textYLink.vue'))
     const descargarApp = defineAsyncComponent(() => import('../components/reutilizable/utils/descargarApp.vue'))
     const mejorarExperiencia = defineAsyncComponent(() => import('../components/home/MejorarExperiencia.vue'))
@@ -28,9 +29,20 @@
     const comunidad = defineAsyncComponent(() => import('../components/home/Comunidad.vue'))
     const nuestrasNovedades = defineAsyncComponent(() => import('../components/home/NuestrasNovedades.vue'))
     const testimonios = defineAsyncComponent(() => import('../components/home/Testimonios.vue'))
-    const contact = defineAsyncComponent(() => import('../components/home/Contactanos.vue'))
+    const contactanos = defineAsyncComponent(() => import('../components/home/Contactanos.vue'))
 
     name: 'Home'
+    // const cookiesOn = ref(false)
+    // const cookiesAnswer = (useCookies) => {
+    //     if (useCookies){
+    //         localStorage.setItem('cookiesDecided', true)
+    //         localStorage.setItem('cookiesAccepted', true)
+    //     }else{
+    //         localStorage.setItem('cookiesDecided', true)
+    //         localStorage.setItem('cookiesAccepted', false)
+    //     }
+    //     cookiesOn.value = useCookies
+    // }
     useHead({
         // Can be static or computed
         title: 'SugarCoach: La app que te ayuda a cuidar de tu hijo con diabetes',

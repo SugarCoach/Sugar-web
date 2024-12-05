@@ -3,7 +3,7 @@
         <div class="mejorar-container bg-primary bg-opacity-75 gap-2 p-3 p-sm-4 d-flex  align-items-center align-items-sm-end position-relative">
             <div class="h-100 position-relative contenedor-img align-self-start">
                 <span class="cuadrado position-absolute rounded-2"></span>
-                <img src="../../../public/contenido/11-Niños-con-SC.webp" alt="Niño usando app de SugarCoach"
+                <img loading="lazy" src="../../../public/contenido/11-Niños-con-SC.webp" alt="Niño usando app de SugarCoach"
                     class=" rounded-2 position-relative">
             </div>
 
@@ -13,7 +13,7 @@
                     <p class="w-75" v-html="$t('home.mejorarExperiencia.p')"></p>
                 </div>
                 <div class="d-flex gap-2 gap-sm-4 mb-2 align-items-center flex-wrap flex-sm-nowrap">
-                    <ctaBtn class="rounded-pill cta-btn">
+                    <ctaBtn class="rounded-pill cta-btn" url="/premium">
                         <iconCorona width="25px" height="25px" color="white" class="me-sm-2 vertical-align-top" />
                         <span v-html="$t('home.mejorarExperiencia.ctaBtn')"></span>
                     </ctaBtn>

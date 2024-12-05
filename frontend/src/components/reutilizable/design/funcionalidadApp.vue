@@ -2,7 +2,7 @@
 	<div class="fondo rounded-3  position-relative d-flex rounded-5" :class="props.direction">
 		<div class="d-flex contenedor-funcionalidad gap-3 gap-sm-0 pt-5 p-3 p-sm-5">
 			<div class="celu position-relative mb-2 mb-sm-0">
-				<img :src="props.celu_url" class="position-absolute h-auto" alt="Pantalla de SugarCoach">
+				<img :src="props.celu_url" loading="lazy" class="position-absolute h-auto" alt="Pantalla de SugarCoach">
 				<div class="position-absolute tapa-celu d-none bottom-0"></div>
 			</div>
 
@@ -44,7 +44,8 @@ const props = defineProps({
 	},
 	texto: {
 		type: String,
-	}
+	},
+
 });
 </script>
 

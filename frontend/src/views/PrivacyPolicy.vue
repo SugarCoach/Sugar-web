@@ -1,5 +1,4 @@
 <template>
-    <q-page>
         <main class="mt-5 container">
             <header>
                 <h1>{{ $t('politica.header.h1') }}</h1>
@@ -19,76 +18,7 @@
                     <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>
                 </div>
             </section>
-            <section>
-                <h2></h2>
-
-                <p></p>
-
-                <!-- <ul>
-					<li>
-						<p></p>
-						<p>
-							<a
-								href="https://policies.google.com/technologies/ads"
-								>https://policies.google.com/technologies/ads</a
-							>
-						</p>
-					</li>
-				</ul> -->
-            </section>
-            <!-- <section>
-				<h2></h2>
-
-				<p>
-
-				</p>
-
-				<p>
-
-				</p>
-
-				<p>
-
-				</p>
-			</section>
-			<section>
-				<h2></h2>
-
-				<p>
-
-				</p>
-			</section>
-			<section>
-				<h2></h2>
-
-				<p>
-
-				</p>
-
-				<p>
-
-				</p>
-			</section> -->
-            <section>
-                <h2></h2>
-
-                <p>
-                    <!-- <a
-						href="https://www.app-privacy-policy.com/app-privacy-policy-generator/"
-						>App Privacy Policy Generator from
-						App-Privacy-Policy.com</a
-					> -->
-                </p>
-            </section>
-            <!-- <section>
-				<h2></h2>
-
-				<p>
-					
-				</p>
-			</section> -->
         </main>
-    </q-page>
 </template>
 
 <script setup>

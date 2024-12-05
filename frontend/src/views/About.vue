@@ -1,29 +1,28 @@
 <template>
-    <q-page>
-        <main>
-            <hero
-                justify="center"
-                img="../../contenido/integrantes/10.Team.jpg"
-                :title="$t('sobreNosotros.hero.h1')"
-                :subheading="$t('sobreNosotros.hero.h2')"
-            />
-            <imgsYtextos :title="$t('sobreNosotros.beneficios.h2')" from="sobreNosotros" :imagenesYtextos="imagenesYTextos" />
-            <fuertes />
-            <nuestroEquipo />
-            <contacto />
-        </main>
-    </q-page>
+    <main>
+        <hero
+            justify="center"
+            img="../../contenido/integrantes/10.Team.jpg"
+            :title="$t('sobreNosotros.hero.h1')"
+            :subheading="$t('sobreNosotros.hero.h2')"
+        />
+        <imgsYtextos :title="$t('sobreNosotros.beneficios.h2')" from="sobreNosotros" :imagenesYtextos="imagenesYTextos" />
+        <fuertes />
+        <nuestroEquipo />
+        <contacto />
+    </main>
 </template>
 
 <script setup>
+    import { defineAsyncComponent } from 'vue'
     import hero from '../components/reutilizable/ui/hero.vue'
     import fuertes from '../components/about/Fuertes.vue'
-    import nuestroEquipo from '../components/about/NuestroEquipo.vue'
     import contacto from '../components/home/Contactanos.vue'
     import imgsYtextos from '../components/reutilizable/ui/imgsYtextos.vue'
+    const nuestroEquipo = defineAsyncComponent(() => import('../components/about/NuestroEquipo.vue'))
+
     import { useHead } from '@vueuse/head'
     name: 'About'
-    components: [hero, imgsYtextos, fuertes, nuestroEquipo, contacto]
 
     const imagenesYTextos = [
         {
@@ -62,8 +61,7 @@
             },
             {
                 name: `keywords`,
-                content:
-                    'SugarCoach, Equipo, Sobre nosotros, About, Isabel Berizzo, Nuestra historia, Quienes somos, Nuestros fuertes, Integrantes'
+                content: 'SugarCoach, Equipo, Sobre nosotros, About, Isabel Berizzo, Nuestra historia, Quienes somos, Nuestros fuertes, Integrantes'
             }
         ]
     })

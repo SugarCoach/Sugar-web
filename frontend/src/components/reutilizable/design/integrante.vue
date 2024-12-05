@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex flex-column justify-content-between align-items-center integrante p-3 text-center rounded-5">
-        <img :src="props.img_url" :alt="props.img_alt" class="rounded-circle mt-2">
+        <img loading="lazy" :src="props.img_url" :alt="props.img_alt" class="rounded-circle mt-2">
         <div class="d-flex flex-column gap-0 mb-2">
             <span class="nombre fw-bold">{{ props.nombre }}</span>
             <span class="rol fw-light">{{ props.rol }}</span>

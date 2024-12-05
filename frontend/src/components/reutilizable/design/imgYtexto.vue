@@ -1,11 +1,11 @@
 <template>
     <div class="contenedor-imgytextos d-flex align-items-center w-100 justify-content-center  gap-4 gap-sm-3 gap-md-5 flex-wrap"
         :class="props.direction === 'right' ? 'flex-row-reverse' : ''">
-        <img class="" v-if="props.imagen != 'cards'" :src="props.imagen" :alt="imagen_alt">
+        <img loading="lazy" class="" v-if="props.imagen != 'cards'" :src="props.imagen" :alt="imagen_alt">
         <div v-else class="cards position-relative d-flex justify-content-center pb-5">
-            <img class="fornite" src="../../../../public/contenido/tarjeta-fornite.webp" alt="">
-            <img class="minecraft" src="../../../../public/contenido/minecraft_card.png" alt="">
-            <img class="xbox" src="../../../../public/contenido/xbox_card.png" alt="">
+            <img loading="lazy" class="fornite" src="../../../../public/contenido/tarjeta-fornite.webp" alt="">
+            <img loading="lazy" class="minecraft" src="../../../../public/contenido/minecraft_card.png" alt="">
+            <img loading="lazy" class="xbox" src="../../../../public/contenido/xbox_card.png" alt="">
         </div>
         <div class="text d-flex flex-column align-self-start justify-content-start align-items-start">
             <h3 class="mt-0 mt-sm-4">{{ props.title }}</h3>

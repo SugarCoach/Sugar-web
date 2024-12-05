@@ -1,129 +1,136 @@
 <template>
-	<q-page class="">
-		<main>
-			<heroCircle heading1="Premium" :heading2="$t('premium.hero.h2')" color="#FFB800"
-				:over-text="$t('premium.hero.overtext')" :button-text="$t('premium.hero.ctaBtn')" button_url="#planes-premium"
-				img_url="../../../contenido/7-Niños-con-SC.webp" img_alt="Foto de niño ganando puntos en SugarCoach"/>
-			<imgsYtextos from="premium" :title="$t('premium.beneficios.h2')" :imagenesYtextos="imagenesYTextos" color="#FFB800">
-				<iconTrofeo color="white" size="23px"/>
-			</imgsYtextos>
-			<planes :paquetesUsuarios="paquetes" />
-			<premios />
-			<faqs :preguntas="preguntas" from="premium"/>
-			<Contactanos/>
-		</main>
-	</q-page>
+    <main>
+        <heroCircle
+            heading1="Premium"
+            :heading2="$t('premium.hero.h2')"
+            color="#FFB800"
+            :over-text="$t('premium.hero.overtext')"
+            :button-text="$t('premium.hero.ctaBtn')"
+            button_url="#planes-premium"
+            img_url="../../../contenido/7-Niños-con-SC.webp"
+            img_alt="Foto de niño ganando puntos en SugarCoach"
+        />
+        <imgsYtextos from="premium" :title="$t('premium.beneficios.h2')" :imagenesYtextos="imagenesYTextos" color="#FFB800">
+            <iconTrofeo color="white" size="23px" />
+        </imgsYtextos>
+        <planes :paquetesUsuarios="paquetes" />
+        <premios />
+        <faqs :preguntas="preguntas" from="premium" />
+        <Contactanos />
+    </main>
 </template>
 
 <script setup>
-import heroCircle from "../components/reutilizable/ui/heroCircle.vue"
+    import { defineAsyncComponent } from 'vue'
+    import heroCircle from '../components/reutilizable/ui/heroCircle.vue'
 
-import imgsYtextos from "../components/reutilizable/ui/imgsYtextos.vue";
-import planes from "../components/premium/Planes.vue";
-import premios from "../components/premium/Premios.vue";
-import faqs from "../components/reutilizable/ui/preguntasFrecuentes.vue";
-import iconTrofeo from "../components/reutilizable/icons/_trofeo.vue";
-import Contactanos from "../components/home/Contactanos.vue";
-import { useHead } from "@vueuse/head";
-// import { defineAsyncComponent } from "vue";
-name: "Premium";
-components: [heroCircle, iconTrofeo, imgsYtextos, planes, premios, faqs, Contactanos];
-useHead({
-	// Can be static or computed
-	title:
-		"SugarCoach - Premium: Accede a más beneficios y funciones por un precio asequible",
-	link: [
-		{
-			rel: "canonical",
-			href: "https://sugar.coach/premium",
-		},
-	],
-	meta: [
-		{
-			name: `description`,
-			content:
-				"Mejora tu experiencia con Sugar Coach adquiriendo la versión premium. Accede a beneficios exclusivos para un control aún más efectivo de la diabetes infantil. Descubre todas las funciones y suscríbete hoy.",
-		},
-		{
-			name: `keywords`,
-			content:
-				"Versión premium, Beneficios exclusivos, Mejora en el control de la diabetes, Suscripción paga, Becado, Patrocina",
-		},
-	],
-});
-const imagenesYTextos = [
-	{
-		img_url: 'contenido/niños-con-app.jpg',
-		img_alt: 'Equipo de SugarCoach trabajando',
-		cta_url: '',
-		id: 0
-	},
-	{
-		img_url: '../../contenido/telemedicina_edit.png',
-		img_alt: 'Equipo de SugarCoach trabajando',
-		cta_url: '',
-		id: 1
-	},
-	{
-		img_url: '../../contenido/alertas_geolocalizacion_edit.png',
-		img_alt: 'Equipo de SugarCoach trabajando',
-		cta_url: '',
-		id: 2
-	},
-	{
-		img_url: 'cards',
-		img_alt: ['Gift card de Fornite', 'Gift card de Minicraft', 'Gift card de Xbox'],
-		cta_url: '#premios',
-		id: 3
-	},
-];
+    import imgsYtextos from '../components/reutilizable/ui/imgsYtextos.vue'
+    import planes from '../components/premium/Planes.vue'
+    import premios from '../components/premium/Premios.vue'
+    import iconTrofeo from '../components/reutilizable/icons/_trofeo.vue'
+    import Contactanos from '../components/home/Contactanos.vue'
+    const faqs = defineAsyncComponent(() => import('../components/reutilizable/ui/preguntasFrecuentes.vue'))
+    import { useHead } from '@vueuse/head'
+    // import { defineAsyncComponent } from "vue";
+    name: 'Premium'
+    useHead({
+        // Can be static or computed
+        title: 'SugarCoach - Premium: Accede a más beneficios y funciones por un precio asequible',
+        link: [
+            {
+                rel: 'canonical',
+                href: 'https://sugar.coach/premium'
+            }
+        ],
+        meta: [
+            {
+                name: `description`,
+                content:
+                    'Mejora tu experiencia con Sugar Coach adquiriendo la versión premium. Accede a beneficios exclusivos para un control aún más efectivo de la diabetes infantil. Descubre todas las funciones y suscríbete hoy.'
+            },
+            {
+                name: `keywords`,
+                content: 'Versión premium, Beneficios exclusivos, Mejora en el control de la diabetes, Suscripción paga, Becado, Patrocina'
+            }
+        ]
+    })
+    const imagenesYTextos = [
+        {
+            img_url: 'contenido/niños-con-app.jpg',
+            img_alt: 'Equipo de SugarCoach trabajando',
+            cta_url: '',
+            id: 0
+        },
+        {
+            img_url: '../../contenido/telemedicina_edit.png',
+            img_alt: 'Equipo de SugarCoach trabajando',
+            cta_url: '',
+            id: 1
+        },
+        {
+            img_url: '../../contenido/alertas_geolocalizacion_edit.png',
+            img_alt: 'Equipo de SugarCoach trabajando',
+            cta_url: '',
+            id: 2
+        },
+        {
+            img_url: 'cards',
+            img_alt: ['Gift card de Fornite', 'Gift card de Minicraft', 'Gift card de Xbox'],
+            cta_url: '#premios',
+            id: 3
+        }
+    ]
 
-const paquetes = [
-	{
-		title: 'Becado',
-		price: 'Free',
-		texto: 'lorem ipsum dolor sit amet, consectetur adipis, sed do eiusmod tempor incididunt ut labore et d',
-		btnText: 'Obtenlo gratis',
-		beneficios: 4,
-		mensual: false,
-		id: 0,
-	},
-	{
-		title: 'Clasico',
-		price: '$2.99',
-		texto: 'lorem ipsum dolor sit amet, consectetur adipis, sed do eiusmod tempor incididunt ut labore et d',
-		btnText: 'Pasate a premium',
-		beneficios: 7,
-		mensual: true,
-		id: 1,
-	}
-];
-const preguntas = [
-	{
-		pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
-		respuesta: 'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
-		identificador: "One",
-		id: 0
-	},
-	{
-		pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
-		respuesta: 'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
-		identificado: "Two",
-		id: 1
-	},
-	{
-		pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
-		respuesta: 'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
-		identificador: "Three",
-		id: 2
-	},
-	{
-		pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
-		respuesta: 'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
-		identificador: "Four",
-		id: 3
-	}
-]
+    const paquetes = [
+        {
+            title: 'Becado',
+            price: 'Free',
+            texto: 'lorem ipsum dolor sit amet, consectetur adipis, sed do eiusmod tempor incididunt ut labore et d',
+            btnText: 'Obtenlo gratis',
+            beneficios: 4,
+            mensual: false,
+            id: 0
+        },
+        {
+            title: 'Clasico',
+            price: '$2.99',
+            texto: 'lorem ipsum dolor sit amet, consectetur adipis, sed do eiusmod tempor incididunt ut labore et d',
+            btnText: 'Pasate a premium',
+            beneficios: 7,
+            mensual: true,
+            id: 1
+        }
+    ]
+    const preguntas = [
+        {
+            pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
+            respuesta:
+                'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
+            identificador: 'One',
+            id: 0
+        },
+        {
+            pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
+            respuesta:
+                'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
+            identificado: 'Two',
+            id: 1
+        },
+        {
+            pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
+            respuesta:
+                'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
+            identificador: 'Three',
+            id: 2
+        },
+        {
+            pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
+            respuesta:
+                'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
+            identificador: 'Four',
+            id: 3
+        }
+    ]
 </script>
 
 <style scoped lang="scss"></style>

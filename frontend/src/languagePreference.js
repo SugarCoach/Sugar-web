@@ -1,5 +1,12 @@
 const messages = {
     es:{
+        cookies:{
+            p: 'Usamos cookies de seguimiento para entender cómo utilizas el producto y ayudarnos a mejorarlo. Por favor, acepta las cookies para ayudarnos a mejorar.',
+            accept: 'Aceptar',
+            decline: 'Rechazar',
+            declinedCookies: 'Para ver este contenido acepta las cookies',
+        },
+        
         nav: {
                 links:[
                     'Nustra App',
@@ -473,6 +480,12 @@ const messages = {
     },
     
     en:{
+        cookies:{
+            p: 'We use tracking cookies to understand how you use the product and help us improve it. Please accept cookies to help us improve.',
+            accept: 'Accept',
+            decline: 'Decline',
+            declinedCookies: 'To see this content accept cookies',
+        },
         nav: {
                 links:[
                     'Our App',
