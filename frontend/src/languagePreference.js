@@ -97,34 +97,29 @@ const messages = {
                 h2: 'Testimonios',
                 listaTestimonios: [
                     {
-                        name: 'pablou',
-                        opinion: '',
+                        name: 'Maria Castaña',
+                        opinion: 'SugarCoach ha sido una bendición para nuestra familia. Mi hijo tiene diabetes y esta aplicación nos ha permitido monitorear sus niveles de azúcar en sangre de manera efectiva. Las notificaciones nos ayudan a mantenernos al tanto de su salud. ¡Altamente recomendada!',
                         stars: '',
                     },
                     {
-                        name: '',
-                        opinion: '',
-                        stars: '',
+                        name: 'Pedro Romero',
+                        opinion: 'Excelente aplicación para gestionar mis niveles de azúcar. Las alertas y recordatorios son muy útiles, y el soporte al cliente es excepcional.',
                     },
                     {
-                        name: '',
-                        opinion: '',
-                        stars: '',
+                        name: 'Santiago Colomar',
+                        opinion: 'SugarCoach ha sido un cambio de vida para mí. La interfaz es intuitiva y fácil de usar, y las funciones de seguimiento me ayudan a mantener mi salud bajo control.',
                     },
                     {
-                        name: '',
-                        opinion: '',
-                        stars: '',
+                        name: 'Martin Cullaro',
+                        opinion: 'Como padres, siempre estamos preocupados por la salud de nuestros hijos. SugarCoach nos ha dado tranquilidad al permitirnos seguir de cerca los niveles de azúcar en sangre de nuestra hija. La interfaz es fácil de usar y las gráficas son muy claras. ¡Cinco estrellas!',
                     },
                     {
-                        name: '',
-                        opinion: '',
-                        stars: '',
+                        name: 'Cecilia Fernandez',
+                        opinion: 'Desde que uso SugarCoach, he podido mantener mis niveles de azúcar en sangre estables. La aplicación es muy completa y fácil de usar.',
                     },
                     {
-                        name: '',
-                        opinion: '',
-                        stars: '',
+                        name: 'Candela flores',
+                        opinion: 'Desde que empezamos a usar SugarCoach, hemos podido gestionar mejor la diabetes de nuestro hijo. Las funciones de seguimiento y las alertas nos han ayudado a mantener sus niveles de azúcar bajo control. ¡No podríamos estar más satisfechos!',
                     }
                 ]
             },
@@ -240,21 +235,25 @@ const messages = {
                 h2: 'Preguntas frecuentes',
                 preguntas: [
                     {
-                        pregunta: 'naur',
+                        pregunta: '¿Cómo puedo suscribirme a SugarCoach Diabetes Premium?',
                         respuesta: 'adcfdsas',
                     },
                     {
-                        pregunta: 'main',
+                        pregunta: '¿Cuáles son los métodos de pago aceptados?',
                         respuesta: 'xscacasd',
                     },
                     {
-                        pregunta: 'soup',
+                        pregunta: '¿Puedo cancelar mi suscripción en cualquier momento?',
                         respuesta: 'saxasxaS',
                     },
                     {
-                        pregunta: 'raiz',
+                        pregunta: '¿Hay algun requisito para acceder al plan becado?',
                         respuesta: 'dcsadcsdc',
-                    }
+                    },
+                    {
+                        pregunta: '¿Cómo puedo contactar al soporte técnico si tengo problemas con mi suscripción?',
+                        respuesta: 'dcsadcsdc',
+                    },
                 ]
             }
         },
@@ -333,19 +332,19 @@ const messages = {
                 h2: 'Preguntas frecuentes',
                 preguntas: [
                     {
-                        pregunta: 'naur',
+                        pregunta: '¿Como se accede a los beneficios para empresas?',
                         respuesta: 'adcfdsas',
                     },
                     {
-                        pregunta: 'main',
+                        pregunta: '¿Cómo pueden las empresas promocionar su colaboración con SugarCoach?',
                         respuesta: 'xscacasd',
                     },
                     {
-                        pregunta: 'soup',
+                        pregunta: '¿Qué ejemplos de éxito tienen de empresas que ya colaboran con SugarCoach?',
                         respuesta: 'saxasxaS',
                     },
                     {
-                        pregunta: 'raiz',
+                        pregunta: '¿Cómo se mide el impacto de la colaboración de una empresa con SugarCoach?',
                         respuesta: 'dcsadcsdc',
                     }
                 ]
@@ -577,34 +576,29 @@ const messages = {
                 h2: 'Reviews',
                 listaTestimonios: [
                     {
-                        name: 'pablo',
-                        opinion: '',
+                        name: 'Maria Castaña',
+                        opinion: 'SugarCoach ha sido una bendición para nuestra familia. Mi hijo tiene diabetes y esta aplicación nos ha permitido monitorear sus niveles de azúcar en sangre de manera efectiva. Las notificaciones nos ayudan a mantenernos al tanto de su salud. ¡Altamente recomendada!',
                         stars: '',
                     },
                     {
-                        name: '',
-                        opinion: '',
-                        stars: '',
+                        name: 'Pedro Romero',
+                        opinion: 'Excelente aplicación para gestionar mis niveles de azúcar. Las alertas y recordatorios son muy útiles, y el soporte al cliente es excepcional.',
                     },
                     {
-                        name: '',
-                        opinion: '',
-                        stars: '',
+                        name: 'Santiago Colomar',
+                        opinion: 'SugarCoach ha sido un cambio de vida para mí. La interfaz es intuitiva y fácil de usar, y las funciones de seguimiento me ayudan a mantener mi salud bajo control.',
                     },
                     {
-                        name: '',
-                        opinion: '',
-                        stars: '',
+                        name: 'Martin Cullaro',
+                        opinion: 'Como padres, siempre estamos preocupados por la salud de nuestros hijos. SugarCoach nos ha dado tranquilidad al permitirnos seguir de cerca los niveles de azúcar en sangre de nuestra hija. La interfaz es fácil de usar y las gráficas son muy claras. ¡Cinco estrellas!',
                     },
                     {
-                        name: '',
-                        opinion: '',
-                        stars: '',
+                        name: 'Cecilia Fernandez',
+                        opinion: 'Desde que uso SugarCoach, he podido mantener mis niveles de azúcar en sangre estables. La aplicación es muy completa y fácil de usar.',
                     },
                     {
-                        name: '',
-                        opinion: '',
-                        stars: '',
+                        name: 'Candela flores',
+                        opinion: 'Desde que empezamos a usar SugarCoach, hemos podido gestionar mejor la diabetes de nuestro hijo. Las funciones de seguimiento y las alertas nos han ayudado a mantener sus niveles de azúcar bajo control. ¡No podríamos estar más satisfechos!',
                     }
                 ]
             },

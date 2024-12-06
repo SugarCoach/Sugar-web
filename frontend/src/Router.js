@@ -78,29 +78,29 @@ const router = createRouter({
     }
 })
 
-// router.beforeEach((to, from, next) => {
-//     // Si la ruta tiene el meta analytics en true, se agrega el script de Google Analytics al head
-//     if (to.meta.analytics) {
-//         useHead({
-//             script: [
-//                 {
-//                     src: 'https://www.googletagmanager.com/gtag/js?id=G-600XFCVLS9',
-//                     async: true
-//                 },
-//                 {
-//                     innerHTML: `
-//                     window.dataLayer = window.dataLayer || [];
-//                     function gtag(){dataLayer.push(arguments);}
-//                     gtag('js', new Date());
-//                     gtag('config', 'G-600XFCVLS9');
-//                     `
-//                 },
-//             ]
-//         })
-//     }
-//     // Se continúa con la navegación
-//     next()
-// })
+router.beforeEach((to, from, next) => {
+    // Si la ruta tiene el meta analytics en true, se agrega el script de Google Analytics al head
+    if (to.meta.analytics) {
+        useHead({
+            script: [
+                {
+                    src: 'https://www.googletagmanager.com/gtag/js?id=G-600XFCVLS9',
+                    async: true
+                },
+                {
+                    innerHTML: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-600XFCVLS9');
+                    `
+                },
+            ]
+        })
+    }
+    // Se continúa con la navegación
+    next()
+})
 
 
 // Exporta el router para usarlo en tu aplicación

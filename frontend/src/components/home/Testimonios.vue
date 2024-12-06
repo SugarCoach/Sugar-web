@@ -1,6 +1,6 @@
 <template>
     <section id="testimonios">
-        <h2 class="m-auto m-0 mb-2">{{ $t('home.testimonios.h2') }}</h2>
+        <h2 class="m-auto m-0 mb-4">{{ $t('home.testimonios.h2') }}</h2>
         <div class="position-relative testimonios-container">
             <div class="p-2 position-absolute left m-1 m-sm-5" @click="move('left')">
                 <div class="arrow rounded-circle d-flex justify-content-center align-items-center">
@@ -15,7 +15,6 @@
                 :user="$t('home.testimonios.listaTestimonios[' + item.id + '].name')"
                 :opinion="$t('home.testimonios.listaTestimonios[' + item.id + '].opinion')"
                 :stars="5"
-                :size="'lg'"
             />
             <div class="p-2 position-absolute right m-1 m-sm-5" @click="move('right')">
                 <div class="arrow rounded-circle d-flex justify-content-center align-items-center">
@@ -101,7 +100,7 @@
 <style scoped lang="scss">
     $transform: 18vw;
     #testimonios {
-        height: auto;
+        height: fit-content;
         h2 {
             width: 64%;
         }
@@ -113,8 +112,6 @@
 
         .testimonios-container {
             vertical-align: middle;
-            height: 36vw;
-            max-height: 400px;
             min-height: 240px;
             .t1,
             .t2,
@@ -146,16 +143,17 @@
                 opacity: 0;
             }
             .t3 {
+                position: relative;
                 z-index: 99;
             }
             .left {
                 left: 0;
-                top: 45%;
+                bottom: 30%;
                 cursor: pointer;
             }
             .right {
                 right: 0;
-                top: 45%;
+                bottom: 30%;
                 transform: rotate(180deg);
                 cursor: pointer;
             }

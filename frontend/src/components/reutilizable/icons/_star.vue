@@ -1,6 +1,6 @@
 <template>
     <svg xmlns="http://www.w3.org/2000/svg" :width="props.size" :height="props.size" viewBox="0 0 24 24">
-        <path :fill="props.fill ? 'black' : '#00000000'" :stroke="props.color" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        <path :fill="props.fill" :stroke="props.color" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="m12 17.75l-6.172 3.245l1.179-6.873l-5-4.867l6.9-1l3.086-6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
     </svg>
 </template>
@@ -10,21 +10,21 @@ name: 'iconStar';
 const props = defineProps({
     color: {
         type: String,
-        default: "#000000",
+        default: "#07040496",
     },
     size: {
         type: String,
         default: "25px"
     },
     fill: {
-        type: Boolean,
-        default: false
+        type: String,
+        default: 'black'
     }
 });
 </script>
 
 <style scoped lang="scss">
 h1{
-    background-color: #00000000;
+    background-color: #07040496;
 }
 </style>

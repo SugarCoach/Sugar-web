@@ -24,7 +24,6 @@
     import imgYtexto from '../design/imgYtexto.vue'
 
     name: 'nosotros'
-    components: [imgYtexto]
     const props = defineProps({
         title: {
             type: String,

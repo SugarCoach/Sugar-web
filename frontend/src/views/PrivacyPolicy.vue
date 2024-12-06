@@ -1,38 +1,42 @@
 <template>
-        <main class="mt-5 container">
-            <header>
-                <h1>{{ $t('politica.header.h1') }}</h1>
+    <main class="mt-5 container">
+        <header>
+            <h1>{{ $t('politica.header.h1') }}</h1>
 
-                <p v-html="$t('politica.header.p')"></p>
-            </header>
+            <p v-html="purifyHTML($t('politica.header.p'))"></p>
+        </header>
 
-            <section v-for="item in 6">
-                <h2>{{ $t('politica.sections[' + item + '].h2') }}</h2>
-                <p v-if="item != 5" v-html="$t('politica.sections[' + item + '].p')"></p>
-                <p v-else>
-                    {{ $t('politica.sections[' + item + '].p') }}
-                    <a href="https://www.app-privacy-policy.com/app-privacy-policy-generator/">{{ $t('politica.sections[' + item + '].link') }}</a>
-                </p>
-                <div v-if="item == 1">
-                    <p>Google</p>
-                    <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>
-                </div>
-            </section>
-        </main>
+        <section v-for="item in 6">
+            <h2>{{ $t('politica.sections[' + item + '].h2') }}</h2>
+            <p v-if="item != 5" v-html="purifyHTML($t('politica.sections[' + item + '].p'))"></p>
+            <p v-else>
+                {{ $t('politica.sections[' + item + '].p') }}
+                <a href="https://www.app-privacy-policy.com/app-privacy-policy-generator/">{{ $t('politica.sections[' + item + '].link') }}</a>
+            </p>
+            <div v-if="item == 1">
+                <p>Google</p>
+                <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>
+            </div>
+        </section>
+    </main>
 </template>
 
 <script setup>
+    import DOMPurify from 'dompurify'
     import { useHead } from '@vueuse/head'
     name: 'privacyPolicy'
+    const purifyHTML = dirtyHTML => {
+        return DOMPurify.sanitize(dirtyHTML)
+    }
     useHead({
         // Can be static or computed
         title: 'SugarCoach - Privacy Policy',
         meta: [
             {
-                name: `description`,
+                name: `description`
             },
             {
-                name: `keywords`,
+                name: `keywords`
             },
             {
                 name: `robots`,
