@@ -1,6 +1,6 @@
 <template>
     <main>
-        <hero img="contenido/1-Niños-con-SC.jpg" title="SugarCoach" :subheading="$t('home.hero.h2')" :cta="true" />
+        <hero img="contenido/img.jpg" title="title" :subheading="$t('home.hero.h2')" :cta="true" />
         <nuestraApp />
         <textLink class="py-5 mt-5 mb-1" :text="$t('home.descargarApp')">
             <descargarApp />

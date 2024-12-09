@@ -12,7 +12,7 @@ const messages = {
                     'Nustra App',
                     'Comunidad',
                     'Quienes somos',
-                    'Empresas',
+                    'Anunciantes',
                     'Premium'
                 ],
                 policy: [
@@ -259,7 +259,7 @@ const messages = {
         },
         empresas: {
             hero: {
-                h1: 'Empresas',
+                h1: 'Anunciantes',
                 h2: 'Da a conocer a tu empresa apoyandonos',
                 overtext: 'Invierte en SugarCoach',
                 ctaBtn: 'Patrocinanos'
@@ -464,7 +464,7 @@ const messages = {
                         'Inicio',
                         'Sobre nosotros',
                         'Contacto',
-                        'Empresas'
+                        'Anunciantes'
                     ]
                 },
                 {
@@ -490,7 +490,7 @@ const messages = {
                     'Our App',
                     'Community',
                     'About',
-                    'Companies',
+                    'Advertisers',
                     'Premium'
                 ],
                 policy: [
@@ -735,7 +735,7 @@ const messages = {
         },
         empresas: {
             hero: {
-                h1: 'Companies',
+                h1: 'Advertisers',
                 h2: 'Promote your company by supporting us',
                 overtext: 'Invest in SugarCoach',
                 ctaBtn: 'Sponsor us'
@@ -940,7 +940,7 @@ const messages = {
                         'Home',
                         'About',
                         'Contact',
-                        'Companies'
+                        'Advertisers'
                     ]
                 },
                 {

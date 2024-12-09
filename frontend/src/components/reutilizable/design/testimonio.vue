@@ -36,9 +36,6 @@
 </script>
 
 <style scoped lang="scss">
-    $lg: 45%;
-    $md: 20%;
-
     .testimonio {
         background: linear-gradient(30deg, #ffffff 0%, #de98fff3 64%);
         aspect-ratio: 6/5;
@@ -46,20 +43,20 @@
         box-shadow: 1px 6px 25px -5px rgba(0, 0, 0, 0.3);
         min-width: 230px;
         max-width: 400px;
-        width: $lg;
+        width: 50%;
         z-index: 40;
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
-        color: white; 
+        color: rgb(0, 0, 0); 
         h3 {
             font-size: 1.7rem;
             text-shadow: 0 0 10px white;
         }
         p {
             font-size: 1rem;
-            text-shadow: 0 0 10px #400544f3;
+            text-shadow: 0 0 10px #ffffff;
         }
     }
 </style>
