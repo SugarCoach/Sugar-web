@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-    import { defineAsyncComponent } from 'vue'
+    import { defineAsyncComponent, hydrateOnIdle, hydrateOnVisible, hydrateOnInteraction } from 'vue'
     import heroCircle from '../components/reutilizable/ui/heroCircle.vue'
 
     import imgsYtextos from '../components/reutilizable/ui/imgsYtextos.vue'
@@ -29,7 +29,10 @@
     import premios from '../components/premium/Premios.vue'
     import iconTrofeo from '../components/reutilizable/icons/_trofeo.vue'
     import Contactanos from '../components/home/Contactanos.vue'
-    const faqs = defineAsyncComponent(() => import('../components/reutilizable/ui/preguntasFrecuentes.vue'))
+    const faqs = defineAsyncComponent({
+        loader: () => import('../components/reutilizable/ui/preguntasFrecuentes.vue'),
+        hydrate: hydrateOnInteraction('click')
+    })
     import { useHead } from '@vueuse/head'
     // import { defineAsyncComponent } from "vue";
     name: 'Premium'

@@ -1,20 +1,20 @@
 <template>
-    <div class="paquete p-4 rounded-3 position-relative border border-dark-subtle d-flex flex-column" :class="props.texto ? 'plan-x' : ''">
-        <h3 class="text-start mb-0 border-bottom border-dark border-opacity-50 px-4 pb-4 h4 d-flex align-items-center" :style="colorText">
+    <div class="paquete rounded-3 position-relative border border-dark-subtle d-flex flex-column" :class="props.texto ? 'plan-x' : ''">
+        <h3 class="w-100 p-4 text-start mb-0 border-bottom border-dark border-opacity-50 px-4 pb-4 h4 d-flex align-items-center" :style="colorText">
             <slot class="icon"></slot>{{ props.title }}
         </h3>
         <div class="d-flex flex-column justify-content-between flex-fill">
             <div class="d-flex flex-column justify-content-start">
-                <div class="text-start w-100 mb-0 py-3 display-6 fw-medium h4">
-                    {{ props.price }}<span v-show="props.mensual" class="lead fw-light">/mo</span>
+                <div class="p-4 py-0 contenedor-text d-flex flex-column border-bottom border-dark border-dark border-opacity-50">
+                    <div class="text-start w-100 mb-0 py-3 display-6 fw-medium h4">
+                        {{ props.price }}<span v-show="props.mensual" class="lead fw-light">/mo</span>
+                    </div>
+                    <div class="d-flex flex-fill flex-column justify-content-between" v-if="props.texto">
+                        <p v-if="props.texto">{{ props.texto }}</p>
+                        <a :href="props.btnUrl" class="btn btn-primary rounded-pill w-100 py-2 mb-2" :style="colorBtn">{{ props.textoBtn }}</a>
+                    </div>
                 </div>
-                <div class="mb-3" v-if="props.texto">
-                    <p v-if="props.texto">{{ props.texto }}</p>
-                    <a :href="props.btnUrl" class="btn btn-primary rounded-pill w-100 mb-3 py-2" :style="colorBtn">{{ props.textoBtn }}</a>
-                    <div class="divider border-bottom position-absolute start-0 border-dark border-opacity-50"></div>
-                </div>
-
-                <ul class="text-start w-100 p-0 d-flex flex-column gap-4 mb-3 mt-3">
+                <ul class="p-4 text-start w-100 p-0 d-flex flex-column gap-4 mb-3 mt-3">
                     <li v-for="(n, i) in props.beneficios" class="">
                         <iconTick :color="props.color" /> {{ $t(props.from + '.planes.paquetes[' + props.paqueteId + '].beneficios[' + i + ']') }}
                     </li>
@@ -136,10 +136,12 @@
         background-color: $light-gray;
         h3 {
             width: calc(100% + 2 * ($padding));
-            margin-left: -$padding;
             .icon {
                 margin-left: -5px;
             }
+        }
+        .contenedor-text {
+            min-height: 200px;
         }
         .proximamente {
             font-size: 1.4rem;
@@ -148,10 +150,11 @@
         }
         .divider {
             width: 100%;
+            top: 290px;
         }
         &.plan-x {
-            width: 24vw;
-            min-width: 285px;
+            width: 29vw;
+            min-width: 295px;
         }
     }
 </style>

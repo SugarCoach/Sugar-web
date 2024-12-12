@@ -3,7 +3,7 @@
     <router-view />
     <!--<div class="load d-flex justify-content-center align-items-center" style="width: 100%; height: 100vh;background: linear-gradient(180deg,rgb(83, 222, 230)15%,rgb(2, 20, 43) 100%);">
     <img src="../public/contenido/sugar-logo.png" alt="Logo girando"></div>-->
-    <sugarFooter v-if="!($route.path === '/isa' || $route.path == '/lab')"></sugarFooter>
+    <sugarFooter v-if="!($route.path === '/isa' || $route.path == '/lab')"></sugarFooter>3
 </template>
 
 <script setup>

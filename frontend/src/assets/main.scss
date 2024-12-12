@@ -77,3 +77,24 @@ ul{
         font-size: 12px;
     }
 }
+.show-team{
+    view-timeline-name: --integrante;
+    view-timeline-axis: block;
+    animation-timeline: --integrante;
+    animation-name: show;
+    animation-range: entry 25% cover 45%;
+    animation-fill-mode: both;
+
+}
+@keyframes show{
+    0%{
+        scale: 0.8;
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}

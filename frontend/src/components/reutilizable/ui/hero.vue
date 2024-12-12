@@ -52,15 +52,15 @@ onMounted(() => {
 .hero {
     padding: 0 10vw 0 10vw;
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-attachment: fixed;
     width: 100%;
-    height: calc(100vh - (80.141px + 1.6250rem));
+    height: 100vh;/* calc(100vh - (80.141px + 1.6250rem)) */
     align-content: center;
 }
 
 .filtro {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), 0%, 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.562) 0%, rgba(255, 255, 255, 0)), 80%;
     z-index: 50;
 }
 

@@ -1,6 +1,6 @@
 <template>
     <main>
-        <hero img="contenido/img.jpg" title="title" :subheading="$t('home.hero.h2')" :cta="true" />
+        <hero img="contenido/1-Niños-con-SC-edit.jpg" title="SugarCoach" :subheading="$t('home.hero.h2')" :cta="true" />
         <nuestraApp />
         <textLink class="py-5 mt-5 mb-1" :text="$t('home.descargarApp')">
             <descargarApp />
@@ -11,21 +11,24 @@
         <testimonios />
         <nuestrasNovedades />
         <contactanos />
-        <CookieBanner />
+        <!-- <CookieBanner /> -->
         <!-- @useCookies="cookiesAnswer" -->
     </main>
 </template>
 
 <script setup>
     import { useHead } from '@vueuse/head'
-    import { defineAsyncComponent, ref } from 'vue'
+    import { defineAsyncComponent, hydrateOnIdle } from 'vue'
     import hero from '../components/reutilizable/ui/hero.vue'
     import nuestraApp from '../components/home/NuestraApp.vue'
     import CookieBanner from '../components/CookieBanner.vue'
     const textLink = defineAsyncComponent(() => import('../components/reutilizable/utils/textYLink.vue'))
     const descargarApp = defineAsyncComponent(() => import('../components/reutilizable/utils/descargarApp.vue'))
     const mejorarExperiencia = defineAsyncComponent(() => import('../components/home/MejorarExperiencia.vue'))
-    const sectionPremium = defineAsyncComponent(() => import('../components/home/sectionPremium.vue'))
+    const sectionPremium = defineAsyncComponent({
+        loader: () => import('../components/home/sectionPremium.vue'),
+        hydrate: hydrateOnIdle()
+    })
     const comunidad = defineAsyncComponent(() => import('../components/home/Comunidad.vue'))
     const nuestrasNovedades = defineAsyncComponent(() => import('../components/home/NuestrasNovedades.vue'))
     const testimonios = defineAsyncComponent(() => import('../components/home/Testimonios.vue'))

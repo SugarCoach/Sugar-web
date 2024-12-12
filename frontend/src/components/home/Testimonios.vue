@@ -12,9 +12,9 @@
                 :key="item.id"
                 class="testimonio"
                 :class="'t' + item.className"
-                :user="$t('home.testimonios.listaTestimonios[' + item.id + '].name')"
-                :opinion="$t('home.testimonios.listaTestimonios[' + item.id + '].opinion')"
-                :stars="5"
+                :user="item.name"
+                :opinion="item.opinion"
+                :stars="item.stars"
             />
             <div class="p-2 position-absolute right m-1 m-sm-5" @click="move('right')">
                 <div class="arrow rounded-circle d-flex justify-content-center align-items-center">
@@ -38,39 +38,47 @@
     const testimonios = ref([
         {
             className: 1,
-            user: 'Pablo',
-            opinion: 'Buenisimaaaaa',
+            name: 'Tomás G., 12 años.',
+            opinion: 'Es como un videojuego, pero cuido mi salud. ¡Y ya gané mi primer premio!',
+            stars: 5,
             id: 0
         },
         {
             className: 2,
-            user: 'Pablo',
-            opinion: 'me gusta esta app',
+            name: 'Pedro R., 24 Años',
+            opinion:
+                'Excelente aplicación para gestionar mis niveles de azúcar. Las alertas y recordatorios son muy útiles, y el soporte al cliente es excepcional.',
+            stars: 5,
             id: 1
         },
         {
             className: 3,
-            user: 'Pablo',
-            opinion: 'buena',
+            name: 'Santiago M., 40 Años',
+            opinion:
+                'SugarCoach ha sido un cambio de vida para mí. La interfaz es intuitiva y fácil de usar, y las funciones de seguimiento me ayudan a mantener mi salud bajo control.',
+            stars: 5,
             id: 2
         },
         {
             className: 4,
-            user: 'Pablo',
-            opinion: 'Muy buena aplicación',
+            name: 'Carolina P., 34 años.',
+            opinion: 'Con SugarCoach, aprendí a manejar mejor mi diabetes mientras me divertía. ¡Nunca pensé que sería tan fácil!',
+            stars: 5,
             id: 3
         },
         {
             className: 5,
-            user: 'Pablo',
-            opinion: 'Increible',
+            name: 'Cecilia F., 25 Años',
+            opinion:
+                'Desde que uso SugarCoach, he podido mantener mis niveles de azúcar en sangre estables. La aplicación es muy completa y fácil de usar.',
+            stars: 5,
             id: 4
         },
-
         {
             className: 6,
-            user: 'Pablo',
-            opinion: 'La mejor app que use',
+            name: 'María y Andrés, padres de Lucas (8 años).',
+            opinion: 'Como padres, nos da tranquilidad saber que Lucas está motivado para cuidar su diabetes. Es un apoyo increíble.',
+            stars: 4,
             id: 5
         }
     ])
@@ -100,7 +108,7 @@
 <style scoped lang="scss">
     $transform: 18vw;
     #testimonios {
-        height: fit-content;
+        height: 85vh;
         h2 {
             width: 64%;
         }

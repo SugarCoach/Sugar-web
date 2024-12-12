@@ -19,5 +19,9 @@ const props = defineProps({
 <style scoped lang="scss">
 a{
 	width: fit-content;
+	transition: .2s;
+	&:hover{
+		transform: translateY(-3px);
+	}
 }
 </style>

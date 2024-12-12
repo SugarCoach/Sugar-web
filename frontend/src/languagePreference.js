@@ -23,7 +23,7 @@ const messages = {
         home: {
             
             hero: {
-                h2: 'Diviertete mientras te cuidas',
+                h2: 'Explora, aprende y cuida tu diabetes con SugarCoach.',
             },
             nuestraApp: {
                 h2: 'Nuestra App',
@@ -34,7 +34,7 @@ const messages = {
                     },
                     {
                         title: 'Aprendiendo a cuidarse con una aplicación para diabéticos',
-                        texto: 'Creamos una herramienta moderna, rápida y amigable diseñada desde el punto de vista del usuario real que permite al usuario crear hábitos saludables. Con explicaciones sencillas para llevar un control eficiente de la diabetes tipo 1 el usuario juega y recibe recompensas del mundo gaming.',
+                        texto: 'Creamos una herramienta moderna, rápida y amigable diseñada desde el punto de vista del usuario real que permite al usuario crear hábitos saludables. Con explicaciones sencillas para llevar un control eficiente de la diabetes tipo 1, el usuario juega y recibe recompensas del mundo gaming.',
                     },
                     {
                         title: 'Manteniendo informado al grupo familiar sobre la diabetes infantil',
@@ -95,33 +95,6 @@ const messages = {
             comunidad: 'Comunidad',
             testimonios: {
                 h2: 'Testimonios',
-                listaTestimonios: [
-                    {
-                        name: 'Maria Castaña',
-                        opinion: 'SugarCoach ha sido una bendición para nuestra familia. Mi hijo tiene diabetes y esta aplicación nos ha permitido monitorear sus niveles de azúcar en sangre de manera efectiva. Las notificaciones nos ayudan a mantenernos al tanto de su salud. ¡Altamente recomendada!',
-                        stars: '',
-                    },
-                    {
-                        name: 'Pedro Romero',
-                        opinion: 'Excelente aplicación para gestionar mis niveles de azúcar. Las alertas y recordatorios son muy útiles, y el soporte al cliente es excepcional.',
-                    },
-                    {
-                        name: 'Santiago Colomar',
-                        opinion: 'SugarCoach ha sido un cambio de vida para mí. La interfaz es intuitiva y fácil de usar, y las funciones de seguimiento me ayudan a mantener mi salud bajo control.',
-                    },
-                    {
-                        name: 'Martin Cullaro',
-                        opinion: 'Como padres, siempre estamos preocupados por la salud de nuestros hijos. SugarCoach nos ha dado tranquilidad al permitirnos seguir de cerca los niveles de azúcar en sangre de nuestra hija. La interfaz es fácil de usar y las gráficas son muy claras. ¡Cinco estrellas!',
-                    },
-                    {
-                        name: 'Cecilia Fernandez',
-                        opinion: 'Desde que uso SugarCoach, he podido mantener mis niveles de azúcar en sangre estables. La aplicación es muy completa y fácil de usar.',
-                    },
-                    {
-                        name: 'Candela flores',
-                        opinion: 'Desde que empezamos a usar SugarCoach, hemos podido gestionar mejor la diabetes de nuestro hijo. Las funciones de seguimiento y las alertas nos han ayudado a mantener sus niveles de azúcar bajo control. ¡No podríamos estar más satisfechos!',
-                    }
-                ]
             },
             novedades: {
                 h2: 'Seguí nuestras novedades',
@@ -167,34 +140,36 @@ const messages = {
                 imgsYtextos: [
                     {
                         h3: 'Parenting',
-                        p: '',
+                        p: 'SugarCoach está diseñada para apoyar a las familias de pacientes diabéticos en su día a día. Los padres pueden monitorear en tiempo real los registros de glucemia, insulina, carbohidratos y actividad física de sus hijos, asegurándose de que todo esté bajo control. Además, acceden a contenido que les ayuda a entender mejor la enfermedad y a tomar decisiones informadas en un entorno colaborativo que fomenta la comunicación entre la familia, el paciente diabético y el equipo médico. SugarCoach convierte el cuidado de la diabetes en un esfuerzo conjunto.',
+
                         ctaBtn: ''
                     },
                     {
                         h3: 'Telemedicina',
-                        p: '',
+                        p: 'Con SugarCoach, compartir información de salud con tu médico y su equipo es fácil y rápido. Los pacientes pueden registrar glucemia, insulina, carbohidratos y más, y los profesionales de la salud acceden a estos datos en tiempo real. Esto facilita una interacción ágil y colaborativa entre médicos, nutricionistas, enfermeras y coaches, asegurando una atención personalizada y efectiva desde cualquier lugar.',
                         ctaBtn: ''
                     },
                     {
                         h3: 'Alertas de emergencia',
-                        p: '',
+                        p: 'SugarCoach actúa rápidamente en situaciones críticas. Cuando se detectan valores peligrosos de glucemia u otros indicadores de riesgo, nuestra funcionalidad de alertas notifica automáticamente a los contactos designados y al equipo médico, incluyendo la ubicación en tiempo real gracias a la geolocalización. Esto permite una respuesta rápida y efectiva, brindando tranquilidad al paciente y a sus seres queridos.',
                         ctaBtn: ''
                     },
                     {
                         h3: '¡Canjea tus puntos!',
-                        p: '',
+                        p: 'Con SugarCoach, cuidar tu salud es como jugar y ganar! Cada vez que registras glucemia, insulina o completas desafíos, acumulas puntos que puedes canjear por increíbles premios: tarjetas de regalo para tus juegos favoritos, recompensas digitales y más. Conviértete en un campeón de tu salud mientras te diviertes y alcanzas tus metas. ¡Porque cuidarte también puede ser un juego emocionante!',
                         ctaBtn: 'Premios'
                     },
                 ]
             },
             planes: {
                 h2: 'Elije tu plan ideal',
-                h3: '¿Eres una empresa?',
+                p: 'Nuestros planes están diseñados para adaptarse a tus necesidades. Puedes elegir entre la suscripción mensual o anual, y empezar a disfrutar de todas las ventajas de ser Premium hoy mismo.',
+                h3: '¿Eres una empresa y quieres ser anunciante?',
                 paquetes:[
                     {
-                        title: 'Becado',
+                        title: 'Premium patrocinado',
                         price: 'Gratis',
-                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
+                        description: 'Disfruta de herramientas Premium sin costo gracias a nuestros patrocinadores',
                         ctaBtn: 'Obrtenlo gratis',
                         beneficios: [
                             'Licencia Premium',
@@ -204,9 +179,9 @@ const messages = {
                         ]
                     },
                     {
-                        title: 'Clasico',
+                        title: 'Premium clasico',
                         price: '$2.99',
-                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
+                        description: 'Accede a herramientas Premium para gestionar tu salud sin publicidad y con acceso a beneficios exclusivos..',
                         ctaBtn: 'Pasate a premium',
                         beneficios: [
                             'Apoyar a SugarCoach',
@@ -221,9 +196,14 @@ const messages = {
                     {
                         title: 'Para empresas',
                         price: 'Contactanos',
-                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
+                        description: 'Anuncia tu marca con propósito: impacta, comunica y transforma con la plataforma líder de diabetes en Latinoamérica.',
                         ctaBtn: 'Ir a empresas',
-                        beneficios: []
+                        beneficios: [
+                            'Mejorar la adherencia a tratamientos médicos.',
+                            'Conectar con audiencias de forma significativa.',
+                            'Obtener reportes de impacto basados en ODS.',
+                            'Personalizar campañas de salud o branding.',
+                        ]
                     },
                 ]
             },
@@ -332,19 +312,19 @@ const messages = {
                 h2: 'Preguntas frecuentes',
                 preguntas: [
                     {
-                        pregunta: '¿Como se accede a los beneficios para empresas?',
-                        respuesta: 'adcfdsas',
+                        pregunta: '¿Qué incluye el plan para empresas?',
+                        respuesta: 'Incluye licencias premium para usuarios, espacios publicitarios, Smart Data ROI y reportes detallados sobre el impacto generado.',
                     },
                     {
-                        pregunta: '¿Cómo pueden las empresas promocionar su colaboración con SugarCoach?',
-                        respuesta: 'xscacasd',
+                        pregunta: '¿Cómo se mide el impacto?',
+                        respuesta: ' A través de encuestas iniciales y reportes sobre el progreso de los usuarios en relación con los ODS de salud, educación y equidad de género.',
+                    },
+                    {
+                        pregunta: '¿Puedo personalizar mi campaña?',
+                        respuesta: 'Sí, trabajamos contigo para adaptar la experiencia a los objetivos de tu marca.',
                     },
                     {
                         pregunta: '¿Qué ejemplos de éxito tienen de empresas que ya colaboran con SugarCoach?',
-                        respuesta: 'saxasxaS',
-                    },
-                    {
-                        pregunta: '¿Cómo se mide el impacto de la colaboración de una empresa con SugarCoach?',
                         respuesta: 'dcsadcsdc',
                     }
                 ]
@@ -359,8 +339,8 @@ const messages = {
                 h2: 'Nosotros',
                 imgsYtextos: [
                     {
-                        h3: 'Somos un equipo',
-                        p: '',
+                        h3: 'Nuestra historia',
+                        p: '"SugarCoach nació de mi historia personal, impulsada por el amor, la resiliencia y el talento de un equipo comprometido."<br/>Soy Isa Berizzo, madre de dos hijos diagnosticados con diabetes tipo 1 cuando tenían solo 3 y 4 años. Como Ingeniera en Sistemas, programadora y CTO, decidí combinar mi experiencia técnica con mi pasión por transformar vidas. Así nació SugarCoach, una plataforma diseñada para convertir el desafío de la diabetes en una experiencia positiva, educativa y motivadora',
                         ctaBtn: ''
                     },
                     {
@@ -391,11 +371,26 @@ const messages = {
             equipo: {
                 h2: 'Nuestro Equipo',
                 integrantes: [
-                    'CEO & CTO FOUNDER',
-                    'COO',
-                    'Business development',
-                    'RSE & Relaciones Públicas',
-                    'CM & Content Manager',
+                    {
+                        rol: 'CEO & CTO FOUNDER',
+                        description: ''
+                    },
+                    {
+                        rol: 'COO',
+                        description: 'Ingeniera Industrial con especialización en desarrollo y administración de proyectos, Verónica lidera nuestras operaciones, asegurando que cada iniciativa se ejecute con excelencia.'
+                    },
+                    {
+                        rol: 'Business development',
+                        description: 'Especialista en desarrollo de negocios, ventas y estrategias de mercado, Karin impulsa nuestro crecimiento y expansión con su enfoque en relaciones clave y oportunidades estratégicas.'
+                    },
+                    {
+                        rol: 'RSE & Relaciones Públicas',
+                        description: 'Licenciada en Relaciones Institucionales y experta en responsabilidad social, Débora integra estrategias que fortalecen nuestro compromiso con el impacto social.'
+                    },
+                    {
+                        rol: 'CM & Content Manager',
+                        description: ' Licenciada en Ciencia Política y mi hija, Agustina está a cargo del contenido, redes sociales y marketing, aportando creatividad y conexión directa con nuestra audiencia.'
+                    },
                 ]
             }
         },
