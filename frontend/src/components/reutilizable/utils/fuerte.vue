@@ -2,8 +2,8 @@
     <div class="d-flex flex-column align-items-center gap-2 fuerte">
         <slot></slot>
         <div class="d-flex flex-column align-items-center">
-            <h3>{{ props.title }}</h3>
-            <p class="w-75" v-html="purifyHTML(props.texto)"></p>
+            <!-- <h3>{{ props.title }}</h3> -->
+            <p class="w-75 text-center fw-medium" v-html="purifyHTML(props.texto)"></p>
         </div>
     </div>
 </template>

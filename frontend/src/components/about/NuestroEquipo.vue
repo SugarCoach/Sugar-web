@@ -6,7 +6,7 @@
                 v-for="item in integrantes"
                 :key="item.id"
                 :class-name="
-                    item.id % 2 == 0 ? 'right flex-md-row-reverse justify-content-md-end' : 'flex-md-row justify-content-md-start left'
+                    item.id % 2 != 0 ? 'right flex-md-row-reverse justify-content-md-end' : 'flex-md-row justify-content-md-start left'
                 "
                 :description="$t('sobreNosotros.equipo.integrantes[' + item.id + '].description')"
                 :nombre="item.nombre"
@@ -37,24 +37,26 @@
             id: 1
         },
         {
-            img_url: '../../contenido/integrantes/karin-full.webp',
-            img_alt: 'Karin Chmiel, SugarCoach Business development',
-            nombre: 'Karin Chmiel',
+            img_url: '../../contenido/integrantes/devora-full.webp',
+            img_alt: 'Debora Biain, SugarCoach RSE & Relaciones Públicas',
+            nombre: 'Debora Biain',
             id: 2
         },
 
         {
-            img_url: '../../contenido/integrantes/devora-full.webp',
-            img_alt: 'Debora Biain, SugarCoach RSE & Relaciones Públicas',
-            nombre: 'Debora Biain',
-            id: 3
-        },
-        {
             img_url: '../../contenido/integrantes/agustina-circle.jpg',
             img_alt: 'Agustina Olivo, SugarCoach CM & Content Manager',
             nombre: 'Agustina Olivo',
+            id: 3
+        },
+        {
+            img_url: '../../contenido/integrantes/karin-full.webp',
+            img_alt: 'Karin Chmiel, SugarCoach Business development',
+            nombre: 'Karin Chmiel',
             id: 4
-        }
+        },
+
+
     ]
 </script>
 

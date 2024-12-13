@@ -5,7 +5,7 @@
         </h3>
         <div class="d-flex flex-column justify-content-between flex-fill">
             <div class="d-flex flex-column justify-content-start">
-                <div class="p-4 py-0 contenedor-text d-flex flex-column border-bottom border-dark border-dark border-opacity-50">
+                <div class="p-4 py-0 contenedor-text d-flex flex-column" :class="props.texto ? 'border-bottom border-dark border-opacity-50'  : ''">
                     <div class="text-start w-100 mb-0 py-3 display-6 fw-medium h4">
                         {{ props.price }}<span v-show="props.mensual" class="lead fw-light">/mo</span>
                     </div>
@@ -14,7 +14,7 @@
                         <a :href="props.btnUrl" class="btn btn-primary rounded-pill w-100 py-2 mb-2" :style="colorBtn">{{ props.textoBtn }}</a>
                     </div>
                 </div>
-                <ul class="p-4 text-start w-100 p-0 d-flex flex-column gap-4 mb-3 mt-3">
+                <ul class="p-4 text-start w-100 p-0 d-flex flex-column gap-4 mb-3">
                     <li v-for="(n, i) in props.beneficios" class="">
                         <iconTick :color="props.color" /> {{ $t(props.from + '.planes.paquetes[' + props.paqueteId + '].beneficios[' + i + ']') }}
                     </li>
@@ -31,13 +31,13 @@
                 :style="colorBtn"
                 v-if="!props.texto && props.btnUrl === 'modal'"
                 type="button"
-                class="btn btn-primary rounded-pill w-100 py-2"
+                class="btn btn-primary rounded-pill w-75 py-2 my-3 m-0 m-auto"
                 data-bs-toggle="modal"
                 data-bs-target="#modal_pago"
             >
                 {{ props.textoBtn }}
             </button>
-            <a :href="props.btnUrl" v-else-if="!props.texto" class="btn btn-primary rounded-pill w-100 py-2" :style="colorBtn">{{
+            <a :href="props.btnUrl" v-else-if="!props.texto && props.btnUrl" class="btn btn-primary rounded-pill w-75 py-2 my-3 m-0 m-auto" :style="colorBtn">{{
                 props.textoBtn
             }}</a>
         </div>
@@ -130,7 +130,7 @@
     $padding: 1.5rem;
     $light-gray: rgba(217, 217, 217, 0.2);
     .paquete {
-        width: 23.5vw;
+        width: 25.5vw;
         max-width: 360px;
         min-width: 260px;
         background-color: $light-gray;
@@ -140,8 +140,8 @@
                 margin-left: -5px;
             }
         }
-        .contenedor-text {
-            min-height: 200px;
+        p{
+            min-height: 5rem;
         }
         .proximamente {
             font-size: 1.4rem;

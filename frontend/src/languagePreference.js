@@ -9,7 +9,7 @@ const messages = {
         
         nav: {
                 links:[
-                    'Nustra App',
+                    'Nuestra App',
                     'Comunidad',
                     'Quienes somos',
                     'Anunciantes',
@@ -181,7 +181,7 @@ const messages = {
                     {
                         title: 'Premium clasico',
                         price: '$2.99',
-                        description: 'Accede a herramientas Premium para gestionar tu salud sin publicidad y con acceso a beneficios exclusivos..',
+                        description: 'Accede a herramientas Premium para gestionar tu salud sin publicidad y con acceso a beneficios exclusivos.',
                         ctaBtn: 'Pasate a premium',
                         beneficios: [
                             'Apoyar a SugarCoach',
@@ -278,21 +278,38 @@ const messages = {
                         price: '$25',
                         description: '',
                         ctaBtn: 'Comprar',
-                        beneficios: []
+                        beneficios: [
+                            'Mejorar la adherencia a tratamientos médicos.',
+                            'Conectar con audiencias de forma significativa.',
+                            'Obtener reportes de impacto basados en ODS.',
+                            'Personalizar campañas de branding.',
+
+                        ]
                     },
                     {
                         title: 'Premium',
                         price: '$250',
                         description: '',
                         ctaBtn: 'Comprar',
-                        beneficios: []
+                        beneficios: [
+                            'Mejorar la adherencia a tratamientos médicos.',
+                            'Conectar con audiencias de forma significativa.',
+                            'Obtener reportes de impacto basados en ODS.',
+                            'Personalizar campañas de branding.',
+                        ]
                     },
                     {
                         title: 'Socios',
                         price: 'Contactanos',
                         description: '',
                         ctaBtn: 'Contactar',
-                        beneficios: []
+                        beneficios: [
+                            'Mejorar la adherencia a tratamientos médicos.',
+                            'Conectar con audiencias de forma significativa.',
+                            'Obtener reportes de impacto basados en ODS.',
+                            'Personalizar campañas de branding.',
+
+                        ]
                     },
                 ],
                 formularioPago: {
@@ -340,7 +357,7 @@ const messages = {
                 imgsYtextos: [
                     {
                         h3: 'Nuestra historia',
-                        p: '"SugarCoach nació de mi historia personal, impulsada por el amor, la resiliencia y el talento de un equipo comprometido."<br/>Soy Isa Berizzo, madre de dos hijos diagnosticados con diabetes tipo 1 cuando tenían solo 3 y 4 años. Como Ingeniera en Sistemas, programadora y CTO, decidí combinar mi experiencia técnica con mi pasión por transformar vidas. Así nació SugarCoach, una plataforma diseñada para convertir el desafío de la diabetes en una experiencia positiva, educativa y motivadora',
+                        p: 'Somos un equipo decidido a mejorar la calidad de vida de las familias de niños con diabetes tipo 1. SugarCoach nació de la necesidad de mantener vivos y sanos a los hijos de Isabel. Como muchos padres de niños con DT1, ella se dio cuenta que controlar la enfermedad era un trabajo exhaustivo y cambiaba la dinamica para toda la familia (diabetes 3). Por eso pensó en crear una aplicación que no solo resolviera su problema, sino que también pudiera ayudar a otras familias que vivían lo mismo. En 2021, junto a Verónica Aveldaño, nuestra COO lanzaron SugarCoach, un proyecto integral que incluye una App móvil, educativa y de contención para la comunidad de familias con diabetes tipo 1. Queremos darles la bienvenida a SugarCoach, la mejor solución para la diabetes.',
                         ctaBtn: ''
                     },
                     {
@@ -355,15 +372,19 @@ const messages = {
                 fuertes: [
                     {
                         h3: 'fuerte1',
-                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
+                        p: 'La app está diseñada para fines educativos y de gestión de la diabetes, no para reemplazar el consejo médico profesional.',
                     },
                     {
                         h3: 'fuerte2',
-                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
+                        p: 'Las suscripciones son personales e intransferibles. Puedes cancelarlas en cualquier momento desde tu cuenta.',
                     },
                     {
                         h3: 'fuerte3',
-                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
+                        p: 'Nos comprometemos a proteger tu información y solo la utilizamos para mejorar tu experiencia y generar reportes de impacto social.',
+                    },
+                    {
+                        h3: 'fuerte3',
+                        p: 'Las funciones Premium están patrocinadas por empresas que apoyan el acceso gratuito a nuestra plataforma. Toda publicidad será relevante y no intrusiva.',
                     }
                 ],
                 
@@ -373,15 +394,11 @@ const messages = {
                 integrantes: [
                     {
                         rol: 'CEO & CTO FOUNDER',
-                        description: ''
+                        description: 'Soy Isa Berizzo, madre de dos hijos diagnosticados con diabetes tipo 1 cuando tenían solo 3 y 4 años. Como Ingeniera en Sistemas, programadora y CTO, decidí combinar mi experiencia técnica con mi pasión por transformar vidas. Así nació SugarCoach, una plataforma diseñada para convertir el desafío de la diabetes en una experiencia positiva, educativa y motivadora.'
                     },
                     {
                         rol: 'COO',
                         description: 'Ingeniera Industrial con especialización en desarrollo y administración de proyectos, Verónica lidera nuestras operaciones, asegurando que cada iniciativa se ejecute con excelencia.'
-                    },
-                    {
-                        rol: 'Business development',
-                        description: 'Especialista en desarrollo de negocios, ventas y estrategias de mercado, Karin impulsa nuestro crecimiento y expansión con su enfoque en relaciones clave y oportunidades estratégicas.'
                     },
                     {
                         rol: 'RSE & Relaciones Públicas',
@@ -390,6 +407,10 @@ const messages = {
                     {
                         rol: 'CM & Content Manager',
                         description: ' Licenciada en Ciencia Política y mi hija, Agustina está a cargo del contenido, redes sociales y marketing, aportando creatividad y conexión directa con nuestra audiencia.'
+                    },
+                    {
+                        rol: 'Business development',
+                        description: 'Especialista en desarrollo de negocios, ventas y estrategias de mercado, Karin impulsa nuestro crecimiento y expansión con su enfoque en relaciones clave y oportunidades estratégicas.'
                     },
                 ]
             }
@@ -642,34 +663,35 @@ const messages = {
                 imgsYtextos: [
                     {
                         h3: 'Parenting',
-                        p: '',
+                        p: 'SugarCoach is designed to support families of diabetic patients in their daily lives. Parents can monitor their children\'s blood glucose, insulin, carbohydrates, and physical activity records in real-time, ensuring everything is under control. Additionally, they access content that helps them better understand the disease and make informed decisions in a collaborative environment that fosters communication between the family, the diabetic patient, and the medical team. SugarCoach turns diabetes care into a joint effort.',
                         ctaBtn: ''
                     },
                     {
                         h3: 'Telemedicine',
-                        p: '',
+                        p: 'With SugarCoach, sharing health information with your doctor and their team is easy and quick. Patients can log blood glucose, insulin, carbohydrates, and more, and healthcare professionals access this data in real-time. This facilitates agile and collaborative interaction between doctors, nutritionists, nurses, and coaches, ensuring personalized and effective care from anywhere.',
                         ctaBtn: ''
                     },
                     {
                         h3: 'Emergency alerts',
-                        p: '',
+                        p: 'SugarCoach acts quickly in critical situations. When dangerous blood glucose levels or other risk indicators are detected, our alert functionality automatically notifies designated contacts and the medical team, including real-time location thanks to geolocation. This allows for a quick and effective response, providing peace of mind to the patient and their loved ones.',
                         ctaBtn: ''
                     },
                     {
                         h3: 'Trade your points!',
-                        p: '',
+                        p: 'With SugarCoach, taking care of your health is like playing and winning! Every time you log blood glucose, insulin, or complete challenges, you earn points that you can redeem for amazing prizes: gift cards for your favorite games, digital rewards, and more. Become a champion of your health while having fun and reaching your goals. Because taking care of yourself can also be an exciting game!',
                         ctaBtn: 'Awards'
                     },
                 ]
             },
             planes: {
                 h2: 'Chose your ideal plan',
+                p: 'Our plans are designed to fit your needs. You can choose between a monthly or annual subscription and start enjoying all the benefits of being Premium today.',
                 h3: 'Are you a company?',
                 paquetes:[
                     {
                         title: 'Scolarship',
                         price: 'Free',
-                        description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
+                        description: 'Enjoy Premium tools at no cost thanks to our sponsors.',
                         ctaBtn: 'Get it for free',
                         beneficios: [
                             'Premium license',
@@ -681,7 +703,7 @@ const messages = {
                     {
                         title: 'Clasic',
                         price: '$2.99',
-                        description: 'orem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
+                        description: 'Access Premium tools to manage your health without ads and with access to exclusive benefits.',
                         ctaBtn: 'Go premium',
                         beneficios: [
                             'Support SugarCoach',
@@ -696,9 +718,14 @@ const messages = {
                     {
                         title: 'For companies',
                         price: 'Contact us',
-                        description: 'orem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
+                        description: 'Advertise your brand with purpose: impact, communicate, and transform with the leading diabetes platform in Latin America.',
                         ctaBtn: 'Go to companies',
-                        beneficios: []
+                        beneficios: [
+                            'Improve adherence to medical treatments.',
+                            'Connect with audiences in a meaningful way.',
+                            'Obtain impact reports based on SDGs.',
+                            'Customize branding campaigns.'
+                        ]
                     },
                 ]
             },
@@ -769,21 +796,36 @@ const messages = {
                         price: '$25',
                         description: '',
                         ctaBtn: 'Buy',
-                        beneficios: []
+                        beneficios: [
+                            'Improve adherence to medical treatments.',
+                            'Connect with audiences in a meaningful way.',
+                            'Obtain impact reports based on SDGs.',
+                            'Customize branding campaigns.',
+                        ]
                     },
                     {
                         title: 'Premium',
                         price: '$250',
                         description: '',
                         ctaBtn: 'Buy',
-                        beneficios: []
+                        beneficios: [
+                            'Mejorar la adherencia a tratamientos médicos.',
+                            'Conectar con audiencias de forma significativa.',
+                            'Obtener reportes de impacto basados en ODS.',
+                            'Personalizar campañas de branding.',
+                        ]
                     },
                     {
                         title: 'Socios',
                         price: 'Contact us',
                         description: '',
                         ctaBtn: 'Contact',
-                        beneficios: []
+                        beneficios: [
+                            'Mejorar la adherencia a tratamientos médicos.',
+                            'Conectar con audiencias de forma significativa.',
+                            'Obtener reportes de impacto basados en ODS.',
+                            'Personalizar campañas de branding.',
+                        ]
                     },
                 ],
                 formularioPago: {
@@ -803,20 +845,20 @@ const messages = {
                 h2: 'FAQS',
                 preguntas: [
                     {
-                        pregunta: 'lolo',
-                        respuesta: 'sxcassdc',
+                        pregunta: 'What does the business plan include?',
+                        respuesta: 'It includes premium licenses for users, advertising spaces, Smart Data ROI, and detailed reports on the generated impact.',
                     },
                     {
-                        pregunta: 'casa',
-                        respuesta: 'sddf',
+                        pregunta: 'How is the impact measured?',
+                        respuesta: 'Through initial surveys and reports on the progress of users in relation to the SDGs of health, education, and gender equality.',
                     },
                     {
-                        pregunta: 'mesa',
-                        respuesta: 'fecda',
+                        pregunta: 'Can I customize my campaign?',
+                        respuesta: 'Yes, we work with you to tailor the experience to your brand\'s goals.',
                     },
                     {
-                        pregunta: 'rama',
-                        respuesta: 'cdxcvdas',
+                        pregunta: 'What success stories do you have from companies that already collaborate with SugarCoach?',
+                        respuesta: '',
                     }
                 ]
             }
@@ -830,8 +872,8 @@ const messages = {
                 h2: 'Us',
                 imgsYtextos: [
                     {
-                        h3: 'We are a team',
-                        p: '',
+                        h3: 'Our history',
+                        p: 'We are a team committed to improving the quality of life for families of children with type 1 diabetes. SugarCoach was born out of the need to keep Isabel\'s children alive and healthy. Like many parents of children with T1D, she realized that managing the disease was an exhausting task and changed the dynamics for the whole family (diabetes 3). That\'s why she thought of creating an application that not only solved her problem but could also help other families going through the same thing. In 2021, together with Verónica Aveldaño, our COO, they launched SugarCoach, a comprehensive project that includes a mobile app, educational and support resources for the community of families with type 1 diabetes. We want to welcome you to SugarCoach, the best solution for diabetes.',
                         ctaBtn: ''
                     },
                     {
@@ -846,15 +888,19 @@ const messages = {
                 fuertes: [
                     {
                         h3: 'fuerte1',
-                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
+                        p: 'The app is designed for educational and diabetes management purposes, not to replace professional medical advice.',
                     },
                     {
                         h3: 'fuerte2',
-                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
+                        p: 'Subscriptions are personal and non-transferable. You can cancel them at any time from your account.',
                     },
                     {
                         h3: 'fuerte3',
-                        p: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
+                        p: 'We are committed to protecting your information and only use it to improve your experience and generate social impact reports.',
+                    },
+                    {
+                        h3: 'fuerte3',
+                        p: 'Premium features are sponsored by companies that support free access to our platform. All advertising will be relevant and non-intrusive.',
                     }
                 ],
                 
@@ -862,11 +908,26 @@ const messages = {
             equipo: {
                 h2: 'Our team',
                 integrantes: [
-                    'CEO & CTO FOUNDER',
-                    'COO',
-                    'Business development',
-                    'RSE & Public Relations',
-                    'CM & Content Manager',
+                    {
+                        rol: 'CEO & CTO FOUNDER',
+                        description: 'I am Isa Berizzo, mother of two children diagnosed with type 1 diabetes when they were only 3 and 4 years old. As a Systems Engineer, programmer, and CTO, I decided to combine my technical experience with my passion for transforming lives. Thus, SugarCoach was born, a platform designed to turn the challenge of diabetes into a positive, educational, and motivating experience.'
+                    },
+                    {
+                        rol: 'COO',
+                        description: 'Industrial Engineer with a specialization in project development and management, Verónica leads our operations, ensuring that each initiative is executed with excellence.'
+                    },
+                    {
+                        rol: 'RSE & Public Relations',
+                        description: 'With a degree in Institutional Relations and expertise in social responsibility, Débora integrates strategies that strengthen our commitment to social impact.'
+                    },
+                    {
+                        rol: 'CM & Content Manager',
+                        description: 'With a degree in Political Science, my daughter Agustina is in charge of content, social media, and marketing, bringing creativity and direct connection with our audience.'
+                    },
+                    {
+                        rol: 'Business development',
+                        description: 'Specialist in business development, sales, and market strategies, Karin drives our growth and expansion with her focus on key relationships and strategic opportunities.'
+                    },
                 ]
             }
         },

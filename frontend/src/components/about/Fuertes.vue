@@ -8,9 +8,11 @@
                 :title="$t('sobreNosotros.nuestrosFuertes.fuertes[' + item.id + '].h3')"
                 :texto="$t('sobreNosotros.nuestrosFuertes.fuertes[' + item.id + '].p')"
             >
-                <corona v-if="item.title === 'fuerte1'" :size="iconSize" />
-                <trofeo v-else-if="item.title === 'fuerte2'" :size="iconSize" />
-                <gota v-else :size="iconSize" />
+                
+                <icon-doctor v-if="item.title === 'fuerte1'" :size="iconSize" color="#00a2ff"/>
+                <icon-licensia v-else-if="item.title === 'fuerte2'" :size="iconSize" color="#d400ff"/>
+                <icon-incognito v-else-if="item.title === 'fuerte3'" :size="iconSize" color="black"/>
+                <corona v-else-if="item.title === 'fuerte4'" :size="iconSize" color="#FFB800" />
             </fuerte>
         </div>
     </section>
@@ -21,6 +23,9 @@
     import corona from '../reutilizable/icons/_corona.vue'
     import gota from '../reutilizable/icons/_gota.vue'
     import trofeo from '../reutilizable/icons/_trofeo.vue'
+    import iconIncognito from '../reutilizable/icons/_incognito.vue'
+    import iconLicensia from '../reutilizable/icons/_licensia.vue'
+    import iconDoctor from '../reutilizable/icons/_doctor.vue'
 
     name: 'nuestrosFuertes'
     components: [fuerte, corona, trofeo, gota]
@@ -39,6 +44,11 @@
             title: 'fuerte3',
             texto: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
             id: 2
+        },
+        {
+            title: 'fuerte4',
+            texto: 'lorem ipsum dolor sit amet, consectet, nisl, sed do eiusmod tempor incididunt ut lab.',
+            id: 3
         }
     ]
     const iconSize = '50px'

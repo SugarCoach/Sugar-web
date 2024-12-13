@@ -55,7 +55,7 @@ onMounted(() => {
     background-position: center;
     background-attachment: fixed;
     width: 100%;
-    height: 100vh;/* calc(100vh - (80.141px + 1.6250rem)) */
+    height: calc(100vh - (80.141px + 1.6250rem));
     align-content: center;
 }
 

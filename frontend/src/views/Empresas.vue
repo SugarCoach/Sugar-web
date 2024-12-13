@@ -96,7 +96,7 @@
             price: '$25',
             btnText: 'Comprar',
             btnUrl: 'https://fundrazr.com/campaigns/e2TMf2/pay',
-            beneficios: 0,
+            beneficios: 4,
             mensual: false,
             id: 0
         },
@@ -105,7 +105,7 @@
             price: '$250',
             btnText: 'Comprar',
             btnUrl: 'https://fundrazr.com/campaigns/e2TMf2/pay',
-            beneficios: 0,
+            beneficios: 4,
             mensual: false,
             id: 1
         },
@@ -114,7 +114,7 @@
             price: 'Contactanos',
             btnText: 'Contactar',
             btnUrl: 'modal',
-            beneficios: 0,
+            beneficios: 4,
             mensual: false,
             id: 2
         }

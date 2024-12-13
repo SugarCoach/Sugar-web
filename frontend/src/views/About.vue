@@ -6,9 +6,11 @@
             :title="$t('sobreNosotros.hero.h1')"
             :subheading="$t('sobreNosotros.hero.h2')"
         />
-        <imgsYtextos :title="$t('sobreNosotros.beneficios.h2')" from="sobreNosotros" :imagenesYtextos="imagenesYTextos" />
-        <fuertes />
+        <Nosotros></Nosotros>
+        <!-- <imgsYtextos :title="$t('sobreNosotros.beneficios.h2')" from="sobreNosotros" :imagenesYtextos="imagenesYTextos" /> -->
         <nuestroEquipo />
+        <fuertes />
+        
         <contacto />
     </main>
 </template>
@@ -18,6 +20,7 @@
     import hero from '../components/reutilizable/ui/hero.vue'
     import fuertes from '../components/about/Fuertes.vue'
     import contacto from '../components/home/Contactanos.vue'
+    import Nosotros from '../components/about/Nosotros.vue'
     import imgsYtextos from '../components/reutilizable/ui/imgsYtextos.vue'
     const nuestroEquipo = defineAsyncComponent(() => import('../components/about/NuestroEquipo.vue'))
 
@@ -34,15 +37,6 @@
             cta_url: '',
             id: 0
         },
-        {
-            img_url: '../../contenido/objetivos.png',
-            img_alt: 'Objetivos de SugarCoach',
-            title: 'Nuestra mision',
-            texto: '',
-            cta: 'Premios',
-            cta_url: '/#premios',
-            id: 1
-        }
     ]
     useHead({
         // Can be static or computed

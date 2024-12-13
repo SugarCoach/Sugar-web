@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-md navbar-white bg-white bg-opacity-50 shadow position-fixed w-100 top-0" aria-label="Fourth navbar example">
+    <nav class="navbar navbar-expand-md navbar-white bg-white shadow position-sticky w-100 top-0" aria-label="Fourth navbar example">
         <div class="container-fluid">
             <a class="navbar-brand space-left m-0" href="/">
                 <sugarlogo size="60px" class="" />
@@ -28,7 +28,7 @@
                     </div>
                     <languageSelector/>
                 </div>
-                <ul class="navbar-nav mb-2 mb-md-0 gap-3 pe-3 pe-lg-5">
+                <ul class="navbar-nav mb-2 mb-md-0 gap-3 pe-1 pe-lg-5">
                     <li v-for="link in nav" :key="link.id" class="nav-item fw-medium">
                         <a v-if="!link.isView" class="nav-link" aria-current="page" :href="link.url">{{ $t('nav.links['+ link.id +']') }}</a>
                         <router-link v-else-if="link.id != 4" :to="link.url" class="nav-link">
@@ -96,9 +96,6 @@
 
 <style scoped lang="scss">
     $transition: 0.3s;
-    nav{
-        backdrop-filter: blur(45px);
-    }
     .premium-link {
         transition: $transition;
 

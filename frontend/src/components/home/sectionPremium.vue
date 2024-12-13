@@ -8,9 +8,9 @@
 
             <div class="d-flex justify-content-center paquetes-container flex-wrap">
                 <paquete-premium :color="basicColor" :title="$t('home.planes.paquetes[0].title')" :price="$t('home.planes.paquetes[0].price')"
-                    :beneficios="4" :paqueteId="0" from="home" :texto-btn="$t('home.planes.paquetes[0].ctaBtn')" btnUrl="/premium#planes-premium" />
-                <paquete-premium :color="premiuColor" :paqueteId="1" :title="$t('home.planes.paquetes[1].title')" btnUrl="/premium#premios" :price="$t('home.planes.paquetes[1].price')" :mensual="true"
-                    :beneficios="7" from="home" :texto-btn="$t('home.planes.paquetes[1].ctaBtn')" />
+                    :beneficios="4" :paqueteId="0" from="home"><iconGota :color="basicColor" size="40px"/> </paquete-premium>
+                <paquete-premium :color="premiuColor" :paqueteId="1" :title="$t('home.planes.paquetes[1].title')" :price="$t('home.planes.paquetes[1].price')" :mensual="true"
+                    :beneficios="7" from="home"  ><iconCorona :color="premiuColor" size="40px"/> </paquete-premium>
             </div>
             <div class="d-flex flex-column gap-4 cta-links">
                 <textLink class="" :color="premiuColor" :text="$t('home.planes.linkPremium.h4')">
@@ -31,6 +31,7 @@
 </template>
 
 <script setup>
+import iconGota from '../reutilizable/icons/_gota.vue';
 import iconCorona from '../reutilizable/icons/_corona.vue';
 import iconTrofeo from '../reutilizable/icons/_trofeo.vue';
 import paquetePremium from '../reutilizable/design/paquetePremium.vue';
