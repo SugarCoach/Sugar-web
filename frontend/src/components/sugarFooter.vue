@@ -1,23 +1,23 @@
 <template>
-    <div class="container-md">
-        <footer class="py-5">
+    <div class="" :style="`background-color: ${props.bgColor};`">
+        <footer class="py-5 container-md">
             <div class="d-flex justify-content-between gap-2 flex-wrap">
                 <div class="mb-3 logo">
                     <sugarLogo size="120px"></sugarLogo>
                 </div>
                 <div class="d-flex gap-5 justify-content-start justify-content-sm-end sections flex-wrap">
                     <div class="">
-                        <h5 class="fw-bold">{{ $t('footer[0].title') }}</h5>
+                        <h5 class="fw-bold" :style="`color: ${props.color}!important;`">{{ $t('footer[0].title') }}</h5>
                         <descargarApp />
                     </div>
                     <div v-for="item in sections" :key="item.id" class="">
-                        <h5 class="fw-bold">{{ $t('footer['+ item.id +'].title') }}</h5>
-                        <ul class="nav flex-column">
+                        <h5 class="fw-bold" :style="`color: ${props.color}!important;`">{{ $t('footer['+ item.id +'].title') }}</h5>
+                        <ul class="nav flex-column" >
                             <li v-for="link in item.links" :key="link.id" class="nav-item mb-2">
-                                <router-link v-if="link.isView" :to="link.url" class="nav-link p-0 text-body-secondary fw-semibold">
+                                <router-link v-if="link.isView" :to="link.url" class="nav-link p-0 text-body-secondary fw-semibold" :style="`color: ${props.color}!important;`">
                                     {{$t('footer['+ item.id +'].links['+ link.id +']') }}
                                 </router-link>
-                                <a v-else aria-current="page" :href="link.url" class="nav-link p-0 text-body-secondary fw-semibold">
+                                <a v-else aria-current="page" :href="link.url" class="nav-link p-0 text-body-secondary fw-semibold" :style="`color: ${props.color}!important;`">
                                     {{ $t('footer['+ item.id +'].links['+ link.id +']') }}
                                 </a>
                             </li>
@@ -27,7 +27,7 @@
             </div>
 
             <div class="d-flex justify-content-between py-3 my-4 sub-footer flex-wrap">
-                <p class="d-flex align-items-center">&copy; 2024 SugarCoach Diabetes Premium, Inc.</p>
+                <p class="d-flex align-items-center" :style="`color: ${props.color}!important;`">&copy; 2024 SugarCoach Diabetes Premium, Inc.</p>
                 <redesSociales size="md" justify="end" />
             </div>
         </footer>
@@ -40,6 +40,15 @@
 
     name: 'sugarFooter'
     components: [descargarApp, sugarLogo, redesSociales]
+    const props = defineProps({
+        bgColor: {
+            type: String
+        },
+        color: {
+            type: String,
+            default: '#000000'
+        }
+    })
     const sections = [
         {
             section: 'SugarCoach',
@@ -60,7 +69,7 @@
                     id: 2
                 },
                 {
-                    url: '/empresas',
+                    url: '/anunciantes',
                     isView: true,
                     id: 3
                 }

@@ -1,10 +1,10 @@
 <template>
-    <nav class="navbar navbar-expand-md navbar-white bg-white shadow position-sticky w-100 top-0" aria-label="Fourth navbar example">
+    <nav class="navbar navbar-expand-md navbar-white shadow position-sticky w-100 top-0" aria-label="Fourth navbar example" :style="`background-color: ${props.bgColor};`">
         <div class="container-fluid">
             <a class="navbar-brand space-left m-0" href="/">
                 <sugarlogo size="60px" class="" />
             </a>
-            <button
+            <button :style="`color: ${props.color}!important;`"
                 class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
@@ -20,18 +20,18 @@
                 <div class="d-flex gap-3 flex-column-reverse flex-md-row pe-3">
                     <div class="d-flex gap-1">
                         <span v-for="link in policy" :key="link.id" class="font-smallest gap-1 d-flex align-items-center">
-                            <router-link :to="link.url" class="text-black text-opacity-50 fw-normal">
+                            <router-link :to="link.url" class="text-black text-opacity-50 fw-normal" :style="`color: ${props.color}!important;`">
                                 {{ $t('nav.policy['+ link.id +']') }}
                             </router-link>
-                            <span v-if="link.id == 0" class="text-black text-opacity-50">|</span>
+                            <span v-if="link.id == 0" class="text-black text-opacity-50" :style="`color: ${props.color}!important;`">|</span>
                         </span>
                     </div>
-                    <languageSelector/>
+                    <languageSelector :color="props.color"/>
                 </div>
                 <ul class="navbar-nav mb-2 mb-md-0 gap-3 pe-1 pe-lg-5">
                     <li v-for="link in nav" :key="link.id" class="nav-item fw-medium">
-                        <a v-if="!link.isView" class="nav-link" aria-current="page" :href="link.url">{{ $t('nav.links['+ link.id +']') }}</a>
-                        <router-link v-else-if="link.id != 4" :to="link.url" class="nav-link">
+                        <a v-if="!link.isView" class="nav-link" aria-current="page" :href="link.url" :style="`color: ${props.color}!important;`">{{ $t('nav.links['+ link.id +']') }}</a>
+                        <router-link v-else-if="link.id != 4" :to="link.url" class="nav-link" :style="`color: ${props.color}!important;`">
                             {{ $t('nav.links['+ link.id +']') }}
                         </router-link>
                         
@@ -53,6 +53,14 @@
     components: {
         sugarlogo, iconCorona, languageSelector
     }
+    const props = defineProps({
+        bgColor: {
+            type: String
+        },
+        color: {
+            type: String
+        }
+    })
     const nav = [
         {
             url: '/#nuestra_app',
@@ -70,7 +78,7 @@
             id: 2
         },
         {
-            url: '/empresas',
+            url: '/anunciantes',
             isView: true,
             id: 3
         },

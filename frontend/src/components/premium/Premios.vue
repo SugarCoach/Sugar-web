@@ -7,7 +7,7 @@
             </div>
 
             <div class="contenedor-premios d-grid m-0 m-auto pt-4">
-                <img loading="lazy" class="m-auto m-0" v-for="item in premios" :key="item.id" :src="item.url" :alt="item.alt">
+                <img loading="lazy" class="m-auto m-0" :class="item.className" v-for="item in premios" :key="item.id" :src="item.url" :alt="item.alt">
             </div>
             <div class="w-100 d-flex justify-content-center mt-5">
                 <button class="btn px-5 py-3">{{ $t('premium.premios.ctaBtn') }}</button>
@@ -36,8 +36,9 @@ const premios = [
         id: 1
     },
     {
-        url: 'contenido/xbox_card_transformed.png',
+        url: 'contenido/roblox-card.png',
         alt: 'Targeta de regalo fornite',
+        className: 'p-2',
         id: 2
     },
     {
@@ -51,8 +52,9 @@ const premios = [
         id: 4
     },
     {
-        url: 'contenido/google_play_card.png',
+        url: 'contenido/googleplay_card.png',
         alt: 'Targeta de regalo fornite',
+        className: 'p-2',
         id: 5
     },
     {

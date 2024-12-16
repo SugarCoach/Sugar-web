@@ -1,18 +1,17 @@
 <template>
     <div
-        class="contenedor-imgytextos d-flex align-items-center w-100 justify-content-center gap-4 gap-sm-3 gap-md-5 flex-wrap"
+        class="contenedor-imgytextos d-flex align-items-center w-100 justify-content-center gap-4 gap-sm-3 gap-md-5 flex-wrap contenedor-imgtexto p-5 rounded-4" :style="`background-color:${bgColor}; box-shadow: 3px 5px 10px -5px ${props.bgColor === '#383838' ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.25)'};`"
         :class="props.direction === 'right' ? 'flex-row-reverse' : ''"
     >
         <img loading="lazy" class="" v-if="props.imagen != 'cards'" :src="props.imagen" :alt="imagen_alt" />
         <div v-else class="cards position-relative d-flex justify-content-center pb-5">
             <img loading="lazy" class="fornite" src="../../../../public/contenido/tarjeta-fornite.webp" alt="" />
-            <img loading="lazy" class="minecraft" src="../../../../public/contenido/minecraft_card.png" alt="" />
-            <img loading="lazy" class="xbox" src="../../../../public/contenido/xbox_card.png" alt="" />
+            <img loading="lazy" class="roblox" src="../../../../public/contenido/roblox-card.png" alt="" />
+            <img loading="lazy" class="xbox p-2" src="../../../../public/contenido/xbox_card.png" alt="" />
         </div>
         <div class="text d-flex flex-column align-self-start justify-content-start align-items-start">
             <h3 class="mt-0 mt-sm-4">{{ props.title }}</h3>
-            <p class="mb-1" v-html="purifyHTML(props.texto)">
-            </p>
+            <p class="mb-1" v-html="purifyHTML(props.texto)"></p>
             <ctaBtn v-if="props.cta" :url="props.cta_url" :color="props.color"><slot></slot>{{ props.cta }}</ctaBtn>
         </div>
     </div>
@@ -22,7 +21,7 @@
     import DOMPurify from 'dompurify'
     import ctaBtn from '../utils/ctaBtn.vue'
     name: 'imgYtexto'
-    const purifyHTML = (dirtyHTML) => {
+    const purifyHTML = dirtyHTML => {
         return DOMPurify.sanitize(dirtyHTML)
     }
     const props = defineProps({
@@ -55,21 +54,27 @@
         color: {
             type: String,
             default: 'blue'
+        },
+        bgColor:{
+            type: String,
         }
     })
     const textColor = `color: ${props.color};`
 </script>
 
 <style scoped lang="scss">
+    .contenedor-imgtexto {
+        background-color: #f8f8f8;
+        box-shadow: 3px 5px 10px -5px rgba(0, 0, 0, 0.25);
+    }
     img,
-    .text,
     .cards {
         width: 45%;
-        min-width: 250px;
-
-        p {
-            max-width: 400px;
-        }
+        min-width: 260px;
+    }
+    .text{
+        width: 49%;
+        min-width: 300px;
     }
     .cards {
         filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.15));
@@ -83,7 +88,7 @@
                 left: 15%;
                 transform: rotate(-35deg);
             }
-            &.minecraft {
+            &.roblox {
                 position: relative;
             }
             &.xbox {
@@ -93,11 +98,11 @@
         }
     }
 
-    @media only screen and (max-width: 575px) {
+    @media only screen and (max-width: 804px) {
         img,
         .text,
         .cards {
-            width: 75%;
+            width: 85%;
         }
     }
 </style>

@@ -194,7 +194,7 @@ const messages = {
                         ]
                     },
                     {
-                        title: 'Para empresas',
+                        title: 'Para anunciantes',
                         price: 'Contactanos',
                         description: 'Anuncia tu marca con propósito: impacta, comunica y transforma con la plataforma líder de diabetes en Latinoamérica.',
                         ctaBtn: 'Ir a empresas',
@@ -216,23 +216,42 @@ const messages = {
                 preguntas: [
                     {
                         pregunta: '¿Cómo puedo suscribirme a SugarCoach Diabetes Premium?',
-                        respuesta: 'adcfdsas',
+                        respuesta: 'Suscribirte a SugarCoach Diabetes Premium es muy sencillo:',
+                        ul: [],
+                        ol:[
+                            'Descarga la app desde Google Play.',
+                            'Regístrate o inicia sesión en tu cuenta.',
+                            'Ve a la sección "Premium" dentro de la app y selecciona el plan que mejor se adapte a tus necesidades (mensual o anual).',
+                            'Completa el proceso de pago y empieza a disfrutar de las funciones avanzadas, como reportes detallados, niveles exclusivos y recompensas adicionales.'
+                        ]
                     },
                     {
                         pregunta: '¿Cuáles son los métodos de pago aceptados?',
-                        respuesta: 'xscacasd',
+                        respuesta: 'Aceptamos los siguientes métodos de pago:',
+                        ul:[
+                            'Tarjetas de crédito y débito (Visa, Mastercard, American Express).',
+                            'Pagos a través de Google Pay.',
+                            'Otros métodos según la región (ver opciones disponibles al momento de suscribirte).',
+                        ],
+                        ol: []
                     },
                     {
                         pregunta: '¿Puedo cancelar mi suscripción en cualquier momento?',
-                        respuesta: 'saxasxaS',
+                        respuesta: 'Sí, puedes cancelar tu suscripción en cualquier momento directamente desde la configuración de tu cuenta en la app o a través de Google Play. Si cancelas, seguirás disfrutando de los beneficios premium hasta que termine el período de suscripción que ya has pagado.',
                     },
                     {
                         pregunta: '¿Hay algun requisito para acceder al plan becado?',
-                        respuesta: 'dcsadcsdc',
+                        respuesta: 'Sí, los planes becados están dirigidos a usuarios en situación de vulnerabilidad económica. Para acceder a este beneficio:',
+                        ul: [],
+                        ol: [
+                            'Completa el formulario de solicitud en nuestra app o sitio web.',
+                            'Proporciona la documentación requerida para demostrar la elegibilidad (según las condiciones establecidas en tu región).',
+                            'Recibirás un código de activación si cumples con los requisitos, gracias a nuestros patrocinadores comprometidos con el impacto social.',
+                        ]
                     },
                     {
                         pregunta: '¿Cómo puedo contactar al soporte técnico si tengo problemas con mi suscripción?',
-                        respuesta: 'dcsadcsdc',
+                        respuesta: 'Puedes enviarnos un mensaje a traves del formulario de contacto',
                     },
                 ]
             }
@@ -716,7 +735,7 @@ const messages = {
                         ]
                     },
                     {
-                        title: 'For companies',
+                        title: 'For advertisers',
                         price: 'Contact us',
                         description: 'Advertise your brand with purpose: impact, communicate, and transform with the leading diabetes platform in Latin America.',
                         ctaBtn: 'Go to companies',
@@ -737,21 +756,44 @@ const messages = {
                 h2: 'FAQS',
                 preguntas: [
                     {
-                        pregunta: 'lolo',
-                        respuesta: 'sxcassdc',
+                        pregunta: '¿Cómo puedo suscribirme a SugarCoach Diabetes Premium?',
+                        respuesta: 'Suscribirte a SugarCoach Diabetes Premium es muy sencillo:',
+                        ul: [],
+                        ol:[
+                            'Download the app on Google Play.',
+                            'Register or log in your account',
+                            'Go to the "Premium" section within the app and select the plan that best suits your needs (monthly or annual).',
+                            'Complete the payment process and start enjoying advanced features, such as detailed reports, exclusive levels, and additional rewards.'
+                        ]
                     },
                     {
-                        pregunta: 'casa',
-                        respuesta: 'sddf',
+                        pregunta: 'What are the accepted payment methods?',
+                        respuesta: 'We accept the following payment methods:',
+                        ul:[
+                            'Credit and debit cards (Visa, Mastercard, American Express).',
+                            'Payments through Google Pay.',
+                            'Other methods depending on the region (see available options when subscribing).',
+                        ],
+                        ol: []
                     },
                     {
-                        pregunta: 'mesa',
-                        respuesta: 'fecda',
+                        pregunta: 'Can I cancel my subscription at any time?',
+                        respuesta: 'Yes, you can cancel your subscription at any time directly from your account settings in the app or through Google Play. If you cancel, you will continue to enjoy the premium benefits until the subscription period you have already paid for ends.',
                     },
                     {
-                        pregunta: 'rama',
-                        respuesta: 'cdxcvdas',
-                    }
+                        pregunta: 'Are there any requirements to access the sponsored plan?',
+                        respuesta: 'Yes, the scholarship plans are aimed at users in a situation of economic vulnerability. To access this benefit:',
+                        ul: [],
+                        ol: [
+                            'Complete the application form in our app or website.',
+                            'Provide the required documentation to prove eligibility (according to the conditions established in your region).',
+                            'You will receive an activation code if you meet the requirements, thanks to our sponsors committed to social impact.',
+                        ]
+                    },
+                    {
+                        pregunta: '"How can I contact technical support if I have problems with my subscription?',
+                        respuesta: 'You can write to us through the contact form.',
+                    },
                 ]
             }
         },

@@ -65,13 +65,13 @@
             id: 0
         },
         {
-            img_url: '../../contenido/telemedicina_edit.png',
+            img_url: '../../contenido/tabla.jpg',
             img_alt: 'Equipo de SugarCoach trabajando',
             cta_url: '',
             id: 1
         },
         {
-            img_url: '../../contenido/alertas_geolocalizacion_edit.png',
+            img_url: '../../contenido/alertas de emergencia.jpg',
             img_alt: 'Equipo de SugarCoach trabajando',
             cta_url: '',
             id: 2
@@ -109,6 +109,7 @@
             pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
             respuesta:
                 'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
+            ol: 4,
             identificador: 'One',
             id: 0
         },
@@ -116,6 +117,7 @@
             pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
             respuesta:
                 'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
+            ul: 3,
             identificado: 'Two',
             id: 1
         },
@@ -130,8 +132,16 @@
             pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
             respuesta:
                 'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
+            ol: 3,
             identificador: 'Four',
             id: 3
+        },
+        {
+            pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
+            respuesta:
+                'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
+            identificador: 'Five',
+            id: 4
         }
     ]
 </script>

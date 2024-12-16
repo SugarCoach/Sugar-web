@@ -30,8 +30,8 @@ const routes = [
         meta: { analytics: true }
     },
     {
-        path: '/empresas', // otra ruta
-        name: 'Empresas',
+        path: '/anunciantes', // otra ruta
+        name: 'Anunciantes',
         component: () => import('./views/Empresas.vue'),
         meta: { analytics: true }
     },

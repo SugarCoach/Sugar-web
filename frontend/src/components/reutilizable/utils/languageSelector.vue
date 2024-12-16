@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex justify-content-start align-content-center gap-2">
-        <span @click="$i18n.locale = 'es'; cheangeLang('es')" :class="classEs" class="">ES</span>
-        <span @click="$i18n.locale = 'en'; cheangeLang('en')" :class="classEn"  class="">EN</span>
+        <span @click="$i18n.locale = 'es'; cheangeLang('es')" :class="classEs" class="" :style="`color: ${props.color}!important;`">ES</span>
+        <span @click="$i18n.locale = 'en'; cheangeLang('en')" :class="classEn"  class="" :style="`color: ${props.color}!important;`">EN</span>
     </div>
 </template>
 
@@ -10,6 +10,11 @@
 import { ref } from 'vue';
 
 name: "languageSelector";
+const props = defineProps({
+    color: {
+        type: String,
+    }
+})
 let selected = ref('es');
 let classEs = ref('selected')
 let classEn = ref('no-selected')
@@ -34,6 +39,6 @@ const cheangeLang = (lang) => {
     }
     .no-selected{
         color: rgb(43, 43, 43);
-        font-weight: 500;
+        font-weight: 300;
     }
 </style>

@@ -10,11 +10,11 @@
             img_url="../../../contenido/nenes-usando-app.jpg"
             img_alt="Foto de niño viendo sus datos en SugarCoach"
         />
-        <ImgsYtextos :title="$t('empresas.beneficios.h2')" from="empresas" :imagenesYtextos="imagenesYTextos" color="#00C8DC">
+        <ImgsYtextos bg-color="#383838" :title="$t('empresas.beneficios.h2')" from="empresas" :imagenesYtextos="imagenesYTextos" color="#00C8DC">
             <iconEdificio color="white" size="23px" />
         </ImgsYtextos>
         <PlanesEmpresas :paquetes="paquetes" color="#00C8DC" />
-        <faqs :preguntas="preguntas" from="empresas" />
+        <faqs bg-color="#383838" color="white" :preguntas="preguntas" from="empresas" />
         <Contactanos />
     </main>
 </template>
@@ -63,7 +63,7 @@
             id: 0
         },
         {
-            img_url: 'contenido/objetivos.png',
+            img_url: 'contenido/agenda2030.webp',
             img_alt: 'Equipo de SugarCoach trabajando',
             title: 'Lista de sponsors',
             texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
@@ -151,4 +151,9 @@
     ]
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+main{
+    background-color: #242424;
+    color: white!important;
+}
+</style>

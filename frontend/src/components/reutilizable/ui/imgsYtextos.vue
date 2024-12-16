@@ -1,5 +1,5 @@
 <template>
-    <section class="container">
+    <section class="container-fluid">
         <h2 class="text-center lone-h2">{{ props.title }}</h2>
         <div class="contenedor-textos d-flex flex-column">
             <imgYtexto
@@ -13,6 +13,7 @@
                 :cta="$t(props.from + '.beneficios.imgsYtextos[' + item.id + '].ctaBtn')"
                 :cta_url="item.cta_url"
                 :color="props.color"
+                :bg-color="props.bgColor"
             >
                 <slot></slot>
             </imgYtexto>
@@ -39,12 +40,15 @@
         color: {
             type: String,
             default: 'blue'
+        },
+        bgColor: {
+            type: String
         }
     })
 </script>
 
 <style scoped lang="scss">
     .contenedor-textos {
-        gap: 75vh;
+        gap: 65vh;
     }
 </style>
