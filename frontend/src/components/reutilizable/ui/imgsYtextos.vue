@@ -1,5 +1,5 @@
 <template>
-    <section class="container-fluid">
+    <section class="container-fluid mt-0">
         <h2 class="text-center lone-h2">{{ props.title }}</h2>
         <div class="contenedor-textos d-flex flex-column">
             <imgYtexto
@@ -8,9 +8,9 @@
                 :direction="item.id % 2 == 0 ? 'left' : 'right'"
                 :imagen="item.img_url"
                 :imagen_alt="item.img_alt"
-                :title="$t(props.from + '.beneficios.imgsYtextos[' + item.id + '].h3')"
-                :texto="$t(props.from + '.beneficios.imgsYtextos[' + item.id + '].p')"
-                :cta="$t(props.from + '.beneficios.imgsYtextos[' + item.id + '].ctaBtn')"
+                :title="$t(props.from + '.comoFunciona.imgsYtextos[' + item.id + '].h3')"
+                :texto="$t(props.from + '.comoFunciona.imgsYtextos[' + item.id + '].p')"
+                :cta="$t(props.from + '.comoFunciona.imgsYtextos[' + item.id + '].ctaBtn')"
                 :cta_url="item.cta_url"
                 :color="props.color"
                 :bg-color="props.bgColor"

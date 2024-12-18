@@ -114,9 +114,9 @@
     .fondo {
         background-color: rgb(248, 248, 248);
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 15px #ffffff;
-        @include screenStyles(250px, 6/4);
+        @include screenStyles(290px, 7/4);
         .contenedor-funcionalidad {
-            width: 680px;
+            width: 1000px;
             max-width: 80vw;
         }
 
@@ -151,9 +151,9 @@
 
     @media only screen and (max-width: 992px) {
         .fondo {
-            @include screenStyles(220px, 7/5);
+            @include screenStyles(240px, 7/5);
             .contenedor-funcionalidad {
-                width: 600px;
+                width: 650px;
             }
         }
     }

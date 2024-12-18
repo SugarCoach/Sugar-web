@@ -4,8 +4,8 @@
             <a class="navbar-brand space-left m-0" href="/">
                 <sugarlogo size="60px" class="" />
             </a>
-            <button :style="`color: ${props.color}!important;`"
-                class="navbar-toggler"
+            <button
+                class="navbar-toggler bg-white"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarsExample04"

@@ -1,6 +1,6 @@
 <template>
     <div class="" :style="`background-color: ${props.bgColor};`">
-        <footer class="py-5 container-md">
+        <footer class="pt-5 container-md">
             <div class="d-flex justify-content-between gap-2 flex-wrap">
                 <div class="mb-3 logo">
                     <sugarLogo size="120px"></sugarLogo>
@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-between py-3 my-4 sub-footer flex-wrap">
+            <div class="d-flex justify-content-between py-3 mt-4 sub-footer flex-wrap">
                 <p class="d-flex align-items-center" :style="`color: ${props.color}!important;`">&copy; 2024 SugarCoach Diabetes Premium, Inc.</p>
                 <redesSociales size="md" justify="end" />
             </div>

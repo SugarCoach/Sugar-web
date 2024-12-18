@@ -135,7 +135,7 @@ const messages = {
                 overtext: 'Mejora tu salud con Premium',
                 ctaBtn: 'Obten Premium'
             },
-            beneficios: {
+            comoFunciona: {
                 h2: 'Beneficios',
                 imgsYtextos: [
                     {
@@ -259,26 +259,26 @@ const messages = {
         empresas: {
             hero: {
                 h1: 'Anunciantes',
-                h2: 'Da a conocer a tu empresa apoyandonos',
+                h2: 'Invierte en publicidad en la plataforma líder de diabetes en Latinoamérica, con una audiencia de 150 millones en 23 países.',
                 overtext: 'Invierte en SugarCoach',
                 ctaBtn: 'Patrocinanos'
             },
-            beneficios: {
-                h2: 'Beneficios',
+            comoFunciona: {
+                h2: '¿Como funciona?',
                 imgsYtextos: [
                     {
-                        h3: 'Distribuir licencias Premium',
-                        p: '',
+                        h3: 'Compra lotes de licencias premium',
+                        p: 'Para anunciar, las marcas adquieren lotes de licencias Premium que repartimos entre nuestros usuarios, beneficiandolos directamente con acceso gratuito a herramientas Premium de SugarCoach. Cada licencia incluye un código único que vincula al usuario con la marca patrocinadora.',
                         ctaBtn: ''
                     },
                     {
-                        h3: 'Lista de sponsors',
-                        p: '',
+                        h3: 'Impacto tangible',
+                        p: 'Los datos recolectados se integran en un reporte de impacto social alineado con los Objetivos de Desarrollo Sostenible (ODS) 3 (Salud y Bienestar), 4 (Educación de Calidad) y 5 (Igualdad de Género). Este reporte es  un Bono Social Certificado, respaldado por datos medibles y transparentes.',
                         ctaBtn: ''
                     },
                     {
-                        h3: 'Verse en articulos y notas',
-                        p: '',
+                        h3: 'Interacción con los usuarios',
+                        p: 'Al activar el código, los usuarios completan una encuesta inicial que permite recolectar datos clave sobre sus preferencias, hábitos y necesidades. Durante el uso diario de la app, los usuarios ven anuncios no invasivos en momentos clave, como al enviar datos médicos o al canjear puntos por premios.',
                         ctaBtn: ''
                     },
                     {
@@ -288,61 +288,90 @@ const messages = {
                     },
                 ]
             },
-            planes: {
-                h2: 'Elige tu plan ideal',
-                h3: '',
-                paquetes:[
-                    {
-                        title: 'Basico',
-                        price: '$25',
-                        description: '',
-                        ctaBtn: 'Comprar',
-                        beneficios: [
-                            'Mejorar la adherencia a tratamientos médicos.',
-                            'Conectar con audiencias de forma significativa.',
-                            'Obtener reportes de impacto basados en ODS.',
-                            'Personalizar campañas de branding.',
+            // planes: {
+            //     h2: 'Elige tu plan ideal',
+            //     h3: '',
+            //     paquetes:[
+            //         {
+            //             title: 'Basico',
+            //             price: '$25',
+            //             description: '',
+            //             ctaBtn: 'Comprar',
+            //             beneficios: [
+            //                 'Mejorar la adherencia a tratamientos médicos.',
+            //                 'Conectar con audiencias de forma significativa.',
+            //                 'Obtener reportes de impacto basados en ODS.',
+            //                 'Personalizar campañas de branding.',
 
-                        ]
-                    },
-                    {
-                        title: 'Premium',
-                        price: '$250',
-                        description: '',
-                        ctaBtn: 'Comprar',
-                        beneficios: [
-                            'Mejorar la adherencia a tratamientos médicos.',
-                            'Conectar con audiencias de forma significativa.',
-                            'Obtener reportes de impacto basados en ODS.',
-                            'Personalizar campañas de branding.',
-                        ]
-                    },
-                    {
-                        title: 'Socios',
-                        price: 'Contactanos',
-                        description: '',
-                        ctaBtn: 'Contactar',
-                        beneficios: [
-                            'Mejorar la adherencia a tratamientos médicos.',
-                            'Conectar con audiencias de forma significativa.',
-                            'Obtener reportes de impacto basados en ODS.',
-                            'Personalizar campañas de branding.',
+            //             ]
+            //         },
+            //         {
+            //             title: 'Premium',
+            //             price: '$250',
+            //             description: '',
+            //             ctaBtn: 'Comprar',
+            //             beneficios: [
+            //                 'Mejorar la adherencia a tratamientos médicos.',
+            //                 'Conectar con audiencias de forma significativa.',
+            //                 'Obtener reportes de impacto basados en ODS.',
+            //                 'Personalizar campañas de branding.',
+            //             ]
+            //         },
+            //         {
+            //             title: 'Socios',
+            //             price: 'Contactanos',
+            //             description: '',
+            //             ctaBtn: 'Contactar',
+            //             beneficios: [
+            //                 'Mejorar la adherencia a tratamientos médicos.',
+            //                 'Conectar con audiencias de forma significativa.',
+            //                 'Obtener reportes de impacto basados en ODS.',
+            //                 'Personalizar campañas de branding.',
 
-                        ]
+            //             ]
+            //         },
+            //     ],
+            //     formularioPago: {
+            //         h4: '¡Gracias por querer apoyar a SugarCoach!',
+            //         p: 'Para completar tu compra, necesitamos que nos proporciones tu correo electrónico. Te enviaremos un email con un enlace seguro para que puedas realizar el pago con el método que prefieras.',
+            //         inputs: [
+            //             'Nombre de la empresa',
+            //             'Email de la empresa',
+            //             'Fecha y hora de la reunion',
+            //             'Enviar'
+            //         ],
+            //         info: 'Si tienes alguna duda o problema, puedes contactarnos a', 
+            //         cerrar: 'Cerrar'
+            //     }
+            // },
+            beneficios: {
+                items: [
+                    {
+                        title: 'Conexión significativa',
+                        text: 'Las marcas logran un vínculo cualitativo con usuarios que interactúan al menos 5 veces al día con la app.'
                     },
-                ],
-                formularioPago: {
-                    h4: '¡Gracias por querer apoyar a SugarCoach!',
-                    p: 'Para completar tu compra, necesitamos que nos proporciones tu correo electrónico. Te enviaremos un email con un enlace seguro para que puedas realizar el pago con el método que prefieras.',
-                    inputs: [
-                        'Nombre de la empresa',
-                        'Email de la empresa',
-                        'Fecha y hora de la reunion',
-                        'Enviar'
-                    ],
-                    info: 'Si tienes alguna duda o problema, puedes contactarnos a', 
-                    cerrar: 'Cerrar'
-                }
+                    {
+                        title: 'Aumenta tu alcance',
+                        text: 'SugarCoach integra al paciente diabético con su grupo familiar y el equipo médico, quienes interactúan activamente con tus anuncios.'
+                    },
+                    {
+                        title: 'Audiencias diversificadas',
+                        text: 'Conecta con millennials (padres de niños o jóvenes diabéticos), centennials, y generación alfa como early adopters, además de profesionales de la salud como médicos, nutricionistas, y coaches de diabetes, todos presentes en la plataforma.'
+                    },
+                    {
+                        title: 'Reporte de impacto social',
+                        text: 'Cada campaña incluye un Bono Social Certificado que demuestra el valor generado en términos de salud, educación y equidad de género.'
+                    },
+                    {
+                        title: 'Smart Data ROI',
+                        text: 'Gracias a nuestros mecanismos de análisis inteligente, las marcas obtienen insights precisos y accionables para optimizar futuras estrategias.'
+                    },
+                    {
+                        title: 'Vi sibilidad y reconocimiento',
+                        text: 'Participar en SugarCoach posiciona a las marcas como líderes en responsabilidad social y compromiso con la salud.'
+                    },
+
+                ]
             },
             faqs: {
                 h2: 'Preguntas frecuentes',

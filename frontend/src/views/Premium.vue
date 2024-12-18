@@ -10,7 +10,7 @@
             img_url="../../../contenido/7-Niños-con-SC.webp"
             img_alt="Foto de niño ganando puntos en SugarCoach"
         />
-        <imgsYtextos from="premium" :title="$t('premium.beneficios.h2')" :imagenesYtextos="imagenesYTextos" color="#FFB800">
+        <imgsYtextos from="premium" :title="$t('premium.comoFunciona.h2')" :imagenesYtextos="imagenesYTextos" color="#FFB800">
             <iconTrofeo color="white" size="23px" />
         </imgsYtextos>
         <planes :paquetesUsuarios="paquetes" />

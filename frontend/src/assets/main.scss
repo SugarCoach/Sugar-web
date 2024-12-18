@@ -1,98 +1,105 @@
-$premium : #FFB800;
-$space_hero: 10vw;
-$box-shadow: 0 .5rem 20px rgba(0, 0, 0, 0.2);
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+$premium: #ffb800;
+$space_hero: calc(8vw);
+$box-shadow: 0 0.5rem 20px rgba(0, 0, 0, 0.2);
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
-html{
+html {
     font-size: 15px;
 }
-.nav-link{
+.nav-link {
     padding: 0 !important;
     height: 2rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
 }
-main{
+main {
     min-height: 100vh;
     padding-bottom: max(50vh, 200px);
 }
-nav{
+nav {
     z-index: 900;
 }
-section{
+section {
     margin-top: max(20vh, 100px);
     padding: 20vh 0 10vh 0;
     min-height: 50vh;
 }
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-wrap: balance;
 }
-h1{
+h1 {
     font-size: 4rem;
 }
-h2{
+h2 {
     font-size: 3rem;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-.font-smallest{
+.font-smallest {
     font-size: 1rem;
 }
 .color-premium {
     color: $premium;
 }
-.space-left{
+.space-left {
     padding-left: $space_hero;
 }
-.vertical-align-top{
+.vertical-align-top {
     vertical-align: top;
 }
-.lone-h2{
-    margin-bottom: 15vh!important;
+.lone-h2 {
+    margin-bottom: 15vh !important;
 }
 @media only screen and (768px <= width <= 992px) {
-    html{
+    html {
         font-size: 14px;
+        .space-left{
+            padding-left: 6.5vw;
+        }
     }
 }
 
 @media only screen and (576px <= width <= 768px) {
-    html{
+    html {
         font-size: 13.5px;
-    }
-    .space-left{
-        margin: 5vw;
+        .space-left {
+            padding-left: 5vw;
+        }
     }
 }
 @media only screen and (width <= 576px) {
-    html{
+    html {
         font-size: 12px;
     }
 }
-.show-team{
+.show-team {
     view-timeline-name: --integrante;
     view-timeline-axis: block;
     animation-timeline: --integrante;
     animation-name: show;
     animation-range: entry 25% cover 45%;
     animation-fill-mode: both;
-
 }
-@keyframes show{
-    0%{
+@keyframes show {
+    0% {
         scale: 0.8;
         opacity: 0;
         transform: translateY(100px);
     }
-    100%{
+    100% {
         opacity: 1;
         scale: 1;
         transform: translateY(0);

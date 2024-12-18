@@ -39,6 +39,6 @@ const cheangeLang = (lang) => {
     }
     .no-selected{
         color: rgb(43, 43, 43);
-        font-weight: 300;
+        font-weight: 3q00;
     }
 </style>

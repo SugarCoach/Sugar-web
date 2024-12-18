@@ -63,11 +63,11 @@ const props = defineProps({
 @import "../../../assets/main.scss";
 
 .hero-circle {
-    height: 60vh;
+    height: 80vh;
     overflow: hidden;
 
     img {
-        width: 50%;
+        width: 66%;
         aspect-ratio: 8/7;
         min-height: 80%;
         max-height: 100%;
@@ -96,7 +96,7 @@ const props = defineProps({
 @media only screen and (max-width: 992px) {
     .hero-circle {
         img {
-            width: 45%;
+            width: 60%;
             border-bottom-left-radius: 85%;
         }
     }

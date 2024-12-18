@@ -1,7 +1,7 @@
 <template>
     <main>
-        <heroCircle
-            :heading1="$t('empresas.hero.h1')"
+        <!-- <heroCircle
+            :heading1=""
             :heading2="$t('empresas.hero.h2')"
             :over-text="$t('empresas.hero.overtext')"
             color="#00C8DC"
@@ -9,28 +9,31 @@
             button_url="#planes-empresas"
             img_url="../../../contenido/nenes-usando-app.jpg"
             img_alt="Foto de niño viendo sus datos en SugarCoach"
-        />
-        <ImgsYtextos bg-color="#383838" :title="$t('empresas.beneficios.h2')" from="empresas" :imagenesYtextos="imagenesYTextos" color="#00C8DC">
+        /> -->
+        <heroHalf imagen="../../../public/contenido/nenes-usando-app.jpg" img-alt="Nene usando SugarCoach" :title="$t('empresas.hero.h1')" :subheading="$t('empresas.hero.h2')"> </heroHalf>
+        <ImgsYtextos bg-color="#010620" :title="$t('empresas.comoFunciona.h2')" from="empresas" :imagenesYtextos="imagenesYTextos" color="#00C8DC">
             <iconEdificio color="white" size="23px" />
         </ImgsYtextos>
-        <PlanesEmpresas :paquetes="paquetes" color="#00C8DC" />
-        <faqs bg-color="#383838" color="white" :preguntas="preguntas" from="empresas" />
+        <beneficios/>
+        <!-- <PlanesEmpresas :paquetes="paquetes" color="#00C8DC" /> -->
+        <faqs bg-color="#010620" color="white" :preguntas="preguntas" from="empresas" />
         <Contactanos />
     </main>
 </template>
 
 <script setup>
-    import heroCircle from '../components/reutilizable/ui/heroCircle.vue'
-    import corona from '../components/reutilizable/icons/_corona.vue'
+    import heroHalf from '../components/reutilizable/ui/heroHalf.vue'
+    import beneficios from '../components/empresas/beneficios.vue'
+    // import heroCircle from '../components/reutilizable/ui/heroCircle.vue'
     import ImgsYtextos from '../components/reutilizable/ui/imgsYtextos.vue'
     import PlanesEmpresas from '../components/empresas/PlanesEmpresas.vue'
     import faqs from '../components/reutilizable/ui/preguntasFrecuentes.vue'
     import Contactanos from '../components/home/Contactanos.vue'
     import iconEdificio from '../components/reutilizable/icons/_edificio.vue'
+    import ctaBtn from '../components/reutilizable/utils/ctaBtn.vue'
     import { useHead } from '@vueuse/head'
     // import { defineAsyncComponent } from "vue";
     name: 'Empresas'
-    components: [heroCircle, iconEdificio, ImgsYtextos, PlanesEmpresas, faqs, Contactanos]
     useHead({
         // Can be static or computed
         title: 'SugarCoach - Empresas: Consigue opurtunidades de crecimiento para tu empresa mientras apoyas a SugarCoach',
@@ -152,8 +155,8 @@
 </script>
 
 <style scoped lang="scss">
-main{
-    background-color: #242424;
-    color: white!important;
-}
+    main {
+        background: #010416;
+        color: white !important;
+    }
 </style>

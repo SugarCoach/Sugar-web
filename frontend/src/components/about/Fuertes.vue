@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-    import fuerte from '../reutilizable/utils/fuerte.vue'
+    import fuerte from '../reutilizable/utils/iconYtext.vue'
     import corona from '../reutilizable/icons/_corona.vue'
     import gota from '../reutilizable/icons/_gota.vue'
     import trofeo from '../reutilizable/icons/_trofeo.vue'

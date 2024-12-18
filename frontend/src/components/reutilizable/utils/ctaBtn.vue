@@ -1,5 +1,5 @@
 <template>
-	<a :href="props.url" class="btn px-3 py-2 d-flex align-items-center gap-2 text-white" :style="`background-color: ${props.color}!important;`"><slot></slot></a>
+	<a :href="props.url" class="btn d-flex align-items-center gap-2 text-white" :style="`background-color: ${props.color}!important;`" :class="className"><slot></slot></a>
 </template>
 
 <script setup>
@@ -12,6 +12,10 @@ const props = defineProps({
 	color: {
 		type: String,
 		default: "#2482D9"
+	},
+	className:{
+		type: String,
+		default: "px-3 py-2"
 	}
 });
 </script>

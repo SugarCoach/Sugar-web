@@ -1,6 +1,6 @@
 <template>
     <section id="nuestra_app">
-        <h2 class="text-center lone-h2">{{ $t('home.nuestraApp.h2') }}</h2>
+        <h2 class="text-center lone-h2 h1">{{ $t('home.nuestraApp.h2') }}</h2>
         <div class="screens-container h-100 d-flex flex-column align-items-center">
             <funcionalidadApp
                 v-for="item in pantallas"
@@ -41,6 +41,9 @@
 </script>
 
 <style scoped>
+    #nuestra_app {
+        margin-top: 0;
+    }
     .screens-container {
         gap: 90vh;
     }
