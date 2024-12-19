@@ -10,11 +10,21 @@
             img_url="../../../contenido/nenes-usando-app.jpg"
             img_alt="Foto de niño viendo sus datos en SugarCoach"
         /> -->
-        <heroHalf imagen="../../../public/contenido/nenes-usando-app.jpg" img-alt="Nene usando SugarCoach" :title="$t('empresas.hero.h1')" :subheading="$t('empresas.hero.h2')"> </heroHalf>
+        <heroHalf
+            imagen="../../../public/contenido/nenes-usando-app.jpg"
+            img-alt="Nene usando SugarCoach"
+            :title="$t('empresas.hero.h1')"
+            :subheading="$t('empresas.hero.h2')"
+            :texto="$t('empresas.hero.p')"
+        >
+            <ctaBtn url="#beneficios" color="#00C8DC" class="cta-btn" class-name="py-2 px-4 fw-medium lead rounded-pill"
+                ><iconEdificio color="white" />{{ $t('empresas.hero.ctaBtn') }}
+            </ctaBtn>
+        </heroHalf>
         <ImgsYtextos bg-color="#010620" :title="$t('empresas.comoFunciona.h2')" from="empresas" :imagenesYtextos="imagenesYTextos" color="#00C8DC">
             <iconEdificio color="white" size="23px" />
         </ImgsYtextos>
-        <beneficios/>
+        <beneficios />
         <!-- <PlanesEmpresas :paquetes="paquetes" color="#00C8DC" /> -->
         <faqs bg-color="#010620" color="white" :preguntas="preguntas" from="empresas" />
         <Contactanos />
@@ -82,15 +92,6 @@
             cta: '',
             cta_url: '',
             id: 2
-        },
-        {
-            img_url: 'contenido/integrantes/11.Team.jpg',
-            img_alt: 'Equipo de SugarCoach trabajando',
-            title: 'Apoyar a SugarCoach',
-            texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
-            cta: 'Ver los paquetes',
-            cta_url: '#planes-empresas',
-            id: 3
         }
     ]
     const paquetes = [
@@ -158,5 +159,9 @@
     main {
         background: #010416;
         color: white !important;
+        .cta-btn{
+            z-index: 102;
+            position: relative;
+        }
     }
 </style>

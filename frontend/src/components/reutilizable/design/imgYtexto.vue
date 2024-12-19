@@ -1,6 +1,9 @@
 <template>
     <div
-        class="contenedor-imgytextos d-flex align-items-center w-100 justify-content-center gap-4 gap-sm-3 gap-md-5 flex-wrap contenedor-imgtexto p-5 rounded-4" :style="`background-color:${bgColor}; box-shadow: 3px 5px 10px -5px ${props.bgColor === '#383838' ? 'rgba(255, 255, 255, 0.5)' : 'rgba(0, 0, 0, 0.25)'};`"
+        class="contenedor-imgytextos d-flex align-items-center w-100 justify-content-center gap-4 gap-sm-3 gap-md-5 flex-wrap contenedor-imgtexto p-5 rounded-4"
+        :style="`background-color:${bgColor}; box-shadow: 3px 5px 10px -5px ${
+            props.bgColor === '#383838' ?  'rgba(0, 0, 0, 0.25)' : 'rgba(255, 255, 255, 0.5)'
+        };`"
         :class="props.direction === 'right' ? 'flex-row-reverse' : ''"
     >
         <img loading="lazy" class="" v-if="props.imagen != 'cards'" :src="props.imagen" :alt="imagen_alt" />
@@ -55,8 +58,8 @@
             type: String,
             default: 'blue'
         },
-        bgColor:{
-            type: String,
+        bgColor: {
+            type: String
         }
     })
     const textColor = `color: ${props.color};`
@@ -65,16 +68,22 @@
 <style scoped lang="scss">
     .contenedor-imgtexto {
         background-color: #f8f8f8;
-        box-shadow: 3px 5px 10px -5px rgba(0, 0, 0, 0.25);
+        box-shadow: 3px 5px 10px -5px #00cadca6!important;
     }
     img,
     .cards {
         width: 45%;
         min-width: 260px;
     }
-    .text{
+    .text {
         width: 49%;
         min-width: 300px;
+        h3 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.3rem;
+        }
     }
     .cards {
         filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.15));
@@ -97,7 +106,16 @@
             }
         }
     }
-
+    @media only screen and (max-width: 991px) {
+        .text {
+            h3 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    }
     @media only screen and (max-width: 804px) {
         img,
         .text,

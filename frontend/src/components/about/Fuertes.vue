@@ -5,7 +5,6 @@
             <fuerte
                 v-for="item in fuertes"
                 :key="item.id"
-                :title="$t('sobreNosotros.nuestrosFuertes.fuertes[' + item.id + '].h3')"
                 :texto="$t('sobreNosotros.nuestrosFuertes.fuertes[' + item.id + '].p')"
             >
                 

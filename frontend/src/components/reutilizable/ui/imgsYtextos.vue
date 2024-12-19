@@ -49,6 +49,6 @@
 
 <style scoped lang="scss">
     .contenedor-textos {
-        gap: 65vh;
+        gap: 35vh;
     }
 </style>

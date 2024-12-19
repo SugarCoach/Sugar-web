@@ -15,14 +15,9 @@
                 <h1 class="mb-2">{{ props.title }}</h1>
                 <h2 class="mb-0">{{ props.subheading }}</h2>
             </div>
-            <p>
-                Conecta con una audiencia comprometida que interactúa en la plataforma al menos 5 veces al día y posiciona tu marca como un referente
-                de impacto social medible. Sé parte del cambio y alcanza a miles mientras generas resultados tangibles alineados a los
-                <strong>ODS</strong>. Sé parte de la plataforma <strong>#1</strong> que está revolucionando la gestión de la diabetes.
+            <p v-html="props.texto">
             </p>
-            <ctaBtn color="#00C8DC" class="cta-btn" class-name="py-2 px-4 fw-medium lead rounded-pill"
-                ><iconEdificio color="white" />{{ $t('empresas.hero.ctaBtn') }}
-            </ctaBtn>
+            <slot class="cta-btn"></slot>
         </div>
         <div class="position-relative contenedor-img flex-fill">
             <div class="filtro position-absolute w-100 h-100"></div>
@@ -100,9 +95,8 @@
             }
         }
     }
-
     .filtro {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(5, 0, 19, 0.2);;
         z-index: 50;
     }
 
@@ -113,6 +107,10 @@
         .hero{
             .contenedor-img {
                 display: none;
+                
+            }
+            .filtro{
+                background: rgba(5, 0, 19, 0.5);
             }
             .contenedor-texto {
                 height: 100%;
@@ -121,7 +119,7 @@
                 background-size: cover;
                 background-attachment: fixed;
                 background-position: center;
-                h1, h2, p, a{
+                h1, h2, p{
                     z-index: 102;
                     position: relative;
                 }

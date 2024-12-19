@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-name: "iconCorona";
+name: "iconArrow";
 const props = defineProps({
     color: {
         type: String,

@@ -260,7 +260,8 @@ const messages = {
             hero: {
                 h1: 'Anunciantes',
                 h2: 'Invierte en publicidad en la plataforma líder de diabetes en Latinoamérica, con una audiencia de 150 millones en 23 países.',
-                overtext: 'Invierte en SugarCoach',
+                p:'Conecta con una audiencia comprometida que interactúa en la plataforma al menos 5 veces al día y posiciona tu marca como un referente de impacto social medible. Sé parte del cambio y alcanza a miles mientras generas resultados tangibles alineados a los <strong>ODS</strong>. Sé parte de la plataforma <strong>#1</strong> que está revolucionando la gestión de la diabetes.',
+                // overtext: 'Invierte en SugarCoach',
                 ctaBtn: 'Patrocinanos'
             },
             comoFunciona: {
@@ -280,11 +281,6 @@ const messages = {
                         h3: 'Interacción con los usuarios',
                         p: 'Al activar el código, los usuarios completan una encuesta inicial que permite recolectar datos clave sobre sus preferencias, hábitos y necesidades. Durante el uso diario de la app, los usuarios ven anuncios no invasivos en momentos clave, como al enviar datos médicos o al canjear puntos por premios.',
                         ctaBtn: ''
-                    },
-                    {
-                        h3: 'Apoyar a SugarCoach',
-                        p: '',
-                        ctaBtn: 'Ver los paquetes'
                     },
                 ]
             },
@@ -345,29 +341,31 @@ const messages = {
             //     }
             // },
             beneficios: {
+                h2: 'Beneficios',
+                ctaBtn: 'Empezar como anunciante',
                 items: [
                     {
                         title: 'Conexión significativa',
                         text: 'Las marcas logran un vínculo cualitativo con usuarios que interactúan al menos 5 veces al día con la app.'
                     },
                     {
-                        title: 'Aumenta tu alcance',
-                        text: 'SugarCoach integra al paciente diabético con su grupo familiar y el equipo médico, quienes interactúan activamente con tus anuncios.'
-                    },
-                    {
-                        title: 'Audiencias diversificadas',
-                        text: 'Conecta con millennials (padres de niños o jóvenes diabéticos), centennials, y generación alfa como early adopters, además de profesionales de la salud como médicos, nutricionistas, y coaches de diabetes, todos presentes en la plataforma.'
-                    },
-                    {
                         title: 'Reporte de impacto social',
                         text: 'Cada campaña incluye un Bono Social Certificado que demuestra el valor generado en términos de salud, educación y equidad de género.'
+                    },
+                    {
+                        title: 'Aumenta tu alcance',
+                        text: 'SugarCoach integra al paciente diabético con su grupo familiar y el equipo médico, quienes interactúan activamente con tus anuncios.'
                     },
                     {
                         title: 'Smart Data ROI',
                         text: 'Gracias a nuestros mecanismos de análisis inteligente, las marcas obtienen insights precisos y accionables para optimizar futuras estrategias.'
                     },
                     {
-                        title: 'Vi sibilidad y reconocimiento',
+                        title: 'Audiencias diversificadas',
+                        text: 'Conecta con millennials (padres de niños o jóvenes diabéticos), centennials, y generación alfa como early adopters, además de profesionales de la salud como médicos, nutricionistas, y coaches de diabetes, todos presentes en la plataforma.'
+                    },
+                    {
+                        title: 'Visibilidad y reconocimiento',
                         text: 'Participar en SugarCoach posiciona a las marcas como líderes en responsabilidad social y compromiso con la salud.'
                     },
 
@@ -389,7 +387,7 @@ const messages = {
                         respuesta: 'Sí, trabajamos contigo para adaptar la experiencia a los objetivos de tu marca.',
                     },
                     {
-                        pregunta: '¿Qué ejemplos de éxito tienen de empresas que ya colaboran con SugarCoach?',
+                        pregunta: 'dax',
                         respuesta: 'dcsadcsdc',
                     }
                 ]
@@ -830,87 +828,144 @@ const messages = {
             hero: {
                 h1: 'Advertisers',
                 h2: 'Promote your company by supporting us',
-                overtext: 'Invest in SugarCoach',
+                p:'Connect with an engaged audience that interacts with the platform at least 5 times a day and position your brand as a leader in measurable social impact. Be part of the change and reach thousands while generating tangible results aligned with the SDGs. Be part of the #1 platform that is revolutionizing diabetes management.',
+
+                // overtext: 'Invest in SugarCoach',
                 ctaBtn: 'Sponsor us'
             },
-            beneficios: {
-                h2: 'Benefits',
+            comoFunciona: {
+                h2: 'How it works?',
                 imgsYtextos: [
                     {
-                        h3: 'Distribute Premium licenses',
-                        p: '',
+                        h3: 'Compra lotes de licencias premium',
+                        p: 'To advertise, brands purchase batches of Premium licenses that we distribute among our users, directly benefiting them with free access to SugarCoach Premium tools. Each license includes a unique code that links the user to the sponsoring brand.',
                         ctaBtn: ''
                     },
                     {
-                        h3: 'Sponsors list',
-                        p: '',
+                        h3: 'Impacto tangible',
+                        p: 'The collected data is integrated into a social impact report aligned with Sustainable Development Goals (SDGs) 3 (Health and Well-being), 4 (Quality Education), and 5 (Gender Equality). This report is a Certified Social Bond, backed by measurable and transparent data.',
                         ctaBtn: ''
                     },
                     {
-                        h3: 'Appear in articles and notes',
-                        p: '',
+                        h3: 'Interaction with users',
+                        p: 'Upon activating the code, users complete an initial survey that allows us to collect key data about their preferences, habits, and needs. During daily use of the app, users see non-intrusive ads at key moments, such as when submitting medical data or redeeming points for rewards.',
                         ctaBtn: ''
-                    },
-                    {
-                        h3: 'Support SugarCoach',
-                        p: '',
-                        ctaBtn: 'View the packages'
                     },
                 ]
             },
-            planes: {
-                h2: 'Choose your ideal plan',
-                h3: '',
-                paquetes:[
+            // planes: {
+            //     h2: 'Choose your ideal plan',
+            //     h3: '',
+            //     paquetes:[
+            //         {
+            //             title: 'Basic',
+            //             price: '$25',
+            //             description: '',
+            //             ctaBtn: 'Buy',
+            //             beneficios: [
+            //                 'Improve adherence to medical treatments.',
+            //                 'Connect with audiences in a meaningful way.',
+            //                 'Obtain impact reports based on SDGs.',
+            //                 'Customize branding campaigns.',
+            //             ]
+            //         },
+            //         {
+            //             title: 'Premium',
+            //             price: '$250',
+            //             description: '',
+            //             ctaBtn: 'Buy',
+            //             beneficios: [
+            //                 'Mejorar la adherencia a tratamientos médicos.',
+            //                 'Conectar con audiencias de forma significativa.',
+            //                 'Obtener reportes de impacto basados en ODS.',
+            //                 'Personalizar campañas de branding.',
+            //             ]
+            //         },
+            //         {
+            //             title: 'Socios',
+            //             price: 'Contact us',
+            //             description: '',
+            //             ctaBtn: 'Contact',
+            //             beneficios: [
+            //                 'Mejorar la adherencia a tratamientos médicos.',
+            //                 'Conectar con audiencias de forma significativa.',
+            //                 'Obtener reportes de impacto basados en ODS.',
+            //                 'Personalizar campañas de branding.',
+            //             ]
+            //         },
+            //     ],
+            //     beneficios: {
+            //     h2: 'Beneficios',
+            //     items: [
+            //         {
+            //             title: 'Conexión significativa',
+            //             text: 'Las marcas logran un vínculo cualitativo con usuarios que interactúan al menos 5 veces al día con la app.'
+            //         },
+            //         {
+            //             title: 'Reporte de impacto social',
+            //             text: 'Cada campaña incluye un Bono Social Certificado que demuestra el valor generado en términos de salud, educación y equidad de género.'
+            //         },
+            //         {
+            //             title: 'Aumenta tu alcance',
+            //             text: 'SugarCoach integra al paciente diabético con su grupo familiar y el equipo médico, quienes interactúan activamente con tus anuncios.'
+            //         },
+            //         {
+            //             title: 'Smart Data ROI',
+            //             text: 'Gracias a nuestros mecanismos de análisis inteligente, las marcas obtienen insights precisos y accionables para optimizar futuras estrategias.'
+            //         },
+            //         {
+            //             title: 'Audiencias diversificadas',
+            //             text: 'Conecta con millennials (padres de niños o jóvenes diabéticos), centennials, y generación alfa como early adopters, además de profesionales de la salud como médicos, nutricionistas, y coaches de diabetes, todos presentes en la plataforma.'
+            //         },
+            //         {
+            //             title: 'Visibilidad y reconocimiento',
+            //             text: 'Participar en SugarCoach posiciona a las marcas como líderes en responsabilidad social y compromiso con la salud.'
+            //         },
+
+            //     ]
+            // },
+            //     formularioPago: {
+            //         h4: 'Thanks for your support!',
+            //         p: 'To complete your purchase, we need you to provide us with your email address. We will send you an email with a secure link so you can make the payment using your preferred method.',
+            //         inputs: [
+            //             'Company name',
+            //             'Company email',
+            //             'Date and time of meeting',
+            //             'Enviar'
+            //         ],
+            //         info: 'If you have any doubt or problem, you can contact us at',
+            //         cerrar: 'Close'
+            //     }
+            // },
+            beneficios: {
+                h2: 'Beneficios',
+                ctaBtn: 'Start as an advertiser',
+                items: [
                     {
-                        title: 'Basic',
-                        price: '$25',
-                        description: '',
-                        ctaBtn: 'Buy',
-                        beneficios: [
-                            'Improve adherence to medical treatments.',
-                            'Connect with audiences in a meaningful way.',
-                            'Obtain impact reports based on SDGs.',
-                            'Customize branding campaigns.',
-                        ]
+                        title: 'Meaningful connection',
+                        text: 'Brands achieve a qualitative connection with users who interact with the app at least 5 times a day.'
                     },
                     {
-                        title: 'Premium',
-                        price: '$250',
-                        description: '',
-                        ctaBtn: 'Buy',
-                        beneficios: [
-                            'Mejorar la adherencia a tratamientos médicos.',
-                            'Conectar con audiencias de forma significativa.',
-                            'Obtener reportes de impacto basados en ODS.',
-                            'Personalizar campañas de branding.',
-                        ]
+                        title: 'Social impact report',
+                        text: 'Each campaign includes a Certified Social Bond that demonstrates the value generated in terms of health, education, and gender equity.'
                     },
                     {
-                        title: 'Socios',
-                        price: 'Contact us',
-                        description: '',
-                        ctaBtn: 'Contact',
-                        beneficios: [
-                            'Mejorar la adherencia a tratamientos médicos.',
-                            'Conectar con audiencias de forma significativa.',
-                            'Obtener reportes de impacto basados en ODS.',
-                            'Personalizar campañas de branding.',
-                        ]
+                        title: 'Increase your reach',
+                        text: 'SugarCoach integrates the diabetic patient with their family group and the medical team, who actively interact with your ads.'
                     },
-                ],
-                formularioPago: {
-                    h4: 'Thanks for your support!',
-                    p: 'To complete your purchase, we need you to provide us with your email address. We will send you an email with a secure link so you can make the payment using your preferred method.',
-                    inputs: [
-                        'Company name',
-                        'Company email',
-                        'Date and time of meeting',
-                        'Enviar'
-                    ],
-                    info: 'If you have any doubt or problem, you can contact us at',
-                    cerrar: 'Close'
-                }
+                    {
+                        title: 'Smart Data ROI',
+                        text: 'Thanks to our intelligent analysis mechanisms, brands obtain precise and actionable insights to optimize future strategies.'
+                    },
+                    {
+                        title: 'Diversified audiences',
+                        text: 'Connect with millennials (parents of children or young diabetics), centennials, and generation alpha as early adopters, as well as health professionals such as doctors, nutritionists, and diabetes coaches, all present on the platform.'
+                    },
+                    {
+                        title: 'Visibility and recognition',
+                        text: 'Participating in SugarCoach positions brands as leaders in social responsibility and commitment to health.'
+                    },
+                ]
             },
             faqs: {
                 h2: 'FAQS',
