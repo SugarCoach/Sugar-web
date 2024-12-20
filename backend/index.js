@@ -54,11 +54,11 @@ async function startServer() {
                 if (error) {
                     console.log(error)
                 } else {
-                    console.log('Email enviado: ' + info.response)
+                    // console.log('Email enviado: ' + info.response)
                 }
             })
 
-            res.send(`\nreq.body:\n${name} ${email} ${message}`)
+            // res.send(`\nreq.body:\n${name} ${email} ${message}`)
             // res.json({
             // message: 'Formulario enviado correctamente' });
         })
@@ -82,11 +82,11 @@ async function startServer() {
                 if (error) {
                     console.log(error)
                 } else {
-                    console.log('Email enviado: ' + info.response)
+                    // console.log('Email enviado: ' + info.response)
                 }
             })
 
-            res.send(`\nreq.body:\n${company} ${email} ${date}`)
+            // res.send(`\nreq.body:\n${company} ${email} ${date}`)
             // res.json({
             // message: 'Formulario enviado correctamente' });
         })
