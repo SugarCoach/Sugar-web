@@ -30,8 +30,8 @@
                 </div>
                 <ul class="navbar-nav mb-2 mb-md-0 gap-3 pe-1 pe-lg-5">
                     <li v-for="link in nav" :key="link.id" class="nav-item fw-medium">
-                        <a v-if="!link.isView" class="nav-link" aria-current="page" :href="link.url" :style="`color: ${props.color}!important;`">{{ $t('nav.links['+ link.id +']') }}</a>
-                        <router-link v-else-if="link.id != 4" :to="link.url" class="nav-link" :style="`color: ${props.color}!important;`">
+                        <!-- <a v-if="!link.isView" class="nav-link" aria-current="page" :href="link.url" :style="`color: ${props.color}!important;`">{{ $t('nav.links['+ link.id +']') }}</a> -->
+                        <router-link v-if="link.id != 4" :to="link.url" class="nav-link" :style="`color: ${props.color}!important;`">
                             {{ $t('nav.links['+ link.id +']') }}
                         </router-link>
                         

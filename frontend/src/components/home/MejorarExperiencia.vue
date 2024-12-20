@@ -18,7 +18,7 @@
                 </div>
                 <div class="d-flex gap-2 gap-sm-4 mb-2 align-items-center flex-wrap flex-sm-nowrap">
                     <ctaBtn class="rounded-pill cta-btn" url="/premium">
-                        <iconCorona width="25px" height="25px" color="white" class="me-sm-2 vertical-align-top" />
+                        <iconCorona width="25px" height="25px" color="white" class="vertical-align-top" />
                         <span v-html="$t('home.mejorarExperiencia.ctaBtn')"></span>
                     </ctaBtn>
                     <descargarApp :size="screenWidth <= 578 ? '100px' : '125px'" />

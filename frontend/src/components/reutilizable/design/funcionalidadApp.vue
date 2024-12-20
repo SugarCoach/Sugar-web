@@ -83,7 +83,7 @@
                     }
                 }
                 .text-container {
-                    margin-right: 0;
+                    margin-left: calc($size * 3.2 + $move-celu + 1.5rem);
                 }
             }
             .tira {
@@ -102,7 +102,7 @@
                 }
 
                 .text-container {
-                    margin-left: 0;
+                    margin-right: calc($size * 3.2 + $move-celu);
                 }
             }
             .tira {
@@ -114,7 +114,7 @@
     .fondo {
         background-color: rgb(248, 248, 248);
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 15px #ffffff;
-        @include screenStyles(290px, 7/4);
+        @include screenStyles(290px, 19/10);
         .contenedor-funcionalidad {
             width: 1000px;
             max-width: 80vw;
@@ -142,7 +142,6 @@
         .text-container {
             margin: auto;
             width: 75%;
-
             p {
                 width: 90%;
             }
@@ -179,7 +178,6 @@
                 padding-bottom: 0 !important;
                 justify-content: space-between;
                 flex-direction: column-reverse !important;
-                padding-left: 0 !important;
                 overflow: hidden;
 
                 .celu {

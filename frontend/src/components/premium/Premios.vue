@@ -1,5 +1,5 @@
 <template>
-    <section id="premios">
+    <section id="premios" class="pt-0">
         <sectionDividers sectionId="premios" img_url="/contenido/trofeo.png" img_alt="trofeo">
             <div class="d-flex align-items-center justify-content-center mb-5 w-100 ">
                 <h2 class="text-center">{{ $t('premium.premios.h2') }}</h2>
@@ -31,14 +31,15 @@ const premios = [
         id: 0
     },
     {
-        url: 'contenido/tarjeta-minecraft-transformed.webp',
+        url: 'contenido/xbox_card.png',
         alt: 'Targeta de regalo fornite',
+        className: 'p-2',
         id: 1
     },
     {
         url: 'contenido/roblox-card.png',
         alt: 'Targeta de regalo fornite',
-        className: 'p-2',
+        className: 'p-1',
         id: 2
     },
     {

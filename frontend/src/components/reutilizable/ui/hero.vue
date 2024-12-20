@@ -4,9 +4,9 @@
             <h1>{{ props.title }}</h1>
             <h2 class="mb-0">{{ props.subheading }}</h2>
         </div>
-        <div class="position-absolute w-100 h-100 top-0 start-0 filtro"></div>
+        <div class="position-absolute w-100 h-100 top-0 start-0 filtro" :class="props.filtro"></div>
 
-        <div class="ctas d-flex justify-content-start w-25 align-items-center">
+        <div class="ctas d-flex w-25 align-items-center w-100" :class="`justify-content-${props.justify}`">
             <descargar size="200px" v-if="props.cta" class="descargar"></descargar> <slot class="slot"></slot>
         </div>
     </div>
@@ -36,6 +36,9 @@
         cta: {
             type: Boolean,
             default: false
+        },
+        filtro: {
+            type: String
         }
     })
     onMounted(() => {
@@ -59,6 +62,9 @@
     .filtro {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.562) 0%, rgba(255, 255, 255, 0)), 80%;
         z-index: 50;
+        &.oscuro {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+        }
     }
 
     .header {

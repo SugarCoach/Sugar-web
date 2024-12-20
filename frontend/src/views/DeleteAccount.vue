@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="pb-5 ">
         <form id="delete-account-form" class="m-auto m-0 d-flex flex-column align-items-center p-4 rounded-5 position-relative">
             <h1 class="h3 text-center mb-3 fw-normal">{{ $t('borrarCuenta.h1') }}</h1>
             <div class="d-flex flex-column gap-3 w-100 mb-4">

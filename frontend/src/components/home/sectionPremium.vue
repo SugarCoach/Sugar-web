@@ -1,5 +1,5 @@
 <template>
-    <section id="section-premium">
+    <section id="section-premium" class="pb-0">
         <sectionDividers img_url="/contenido/corona.png" img_alt="corona">
             <header>
                 <h2 class="text-center">SugarCoach Premium</h2>

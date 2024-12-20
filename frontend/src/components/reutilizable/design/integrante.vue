@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex gap-4 gap-md-5 integrante rounded-5 overflow-hidden flex-column" :class="props.className">
         <img loading="lazy" :src="props.img_url" :alt="props.img_alt" class="" />
-        <div class="d-flex flex-column gap-1 gap-md-3 pt-md-5 pt-0 p-md-0 p-5 flex-fill">
+        <div class="d-flex flex-column gap-1 gap-lg-3 pt-md-5 pt-0 p-md-0 p-5 flex-fill">
             <div class="d-flex flex-column">
                 <span class="nombre h4">{{ props.nombre }}</span>
                 <span class="rol fw-light h4">{{ props.rol }}</span>
@@ -43,7 +43,7 @@
 <style scoped lang="scss">
     $padding: 7%;
     .integrante {
-        width: 80%;
+        max-width: 90%;
         background-color: #f8f8f8;
         box-shadow: 3px 5px 10px -5px rgba(0, 0, 0, 0.25);
         &.left {
@@ -76,7 +76,7 @@
     @media only screen and (max-width: 768px) {
         .integrante {
             min-width: 290px;
-            width: 72%;
+            width: 55vw;
             // p {
             //     width: 100%;
             // }
@@ -87,7 +87,7 @@
                 padding-left: 0;
             }
             img {
-                height: 35vh;
+                height: 45vh;
                 aspect-ratio: unset;
             }
         }

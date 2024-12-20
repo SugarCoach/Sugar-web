@@ -21,7 +21,7 @@ nav {
     z-index: 900;
 }
 section {
-    margin-top: max(20vh, 100px);
+    // margin-top: max(20vh, 100px);
     padding: 20vh 0 10vh 0;
     min-height: 50vh;
 }
@@ -39,7 +39,12 @@ h1 {
 h2 {
     font-size: 3rem;
 }
-
+h3 {
+    font-size: 2rem;
+}
+p {
+    font-size: 1.3rem;
+}
 a {
     text-decoration: none;
 }
@@ -47,7 +52,10 @@ a {
 ul {
     list-style: none;
 }
-
+.cta-btn{
+    position: relative;
+    z-index: 102;
+}
 .font-smallest {
     font-size: 1rem;
 }
@@ -63,11 +71,17 @@ ul {
 .lone-h2 {
     margin-bottom: 15vh !important;
 }
-@media only screen and (768px <= width <= 992px) {
+@media only screen and (width <= 992px) {
     html {
         font-size: 14px;
         .space-left{
             padding-left: 6.5vw;
+        }
+        h3 {
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1rem;
         }
     }
 }

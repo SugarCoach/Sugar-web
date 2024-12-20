@@ -1,7 +1,7 @@
 <template>
-    <section class="container">
-        <h2 class="mb-5 pb-5 text-center">{{ $t('sobreNosotros.equipo.h2') }}</h2>
-        <div class="d-flex justify-content-center contenedor-integrante flex-wrap">
+    <section class="container-lg mt-0">
+        <h2 class=" mb-5 pb-5 text-center">{{ $t('sobreNosotros.equipo.h2') }}</h2>
+        <div class="d-flex justify-content-center contenedor-integrante flex-wrap m-0 m-auto">
             <integrante
                 v-for="item in integrantes"
                 :key="item.id"

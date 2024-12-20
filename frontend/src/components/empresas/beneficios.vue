@@ -1,5 +1,5 @@
 <template>
-    <section class="container-fluid" id="beneficios">
+    <section class="container-fluid mt-5" id="beneficios">
         <h2 class="text-center mb-5">{{ $t("empresas.beneficios.h2") }}</h2>
         <div class="contenedor-contendores-iconYtext d-flex flex-column align-items-center gap-4 gap-sm-3 justify-content-start m-0 m-auto">
             <div class="conedor-iconYtext d-flex justify-content-center align-items-start flex-wrap">

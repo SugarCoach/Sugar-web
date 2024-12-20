@@ -1,9 +1,7 @@
 <template>
     <div
         class="contenedor-imgytextos d-flex align-items-center w-100 justify-content-center gap-4 gap-sm-3 gap-md-5 flex-wrap contenedor-imgtexto p-5 rounded-4"
-        :style="`background-color:${bgColor}; box-shadow: 3px 5px 10px -5px ${
-            props.bgColor === '#383838' ?  'rgba(0, 0, 0, 0.25)' : 'rgba(255, 255, 255, 0.5)'
-        };`"
+        :style="`background-color:${bgColor}; box-shadow: 3px 5px 10px -5px ${boxShadowColor};`"
         :class="props.direction === 'right' ? 'flex-row-reverse' : ''"
     >
         <img loading="lazy" class="" v-if="props.imagen != 'cards'" :src="props.imagen" :alt="imagen_alt" />
@@ -63,12 +61,18 @@
         }
     })
     const textColor = `color: ${props.color};`
+    console.log("bgColor",props.bgColor)
+    if (props.bgColor == '#f8f8f8') {
+        console.log('bgColor es igual a #f8f8f8')
+    }
+    const boxShadowColor = props.bgColor == '#f8f8f8' ? 'rgba(0, 0, 0, 0.25)' : '#00cadca6'
+    console.log("boxShadowColor",boxShadowColor)
 </script>
 
 <style scoped lang="scss">
     .contenedor-imgtexto {
         background-color: #f8f8f8;
-        box-shadow: 3px 5px 10px -5px #00cadca6!important;
+        // box-shadow: 3px 5px 10px -5px #00cadca6!important;
     }
     img,
     .cards {

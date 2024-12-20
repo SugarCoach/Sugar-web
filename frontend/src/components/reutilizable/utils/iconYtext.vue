@@ -2,7 +2,7 @@
     <div class="d-flex flex-column gap-2 fuerte align-items-center" :class="`align-items-sm-${props.alignItems}`">
         <slot></slot>
         <div class="d-flex flex-column align-items-center" :class="`align-items-sm-${props.alignItems}`">
-            <h3 v-if="props.title">{{ props.title }}</h3>
+            <h3 v-if="props.title" class="text-center" :class="`text-sm-${props.alignItems}`">{{ props.title }}</h3>
             <p class=" fw-medium text-center" :class="`text-sm-${props.alignItems}`"  v-html="purifyHTML(props.texto)"></p>
         </div>
     </div>
@@ -37,5 +37,11 @@ import DOMPurify from 'dompurify'
         width: 28vw;
         // width: 28vw;
         min-width: 230px;
+        h3{
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1rem;
+        }
     }
 </style>

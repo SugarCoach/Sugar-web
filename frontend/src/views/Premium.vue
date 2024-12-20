@@ -1,6 +1,6 @@
 <template>
     <main>
-        <heroCircle
+        <!-- <heroCircle
             heading1="Premium"
             :heading2="$t('premium.hero.h2')"
             color="#FFB800"
@@ -9,8 +9,15 @@
             button_url="#planes-premium"
             img_url="../../../contenido/7-Niños-con-SC.webp"
             img_alt="Foto de niño ganando puntos en SugarCoach"
-        />
-        <imgsYtextos from="premium" :title="$t('premium.comoFunciona.h2')" :imagenesYtextos="imagenesYTextos" color="#FFB800">
+        /> -->
+        <hero title="Premium" justify="start" :subheading="$t('premium.hero.h2')" filtro="oscuro" button_url="#planes-premium" img="../../contenido/7-Niños-con-SC.webp" >
+            <ctaBtn url="#planes-premium" color="#FFB800" class="cta-btn" class-name="px-4 py-3">
+                <iconCorona color="white" size="23px"/>
+                {{ $t('premium.hero.ctaBtn') }}
+            </ctaBtn>
+        </hero>
+
+        <imgsYtextos from="premium" bg-color="#f8f8f8" :title="$t('premium.comoFunciona.h2')" :imagenesYtextos="imagenesYTextos" color="#FFB800">
             <iconTrofeo color="white" size="23px" />
         </imgsYtextos>
         <planes :paquetesUsuarios="paquetes" />
@@ -22,13 +29,15 @@
 
 <script setup>
     import { defineAsyncComponent, hydrateOnIdle, hydrateOnVisible, hydrateOnInteraction } from 'vue'
-    import heroCircle from '../components/reutilizable/ui/heroCircle.vue'
-
+    // import heroCircle from '../components/reutilizable/ui/heroCircle.vue'
+    import hero from '../components/reutilizable/ui/hero.vue'
     import imgsYtextos from '../components/reutilizable/ui/imgsYtextos.vue'
     import planes from '../components/premium/Planes.vue'
     import premios from '../components/premium/Premios.vue'
     import iconTrofeo from '../components/reutilizable/icons/_trofeo.vue'
     import Contactanos from '../components/home/Contactanos.vue'
+    import ctaBtn from '../components/reutilizable/utils/ctaBtn.vue'
+    import iconCorona from '../components/reutilizable/icons/_corona.vue'
     const faqs = defineAsyncComponent({
         loader: () => import('../components/reutilizable/ui/preguntasFrecuentes.vue'),
         hydrate: hydrateOnInteraction('click')
@@ -136,13 +145,13 @@
             identificador: 'Four',
             id: 3
         },
-        {
-            pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
-            respuesta:
-                'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
-            identificador: 'Five',
-            id: 4
-        }
+        // {
+        //     pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
+        //     respuesta:
+        //         'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
+        //     identificador: 'Five',
+        //     id: 4
+        // }
     ]
 </script>
 

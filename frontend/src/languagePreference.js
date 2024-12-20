@@ -982,10 +982,10 @@ const messages = {
                         pregunta: 'Can I customize my campaign?',
                         respuesta: 'Yes, we work with you to tailor the experience to your brand\'s goals.',
                     },
-                    {
-                        pregunta: 'What success stories do you have from companies that already collaborate with SugarCoach?',
-                        respuesta: '',
-                    }
+                    // {
+                    //     pregunta: 'What success stories do you have from companies that already collaborate with SugarCoach?',
+                    //     respuesta: '',
+                    // }
                 ]
             }
         },

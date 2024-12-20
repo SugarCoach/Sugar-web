@@ -1,5 +1,5 @@
 <template>
-    <section id="nuestras_novedades" class="pt-5">
+    <section id="nuestras_novedades" class="">
         <div class="mb-4 text-center">
             <h2 class="">{{ $t('home.novedades.h2') }}</h2>
             <h3 class="">{{ $t('home.novedades.h3') }}</h3>
@@ -20,7 +20,9 @@ components: [redesSociales]
 <style scoped lang="scss">
 #nuestras_novedades {
     min-height: 25vh;
-    padding: 30px;
+    padding: 20vh 30px 30px 30px;
+    margin-top: min(30vh, 120px);
+    margin-bottom: 150px;
 
     .logo-red-social {
         width: 10vw;

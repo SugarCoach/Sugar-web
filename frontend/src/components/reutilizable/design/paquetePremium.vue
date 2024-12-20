@@ -132,7 +132,7 @@
     .paquete {
         width: 25.5vw;
         max-width: 360px;
-        min-width: 260px;
+        min-width: 280px;
         background-color: $light-gray;
         h3 {
             width: calc(100% + 2 * ($padding));
