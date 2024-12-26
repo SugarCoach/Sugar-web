@@ -57,16 +57,11 @@
     components: [iconCorona, iconTick, iconGota, FormularioPago]
 
     const abrirModal = () => {
-        console.log('hola1')
-        console.log('hola2')
         const $form = document.querySelector('#pay-form')
-        console.log('hola3')
         $form.addEventListener('submit', event => {
             event.preventDefault()
             const formdata = new FormData($form)
-            console.log(`formdata:\n${formdata.toString()}`)
             const data = Object.fromEntries(formdata)
-            console.log(`formdata:\n${JSON.stringify(data)}`)
 
             axios
                 .post(`${process.env.VUE_APP_BACKEND_URL}/pay`, data)

@@ -43,7 +43,7 @@
 <style scoped lang="scss">
     $padding: 7%;
     .integrante {
-        max-width: 90%;
+        max-width: 95%;
         background-color: #f8f8f8;
         box-shadow: 3px 5px 10px -5px rgba(0, 0, 0, 0.25);
         &.left {
@@ -75,7 +75,7 @@
     }
     @media only screen and (max-width: 768px) {
         .integrante {
-            min-width: 290px;
+            min-width: 310px;
             width: 55vw;
             // p {
             //     width: 100%;

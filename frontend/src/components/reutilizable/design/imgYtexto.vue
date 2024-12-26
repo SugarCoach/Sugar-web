@@ -61,12 +61,7 @@
         }
     })
     const textColor = `color: ${props.color};`
-    console.log("bgColor",props.bgColor)
-    if (props.bgColor == '#f8f8f8') {
-        console.log('bgColor es igual a #f8f8f8')
-    }
     const boxShadowColor = props.bgColor == '#f8f8f8' ? 'rgba(0, 0, 0, 0.25)' : '#00cadca6'
-    console.log("boxShadowColor",boxShadowColor)
 </script>
 
 <style scoped lang="scss">

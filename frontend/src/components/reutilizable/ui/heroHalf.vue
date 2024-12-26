@@ -9,7 +9,7 @@
         <div class="ctas d-flex justify-content-start w-25 align-items-center">
             <descargar size="200px" v-if="props.cta" class="descargar"></descargar> <slot class="slot"></slot>
         </div> -->
-        <div class="flex-fill contenedor-texto px-5 d-flex flex-column gap-3 justify-content-end pb-5 position-relative">
+        <div class="flex-fill contenedor-texto px-5 d-flex flex-column gap-3 justify-content-center justify-content-sm-end pb-5 position-relative">
             <div class="filtro position-absolute w-100 h-100 d-block d-md-none start-0 bottom-0"></div>
             <div class="">
                 <h1 class="mb-2">{{ props.title }}</h1>

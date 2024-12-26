@@ -11,7 +11,7 @@
             img_alt="Foto de niño viendo sus datos en SugarCoach"
         /> -->
         <heroHalf
-            imagen="../../../public/contenido/nenes-usando-app.jpg"
+            imagen="../../../contenido/nenes-usando-app.jpg"
             img-alt="Nene usando SugarCoach"
             :title="$t('empresas.hero.h1')"
             :subheading="$t('empresas.hero.h2')"

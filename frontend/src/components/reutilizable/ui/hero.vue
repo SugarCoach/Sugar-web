@@ -87,9 +87,10 @@
         }
     }
 
-    @media only screen and (576px <= width <= 768px) {
+    @media only screen and (width <= 768px) {
         .hero {
             padding: 0 5vw 0 5vw;
+            height: 60vh;
         }
     }
 </style>

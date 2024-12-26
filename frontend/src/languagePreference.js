@@ -704,7 +704,7 @@ const messages = {
                 overtext: 'Be healthier with Premium',
                 ctaBtn: 'Get Premium'
             },
-            beneficios: {
+            comoFunciona: {
                 h2: 'Benefits',
                 imgsYtextos: [
                     {
@@ -837,12 +837,12 @@ const messages = {
                 h2: 'How it works?',
                 imgsYtextos: [
                     {
-                        h3: 'Compra lotes de licencias premium',
+                        h3: 'Purchase batches of premium licenses',
                         p: 'To advertise, brands purchase batches of Premium licenses that we distribute among our users, directly benefiting them with free access to SugarCoach Premium tools. Each license includes a unique code that links the user to the sponsoring brand.',
                         ctaBtn: ''
                     },
                     {
-                        h3: 'Impacto tangible',
+                        h3: 'Tangible impact',
                         p: 'The collected data is integrated into a social impact report aligned with Sustainable Development Goals (SDGs) 3 (Health and Well-being), 4 (Quality Education), and 5 (Gender Equality). This report is a Certified Social Bond, backed by measurable and transparent data.',
                         ctaBtn: ''
                     },

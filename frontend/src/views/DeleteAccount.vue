@@ -79,7 +79,7 @@
             background-color: #f5f5f5;
             width: 380px;
             box-shadow: 4px 4px 30px -5px rgba(0, 0, 0, 0.2), 3px 3px 5px rgba(0, 0, 0, 0.05);
-
+            max-width: 85%;
             input {
                 height: 42px;
             }
@@ -102,5 +102,15 @@
                 right: -40px;
             }
         }
+    }
+    @media screen and (max-width: 576px) {
+        main {
+            form {
+                .info{
+                    right: -20px;
+                }
+            }
+        }
+        
     }
 </style>

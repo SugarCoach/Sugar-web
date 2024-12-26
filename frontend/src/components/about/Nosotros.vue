@@ -25,7 +25,7 @@
     #equipo {
         margin: 100px auto;
         .contenedor-imgtexto {
-            max-width: 90%;
+            max-width: 95%;
             background-color: #f8f8f8;
             box-shadow: 3px 5px 10px -5px rgba(0, 0, 0, 0.25);
             .img-equipo {

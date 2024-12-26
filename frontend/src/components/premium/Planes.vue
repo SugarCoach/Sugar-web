@@ -20,7 +20,7 @@
             </paquetePremium>
         </div>
         <div class="w-100 d-flex flex-column align-items-center">
-            <h3 class="mb-5">{{ $t('premium.planes.h3') }}</h3>
+            <h3 class="mb-5 text-center">{{ $t('premium.planes.h3') }}</h3>
             <paquetePremium
                 :title="$t('premium.planes.paquetes[2].title')"
                 :price="$t('premium.planes.paquetes[2].price')"
