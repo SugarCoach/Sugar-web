@@ -67,7 +67,7 @@
 <style scoped lang="scss">
     @import '../../../assets/main.scss';
     :root {
-        --bg-text: url('../../../../public/contenido/telemedicina.png');
+        --bg-text: url('../../../../contenido/nenes-usando-app.jpg');
     }
     .hero {
         width: 100%;
@@ -79,7 +79,7 @@
             width: 50%;
             min-height: fit-content;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-            background-image: url('../../../../public/contenido/fondo_hero.png');
+            background-image: url('../../../../contenido/fondo_hero.png');
             h2 {
                 font-size: calc(1.2vw + 0.9rem) !important;
             }
