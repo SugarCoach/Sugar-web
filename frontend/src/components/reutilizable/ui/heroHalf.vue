@@ -58,7 +58,7 @@
     })
     onMounted(() => {
         const hero = document.querySelector('.hero')
-        hero.style.backgroundImage = `url(${props.img})`
+        hero.style.backgroundImage = `url(${props.imagen})`
     })
     const r = document.querySelector(':root')
     r.style.setProperty('--bg-text', `url('${props.imagen}')`)
