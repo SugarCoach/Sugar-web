@@ -87,7 +87,7 @@
     .cards {
         filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.15));
         img {
-            min-width: 100px;
+            // min-width: 100px;
             width: 40%;
             top: 0;
             bottom: 0;
