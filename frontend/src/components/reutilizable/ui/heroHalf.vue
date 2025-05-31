@@ -72,8 +72,8 @@
     .hero {
         width: 100%;
         height: calc(100vh - (80.141px + 1.625rem));
-        min-height: fit-content;
         align-content: center;
+        max-height: 600px;
         .contenedor-texto {
             min-width: 500px;
             width: 50%;
