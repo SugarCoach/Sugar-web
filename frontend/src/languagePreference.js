@@ -386,10 +386,6 @@ const messages = {
                         pregunta: '¿Puedo personalizar mi campaña?',
                         respuesta: 'Sí, trabajamos contigo para adaptar la experiencia a los objetivos de tu marca.',
                     },
-                    {
-                        pregunta: 'dax',
-                        respuesta: 'dcsadcsdc',
-                    }
                 ]
             }
         },

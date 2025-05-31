@@ -145,13 +145,6 @@
             identificador: 'Three',
             id: 2
         },
-        {
-            pregunta: '¿lorem ipsum dolor sit amet, consectetur?',
-            respuesta:
-                'lorem ipsum dolor sit amet, consectetur, con sectetur in vol element par. aliquet in vol element par. aliquet in vol element par. aliquet in',
-            identificador: 'Four',
-            id: 3
-        }
     ]
 </script>
 
