@@ -20,9 +20,9 @@
                 </textLink>
 
                 <textLink class="" :color="premiosColor" :text="$t('home.planes.linkPremios.h4')">
-                    <router-link to="/premium#premios" class="gap-1 h3 fw-bold">
+                    <a href="/premium#premios" class="gap-1 h3 fw-bold">
                         <span v-html="$t('home.planes.linkPremios.texto')"></span><iconTrofeo :color="premiosColor" width="50px" height="50px"></iconTrofeo>
-                    </router-link>
+                    </a>
                 </textLink>
             </div>
         </sectionDividers>

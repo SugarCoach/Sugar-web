@@ -4,7 +4,7 @@
             <div class="container-lg ">
                 <!-- <h2 class="text-center mb-5">{{ $t('sobreNosotros.beneficios.h2') }}</h2> -->
                 <div class="contenedor-imgtexto p-3 p-sm-4 p-md-5 rounded-4 m-0 m-auto">
-                    <img src="../../../public/contenido/integrantes/integrantes-equipo.jpg" alt="Equipo" class="img-equipo" loading="lazy" />
+                    <img src="../../../contenido/integrantes/integrantes-equipo.jpg" alt="Equipo" class="img-equipo" loading="lazy" />
                     <h2 class="mb-2">{{ $t('sobreNosotros.beneficios.imgsYtextos[0].h3') }}</h2>
                     <p class="texto pb-4" v-html="$t('sobreNosotros.beneficios.imgsYtextos[0].p')">
                     </p>
