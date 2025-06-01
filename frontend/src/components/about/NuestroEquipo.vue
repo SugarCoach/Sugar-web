@@ -25,32 +25,32 @@
     components: [integrante]
     const integrantes = [
         {
-            img_url: '../../contenido/integrantes/isabel-full.webp',
+            img_url: '/contenido/integrantes/isabel-full.webp',
             img_alt: 'Isabel Berizzo, SugarCoach Founder',
             nombre: 'Isabel Berizzo',
             id: 0
         },
         {
-            img_url: '../../contenido/integrantes/veronica-full.webp',
+            img_url: '/contenido/integrantes/veronica-full.webp',
             img_alt: 'Veronica Avendaño, SugarCoach COO',
             nombre: 'Veronica Avendaño',
             id: 1
         },
         {
-            img_url: '../../contenido/integrantes/devora-full.webp',
+            img_url: '/contenido/integrantes/devora-full.webp',
             img_alt: 'Debora Biain, SugarCoach RSE & Relaciones Públicas',
             nombre: 'Debora Biain',
             id: 2
         },
 
         {
-            img_url: '../../contenido/integrantes/agustina-circle.jpg',
+            img_url: '/contenido/integrantes/agustina-circle.jpg',
             img_alt: 'Agustina Olivo, SugarCoach CM & Content Manager',
             nombre: 'Agustina Olivo',
             id: 3
         },
         {
-            img_url: '../../contenido/integrantes/karin-full.webp',
+            img_url: '/contenido/integrantes/karin-full.webp',
             img_alt: 'Karin Chmiel, SugarCoach Business development',
             nombre: 'Karin Chmiel',
             id: 4

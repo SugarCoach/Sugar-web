@@ -1,5 +1,5 @@
 <template>
-    <img src="../../../../contenido/sugar-logo.webp" :width="props.size" alt="Logo de SugarCoach">
+    <img src="/contenido/sugar-logo.webp" :width="props.size" alt="Logo de SugarCoach">
 </template>
 
 <script setup>

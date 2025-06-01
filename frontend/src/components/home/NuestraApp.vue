@@ -22,19 +22,19 @@
     // const purifiedWelcomeMessage = computed(() => proxy.$DOMPurify.sanitize(rawMessage.value))
     const pantallas = [
         {
-            url: '../../contenido/celu1.png',
+            url: '/contenido/celu1.png',
             id: 0
         },
         {
-            url: '../../contenido/celu2.png',
+            url: '/contenido/celu2.png',
             id: 1
         },
         {
-            url: '../../contenido/celu3.png',
+            url: '/contenido/celu3.png',
             id: 2
         },
         {
-            url: '../../contenido/celu4.png',
+            url: '/contenido/celu4.png',
             id: 3
         }
     ]

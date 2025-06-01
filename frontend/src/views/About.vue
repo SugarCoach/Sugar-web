@@ -2,7 +2,7 @@
     <main>
         <hero
             justify="center"
-            img="../../contenido/integrantes/10.Team.jpg"
+            img="/contenido/integrantes/10.Team.jpg"
             :title="$t('sobreNosotros.hero.h1')"
             :subheading="$t('sobreNosotros.hero.h2')"
         />
@@ -29,7 +29,7 @@
 
     const imagenesYTextos = [
         {
-            img_url: '../../contenido/integrantes/integrantes-equipo.jpg',
+            img_url: '/contenido/integrantes/integrantes-equipo.jpg',
             img_alt: 'Equipo de SugarCoach trabajando',
             title: 'Somos un equipo',
             texto: 'Somos un equipo decidido a mejorar la calidad de vida de las familias de niños con diabetes tipo 1. SugarCoach nació de la necesidad de mantener vivos y sanos a los hijos de Isabel. Como muchos padres de niños con DT1, ella se dio cuenta que controlar la enfermedad era un trabajo exhaustivo y cambiaba la dinamica para toda la familia (diabetes 3). Por eso pensó en crear una aplicación que no solo resolviera su problema, sino que también pudiera ayudar a otras familias que vivían lo mismo.',

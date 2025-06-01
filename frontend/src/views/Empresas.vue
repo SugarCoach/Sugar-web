@@ -11,7 +11,7 @@
             img_alt="Foto de niño viendo sus datos en SugarCoach"
         /> -->
         <heroHalf
-            imagen="../../../../contenido/nenes-usando-app.jpg"
+            imagen="/contenido/nenes-usando-app.jpg"
             img-alt="Nene usando SugarCoach"
             :title="$t('empresas.hero.h1')"
             :subheading="$t('empresas.hero.h2')"
@@ -67,7 +67,7 @@
     })
     const imagenesYTextos = [
         {
-            img_url: 'contenido/8-NiñosconSC.jpg',
+            img_url: '/contenido/8-NiñosconSC.jpg',
             img_alt: 'Equipo de SugarCoach trabajando',
             title: 'Distribuir licencias Premium',
             texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
@@ -76,7 +76,7 @@
             id: 0
         },
         {
-            img_url: 'contenido/agenda2030.webp',
+            img_url: '/contenido/agenda2030.webp',
             img_alt: 'Equipo de SugarCoach trabajando',
             title: 'Lista de sponsors',
             texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',
@@ -85,7 +85,7 @@
             id: 1
         },
         {
-            img_url: 'contenido/integrantes/6.Team.jpg',
+            img_url: '/contenido/integrantes/6.Team.jpg',
             img_alt: 'Equipo de SugarCoach trabajando',
             title: 'Verse en articulos y notas',
             texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',

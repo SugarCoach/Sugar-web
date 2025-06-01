@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex justify-content-center align-items-center">
-        <img class="" style="height: 120vh; max-width: 100vw" src="../../../public/contenido/SugarLab.webp" alt="Infografia SugarCoach" />
+        <img class="" style="height: 120vh; max-width: 100vw" src="/contenido/SugarLab.webp" alt="Infografia SugarCoach" />
     </div>
 </template>
 

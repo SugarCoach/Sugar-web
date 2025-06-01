@@ -17,31 +17,31 @@ name: "redesSociales";
 const redes = [
     {
         enlace: 'https://www.instagram.com/sugar.coach/',
-        url: '../../../contenido/instagram-logo.webp',
+        url: '/contenido/instagram-logo.webp',
         alt: 'Instagram',
         id: 0
     },
     {
         enlace: 'https://www.facebook.com/SugarCoachApp',
-        url: '../../../contenido/facebook-logo.webp',
+        url: '/contenido/facebook-logo.webp',
         alt: 'Facebook',
         id: 1
     },
     {
         enlace: 'https://twitter.com/sugarcoachapp',
-        url: '../../../contenido/x-logo.webp',
+        url: '/contenido/x-logo.webp',
         alt: 'X',
         id: 2
     },
     {
         enlace: 'https://www.youtube.com/@sugarcoachproject3630',
-        url: '../../../contenido/youtube-logo.webp',
+        url: '/contenido/youtube-logo.webp',
         alt: 'Youtube',
         id: 3
     },
     {
         enlace: 'https://www.tiktok.com/@sugar.coach',
-        url: '../../../contenido/tiktok-logo.webp',
+        url: '/contenido/tiktok-logo.webp',
         alt: 'Tiktok',
         id: 4
     },

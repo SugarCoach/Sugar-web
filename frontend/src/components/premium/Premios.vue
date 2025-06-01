@@ -26,50 +26,50 @@ name: "premios";
 components: [ sectionDividers, trofeo ]
 const premios = [
     {
-        url: 'contenido/tarjeta-fornite.webp',
+        url: '/contenido/tarjeta-fornite.webp',
         alt: 'Targeta de regalo fornite',
         id: 0
     },
     {
-        url: 'contenido/xbox_card.png',
+        url: '/contenido/xbox_card.png',
         alt: 'Targeta de regalo fornite',
         className: 'p-2',
         id: 1
     },
     {
-        url: 'contenido/roblox-card.png',
+        url: '/contenido/roblox-card.png',
         alt: 'Targeta de regalo fornite',
         className: 'p-1',
         id: 2
     },
     {
-        url: 'contenido/netflix_card.png',
+        url: '/contenido/netflix_card.png',
         alt: 'Targeta de regalo fornite',
         id: 3
     },
     {
-        url: 'contenido/steam_card.png',
+        url: '/contenido/steam_card.png',
         alt: 'Targeta de regalo fornite',
         id: 4
     },
     {
-        url: 'contenido/googleplay_card.png',
+        url: '/contenido/googleplay_card.png',
         alt: 'Targeta de regalo fornite',
         className: 'p-2',
         id: 5
     },
     {
-        url: 'contenido/playstation_card.png',
+        url: '/contenido/playstation_card.png',
         alt: 'Targeta de regalo fornite',
         id: 6
     },
     {
-        url: 'contenido/switch_card.png',
+        url: '/contenido/switch_card.png',
         alt: 'Targeta de regalo fornite',
         id: 7
     },
     {
-        url: 'contenido/lol_card.webp',
+        url: '/contenido/lol_card.webp',
         alt: 'Targeta de regalo fornite',
         id: 8
     },

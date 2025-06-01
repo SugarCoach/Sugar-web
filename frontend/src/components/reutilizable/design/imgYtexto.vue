@@ -6,9 +6,9 @@
     >
         <img loading="lazy" class="" v-if="props.imagen != 'cards'" :src="props.imagen" :alt="imagen_alt" />
         <div v-else class="cards position-relative d-flex justify-content-center pb-5">
-            <img loading="lazy" class="fornite" src="../../../../public/contenido/tarjeta-fornite.webp" alt="" />
-            <img loading="lazy" class="roblox" src="../../../../public/contenido/roblox-card.png" alt="" />
-            <img loading="lazy" class="xbox p-2" src="../../../../public/contenido/xbox_card.png" alt="" />
+            <img loading="lazy" class="fornite" src="/contenido/tarjeta-fornite.webp" alt="" />
+            <img loading="lazy" class="roblox" src="/contenido/roblox-card.png" alt="" />
+            <img loading="lazy" class="xbox p-2" src="/contenido/xbox_card.png" alt="" />
         </div>
         <div class="text d-flex flex-column align-self-start justify-content-start align-items-start">
             <h3 class="mt-0 mt-sm-4">{{ props.title }}</h3>

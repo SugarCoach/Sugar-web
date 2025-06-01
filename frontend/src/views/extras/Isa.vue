@@ -3,7 +3,7 @@
         <img
             class="img-carta-isa"
             style="height: 100vh"
-            src="../../../public/contenido/Linktree_Isa.webp"
+            src="/contenido/Linktree_Isa.webp"
             alt="Targeta de presentación Isabel Berizzo"
         />
     </div>
@@ -52,7 +52,7 @@
     .link-isa {
         height: 15%;
         width: 150px;
-        cursor: url('../../../public/contenido/pointer.webp'), auto !important;
+        cursor: pointer;
     }
 
     @media only screen and (max-width: 400px) {
