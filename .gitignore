@@ -6,7 +6,6 @@ vite.config.js
 package.json
 package-lock.json
 jsconfig.json
-index.html
 # local env files
 .env
 .env.development
