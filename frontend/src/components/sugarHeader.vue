@@ -1,7 +1,7 @@
 <template>
-    <header>
+    <header class="position-sticky top-0">
         <nav
-            class="navbar navbar-expand-md navbar-white shadow position-sticky w-100 top-0"
+            class="navbar navbar-expand-md navbar-white shadow  w-100 "
             aria-label="Fourth navbar example"
             :style="`background-color: ${props.bgColor};`"
         >
