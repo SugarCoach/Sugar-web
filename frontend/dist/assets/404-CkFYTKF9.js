@@ -1,0 +1,1 @@
+import{c as s,a as t,o as n}from"./index-Bq68TvJC.js";const l={__name:"404",setup(a){return(o,e)=>(n(),s("main",null,e[0]||(e[0]=[t("div",{class:"d-flex justify-content-center align-items-center",style:{height:"100vh",width:"100%"}},[t("h1",{style:{"font-size":"20vw"}},"404")],-1)])))}};export{l as default};
