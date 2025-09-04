@@ -59,7 +59,7 @@ const messages = {
                         title: 'Becado',
                         price: 'Gratis',
                         description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
-                        ctaBtn: 'Obrtenlo gratis',
+                        ctaBtn: 'Obtenlo gratis',
                         beneficios: [
                             'Licencia Premium',
                             'Parenting',
@@ -170,7 +170,7 @@ const messages = {
                         title: 'Premium patrocinado',
                         price: 'Gratis',
                         description: 'Disfruta de herramientas Premium sin costo gracias a nuestros patrocinadores',
-                        ctaBtn: 'Obrtenlo gratis',
+                        ctaBtn: 'Obtenlo gratis',
                         beneficios: [
                             'Licencia Premium',
                             'Parenting',
