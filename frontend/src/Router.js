@@ -60,6 +60,17 @@ const routes = [
         meta: { analytics: false }
     },
     {
+        path: '/terminos',
+        name: 'Terms',
+        component: () => import('./views/Terms.vue'),
+        meta: { analytics: false }
+    },
+    {
+        // Mantener compatibilidad con el link actual del header
+        path: '/Terminos%20y%20condiciones',
+        redirect: '/terminos'
+    },
+    {
         path: '/:catchAll(.*)', // otra ruta
         name: 'NotFound',
         component: () => import('./views/404.vue'),
