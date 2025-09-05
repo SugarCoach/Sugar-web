@@ -59,7 +59,7 @@
         price: 'Contactanos',
         texto: 'lorem ipsum dolor sit amet, consectetur adipis, sed do eiusmod tempor incididunt ut labore et d',
         btnText: 'Ir a Empresas',
-        btnUrl: '/empresas',
+        btnUrl: '/anunciantes#beneficios',
         beneficios: 4,
         mensual: false
     }
