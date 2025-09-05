@@ -112,7 +112,7 @@
         },
         {
             name: 'Terminos y condiciones',
-            url: '/Terminos y condiciones',
+            url: '/terminos',
             id: 1
         }
     ]
