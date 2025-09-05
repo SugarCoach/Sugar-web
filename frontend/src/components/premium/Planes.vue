@@ -32,6 +32,7 @@
                 :mensual="paqueteEmpresa.mensual"
                 :paqueteId="2"
                 from="premium"
+                :btn-url="paqueteEmpresa.btnUrl"
             ><iconEdificio :color="props.color" size="40px"/>
             </paquetePremium>
         </div>
