@@ -75,6 +75,12 @@ const routes = [
         name: 'NotFound',
         component: () => import('./views/404.vue'),
         meta: { analytics: false }
+    },
+    {
+        path: '/premium/Checkout',
+        name: 'PremiumCheckout',
+        component: () => import('./views/premium/Checkout.vue'),
+        meta: { analytics: true }
     }
 ]
 

@@ -10,7 +10,7 @@
                 :price="$t('premium.planes.paquetes[' + item.id + '].price')"
                 :texto="$t('premium.planes.paquetes[' + item.id + '].description')"
                 :texto-btn="$t('premium.planes.paquetes[' + item.id + '].ctaBtn')"
-                :btn-url="item.id === 0 ? 'https://play.google.com/store/apps/details?id=com.sugarcoachpremium&hl=es_AR&pli=1' : ''"
+                :btn-url="item.id === 0 ? 'https://play.google.com/store/apps/details?id=com.sugarcoachpremium&hl=es_AR&pli=1' : '/premium/checkout?plan=' + item.id"
                 :paqueteId="item.id"
                 :beneficios="item.beneficios"
                 from="premium"
