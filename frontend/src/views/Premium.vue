@@ -80,7 +80,7 @@
             id: 1
         },
         {
-            img_url: '/contenido/alertas de emergencia.jpg',
+            img_url: '/contenido/alertas-de-emergencia.webp',
             img_alt: 'Equipo de SugarCoach trabajando',
             cta_url: '',
             id: 2
