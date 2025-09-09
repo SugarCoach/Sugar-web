@@ -85,7 +85,7 @@
             id: 1
         },
         {
-            img_url: '/contenido/integrantes/6.Team.jpg',
+            img_url: '/contenido/integrantes/6.team.jpg',
             img_alt: 'Equipo de SugarCoach trabajando',
             title: 'Verse en articulos y notas',
             texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',

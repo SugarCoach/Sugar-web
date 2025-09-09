@@ -2,7 +2,7 @@
     <main>
         <hero
             justify="center"
-            img="/contenido/integrantes/10.Team.jpg"
+            img="/contenido/integrantes/10.team.jpg"
             :title="$t('sobreNosotros.hero.h1')"
             :subheading="$t('sobreNosotros.hero.h2')"
         />
