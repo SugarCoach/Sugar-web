@@ -3,7 +3,7 @@
         <img
             class="img-carta-isa"
             style="height: 100vh"
-            src="/contenido/Linktree_Isa.webp"
+            src="/contenido/linktree_isa.webp"
             alt="Targeta de presentación Isabel Berizzo"
         />
     </div>
