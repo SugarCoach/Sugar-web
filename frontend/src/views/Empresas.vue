@@ -67,7 +67,7 @@
     })
     const imagenesYTextos = [
         {
-            img_url: '/contenido/8-NiñosconSC.jpg',
+            img_url: '/contenido/8-NinosconSC.jpg',
             img_alt: 'Equipo de SugarCoach trabajando',
             title: 'Distribuir licencias Premium',
             texto: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nunc non ipsum tincidunt viverra. lorem ipsum dolor sit amet, consectetur adip',

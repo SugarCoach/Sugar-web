@@ -5,7 +5,7 @@
                 <span class="cuadrado position-absolute rounded-2"></span>
                 <img
                     loading="lazy"
-                    src="/contenido/11-Niños-con-SC.webp"
+                    src="/contenido/11-Ninos-con-SC.webp"
                     alt="Niño usando app de SugarCoach"
                     class="rounded-2 position-relative"
                 />

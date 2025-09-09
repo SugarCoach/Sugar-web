@@ -7,10 +7,10 @@
             :over-text="$t('premium.hero.overtext')"
             :button-text="$t('premium.hero.ctaBtn')"
             button_url="#planes-premium"
-            img_url="../../../contenido/7-Niños-con-SC.webp"
+            img_url="../../../contenido/7-Ninos-con-SC.webp"
             img_alt="Foto de niño ganando puntos en SugarCoach"
         /> -->
-        <hero title="Premium" justify="start" :subheading="$t('premium.hero.h2')" filtro="oscuro" button_url="#planes-premium" img="/contenido/7-Niños-con-SC.webp" >
+        <hero title="Premium" justify="start" :subheading="$t('premium.hero.h2')" filtro="oscuro" button_url="#planes-premium" img="/contenido/7-Ninos-con-SC.webp" >
             <ctaBtn url="#planes-premium" color="#FFB800" class="cta-btn" class-name="px-4 py-3">
                 <iconCorona color="white" size="23px"/>
                 {{ $t('premium.hero.ctaBtn') }}
@@ -68,7 +68,7 @@
     })
     const imagenesYTextos = [
         {
-            img_url: '/contenido/niños-con-app.jpg',
+            img_url: '/contenido/ninos-con-app.jpg',
             img_alt: 'Equipo de SugarCoach trabajando',
             cta_url: '',
             id: 0
