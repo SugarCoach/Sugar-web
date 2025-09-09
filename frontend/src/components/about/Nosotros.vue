@@ -4,7 +4,15 @@
             <div class="container-lg ">
                 <!-- <h2 class="text-center mb-5">{{ $t('sobreNosotros.beneficios.h2') }}</h2> -->
                 <div class="contenedor-imgtexto p-3 p-sm-4 p-md-5 rounded-4 m-0 m-auto">
-                    <img src="/contenido/integrantes/integrantes-equipo.jpg" alt="Equipo" class="img-equipo" loading="lazy" />
+                    <img 
+                        src="/contenido/integrantes/integrantes-equipo.webp"
+                        alt="Equipo"
+                        class="img-equipo"
+                        loading="lazy"
+                        decoding="async"
+                        width="5286"
+                        height="3524"
+                    />
                     <h2 class="mb-2">{{ $t('sobreNosotros.beneficios.imgsYtextos[0].h3') }}</h2>
                     <p class="texto pb-4" v-html="$t('sobreNosotros.beneficios.imgsYtextos[0].p')">
                     </p>
@@ -31,6 +39,7 @@
             .img-equipo {
                 width: 45%;
                 min-width: 310px;
+                height: auto !important;
                 float: left;
                 border-radius: 10px;
                 margin-right: 20px;
@@ -44,6 +53,7 @@
                 .img-equipo {
                     margin: 0 auto;
                     margin-bottom: 15px;
+                    height: auto !important;
                     width: 100%;
                     min-width: unset;
                     max-width: none;
