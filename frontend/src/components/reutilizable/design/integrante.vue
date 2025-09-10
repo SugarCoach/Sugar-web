@@ -1,6 +1,13 @@
 <template>
     <div class="d-flex gap-4 gap-md-5 integrante rounded-5 overflow-hidden flex-column" :class="props.className">
-        <img loading="lazy" :src="props.img_url" :alt="props.img_alt" class="" />
+        <img
+            :src="props.img_url"
+            :alt="props.img_alt"
+            class=""
+            loading="lazy"
+            decoding="async"
+            style="max-width:100%; height:auto;"
+        />
         <div class="d-flex flex-column gap-1 gap-lg-3 pt-md-5 pt-0 p-md-0 p-5 flex-fill">
             <div class="d-flex flex-column">
                 <span class="nombre h4">{{ props.nombre }}</span>

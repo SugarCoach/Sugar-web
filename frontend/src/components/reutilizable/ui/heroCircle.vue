@@ -11,7 +11,14 @@
                 <iconCorona v-if="props.heading1 === 'Premium'"  color="white" size="23px"/><iconEdificio v-else color="white" size="23px"/>{{ buttonText }}
             </ctaBtn>
         </div>
-        <img class="align-self-center align-self-sm-start" :src="props.img_url" :alt="props.img_alt">
+        <img
+            class="align-self-center align-self-sm-start"
+            :src="props.img_url"
+            :alt="props.img_alt"
+            loading="lazy"
+            decoding="async"
+            style="max-width:100%; height:auto;"
+        />
     </div>
 
 </template>
