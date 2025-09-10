@@ -8,6 +8,9 @@
                     src="/contenido/11-Ninos-con-SC.webp"
                     alt="Niño usando app de SugarCoach"
                     class="rounded-2 position-relative"
+                    width="3922"
+                    height="4000"
+                    decoding="async"
                 />
             </div>
 

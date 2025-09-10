@@ -4,11 +4,42 @@
         :style="`background-color:${bgColor}; box-shadow: 3px 5px 10px -5px ${boxShadowColor};`"
         :class="props.direction === 'right' ? 'flex-row-reverse' : ''"
     >
-        <img loading="lazy" class="" v-if="props.imagen != 'cards'" :src="props.imagen" :alt="imagen_alt" />
+        <img
+            v-if="props.imagen != 'cards'"
+            :src="props.imagen"
+            :alt="imagen_alt"
+            loading="lazy"
+            decoding="async"
+            style="max-width:100%; height:auto;"
+        />
         <div v-else class="cards position-relative d-flex justify-content-center pb-5">
-            <img loading="lazy" class="fornite" src="/contenido/tarjeta-fornite.webp" alt="" />
-            <img loading="lazy" class="roblox" src="/contenido/roblox-card.png" alt="" />
-            <img loading="lazy" class="xbox p-2" src="/contenido/xbox_card.png" alt="" />
+            <img
+                class="fornite"
+                src="/contenido/tarjeta-fornite.webp"
+                alt="Tarjeta de regalo Fortnite"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async"
+            />
+            <img
+                class="roblox"
+                src="/contenido/roblox-card.png"
+                alt="Tarjeta de regalo Roblox"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async"
+            />
+            <img
+                class="xbox p-2"
+                src="/contenido/xbox_card.png"
+                alt="Tarjeta de regalo Xbox"
+                width="800"
+                height="600"
+                loading="lazy"
+                decoding="async"
+            />
         </div>
         <div class="text d-flex flex-column align-self-start justify-content-start align-items-start">
             <h3 class="mt-0 mt-sm-4">{{ props.title }}</h3>

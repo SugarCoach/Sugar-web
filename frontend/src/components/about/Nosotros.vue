@@ -6,7 +6,7 @@
                 <div class="contenedor-imgtexto p-3 p-sm-4 p-md-5 rounded-4 m-0 m-auto">
                     <img 
                         src="/contenido/integrantes/integrantes-equipo.webp"
-                        alt="Equipo"
+                        alt="Equipo de SugarCoach posando en grupo"
                         class="img-equipo"
                         loading="lazy"
                         decoding="async"

@@ -7,7 +7,17 @@
             </div>
 
             <div class="contenedor-premios d-grid m-0 m-auto pt-4">
-                <img loading="lazy" class="m-auto m-0" :class="item.className" v-for="item in premios" :key="item.id" :src="item.url" :alt="item.alt">
+                <img
+                    v-for="item in premios"
+                    :key="item.id"
+                    class="m-auto m-0"
+                    :class="item.className"
+                    :src="item.url"
+                    :alt="item.alt"
+                    loading="lazy"
+                    decoding="async"
+                    style="max-width:100%; height:auto;"
+                />
             </div>
             <div class="w-100 d-flex justify-content-center mt-5">
                 <button class="btn px-5 py-3">{{ $t('premium.premios.ctaBtn') }}</button>

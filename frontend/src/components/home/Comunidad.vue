@@ -4,8 +4,12 @@
 
         <img
         src="/contenido/logo-sugar-comunidad.png"
-        alt="Logo SugarCoach Comunidad"
+        alt="Logo de la comunidad SugarCoach"
         class="comunidad-header mb-4"
+        width="131"
+        height="131"
+        loading="lazy"
+        decoding="async"
         />
 
         <div class="embed-wrapper">
