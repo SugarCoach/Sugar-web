@@ -21,7 +21,14 @@
         </div>
         <div class="position-relative contenedor-img flex-fill">
             <div class="filtro position-absolute w-100 h-100"></div>
-            <img :src="props.imagen" :alt="props.imgAlt" class="w-100 h-100" />
+            <img
+                :src="props.imagen"
+                :alt="props.imgAlt"
+                class="w-100 h-100"
+                loading="lazy"
+                decoding="async"
+                style="max-width:100%; height:auto;"
+            />
         </div>
     </div>
 </template>

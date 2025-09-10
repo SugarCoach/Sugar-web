@@ -16,7 +16,7 @@
                     :alt="item.alt"
                     loading="lazy"
                     decoding="async"
-                    style="max-width:100%; height:auto;"
+                    style="height:auto; width:auto; max-width:220px;"
                 />
             </div>
             <div class="w-100 d-flex justify-content-center mt-5">

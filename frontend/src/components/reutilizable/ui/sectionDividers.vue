@@ -1,7 +1,14 @@
 <template>
     <div class="position-relative overflow-hidden section-div">
         <div class="rounded-circle d-top bg-white position-absolute"></div>
-        <img loading="lazy" class="position-absolute" :class="props.img_alt" :src="props.img_url" :alt="props.img_alt">
+        <img
+            class="position-absolute"
+            :src="props.img_url"
+            :alt="props.img_alt"
+            loading="lazy"
+            decoding="async"
+            style="max-width:100%; height:auto;"
+        />
         <slot></slot>
         <div class="rounded-circle d-bottom bg-white position-absolute"></div>
     </div>

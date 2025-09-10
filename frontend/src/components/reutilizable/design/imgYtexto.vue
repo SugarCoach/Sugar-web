@@ -96,61 +96,71 @@
 </script>
 
 <style scoped lang="scss">
-    .contenedor-imgtexto {
-        background-color: #f8f8f8;
-        // box-shadow: 3px 5px 10px -5px #00cadca6!important;
+.contenedor-imgtexto {
+    background-color: #f8f8f8;
+}
+
+.contenedor-imgtexto > img,
+.cards {
+    width: 45%;
+    min-width: 260px;
+}
+
+.text {
+    width: 49%;
+    min-width: 300px;
+    h3 {
+        font-size: 2rem;
     }
-    img,
-    .cards {
-        width: 45%;
-        min-width: 260px;
+    p {
+        font-size: 1.3rem;
     }
+}
+
+.cards {
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.15));
+    img {
+        width: auto !important;
+        height: auto !important;
+        max-width: 220px !important;
+        object-fit: contain;
+        position: absolute;
+    }
+    img.fornite {
+        left: 10%;
+        transform: rotate(-35deg);
+    }
+    img.roblox {
+        position: relative;
+    }
+    img.xbox {
+        right: 10%;
+        transform: rotate(35deg);
+    }
+}
+
+@media only screen and (max-width: 991px) {
     .text {
-        width: 49%;
-        min-width: 300px;
         h3 {
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
         p {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
     }
+    .cards img {
+        max-width: 180px !important;
+    }
+}
+
+@media only screen and (max-width: 804px) {
+    .contenedor-imgtexto > img,
+    .text,
     .cards {
-        filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.15));
-        img {
-            // min-width: 100px;
-            width: 40%;
-            top: 0;
-            bottom: 0;
-            position: absolute;
-            &.fornite {
-                left: 15%;
-                transform: rotate(-35deg);
-            }
-            &.roblox {
-                position: relative;
-            }
-            &.xbox {
-                right: 15%;
-                transform: rotate(35deg);
-            }
-        }
+        width: 85%;
     }
-    @media only screen and (max-width: 991px) {
-        .text {
-            h3 {
-                font-size: 1.8rem;
-            }
-            p {
-                font-size: 1.1rem;
-            }
-        }
+    .cards img {
+        max-width: 140px !important;
     }
-    @media only screen and (max-width: 804px) {
-        img,
-        .text,
-        .cards {
-            width: 85%;
-        }
-    }
+}
 </style>
