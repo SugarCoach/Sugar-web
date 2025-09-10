@@ -17,8 +17,8 @@
                 class="fornite"
                 src="/contenido/tarjeta-fornite.webp"
                 alt="Tarjeta de regalo Fortnite"
-                width="800"
-                height="600"
+                width="739"
+                height="1023"
                 loading="lazy"
                 decoding="async"
             />
@@ -26,8 +26,8 @@
                 class="roblox"
                 src="/contenido/roblox-card.png"
                 alt="Tarjeta de regalo Roblox"
-                width="800"
-                height="600"
+                width="263"
+                height="364"
                 loading="lazy"
                 decoding="async"
             />
@@ -35,8 +35,8 @@
                 class="xbox p-2"
                 src="/contenido/xbox_card.png"
                 alt="Tarjeta de regalo Xbox"
-                width="800"
-                height="600"
+                width="388"
+                height="559"
                 loading="lazy"
                 decoding="async"
             />
