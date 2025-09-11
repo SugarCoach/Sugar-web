@@ -1,6 +1,11 @@
 <template>
     <main>
-        <hero img="/contenido/1-Ninos-con-SC-edit.jpg" title="SugarCoach" :subheading="$t('home.hero.h2')" :cta="true" />
+        <hero 
+            img="/contenido/1-Ninos-con-SC.webp"
+            title="SugarCoach"
+            :subheading="$t('home.hero.h2')"
+            :cta="true"
+        />
         <nuestraApp />
         <textLink class="py-5 mt-5 mb-1" :text="$t('home.descargarApp')">
             <descargarApp />
@@ -10,9 +15,7 @@
         <comunidad />
         <testimonios />
         <nuestrasNovedades />
-        <contactanos />
-        <!-- <CookieBanner /> -->
-        <!-- @useCookies="cookiesAnswer" -->
+        <contactanos />        
     </main>
 </template>
 
