@@ -1,8 +1,8 @@
 import App from "./App.vue";
 import router from "./Router.js";
-import "./assets/main.scss"
-import "bootstrap/dist/js/bootstrap.js"
-import { createHead } from "@vueuse/head";  
+import "./assets/main.scss";
+import "bootstrap/dist/js/bootstrap.js";
+import { createHead } from "@vueuse/head";
 import { createI18n } from 'vue-i18n';
 import messages from './languagePreference';
 // Importa la función createApp desde el módulo 'vue'

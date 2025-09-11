@@ -1,6 +1,14 @@
 <template>
     <div class="d-flex justify-content-center align-items-center">
-        <img class="" style="height: 120vh; max-width: 100vw" src="/contenido/sugar-lab.webp" alt="Infografia SugarCoach" />
+        <img
+            src="/contenido/sugar-lab.webp"
+            alt="Infografía de SugarCoach Lab"
+            loading="lazy"
+            decoding="async"
+            width="800"
+            height="2000"
+            style="max-width: 100%; height: auto;"
+        />
     </div>
 </template>
 

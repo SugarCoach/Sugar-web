@@ -71,6 +71,21 @@ ul {
 .lone-h2 {
     margin-bottom: 12vh !important;
 }
+.intrinsic-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.intrinsic-box {
+    width: 100%;
+    position: relative;
+}
+.intrinsic-box > img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 @media only screen and (width <= 992px) {
     html {
         font-size: 14px;
