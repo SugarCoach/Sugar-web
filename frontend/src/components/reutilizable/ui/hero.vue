@@ -5,7 +5,7 @@
             :src="props.img"
             :alt="props.title"
             width="1600"
-            height="900"
+            height="1067"
             fetchpriority="high"
             decoding="sync"
         />

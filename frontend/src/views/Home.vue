@@ -22,9 +22,12 @@
 <script setup>
     import { useHead } from '@vueuse/head'
     import { defineAsyncComponent, hydrateOnIdle } from 'vue'
-    import hero from '../components/reutilizable/ui/hero.vue'
-    import nuestraApp from '../components/home/NuestraApp.vue'
+    import hero from '../components/reutilizable/ui/hero.vue'    
     import CookieBanner from '../components/CookieBanner.vue'
+    const nuestraApp = defineAsyncComponent({
+        loader: () => import('../components/home/NuestraApp.vue'),
+        hydrate: hydrateOnIdle()
+    })
     const textLink = defineAsyncComponent(() => import('../components/reutilizable/utils/textYLink.vue'))
     const descargarApp = defineAsyncComponent(() => import('../components/reutilizable/utils/descargarApp.vue'))
     const mejorarExperiencia = defineAsyncComponent(() => import('../components/home/MejorarExperiencia.vue'))
