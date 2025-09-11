@@ -1,5 +1,14 @@
 <template>
     <div class="hero text-white position-relative">
+        <img
+            class="hero-bg"
+            :src="props.img"
+            :alt="props.title"
+            width="1600"
+            height="900"
+            fetchpriority="high"
+            decoding="sync"
+        />
         <div class="d-flex flex-column gap-2 mb-5 h-50 justify-content-end header position-relative" :class="`text-${props.justify}`">
             <h1>{{ props.title }}</h1>
             <h2 class="mb-0">{{ props.subheading }}</h2>
@@ -7,16 +16,15 @@
         <div class="position-absolute w-100 h-100 top-0 start-0 filtro" :class="props.filtro"></div>
 
         <div class="ctas d-flex w-25 align-items-center w-100" :class="`justify-content-${props.justify}`">
-            <descargar size="200px" v-if="props.cta" class="descargar"></descargar> <slot class="slot"></slot>
+            <descargar size="200px" v-if="props.cta" class="descargar"></descargar>
+            <slot class="slot"></slot>
         </div>
     </div>
 </template>
 
 <script setup>
     import descargar from '../utils/descargarApp.vue'
-    import { onMounted } from 'vue'
-    name: 'Hero'
-    components: [descargar]
+    defineOptions({ name: 'Hero' })
     const props = defineProps({
         img: {
             type: String,
@@ -40,23 +48,25 @@
         filtro: {
             type: String
         }
-    })
-    onMounted(() => {
-        const hero = document.querySelector('.hero')
-        hero.style.backgroundImage = `url(${props.img})`
-    })
+    })    
 </script>
 
 <style scoped lang="scss">
     @import '../../../assets/main.scss';
     .hero {
-        padding: 0 $space_hero 0 $space_hero;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        padding: 0 $space_hero 0 $space_hero;        
         width: 100%;
         height: calc(100vh - (80.141px + 1.625rem));
         align-content: center;
+    }
+
+    .hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
     }
 
     .filtro {
