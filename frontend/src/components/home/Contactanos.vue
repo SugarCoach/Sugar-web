@@ -26,7 +26,7 @@
     #contacto {
         height: 80vh;
         min-height: 500px;
-        background-image: url('/contenido/nene-usando-app.jpg');
+        background-image: url('/contenido/nene-usando-app.webp');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
