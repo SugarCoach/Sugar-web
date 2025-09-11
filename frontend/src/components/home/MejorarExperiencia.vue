@@ -89,6 +89,22 @@ $img-radius: 7rem;
     background-color: rgba(8, 8, 85, 0.5);
     z-index: 40;
   }
+
+  h1, h2, h3, p, span {
+    text-shadow: 0 2px 3px rgba(0,0,0,.7), 0 0 1px rgba(0,0,0,.35);
+  }
+
+  .cta-btn,
+  .cta {
+    color: #fff !important;
+    text-shadow: 0 2px 3px rgba(0,0,0,.7), 0 0 1px rgba(0,0,0,.35);
+    outline: none;
+  }
+  .cta-btn:focus-visible,
+  .cta:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 2px;
+  }
 }
 
 @media only screen and (max-width: 578px) {

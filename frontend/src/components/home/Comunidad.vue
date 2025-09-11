@@ -15,6 +15,8 @@
         <div class="embed-wrapper">
             <iframe
                 src="https://embedsocial.com/api/pro_hashtag/5562a4814a6857e915a898125ca1d6811075269f"
+                title="Opiniones de la comunidad SugarCoach"
+                aria-label="Opiniones de la comunidad SugarCoach"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
             ></iframe>

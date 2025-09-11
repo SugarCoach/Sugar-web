@@ -7,11 +7,11 @@
                 </div>
                 <div class="d-flex gap-5 justify-content-start justify-content-sm-end sections flex-wrap">
                     <div class="">
-                        <h5 class="fw-bold" :style="`color: ${props.color}!important;`">{{ $t('footer[0].title') }}</h5>
+                        <h3 class="fw-bold fs-5" :style="`color: ${props.color}!important;`">{{ $t('footer[0].title') }}</h3>
                         <descargarApp />
                     </div>
                     <div v-for="item in sections" :key="item.id" class="">
-                        <h5 class="fw-bold" :style="`color: ${props.color}!important;`">{{ $t('footer['+ item.id +'].title') }}</h5>
+                        <h3 class="fw-bold fs-5" :style="`color: ${props.color}!important;`">{{ $t('footer['+ item.id +'].title') }}</h3>
                         <ul class="nav flex-column" >
                             <li v-for="link in item.links" :key="link.id" class="nav-item mb-2">
                                 <router-link v-if="link.isView" :to="link.url" class="nav-link p-0 text-body-secondary fw-semibold" :style="`color: ${props.color}!important;`">
