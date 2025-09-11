@@ -86,43 +86,6 @@ ul {
     display: block;
 }
 
-/* === Contrast hotfix (scoped y minimal) === */
-
-/* h3 marcados por Lighthouse */
-h3.w-100.p-4.text-start.mb-0.border-bottom.border-dark.border-opacity-50.px-4.pb-4.h4.d-flex.align-items-center {
-    color: #212529 !important;
-    --bs-border-opacity: 1 !important;
-    border-color: rgba(33, 37, 41, 1) !important;
-}
-
-/* tarjetas .paquete */
-div.paquete.rounded-3.position-relative.border.border-dark-subtle.d-flex.flex-column {
-    background-color: #fff !important;
-    color: #212529 !important;
-    border-color: #495057 !important;
-}
-
-/* secciones reportadas */
-div.position-relative.overflow-hidden.section-div {
-    background-color: #fff !important;
-    color: #212529 !important;
-}
-
-/* spans dentro de esas secciones (quitar opacidades heredadas) */
-div.position-relative.overflow-hidden.section-div span {
-    opacity: 1 !important;
-    color: #212529 !important;
-}
-
-/* CTA reportada */
-a.btn.d-flex.align-items-center.gap-2.text-white.px-3.py-2.cta {
-    background-color: #0a58ca !important;
-    color: #fff !important;
-}
-a.btn.d-flex.align-items-center.gap-2.text-white.px-3.py-2.cta:hover {
-    background-color: #084298 !important;
-}
-
 @media only screen and (width <= 992px) {
     html {
         font-size: 14px;
