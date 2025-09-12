@@ -8,6 +8,8 @@
                     class="position-absolute h-auto"
                     loading="lazy"
                     decoding="async"
+                    :width="props.imgW"
+                    :height="props.imgH"
                     style="max-width:100%; height:auto;"
                 />
                 <div class="position-absolute tapa-celu d-none bottom-0"></div>
@@ -36,7 +38,8 @@ const props = defineProps({
     direction: { type: String, required: true },
     last: { type: Boolean, default: false },
     title: { type: String },
-    texto: { type: String }
+    texto: { type: String },
+    imgW: { type: Number, default: null },
 })
 </script>
 

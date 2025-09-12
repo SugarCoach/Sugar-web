@@ -16,6 +16,8 @@
                     :alt="item.alt"
                     loading="lazy"
                     decoding="async"
+                    width="1280"
+                    height="1280"
                     style="height:auto; width:auto; max-width:220px;"
                 />
             </div>
