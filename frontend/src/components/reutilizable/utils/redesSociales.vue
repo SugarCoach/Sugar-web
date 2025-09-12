@@ -3,8 +3,15 @@
         <ul class="w-100 d-flex gap-3 p-0" :class="justifyContent">
             <li v-for="red in redes" style="list-style: none;">
                 <a :href="red.enlace" target="_blank">
-                    <img loading="lazy" :src="red.url" :alt="red.alt" class="logo-red-social" :class="props.size"
-                        style="width: 10vw;max-width: 60px; min-width: 20px;" >
+                    <img
+                        loading="lazy"
+                        :src="red.url"
+                        :alt="red.alt"
+                        class="logo-red-social"
+                        :class="props.size"
+                        width="60"
+                        style="aspect-ratio: 1 / 1; width: 10vw; max-width: 60px; min-width: 20px; height: auto;"
+                    />                    
                 </a>
             </li>
         </ul>
