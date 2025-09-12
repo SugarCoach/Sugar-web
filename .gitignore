@@ -28,3 +28,6 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+.vite
+_metadata.json
