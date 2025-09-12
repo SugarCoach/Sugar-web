@@ -97,7 +97,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
     // Si la ruta tiene el meta analytics en true, se agrega el script de Google Analytics al head
-    if (to.meta.analytics) {
+    if (to.meta.analytics && !window.__ga_loaded__) {
         useHead({
             script: [
                 {

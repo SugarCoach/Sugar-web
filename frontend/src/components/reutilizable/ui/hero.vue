@@ -6,8 +6,8 @@
             :alt="props.title"
             width="1600"
             height="1067"
-            fetchpriority="high"
-            decoding="sync"
+            loading="eager"
+            decoding="async"
         />
         <div class="d-flex flex-column gap-2 mb-5 h-50 justify-content-end header position-relative" :class="`text-${props.justify}`">
             <h1>{{ props.title }}</h1>
