@@ -40,6 +40,7 @@ const props = defineProps({
     title: { type: String },
     texto: { type: String },
     imgW: { type: Number, default: null },
+    imgH: { type: Number, default: null }
 })
 </script>
 
