@@ -24,4 +24,5 @@ lerna-debug.log*
 *.sln
 *.sw?
 
-frontend/.vite
+frontend/dist/
+frontend/.vite/
