@@ -1,9 +1,11 @@
-dist
-dist-ssr
+# Node / Vite
 node_modules/
-# local env files
-.env
-.env.development
+dist/
+dist-ssr/
+.vite/
+frontend/dist/
+frontend/.vite/
+
 # Logs
 logs
 *.log
@@ -12,8 +14,13 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-# Editor directories and files
+
+# Env
+.env
+.env.development
 *.local
+
+# Editor
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -24,5 +31,3 @@ lerna-debug.log*
 *.sln
 *.sw?
 
-frontend/dist/
-frontend/.vite/
