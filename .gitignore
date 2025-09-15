@@ -1,10 +1,22 @@
-# Node / Vite
+# Deps y caches (sí ignorar)
 node_modules/
-dist/
-dist-ssr/
-.vite/
-frontend/dist/
 frontend/.vite/
+.vite/
+dist-ssr/
+
+# Ocultar el código fuente del frontend
+frontend/src/
+frontend/public/
+
+# Archivos sueltos frecuentes en el frontend
+frontend/vite.config.js
+frontend/package.json
+frontend/package-lock.json
+frontend/jsconfig.json
+
+# Local env files
+.env
+.env.development
 
 # Logs
 logs
@@ -15,12 +27,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Env
-.env
-.env.development
-*.local
-
 # Editor
+*.local
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -31,3 +39,5 @@ lerna-debug.log*
 *.sln
 *.sw?
 
+# Metadata varios
+_metadata.json
