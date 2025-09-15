@@ -1,9 +1,14 @@
-dist
-dist-ssr
+# Output
+dist/
+dist-ssr/
+.vite/
+
+# Node
 node_modules/
-# local env files
-.env
-.env.development
+
+# Env
+.env*
+
 # Logs
 logs
 *.log
@@ -12,7 +17,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-# Editor directories and files
+
+# Editor
 *.local
 .vscode/*
 !.vscode/extensions.json
