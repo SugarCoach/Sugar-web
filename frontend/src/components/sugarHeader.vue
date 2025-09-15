@@ -25,10 +25,10 @@
                     <div class="d-flex gap-3 flex-column-reverse flex-md-row pe-3">
                         <div class="d-flex gap-1">
                             <span v-for="link in policy" :key="link.id" class="font-smallest gap-1 d-flex align-items-center">
-                                <router-link :to="link.url" class="text-black text-opacity-50 fw-normal" :style="`color: ${props.color}!important;`">
+                                <router-link :to="link.url" class="fw-normal text-dark">
                                     {{ $t('nav.policy[' + link.id + ']') }}
                                 </router-link>
-                                <span v-if="link.id == 0" class="text-black text-opacity-50" :style="`color: ${props.color}!important;`">|</span>
+                                <span v-if="link.id == 0" class="text-secondary">|</span>
                             </span>
                         </div>
                         <languageSelector :color="props.color" />
