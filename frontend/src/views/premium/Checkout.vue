@@ -2,12 +2,10 @@
     <main class="container py-5">
         <h1 class="mb-4">Checkout Premium</h1>
 
-        <!-- Caso sin plan -->
         <div v-if="!plan">
         <PlanSelector @select="goWithPlan" />
         </div>
 
-        <!-- Caso con plan -->
         <div v-else class="card">
         <div class="card-body">
             <p class="lead mb-2">Plan elegido: <strong>{{ planLabel }}</strong></p>
@@ -25,42 +23,49 @@
 </template>
 
 <script setup>
-    import { computed } from 'vue'
-    import { useRoute, useRouter } from 'vue-router'
-    import PlanSelector from '@/components/premium/PlanSelector.vue'
+import { computed, watchEffect } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import PlanSelector from '@/components/premium/PlanSelector.vue'
+import { enableAnnual, plans } from '@/config/premium.js'
 
-    const route = useRoute()
-    const router = useRouter()
+const route = useRoute()
+const router = useRouter()
 
-    const plan = computed(() => {
-        const p = route.query.plan
-        if (p === '1' || p === '2') return p
-        return null
-    })
+const plan = computed(() => {
+    const p = route.query.plan
+    if (p === '1' || p === '2') return p
+    return null
+})
 
-    const planLabel = computed(() => {
-        if (plan.value === '1') return 'Mensual – U$s2.99/mo'
-        if (plan.value === '2') return 'Anual – U$s29.99/yr'
-        return ''
-    })
-
-    function goWithPlan(p) {
-        router.replace({ path: '/premium/checkout', query: { plan: String(p) } })
+watchEffect(() => {
+    if (plan.value === '2' && !enableAnnual) {
+        router.replace({ path: '/premium/checkout', query: { plan: '1' } })
     }
+})
 
-    function clearPlan() {
-        router.replace({ path: '/premium/checkout' })
-    }
+const planLabel = computed(() => {
+    if (plan.value === '1') return plans.monthly.label
+    if (plan.value === '2') return plans.annual.label
+    return ''
+})
 
-    function proceed() {
-        router.push('/premium/success')
-    }
+function goWithPlan(p) {
+    router.replace({ path: '/premium/checkout', query: { plan: String(p) } })
+}
 
-    function simulateSuccess() {
-        router.push('/premium/success')
-    }
+function clearPlan() {
+    router.replace({ path: '/premium/checkout' })
+}
 
-    function simulateError() {
-        router.push('/premium/error')
-    }
+function proceed() {
+    router.push('/premium/success')
+}
+
+function simulateSuccess() {
+    router.push('/premium/success')
+}
+
+function simulateError() {
+    router.push('/premium/error')
+}
 </script>

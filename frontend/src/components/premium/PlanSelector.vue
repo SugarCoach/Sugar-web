@@ -13,7 +13,7 @@
         </div>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div v-if="enableAnnual" class="col-12 col-md-6">
         <div class="card h-100 border-primary">
             <div class="card-body d-flex flex-column">
             <div class="small text-primary mb-1">Mejor precio</div>
@@ -30,5 +30,7 @@
 </template>
 
 <script setup>
+import { enableAnnual } from '@/config/premium.js'
+
 defineEmits(['select'])
 </script>
