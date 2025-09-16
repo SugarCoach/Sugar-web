@@ -69,7 +69,7 @@ const messages = {
                     },
                     {
                         title: 'Clasico',
-                        price: '$2.99',
+                        price: 'U$s2.99',
                         description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
                         ctaBtn: 'Pasate a premium',
                         beneficios: [
@@ -180,7 +180,7 @@ const messages = {
                     },
                     {
                         title: 'Premium clasico',
-                        price: '$2.99',
+                        price: 'U$s2.99',
                         description: 'Accede a herramientas Premium para gestionar tu salud sin publicidad y con acceso a beneficios exclusivos.',
                         ctaBtn: 'Pasate a premium',
                         beneficios: [
@@ -606,7 +606,7 @@ const messages = {
                     },
                     {
                         title: 'Clasic',
-                        price: '$2.99',
+                        price: 'U$s2.99',
                         description: 'orem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
                         ctaBtn: 'Go premium',
                         beneficios: [
@@ -744,7 +744,7 @@ const messages = {
                     },
                     {
                         title: 'Clasic',
-                        price: '$2.99',
+                        price: 'U$s2.99',
                         description: 'Access Premium tools to manage your health without ads and with access to exclusive benefits.',
                         ctaBtn: 'Go premium',
                         beneficios: [
