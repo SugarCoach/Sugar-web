@@ -105,7 +105,7 @@
         },
         {
             title: 'Clasico',
-            price: '$2.99',
+            price: 'U$s2.99',
             texto: 'lorem ipsum dolor sit amet, consectetur adipis, sed do eiusmod tempor incididunt ut labore et d',
             btnText: 'Pasate a premium',
             beneficios: 7,

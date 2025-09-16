@@ -1,27 +1,27 @@
 const messages = {
-    es:{
-        cookies:{
+    es: {
+        cookies: {
             p: 'Usamos cookies de seguimiento para entender cómo utilizas el producto y ayudarnos a mejorarlo. Por favor, acepta las cookies para ayudarnos a mejorar.',
             accept: 'Aceptar',
             decline: 'Rechazar',
             declinedCookies: 'Para ver este contenido acepta las cookies',
         },
-        
+
         nav: {
-                links:[
-                    'Nuestra App',
-                    'Comunidad',
-                    'Quienes somos',
-                    'Anunciantes',
-                    'Premium'
-                ],
-                policy: [
-                    'Politica de privacidad',
-                    'Terminos y condiciones',
-                ]
-            },
+            links: [
+                'Nuestra App',
+                'Comunidad',
+                'Quienes somos',
+                'Anunciantes',
+                'Premium'
+            ],
+            policy: [
+                'Politica de privacidad',
+                'Terminos y condiciones',
+            ]
+        },
         home: {
-            
+
             hero: {
                 h2: 'Explora, aprende y cuida tu diabetes con SugarCoach.',
             },
@@ -29,7 +29,7 @@ const messages = {
                 h2: 'Nuestra App',
                 pantallas: [
                     {
-                        title:'Una experiencia gamificada para el control de la diabetes tipo 1',
+                        title: 'Una experiencia gamificada para el control de la diabetes tipo 1',
                         texto: 'Cada persona define su perfil y su historia clínica así SugarCoach puede comunicarse con su equipo médico y ofrecerle un tratamiento personalizado de la diabetes. En cada comida, el usuario carga valores de glucemia, insulina y carbohidratos. Y lo más importante es que gana premios por cuidarse. SugarCoach se adapta a todos los tratamientos y dispositivos, incluso registra los perfiles de la Bomba Infusora de Insulina.',
                     },
                     {
@@ -69,7 +69,7 @@ const messages = {
                     },
                     {
                         title: 'Clasico',
-                        price: '$2.99',
+                        price: 'U$s2.99',
                         description: 'lorem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
                         ctaBtn: 'Pasate a premium',
                         beneficios: [
@@ -126,7 +126,7 @@ const messages = {
                 ],
                 enviar: 'Enviar'
             },
-            
+
         },
         premium: {
             hero: {
@@ -165,7 +165,7 @@ const messages = {
                 h2: 'Elije tu plan ideal',
                 p: 'Nuestros planes están diseñados para adaptarse a tus necesidades. Puedes elegir entre la suscripción mensual o anual, y empezar a disfrutar de todas las ventajas de ser Premium hoy mismo.',
                 h3: '¿Eres una empresa y quieres ser anunciante?',
-                paquetes:[
+                paquetes: [
                     {
                         title: 'Premium patrocinado',
                         price: 'Gratis',
@@ -180,7 +180,7 @@ const messages = {
                     },
                     {
                         title: 'Premium clasico',
-                        price: '$2.99',
+                        price: 'U$s2.99',
                         description: 'Accede a herramientas Premium para gestionar tu salud sin publicidad y con acceso a beneficios exclusivos.',
                         ctaBtn: 'Pasate a premium',
                         beneficios: [
@@ -218,7 +218,7 @@ const messages = {
                         pregunta: '¿Cómo puedo suscribirme a SugarCoach Diabetes Premium?',
                         respuesta: 'Suscribirte a SugarCoach Diabetes Premium es muy sencillo:',
                         ul: [],
-                        ol:[
+                        ol: [
                             'Descarga la app desde Google Play.',
                             'Regístrate o inicia sesión en tu cuenta.',
                             'Ve a la sección "Premium" dentro de la app y selecciona el plan que mejor se adapte a tus necesidades (mensual o anual).',
@@ -228,7 +228,7 @@ const messages = {
                     {
                         pregunta: '¿Cuáles son los métodos de pago aceptados?',
                         respuesta: 'Aceptamos los siguientes métodos de pago:',
-                        ul:[
+                        ul: [
                             'Tarjetas de crédito y débito (Visa, Mastercard, American Express).',
                             'Pagos a través de Google Pay.',
                             'Otros métodos según la región (ver opciones disponibles al momento de suscribirte).',
@@ -260,7 +260,7 @@ const messages = {
             hero: {
                 h1: 'Anunciantes',
                 h2: 'Invierte en publicidad en la plataforma líder de diabetes en Latinoamérica, con una audiencia de 150 millones en 23 países.',
-                p:'Conecta con una audiencia comprometida que interactúa en la plataforma al menos 5 veces al día y posiciona tu marca como un referente de impacto social medible. Sé parte del cambio y alcanza a miles mientras generas resultados tangibles alineados a los <strong>ODS</strong>. Sé parte de la plataforma <strong>#1</strong> que está revolucionando la gestión de la diabetes.',
+                p: 'Conecta con una audiencia comprometida que interactúa en la plataforma al menos 5 veces al día y posiciona tu marca como un referente de impacto social medible. Sé parte del cambio y alcanza a miles mientras generas resultados tangibles alineados a los <strong>ODS</strong>. Sé parte de la plataforma <strong>#1</strong> que está revolucionando la gestión de la diabetes.',
                 // overtext: 'Invierte en SugarCoach',
                 ctaBtn: 'Patrocinanos'
             },
@@ -429,7 +429,7 @@ const messages = {
                         p: 'Las funciones Premium están patrocinadas por empresas que apoyan el acceso gratuito a nuestra plataforma. Toda publicidad será relevante y no intrusiva.',
                     }
                 ],
-                
+
             },
             equipo: {
                 h2: 'Nuestro Equipo',
@@ -461,7 +461,7 @@ const messages = {
             h1: 'Borrar tu cuenta',
             enviar: 'Borrar cuenta',
             info: 'Contactanos:',
-            inputs:[
+            inputs: [
                 {
                     label: 'Nombre de Usuario',
                     placeholder: 'Usuario',
@@ -510,54 +510,54 @@ const messages = {
             ],
         },
         footer: [
-                {
-                    title: 'Descargar',
-                    links: [
-                        'descargarApp',
-                    ]
-                },
-                {
-                    title: 'SugarCoach',
-                    links: [
-                        'Inicio',
-                        'Sobre nosotros',
-                        'Contacto',
-                        'Anunciantes'
-                    ]
-                },
-                {
-                    title: 'Usuarios',
-                    links: [
-                        'Premium',
-                        'Premios',
-                        'Borrar cuenta'
-                    ]
-                },
-            ]
+            {
+                title: 'Descargar',
+                links: [
+                    'descargarApp',
+                ]
+            },
+            {
+                title: 'SugarCoach',
+                links: [
+                    'Inicio',
+                    'Sobre nosotros',
+                    'Contacto',
+                    'Anunciantes'
+                ]
+            },
+            {
+                title: 'Usuarios',
+                links: [
+                    'Premium',
+                    'Premios',
+                    'Borrar cuenta'
+                ]
+            },
+        ]
     },
-    
-    en:{
-        cookies:{
+
+    en: {
+        cookies: {
             p: 'We use tracking cookies to understand how you use the product and help us improve it. Please accept cookies to help us improve.',
             accept: 'Accept',
             decline: 'Decline',
             declinedCookies: 'To see this content accept cookies',
         },
         nav: {
-                links:[
-                    'Our App',
-                    'Community',
-                    'About',
-                    'Advertisers',
-                    'Premium'
-                ],
-                policy: [
-                    'Privacy Policy',
-                    'Terms and conditions',
-                ]
-            },
+            links: [
+                'Our App',
+                'Community',
+                'About',
+                'Advertisers',
+                'Premium'
+            ],
+            policy: [
+                'Privacy Policy',
+                'Terms and conditions',
+            ]
+        },
         home: {
-            
+
             hero: {
                 h1: 'SugarCoach',
                 h2: 'Have fun while taking care of yourself',
@@ -566,7 +566,7 @@ const messages = {
                 h2: 'Our App',
                 pantallas: [
                     {
-                        title:'A gamified experience for managing type 1 diabetes',
+                        title: 'A gamified experience for managing type 1 diabetes',
                         texto: 'Each person defines their profile and medical history so that SugarCoach can communicate with their medical team and offer personalized diabetes treatment. At each meal, the user logs blood glucose, insulin, and carbohydrate values. And most importantly, they earn rewards for taking care of themselves. SugarCoach adapts to all treatments and devices, even recording the profiles of the Insulin Infusion Pump.',
                     },
                     {
@@ -606,7 +606,7 @@ const messages = {
                     },
                     {
                         title: 'Clasic',
-                        price: '$2.99',
+                        price: 'U$s2.99',
                         description: 'orem ipsum dolor sit amet, consectetur adipiscing. Proin elit non proident et non proident, sed diam.',
                         ctaBtn: 'Go premium',
                         beneficios: [
@@ -691,7 +691,7 @@ const messages = {
                 ],
                 enviar: 'Send'
             },
-            
+
         },
         premium: {
             hero: {
@@ -729,7 +729,7 @@ const messages = {
                 h2: 'Chose your ideal plan',
                 p: 'Our plans are designed to fit your needs. You can choose between a monthly or annual subscription and start enjoying all the benefits of being Premium today.',
                 h3: 'Are you a company?',
-                paquetes:[
+                paquetes: [
                     {
                         title: 'Scolarship',
                         price: 'Free',
@@ -744,7 +744,7 @@ const messages = {
                     },
                     {
                         title: 'Clasic',
-                        price: '$2.99',
+                        price: 'U$s2.99',
                         description: 'Access Premium tools to manage your health without ads and with access to exclusive benefits.',
                         ctaBtn: 'Go premium',
                         beneficios: [
@@ -782,7 +782,7 @@ const messages = {
                         pregunta: '¿Cómo puedo suscribirme a SugarCoach Diabetes Premium?',
                         respuesta: 'Suscribirte a SugarCoach Diabetes Premium es muy sencillo:',
                         ul: [],
-                        ol:[
+                        ol: [
                             'Download the app on Google Play.',
                             'Register or log in your account',
                             'Go to the "Premium" section within the app and select the plan that best suits your needs (monthly or annual).',
@@ -792,7 +792,7 @@ const messages = {
                     {
                         pregunta: 'What are the accepted payment methods?',
                         respuesta: 'We accept the following payment methods:',
-                        ul:[
+                        ul: [
                             'Credit and debit cards (Visa, Mastercard, American Express).',
                             'Payments through Google Pay.',
                             'Other methods depending on the region (see available options when subscribing).',
@@ -824,7 +824,7 @@ const messages = {
             hero: {
                 h1: 'Advertisers',
                 h2: 'Promote your company by supporting us',
-                p:'Connect with an engaged audience that interacts with the platform at least 5 times a day and position your brand as a leader in measurable social impact. Be part of the change and reach thousands while generating tangible results aligned with the SDGs. Be part of the #1 platform that is revolutionizing diabetes management.',
+                p: 'Connect with an engaged audience that interacts with the platform at least 5 times a day and position your brand as a leader in measurable social impact. Be part of the change and reach thousands while generating tangible results aligned with the SDGs. Be part of the #1 platform that is revolutionizing diabetes management.',
 
                 // overtext: 'Invest in SugarCoach',
                 ctaBtn: 'Sponsor us'
@@ -1025,7 +1025,7 @@ const messages = {
                         p: 'Premium features are sponsored by companies that support free access to our platform. All advertising will be relevant and non-intrusive.',
                     }
                 ],
-                
+
             },
             equipo: {
                 h2: 'Our team',
@@ -1057,7 +1057,7 @@ const messages = {
             h1: 'Delete your account',
             enviar: 'Delete account',
             info: 'Contact us:',
-            inputs:[
+            inputs: [
                 {
                     label: 'Username',
                     placeholder: 'User',
@@ -1106,30 +1106,30 @@ const messages = {
             ],
         },
         footer: [
-                {
-                    title: 'Download',
-                    links: [
-                        'downloadApp',
-                    ]
-                },
-                {
-                    title: 'SugarCoach',
-                    links: [
-                        'Home',
-                        'About',
-                        'Contact',
-                        'Advertisers'
-                    ]
-                },
-                {
-                    title: 'Users',
-                    links: [
-                        'Premium',
-                        'Awards',
-                        'Delete account',
-                    ]
-                },
-            ]
+            {
+                title: 'Download',
+                links: [
+                    'downloadApp',
+                ]
+            },
+            {
+                title: 'SugarCoach',
+                links: [
+                    'Home',
+                    'About',
+                    'Contact',
+                    'Advertisers'
+                ]
+            },
+            {
+                title: 'Users',
+                links: [
+                    'Premium',
+                    'Awards',
+                    'Delete account',
+                ]
+            },
+        ]
     }
 }
 export default messages;
