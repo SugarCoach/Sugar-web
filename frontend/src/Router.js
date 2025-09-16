@@ -77,9 +77,21 @@ const routes = [
         meta: { analytics: false }
     },
     {
-        path: '/premium/Checkout',
+        path: '/premium/checkout',
         name: 'PremiumCheckout',
-        component: () => import('./views/premium/Checkout.vue'),
+        component: () => import('@/views/premium/Checkout.vue'),
+        meta: { analytics: true }
+    },
+    {
+        path: '/premium/success',
+        name: 'PremiumSuccess',
+        component: () => import('./views/premium/Success.vue'),
+        meta: { analytics: true }
+    },
+    {
+        path: '/premium/error',
+        name: 'PremiumError',
+        component: () => import('./views/premium/Error.vue'),
         meta: { analytics: true }
     }
 ]
