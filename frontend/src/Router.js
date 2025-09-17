@@ -83,6 +83,12 @@ const routes = [
         meta: { analytics: true }
     },
     {
+        path: '/premium/premios',
+        name: 'PremiumPremios',
+        component: () => import('./views/premium/Premios.vue'),
+        meta: { analytics: true }
+    },
+    {
         path: '/premium/success',
         name: 'PremiumSuccess',
         component: () => import('./views/premium/Success.vue'),
@@ -108,6 +114,10 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+    if (to.path === '/premium' && to.hash === '#premios') {
+        next({ name: 'PremiumPremios' })
+        return
+    }
     // Si la ruta tiene el meta analytics en true, se agrega el script de Google Analytics al head
     if (to.meta.analytics && !window.__ga_loaded__) {
         useHead({
