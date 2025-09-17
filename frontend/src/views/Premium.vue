@@ -6,12 +6,12 @@
             color="#FFB800"
             :over-text="$t('premium.hero.overtext')"
             :button-text="$t('premium.hero.ctaBtn')"
-            button_url="#planes-premium"
+            button_url="/premium/checkout"
             img_url="../../../contenido/7-Ninos-con-SC.webp"
             img_alt="Foto de niño ganando puntos en SugarCoach"
         /> -->
         <hero title="Premium" justify="start" :subheading="$t('premium.hero.h2')" filtro="oscuro" button_url="#planes-premium" img="/contenido/7-Ninos-con-SC.webp" >
-            <ctaBtn url="#planes-premium" color="#FFB800" class="cta-btn" class-name="px-4 py-3">
+            <ctaBtn url="/premium/checkout" color="#FFB800" class="cta-btn" class-name="px-4 py-3">
                 <iconCorona color="white" size="23px"/>
                 {{ $t('premium.hero.ctaBtn') }}
             </ctaBtn>
