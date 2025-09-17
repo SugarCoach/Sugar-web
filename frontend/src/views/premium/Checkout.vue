@@ -1,23 +1,27 @@
 <template>
-    <main class="container py-5">
-        <h1 class="mb-4">Checkout Premium</h1>
+    <main class="container pt-5 pb-3 checkout-section">
+        <h1 class="mb-5 text-center">Sección Premium</h1>
 
-        <div v-if="!plan">
-        <PlanSelector @select="goWithPlan" />
+        <div v-if="!plan" class="checkout-wrap d-flex justify-content-center">
+            <PlanSelector @select="goWithPlan" />
         </div>
 
-        <div v-else class="card">
-        <div class="card-body">
-            <p class="lead mb-2">Plan elegido: <strong>{{ planLabel }}</strong></p>
-            <p class="text-muted small mb-3">Podés cambiar tu plan antes de confirmar el pago.</p>
+        <div v-else class="card checkout-card mb-0 mx-auto">
+            <div class="card-body text-center">
+                <p class="lead mb-2">
+                    Plan elegido: <strong>{{ planLabel }}</strong>
+                </p>
+                <p class="text-muted small mb-3">
+                    Podés cambiar tu plan antes de confirmar el pago.
+                </p>
 
-            <div class="d-flex gap-2 flex-wrap">
-            <button class="btn btn-secondary" @click="clearPlan">Cambiar plan</button>
-            <button class="btn btn-primary" @click="proceed">Continuar</button>
-            <button class="btn btn-outline-success" @click="simulateSuccess">Simular Success</button>
-            <button class="btn btn-outline-danger" @click="simulateError">Simular Error</button>
+                <div class="d-flex gap-2 flex-wrap justify-content-center checkout-actions">
+                    <button class="btn btn-secondary" @click="clearPlan">Cambiar plan</button>
+                    <button class="btn btn-primary" @click="proceed">Continuar</button>
+                    <button class="btn btn-outline-success" @click="simulateSuccess">Simular Success</button>
+                    <button class="btn btn-outline-danger" @click="simulateError">Simular Error</button>
+                </div>
             </div>
-        </div>
         </div>
     </main>
 </template>

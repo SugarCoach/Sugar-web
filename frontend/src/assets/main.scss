@@ -1,7 +1,17 @@
 $premium: #ffb800;
 $space_hero: 8vw;
-$box-shadow: 0 0.5rem 20px rgba(0, 0, 0, 0.2);
-@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+$app-box-shadow: 0 0.5rem 20px rgba(0, 0, 0, 0.2);
+$box-shadow: $app-box-shadow;
+$card-box-shadow: $app-box-shadow;
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/maps";
+
+$theme-colors: map-merge($theme-colors, ("premium": $premium));
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 html {
     font-size: 15px;
@@ -21,7 +31,6 @@ header{
     z-index: 900;
 }
 section {
-    // margin-top: max(20vh, 100px);
     padding: 20vh 0 10vh 0;
     min-height: 50vh;
 }
@@ -48,7 +57,6 @@ p {
 a {
     text-decoration: none;
 }
-
 ul {
     list-style: none;
 }
@@ -63,8 +71,8 @@ ul {
 }
 .cta-btn:hover { background-color: #ffc61a !important; }
 .cta-btn:focus {
-  outline: 2px solid #1a1a1a;
-  outline-offset: 2px;
+    outline: 2px solid #1a1a1a;
+    outline-offset: 2px;
 }
 .font-smallest {
     font-size: 1rem;
@@ -95,6 +103,47 @@ ul {
     height: auto;
     display: block;
 }
+
+.price-inline { display: inline-flex; align-items: baseline; gap: .25rem; }
+.price-inline .amount { font-weight: 700; line-height: 1; }
+.price-inline .unit { opacity: .75; }
+.badge-premium { background-color: $premium; color: #000; }
+.text-muted-strong { opacity: .7; }
+
+.checkout-section { padding: 8vh 0 6vh; }
+
+.checkout-wrap {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.checkout-card {
+  max-width: 640px;
+  margin-inline: auto;
+  box-shadow: $card-box-shadow;
+}
+
+/* Botonera alineada y que no “estire” */
+.checkout-actions {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+
+
+@media (width <= 576px) {
+  .checkout-actions .btn { width: 100%; }
+}
+
+/* Precio compacto */
+.price-inline { display: inline-flex; align-items: baseline; gap: .25rem; }
+.price-inline .amount { font-weight: 700; line-height: 1; }
+.price-inline .unit { opacity: .75; }
+
+/* Badges/colores de marca */
+.badge-premium { background-color: $premium; color: #000; }
+.text-muted-strong { opacity: .7; }
 
 @media only screen and (width <= 992px) {
     html {
