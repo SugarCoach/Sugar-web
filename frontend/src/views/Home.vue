@@ -1,7 +1,7 @@
 <template>
     <main>
         <hero 
-            img="/contenido/1-Ninos-con-SC.webp"
+            img="/contenido/1-Ninos-con-SC.jpg"
             title="SugarCoach"
             :subheading="$t('home.hero.h2')"
             :cta="true"
