@@ -1,13 +1,8 @@
 $premium: #ffb800;
 $space_hero: 8vw;
-
 $app-box-shadow: 0 0.5rem 20px rgba(0, 0, 0, 0.2);
 $box-shadow: $app-box-shadow;
 $card-box-shadow: $app-box-shadow;
-
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/maps";
 
 $theme-colors: map-merge($theme-colors, ("premium": $premium));
 
@@ -15,7 +10,7 @@ $theme-colors: map-merge($theme-colors, ("premium": $premium));
     --space-hero: #{$space_hero};
 }
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@use "../../node_modules/bootstrap/scss/bootstrap" as *;
 
 html {
     font-size: 15px;
