@@ -45,6 +45,7 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
+@use "sass:math";
 $top: 3rem;
 
 @mixin screenStyles($size, $aspectRatio) {
@@ -63,7 +64,7 @@ $top: 3rem;
         }
     }
 
-    $size: $size/3.2;
+    $size: math.div($size, 3.2);
     $move-celu: calc((-1) * (3rem + $size));
     $move-all: calc((-1) * $size/2 - 1.5rem);
     $tira-move: 25%;
@@ -111,7 +112,7 @@ $top: 3rem;
 .fondo {
     background-color: rgb(248, 248, 248);
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 15px #ffffff;
-    @include screenStyles(290px, 19/10);
+    @include screenStyles(290px, math.div(19, 10));
 
     .contenedor-funcionalidad {
         width: 1000px;
@@ -148,7 +149,7 @@ $top: 3rem;
 
 @media only screen and (max-width: 992px) {
     .fondo {
-        @include screenStyles(240px, 7/5);
+        @include screenStyles(240px, math.div(7, 5));
         .contenedor-funcionalidad {
             width: 650px;
         }
@@ -157,7 +158,7 @@ $top: 3rem;
 
 @media only screen and (max-width: 768px) {
     .fondo {
-        @include screenStyles(190px, 7/5);
+        @include screenStyles(190px, math.div(7, 5));
         .contenedor-funcionalidad {
             width: 480px;
         }

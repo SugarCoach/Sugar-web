@@ -1,16 +1,15 @@
+@use "../../node_modules/bootstrap/scss/bootstrap" as *;
+
 $premium: #ffb800;
 $space_hero: 8vw;
+
 $app-box-shadow: 0 0.5rem 20px rgba(0, 0, 0, 0.2);
 $box-shadow: $app-box-shadow;
 $card-box-shadow: $app-box-shadow;
 
-$theme-colors: map-merge($theme-colors, ("premium": $premium));
-
 :root {
     --space-hero: #{$space_hero};
 }
-
-@use "../../node_modules/bootstrap/scss/bootstrap" as *;
 
 html {
     font-size: 15px;
