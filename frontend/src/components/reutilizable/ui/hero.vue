@@ -53,7 +53,7 @@
 
 <style scoped lang="scss">    
     .hero {
-        padding: 0 $space_hero 0 $space_hero;        
+        padding: 0 var(--space-hero) 0 var(--space-hero);        
         width: 100%;
         height: calc(100vh - (80.141px + 1.625rem));
         align-content: center;

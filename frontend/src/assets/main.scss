@@ -11,6 +11,10 @@ $card-box-shadow: $app-box-shadow;
 
 $theme-colors: map-merge($theme-colors, ("premium": $premium));
 
+:root {
+    --space-hero: #{$space_hero};
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 html {
