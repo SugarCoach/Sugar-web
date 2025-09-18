@@ -67,8 +67,6 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
-@import "../../../assets/main.scss";
-
 .hero-circle {
     height: 80vh;
     overflow: hidden;

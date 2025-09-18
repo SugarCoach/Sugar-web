@@ -109,8 +109,7 @@
     const colorBtn = `background-color: ${props.color}; border-color: ${props.color};`
 </script>
 
-<style scoped lang="scss">
-    @import '../../../assets/main.scss';
+<style scoped lang="scss">    
     $padding: 1.5rem;
     $light-gray: rgba(217, 217, 217, 0.2);
     .paquete {

@@ -51,8 +51,7 @@
     })    
 </script>
 
-<style scoped lang="scss">
-    @import '../../../assets/main.scss';
+<style scoped lang="scss">    
     .hero {
         padding: 0 $space_hero 0 $space_hero;        
         width: 100%;

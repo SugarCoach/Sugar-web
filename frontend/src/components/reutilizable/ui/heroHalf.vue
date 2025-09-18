@@ -72,7 +72,6 @@
 </script>
 
 <style scoped lang="scss">
-    @import '../../../assets/main.scss';
     :root {
         --bg-text: url('/contenido/nenes-usando-app.jpg');
     }
